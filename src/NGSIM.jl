@@ -9,6 +9,7 @@ export
     Roadway,
     ROADWAY_80,
     ROADWAY_101,
+    ROADWAY_DICT,
 
     TrajdataRaw,
     Trajdata,
@@ -37,6 +38,7 @@ export
     get_vehicle,
     get_vehicle!,
     get_vehicles,
+    get_vehicles!,
     get_vehiclestate,
 
     get_footpoint,

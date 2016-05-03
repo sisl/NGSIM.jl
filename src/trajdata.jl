@@ -41,7 +41,7 @@ function symmetric_exponential_moving_average(
     retval
 end
 
-TRAJDATA_INPUT_PATHS = [
+const TRAJDATA_INPUT_PATHS = [
     "/media/tim/DATAPART1/Data/NGSIM/HW80/I-80-Main-Data/vehicle-trajectory-data/0400pm-0415pm/trajectories-0400-0415.txt",
     "/media/tim/DATAPART1/Data/NGSIM/HW80/I-80-Main-Data/vehicle-trajectory-data/0500pm-0515pm/trajectories-0500-0515.txt",
     "/media/tim/DATAPART1/Data/NGSIM/HW80/I-80-Main-Data/vehicle-trajectory-data/0515pm-0530pm/trajectories-0515-0530.txt",
@@ -540,6 +540,7 @@ type Trajdata
         retval.states = states
         retval
     end
+    Trajdata(trajdata_id::Int) = Trajdata(TRAJDATA_INPUT_PATHS[trajdata_id], trajdata_id)
 end
 
 nframes(trajdata::Trajdata) = maximum(keys(trajdata.frame2cars))
@@ -671,21 +672,21 @@ function get_neighbor_index_fore(vehicles::Vector{Vehicle}, roadway::Roadway, ve
 
     best_index
 end
-function get_neighbor_index_rear(Vehicles::Vector{Vehicle}, roadway::Roadway, vehicle_index::Int;
+function get_neighbor_index_rear(vehicles::Vector{Vehicle}, roadway::Roadway, vehicle_index::Int;
     max_dist = 1000.0 # [ft]
     )
 
     best_index = 0
     best_dist   = Inf
 
-    veh = scene.vehicles[vehicle_index]
+    veh = vehicles[vehicle_index]
     active_laneid = veh.state.posF.laneid
     curve = roadway.centerlines[active_laneid]
     dist = curve_at(curve, veh.state.posF.extind).s # [m] dist along curve from host inertial to base of footpoint
 
     # walk forwards along the lanetag until we find a car in it or reach max dist
     while true
-        for (test_vehicle_index, veh_target) in enumerate(scene.vehicles)
+        for (test_vehicle_index, veh_target) in enumerate(vehicles)
 
             if test_vehicle_index == vehicle_index
                 continue

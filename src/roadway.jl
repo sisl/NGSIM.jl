@@ -106,6 +106,8 @@ end
 
 const ROADWAY_80 = read_roadway(ROADWAY_INPUT_80)
 const ROADWAY_101 = read_roadway(ROADWAY_INPUT_101)
+const ROADWAY_DICT = Dict{Symbol, Roadway}(ROADWAY_80.name => ROADWAY_80,
+                          ROADWAY_101.name => ROADWAY_101)
 
 function get_roadway_for_trajdata(input_path::AbstractString)
     if contains(input_path, "I-80") || contains(input_path, "trajectories-04") || contains(input_path, "trajectories-05")
