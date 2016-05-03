@@ -1,3 +1,5 @@
+const FLOATING_POINT_REGEX = r"[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)?"
+
 immutable CurvePt
     pos::VecSE2 # global position
     s::Float64 # distance along curve

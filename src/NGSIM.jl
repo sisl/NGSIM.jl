@@ -65,8 +65,6 @@ export
     load_trajdata_raw,
     input_path_to_extracted_trajdata_csv
 
-const FLOATING_POINT_REGEX = r"[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)?"
-
 include("roadway.jl")
 include("trajdata.jl")
 
