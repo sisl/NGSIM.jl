@@ -50,6 +50,39 @@ const TRAJDATA_INPUT_PATHS = [
     "/media/tim/DATAPART1/Data/NGSIM/HW101/US-101-Main-Data/vehicle-trajectory-data/0820am-0835am/trajectories-0820am-0835am.txt",
 ]
 
+###############
+
+immutable Frenet
+    laneid::Int
+    extind::Float64
+    s::Float64 # distance along lane
+    t::Float64 # lane offset, positive is to left
+    ϕ::Float64 # lane relative heading
+end
+immutable VehicleState
+    posG::VecSE2 # global
+    posF::Frenet # (extind,t,ϕ)
+    v::Float64
+
+    VehicleState() = new(VecSE2(), Frenet(-1, NaN, NaN, NaN, NaN), NaN)
+    VehicleState(posG::VecSE2, v::Float64) = new(posG, Frenet(-1, NaN, NaN, NaN, NaN), v)
+    VehicleState(posG::VecSE2, posF::Frenet, v::Float64) = new(posG, posF, v)
+end
+type Vehicle
+    id::Int
+    class::Int # ∈ (1-motorcycle, 2-auto, 3-truck)
+    length::Float64
+    width::Float64
+    state::VehicleState
+
+    Vehicle() = new(0, 0, NaN, NaN, VehicleState())
+end
+
+get_footpoint(veh::Vehicle) = veh.state.posG + polar(veh.state.posF.t, veh.state.posG.θ-veh.state.posF.ϕ-π/2)
+get_center(veh::Vehicle) = veh.state.posG + polar(veh.length/2, veh.state.posG.θ+π)
+
+###############
+
 type TrajdataRaw
     df         :: DataFrame
     car2start  :: Dict{Int, Int}         # maps carindex to starting index in the df
@@ -97,50 +130,6 @@ type TrajdataRaw
         new(df, car2start, frame2cars, roadway)
     end
 end
-
-###############
-
-immutable Frenet
-    laneid::Int
-    extind::Float64
-    s::Float64 # distance along lane
-    t::Float64 # lane offset, positive is to left
-    ϕ::Float64 # lane relative heading
-end
-immutable VehicleState
-    posG::VecSE2 # global
-    posF::Frenet # (extind,t,ϕ)
-    v::Float64
-
-    VehicleState() = new(VecSE2(), Frenet(-1, NaN, NaN, NaN, NaN), NaN)
-    VehicleState(posG::VecSE2, v::Float64) = new(posG, Frenet(-1, NaN, NaN, NaN, NaN), v)
-    VehicleState(posG::VecSE2, posF::Frenet, v::Float64) = new(posG, posF, v)
-end
-type Vehicle
-    id::Int
-    class::Int # ∈ (1-motorcycle, 2-auto, 3-truck)
-    length::Float64
-    width::Float64
-    state::VehicleState
-
-    Vehicle() = new(0, 0, NaN, NaN, VehicleState())
-end
-
-get_footpoint(veh::Vehicle) = veh.state.posG + polar(veh.state.posF.t, veh.state.posG.θ-veh.state.posF.ϕ-π/2)
-get_center(veh::Vehicle) = veh.state.posG + polar(veh.length/2, veh.state.posG.θ+π)
-
-function get_index_of_first_vehicle_with_id(vehicles::Vector{Vehicle}, id::Int, n_vehicles::Int=length(vehicles))
-    retval = 0
-    for i in 1 : n_vehicles
-        if vehicles[i].id == id
-            retval = i
-            break
-        end
-    end
-    retval
-end
-
-###############
 
 nframes(trajdata::TrajdataRaw) = maximum(keys(trajdata.frame2cars))
 carsinframe(trajdata::TrajdataRaw, frame::Int) = get(trajdata.frame2cars, frame, Int[]) # NOTE: memory allocation!
@@ -601,34 +590,60 @@ function get_vehicle(
 
     veh
 end
-function get_vehicles(trajdata::Trajdata, frame::Int)
+
+###############
+
+type Scene
+    roadway_name::Symbol
+    vehicles::Vector{Vehicle} # this is a pre-allocated array that is at least as large as the maximum number of vehicles in a Trajdata frame
+    n_vehicles::Int
+
+    Scene(n_vehicles::Int=500) = new(:none, Array(Vehicle, n_vehicles), 0)
+    function Scene(
+        roadway_name::Symbol,
+        vehicles::Vector{Vehicle},
+        n_vehicles::Int=length(vehicles),
+        )
+
+        new(roadway_name, vehicles, n_vehicles)
+    end
+end
+
+Base.length(scene::Scene) = scene.n_vehicles
+function Base.empty!(scene::Scene)
+    scene.n_vehicles = 0
+    scene
+end
+function Base.get!(scene::Scene, trajdata::Trajdata, frame::Int)
+
+    scene.roadway_name = trajdata.roadway.name
+
     if haskey(trajdata.frame2cars, frame)
         carids = trajdata.frame2cars[frame]
-        retval = Array(Vehicle, length(carids))
-        for (i,carid) in enumerate(carids)
-            retval[i] = get_vehicle(trajdata, carid, frame)
+        scene.n_vehicles = length(carids)
+        for i in 1 : scene.n_vehicles
+            scene.vehicles[i] = get_vehicle(trajdata, carids[i], frame)
         end
-        retval
     else
-        Vehicle[]
+        scene.n_vehicles = 0.0
     end
+
+    scene
 end
-function get_vehicles!(vehicles::Vector{Vehicle}, trajdata::Trajdata, frame::Int)
 
-    n_vehicles = 0
+get_roadway(scene::Scene) = ROADWAY_DICT[scene.roadway_name]
 
-    if haskey(trajdata.frame2cars, frame)
-        carids = trajdata.frame2cars[frame]
-        n_vehicles = length(carids)
-        for i in 1 : n_vehicles
-            vehicles[i] = get_vehicle(trajdata, carids[i], frame)
+function get_index_of_first_vehicle_with_id(scene::Scene, id::Int)
+    retval = 0
+    for i in 1 : scene.n_vehicles
+        if scene.vehicles[i].id == id
+            retval = i
+            break
         end
     end
-
-    n_vehicles
+    retval
 end
-
-function get_neighbor_index_fore(vehicles::Vector{Vehicle}, roadway::Roadway, vehicle_index::Int;
+function get_neighbor_index_fore(scene::Scene, vehicle_index::Int;
     max_dist = 1000.0 # [ft]
     )
 
@@ -637,10 +652,12 @@ function get_neighbor_index_fore(vehicles::Vector{Vehicle}, roadway::Roadway, ve
     Quits once it reaches a max distance
     =#
 
+    roadway = get_roadway(scene)
+
     best_index = 0
     best_dist  = Inf
 
-    ego_state = vehicles[vehicle_index].state
+    ego_state = scene.vehicles[vehicle_index].state
     active_laneid = ego_state.posF.laneid
     curve = roadway.centerlines[active_laneid]
     dist = -(curve_at(curve, ego_state.posF.extind).s) # [m] dist along curve from host inertial to base of footpoint
@@ -648,7 +665,8 @@ function get_neighbor_index_fore(vehicles::Vector{Vehicle}, roadway::Roadway, ve
     # walk forwards along the lanetag until we find a car in it or reach max dist
     while true
 
-        for (test_vehicle_index, veh_target) in enumerate(vehicles)
+        for test_vehicle_index in 1 : length(scene)
+            veh_target = scene.vehicles[test_vehicle_index]
 
             if test_vehicle_index == vehicle_index
                 continue
@@ -672,21 +690,24 @@ function get_neighbor_index_fore(vehicles::Vector{Vehicle}, roadway::Roadway, ve
 
     best_index
 end
-function get_neighbor_index_rear(vehicles::Vector{Vehicle}, roadway::Roadway, vehicle_index::Int;
+function get_neighbor_index_rear(scene::Scene, vehicle_index::Int;
     max_dist = 1000.0 # [ft]
     )
+
+    roadway = get_roadway(scene)
 
     best_index = 0
     best_dist   = Inf
 
-    veh = vehicles[vehicle_index]
+    veh = scene.vehicles[vehicle_index]
     active_laneid = veh.state.posF.laneid
     curve = roadway.centerlines[active_laneid]
     dist = curve_at(curve, veh.state.posF.extind).s # [m] dist along curve from host inertial to base of footpoint
 
     # walk forwards along the lanetag until we find a car in it or reach max dist
     while true
-        for (test_vehicle_index, veh_target) in enumerate(vehicles)
+        for test_vehicle_index in 1 : length(scene)
+            veh_target = scene.vehicles[test_vehicle_index]
 
             if test_vehicle_index == vehicle_index
                 continue
@@ -717,6 +738,7 @@ function get_neighbor_index_rear(vehicles::Vector{Vehicle}, roadway::Roadway, ve
 
     best_index
 end
+
 function get_headway_dist_between(veh_rear::Vehicle, veh_fore::Vehicle, roadway::Roadway)
 
     # distance from the front of the rear vehicle to the rear of the front vehicle

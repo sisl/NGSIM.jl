@@ -17,6 +17,7 @@ export
     VehicleSystem,
     VehicleState,
     Vehicle,
+    Scene,
     FilterTrajectoryResult,
 
 
@@ -25,6 +26,7 @@ export
 
     project_to_lane,
     project_to_closest_lane,
+    project_posG_to_frenet!,
     curve_at,
     move_extind_along,
     get_neighbor_laneid_left,
@@ -37,9 +39,8 @@ export
 
     get_vehicle,
     get_vehicle!,
-    get_vehicles,
-    get_vehicles!,
     get_vehiclestate,
+    get_roadway,
 
     get_footpoint,
     get_center,
