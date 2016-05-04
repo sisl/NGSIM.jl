@@ -70,5 +70,6 @@ export
 
 include("roadway.jl")
 include("trajdata.jl")
+include("scene.jl")
 
 end # module
