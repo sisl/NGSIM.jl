@@ -42,6 +42,7 @@ export
     get_vehiclestate,
     get_roadway,
 
+    get_extind,
     get_footpoint,
     get_center,
     get_frame_range,

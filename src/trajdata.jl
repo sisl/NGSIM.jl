@@ -529,7 +529,14 @@ type Trajdata
         retval.states = states
         retval
     end
-    Trajdata(trajdata_id::Int) = Trajdata(TRAJDATA_INPUT_PATHS[trajdata_id], trajdata_id)
+    function Trajdata(trajdata_id::Int, recompute::Bool=false)
+        filepath = TRAJDATA_INPUT_PATHS[trajdata_id]
+        if !recompute
+            filepath = input_path_to_extracted_trajdata_csv(filepath)
+        end
+
+        Trajdata(filepath, trajdata_id)
+    end
 end
 
 nframes(trajdata::Trajdata) = maximum(keys(trajdata.frame2cars))

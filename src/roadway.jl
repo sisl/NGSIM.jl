@@ -307,6 +307,42 @@ function curve_at(curve::Vector{CurvePt}, extind::Float64)
     t = extind - ind_lo
     lerp(curvept_lo, curvept_hi, t)
 end
+function get_extind(curve::Vector{CurvePt}, s::Float64)
+
+    # get the extind for the closest s-location on the curve
+
+    if s < 0.0
+        return 1.0
+    elseif s > curve[end].s
+        return convert(Float64, length(curve))
+    end
+
+    a = 1
+    b = length(curve)
+
+    fa = curve[a].s - s
+    fb = curve[b].s - s
+
+    n = 1
+    while true
+        if b == a+1
+            return a + -fa/(fb-fa)
+        end
+
+        c = div(a+b, 2)
+        fc = curve[c].s - s
+        n += 1
+
+        if sign(fc) == sign(fa)
+            a = c
+        else
+            b = c
+        end
+    end
+
+    error("get_extind failed")
+    NaN
+end
 
 function move_extind_along(extind::Float64, curve::Vector{CurvePt}, Δs::Float64)
 

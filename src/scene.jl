@@ -14,7 +14,12 @@ type Scene
     end
 end
 
+Base.start(scene::Scene) = 1
+Base.done(scene::Scene, i::Int) = i > length(scene)
+Base.next(scene::Scene, i::Int) = (scene.vehicles[i], i+1)
+
 Base.length(scene::Scene) = scene.n_vehicles
+Base.getindex(scene::Scene, i::Int) = scene.vehicles[i]
 function Base.empty!(scene::Scene)
     scene.n_vehicles = 0
     scene
@@ -70,8 +75,7 @@ function get_neighbor_index_fore(scene::Scene, vehicle_index::Int;
     # walk forwards along the lanetag until we find a car in it or reach max dist
     while true
 
-        for test_vehicle_index in 1 : length(scene)
-            veh_target = scene.vehicles[test_vehicle_index]
+        for (test_vehicle_index, veh_target) in enumerate(scene)
 
             if test_vehicle_index == vehicle_index
                 continue
@@ -111,8 +115,7 @@ function get_neighbor_index_rear(scene::Scene, vehicle_index::Int;
 
     # walk forwards along the lanetag until we find a car in it or reach max dist
     while true
-        for test_vehicle_index in 1 : length(scene)
-            veh_target = scene.vehicles[test_vehicle_index]
+        for (test_vehicle_index, veh_target) in enumerate(scene)
 
             if test_vehicle_index == vehicle_index
                 continue
