@@ -495,7 +495,7 @@ type Trajdata
         tdraw = load_trajdata_raw(filepath)
         df = tdraw.df
 
-        id_map = Dict{Int, Int}() # maps old id to new id
+        id_map = Dict{Int,Int}() # old -> new
 
         car2start = Array(Int, length(tdraw.car2start))
         vehicles = Array(Vehicle, length(tdraw.car2start))
@@ -530,13 +530,22 @@ type Trajdata
         retval.vehicles = vehicles
         retval.car2start = car2start
 
-        retval.frame2cars = Array(Vector{Int}, length(tdraw.frame2cars))
-        for i in 1 : length(retval.frame2cars)
-            retval.frame2cars[i] = deepcopy(get(tdraw.frame2cars, i, Int[]))
+        retval.frames = convert(Vector{Int}, df[:frame])
+        frame_lo = minimum(retval.frames)
+        Δframe = frame_lo -1
+        retval.frames .-= Δframe # set low frame to 1
+
+        frame_hi = maximum(retval.frames)
+        retval.frame2cars = Array(Vector{Int}, frame_hi)
+        for frame in 1:frame_hi
+            carids = deepcopy(get(tdraw.frame2cars, frame+Δframe, Int[]))
+            for (i,id_old) in enumerate(carids)
+                carids[i] = id_map[id_old]
+            end
+            retval.frame2cars[frame] = carids
         end
 
         retval.roadway = tdraw.roadway
-        retval.frames = convert(Vector{Int}, df[:frame])
         retval.n_frames_in_dataset = convert(Vector{Int}, df[:n_frames_in_dataset])
         retval.states = states
         retval
