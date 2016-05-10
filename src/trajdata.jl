@@ -483,9 +483,9 @@ type Trajdata
     id         :: Int                    # id assigned to this trajdata
     roadway    :: Roadway
 
-    vehicles   :: Dict{Int, Vehicle}     # id → Vehicle (w/ potentially uninitialized state)
-    car2start  :: Dict{Int, Int}         # id → starting index in the df
-    frame2cars :: Dict{Int, Vector{Int}} # frame → list of carids in the scene
+    vehicles   :: Vector{Vehicle}        # id → Vehicle (w/ potentially uninitialized state)
+    car2start  :: Vector{Int}            # id → starting index in the df
+    frame2cars :: Vector{Vector{Int}}    # frame → list of carids in the scene
 
     frames              :: Vector{Int}          # [nrow df]
     n_frames_in_dataset :: Vector{Int}          # [nrow df]
@@ -495,17 +495,24 @@ type Trajdata
         tdraw = load_trajdata_raw(filepath)
         df = tdraw.df
 
-        vehicles = Dict{Int, Vehicle}()
-        for (id,dfind) in tdraw.car2start
+        id_map = Dict{Int, Int} # maps old id to new id
+
+        car2start = Array(Int, length(tdraw.car2start))
+        vehicles = Array(Vehicle, length(tdraw.car2start))
+        for (id_old,dfind) in tdraw.car2start
+
+            id_new = length(id_map)+1
+            id_map[id_old] = id_new
 
             veh = Vehicle()
 
-            veh.id = id
+            veh.id = id_new
             veh.class  = df[dfind, :class ]
             veh.length = df[dfind, :length]
             veh.width  = df[dfind, :width ]
 
-            vehicles[id] = veh
+            vehicles[id_new] = veh
+            car2start[id_new] = dfind
         end
 
         states = Array(VehicleState, nrow(df))
@@ -521,8 +528,13 @@ type Trajdata
         retval = new()
         retval.id = trajdata_id
         retval.vehicles = vehicles
-        retval.car2start = tdraw.car2start
-        retval.frame2cars = tdraw.frame2cars
+        retval.car2start = car2start
+
+        retval.frame2cars = Array(Vector{Int}, length(tdraw.frame2cars))
+        for i in 1 : length(retval.frame2cars)
+            retval.frame2cars[i] = deepcopy(get(tdraw.frame2cars, i, Int[]))
+        end
+
         retval.roadway = tdraw.roadway
         retval.frames = convert(Vector{Int}, df[:frame])
         retval.n_frames_in_dataset = convert(Vector{Int}, df[:n_frames_in_dataset])
@@ -539,11 +551,12 @@ type Trajdata
     end
 end
 
-nframes(trajdata::Trajdata) = maximum(keys(trajdata.frame2cars))
-carsinframe(trajdata::Trajdata, frame::Int) = get(trajdata.frame2cars, frame, Int[]) # NOTE: memory allocation!
+nframes(trajdata::Trajdata) = length(trajdata.frame2cars)
+frame_inbounds(trajdata::Trajdata, frame::Int) = 1 ≤ frame ≤ length(trajdata.frame2cars)
+carsinframe(trajdata::Trajdata, frame::Int) = trajdata.frame2cars[frame]
 nth_carid(trajdata::Trajdata, frame::Int, n::Int) = trajdata.frame2cars[frame][n]
 first_carid(trajdata::Trajdata, frame::Int) = nth_carid(trajdata, frame, 1)
-iscarinframe(trajdata::Trajdata, carid::Int, frame::Int) = haskey(trajdata.frame2cars, carid) && in(carid, trajdata.frame2cars[frame])
+iscarinframe(trajdata::Trajdata, carid::Int, frame::Int) = in(carid, trajdata.frame2cars[frame])
 
 function car_df_index(trajdata::Trajdata, carid::Int, frame::Int)
     #=
