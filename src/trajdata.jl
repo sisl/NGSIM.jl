@@ -222,15 +222,6 @@ function get_state_list_frenet(trajdata::TrajdataRaw, carid::Int, frames::Abstra
     retval
 end
 
-function project_posG_to_frenet!(posG::VecSE2, roadway::Roadway)
-    posF, laneid = project_to_closest_lane(posG, roadway)
-
-    extind = posF.x
-    curve = roadway.centerlines[laneid]
-    s = curve_at(curve, extind).s
-
-    Frenet(laneid, extind, s, posF.y, posF.θ)
-end
 function pull_vehicle_headings!(trajdata::TrajdataRaw;
     v_cutoff::Float64 = 2.5, # speeds below this will use a linearly interpolated heading [fps]
     smoothing_width::Float64 = 0.5, # [s]
@@ -576,16 +567,10 @@ function car_df_index(trajdata::Trajdata, carid::Int, frame::Int)
     lo = trajdata.car2start[carid]
     framestart = trajdata.frames[lo]
 
-    retval = 0
-
-    if framestart == frame
-        retval = lo
-    elseif frame ≥ framestart
-        retval = frame - framestart + lo
-        n_frames = trajdata.n_frames_in_dataset[lo]
-        if retval > lo + n_frames
-            retval = 0
-        end
+    retval = frame - framestart + lo
+    n_frames = trajdata.n_frames_in_dataset[lo]
+    if retval > lo + n_frames
+        retval = 0
     end
 
     retval

@@ -73,22 +73,22 @@ function get_neighbor_index_fore(scene::Scene, vehicle_index::Int;
 
     ego_state = scene.vehicles[vehicle_index].state
     active_laneid = ego_state.posF.laneid
-    curve = roadway.centerlines[active_laneid]
-    dist = -(curve_at(curve, ego_state.posF.extind).s) # [m] dist along curve from host inertial to base of footpoint
+    dist = -ego_state.posF.s # [m] dist along curve from host inertial to base of footpoint
 
     # walk forwards along the lanetag until we find a car in it or reach max dist
     while true
 
-        for (test_vehicle_index, veh_target) in enumerate(scene)
+        for test_vehicle_index in 1 : scene.n_vehicles
 
             if test_vehicle_index == vehicle_index
                 continue
             end
 
+            veh_target = scene.vehicles[test_vehicle_index]
             laneid_target = veh_target.state.posF.laneid
             if laneid_target == active_laneid
 
-                footpoint_s_target = curve_at(curve, veh_target.state.posF.extind).s
+                footpoint_s_target = veh_target.state.posF.s
                 cand_dist = dist + footpoint_s_target
 
                 if 0.0 < cand_dist < best_dist
@@ -114,8 +114,7 @@ function get_neighbor_index_rear(scene::Scene, vehicle_index::Int;
 
     veh = scene.vehicles[vehicle_index]
     active_laneid = veh.state.posF.laneid
-    curve = roadway.centerlines[active_laneid]
-    dist = curve_at(curve, veh.state.posF.extind).s # [m] dist along curve from host inertial to base of footpoint
+    dist = veh.state.posF.s # [m] dist along curve from host inertial to base of footpoint
 
     # walk forwards along the lanetag until we find a car in it or reach max dist
     while true
@@ -128,7 +127,7 @@ function get_neighbor_index_rear(scene::Scene, vehicle_index::Int;
             laneid_target = veh_target.state.posF.laneid
             if laneid_target == active_laneid
 
-                footpoint_s_target = curve_at(curve, veh_target.state.posF.extind).s
+                footpoint_s_target = veh_target.state.posF.s
                 cand_dist = dist - footpoint_s_target
                 if 0.0 < cand_dist < best_dist
                     best_dist = cand_dist
@@ -138,14 +137,6 @@ function get_neighbor_index_rear(scene::Scene, vehicle_index::Int;
         end
 
         break
-
-        # if !isinf(best_dist) || dist > max_dist || !has_prev_lane(sn, active_lane)
-        #     break
-        # end
-
-        # active_lane = prev_lane(sn, active_lane)
-        # active_lanetag = active_lane.id
-        # dist += active_lane.curve.s[end] # move full length
     end
 
     best_index

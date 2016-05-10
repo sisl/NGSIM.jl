@@ -244,6 +244,7 @@ function project_to_lane(posG::VecSE2, curve::Vector{CurvePt})
     # 2 - interpolate between points
     extind_curve = 0.0
     p_curve = VecSE2(NaN, NaN, NaN)
+
     if ind > 1 && ind < length(curve)
         t_lo = _proj_rel( curve[ind-1], curve[ind],   posG )
         t_hi = _proj_rel( curve[ind],   curve[ind+1], posG )
@@ -289,8 +290,8 @@ function project_to_closest_lane(posG::VecSE2, roadway::Roadway)
     best_posF = VecSE2(Inf, Inf, NaN)
     best_laneid = -1
 
-    for (laneid, curve) in enumerate(roadway.centerlines)
-        posF = project_to_lane(posG, curve)
+    for laneid in 1 : length(roadway.centerlines)
+        posF = project_to_lane(posG, roadway.centerlines[laneid])
 
         if abs(posF.y) < abs(best_posF.y)
             best_posF = posF
@@ -299,6 +300,15 @@ function project_to_closest_lane(posG::VecSE2, roadway::Roadway)
     end
 
     (best_posF, best_laneid)
+end
+function project_posG_to_frenet!(posG::VecSE2, roadway::Roadway)
+    posF, laneid = project_to_closest_lane(posG, roadway)
+
+    extind = posF.x
+    curve = roadway.centerlines[laneid]
+    s = curve_at(curve, extind).s
+
+    Frenet(laneid, extind, s, posF.y, posF.θ)
 end
 function curve_at(curve::Vector{CurvePt}, extind::Float64)
     ind_lo, ind_hi = _get_ind_lo_and_hi(curve, extind)
