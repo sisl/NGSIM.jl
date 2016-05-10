@@ -495,7 +495,7 @@ type Trajdata
         tdraw = load_trajdata_raw(filepath)
         df = tdraw.df
 
-        id_map = Dict{Int, Int} # maps old id to new id
+        id_map = Dict{Int, Int}() # maps old id to new id
 
         car2start = Array(Int, length(tdraw.car2start))
         vehicles = Array(Vehicle, length(tdraw.car2start))

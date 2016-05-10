@@ -20,6 +20,10 @@ Base.next(scene::Scene, i::Int) = (scene.vehicles[i], i+1)
 
 Base.length(scene::Scene) = scene.n_vehicles
 Base.getindex(scene::Scene, i::Int) = scene.vehicles[i]
+function Base.setindex!(scene::Scene, veh::Vehicle, i::Int)
+    scene.vehicles[i] = veh
+    scene
+end
 function Base.empty!(scene::Scene)
     scene.n_vehicles = 0
     scene
@@ -28,14 +32,14 @@ function Base.get!(scene::Scene, trajdata::Trajdata, frame::Int)
 
     scene.roadway_name = trajdata.roadway.name
 
-    if haskey(trajdata.frame2cars, frame)
+    if frame_inbounds(trajdata, frame)
         carids = trajdata.frame2cars[frame]
         scene.n_vehicles = length(carids)
         for i in 1 : scene.n_vehicles
             scene.vehicles[i] = get_vehicle(trajdata, carids[i], frame)
         end
     else
-        scene.n_vehicles = 0.0
+        scene.n_vehicles = 0
     end
 
     scene
@@ -155,9 +159,8 @@ function get_headway_dist_between(veh_rear::Vehicle, veh_fore::Vehicle, roadway:
     if veh_fore.state.posF.laneid != active_laneid
         NaN
     else
-        curve = roadway.centerlines[active_laneid]
-        s1 = curve_at(curve, veh_rear.state.posF.extind).s
-        s2 = curve_at(curve, veh_fore.state.posF.extind).s
+        s1 = veh_rear.state.posF.s
+        s2 = veh_fore.state.posF.s
         s2 - s1 - veh_fore.length
     end
 end
@@ -168,9 +171,8 @@ function get_headway_time_between(veh_rear::Vehicle, veh_fore::Vehicle, roadway:
     if veh_fore.state.posF.laneid != active_laneid
         NaN
     else
-        curve = roadway.centerlines[active_laneid]
-        s1 = curve_at(curve, veh_rear.state.posF.extind).s
-        s2 = curve_at(curve, veh_fore.state.posF.extind).s
+        s1 = veh_rear.state.posF.s
+        s2 = veh_fore.state.posF.s
         Δs = s2 - s1 - veh_fore.length
         Δs/veh_rear.state.v
     end
