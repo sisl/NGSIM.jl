@@ -14,9 +14,18 @@ type Scene
     end
 end
 
+# iteration
 Base.start(scene::Scene) = 1
 Base.done(scene::Scene, i::Int) = i > length(scene)
 Base.next(scene::Scene, i::Int) = (scene.vehicles[i], i+1)
+
+# copying
+function Base.copy!(dest::Scene, src::Scene)
+    copy!(dest.vehicles, 1, src.vehicles, 1, src.n_vehicles)
+    dest.n_vehicles = src.n_vehicles
+    dest.roadway_name = src.roadway_name
+    dest
+end
 
 Base.length(scene::Scene) = scene.n_vehicles
 Base.getindex(scene::Scene, i::Int) = scene.vehicles[i]
