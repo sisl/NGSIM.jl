@@ -150,6 +150,87 @@ function get_neighbor_index_rear(scene::Scene, vehicle_index::Int;
 
     best_index
 end
+function get_neighbor_index_left(scene::Scene, vehicle_index::Int, gap_lo::Float64, gap_hi::Float64,
+    GAP_T::Float64 = 5.0,  # [ft]
+    )
+
+    best_index = 0
+    bestΔs = Inf
+
+    veh = scene.vehicles[vehicle_index]
+    state = veh.state
+    posG = state.posG
+    posF = state.posF
+
+    footpoint = get_footpoint(veh)
+
+    right_lane_footpoint = footpoint + Vec.polar(2*GAP_T, footpoint.θ + π/2)
+
+    for test_index in 1 : length(scene)
+        if test_index != vehicle_index
+
+            state_test = scene.vehicles[test_index].state
+            if state_test.posF.laneid != posF.laneid
+
+                # project vehicle to right lane tangent
+                pos_rel = inertial2body(state_test.posG, right_lane_footpoint)
+                if gap_lo ≤ pos_rel.x ≤ gap_hi && abs(pos_rel.y) ≤ GAP_T && abs(pos_rel.x) ≤ bestΔs
+                    bestΔs = abs(pos_rel.x)
+                    best_index = test_index
+                end
+            end
+        end
+    end
+
+    best_index
+end
+function get_neighbor_index_right(scene::Scene, vehicle_index::Int, gap_lo::Float64, gap_hi::Float64,
+    GAP_T::Float64 =  3*1.8,  # [ft]
+    )
+
+    #=
+    Returns the index of the vehicle in the right-neighboring lane if it exists, otherwise returns 0
+
+    - vehicle must be in the neighboring lane
+    - vehicle must be within gap_lo ≤ s ≤ gap_hi
+    =#
+
+    # 1 - take the local tangent vector to your lane
+    # 2 - offset it by 2d_marker_right
+    # 3 - project all other vehicles to the linear-assumed lane
+    # 4 - retain the vehicle that is closest in s that falls within the lane boundary
+
+    best_index = 0
+    bestΔs = Inf
+
+    veh = scene.vehicles[vehicle_index]
+    state = veh.state
+    posG = state.posG
+    posF = state.posF
+
+    footpoint = get_footpoint(veh)
+
+    right_lane_footpoint = footpoint + Vec.polar(2*GAP_T, footpoint.θ - π/2)
+
+    for test_index in 1 : length(scene)
+        if test_index != vehicle_index
+
+            state_test = scene.vehicles[test_index].state
+            if state_test.posF.laneid != posF.laneid
+
+                # project vehicle to right lane tangent
+                pos_rel = inertial2body(state_test.posG, right_lane_footpoint)
+                if gap_lo ≤ pos_rel.x ≤ gap_hi && abs(pos_rel.y) ≤ GAP_T && abs(pos_rel.x) ≤ bestΔs
+                    bestΔs = abs(pos_rel.x)
+                    best_index = test_index
+                end
+            end
+        end
+    end
+
+    best_index
+end
+
 
 function get_headway_dist_between(veh_rear::Vehicle, veh_fore::Vehicle, roadway::Roadway)
 

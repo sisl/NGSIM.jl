@@ -32,6 +32,7 @@ export
     get_neighbor_laneid_left,
     get_neighbor_laneid_right,
 
+    NGSIM_TIMESTEP,
     SMOOTHING_WIDTH_POS,
     CLASS_MOTORCYCLE,
     CLASS_AUTOMOBILE,
@@ -48,6 +49,7 @@ export
     get_frame_range,
     get_index_of_first_vehicle_with_id,
     nframes,
+    frame_inbounds,
     carsinframe,
     carid_set,
     nth_carid,
@@ -55,12 +57,17 @@ export
     iscarinframe,
     car_df_index,
 
+    get_acceleration,
+    get_turnrate,
+
     get_state_list,
     get_state_list_global,
     get_state_list_frenet,
 
     get_neighbor_index_fore,
     get_neighbor_index_rear,
+    get_neighbor_index_left,
+    get_neighbor_index_right,
     get_headway_dist_between,
     get_headway_time_between,
 

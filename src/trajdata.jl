@@ -1,4 +1,5 @@
-const SMOOTHING_WIDTH_POS     = 0.5 # [s]
+const NGSIM_TIMESTEP = 0.1 # [sec]
+const SMOOTHING_WIDTH_POS = 0.5 # [s]
 
 const CLASS_MOTORCYCLE = 1
 const CLASS_AUTOMOBILE = 2
@@ -603,4 +604,30 @@ function get_vehicle(
     veh.state = trajdata.states[dfind]
 
     veh
+end
+
+function get_acceleration(trajdata::Trajdata, id::Int, frame::Int)
+    if frame == 1 || !frame_inbounds(trajdata, frame)
+        return 0.0 # no past info, assume zero
+    end
+
+    v_past = get_vehiclestate(trajdata, id, frame-1).v
+    v_curr = get_vehiclestate(trajdata, id, frame).v
+
+    (v_curr - v_past) / NGSIM_TIMESTEP # [ft/s²]
+end
+function get_turnrate(trajdata::Trajdata, id::Int, frame::Int, frenet::Bool=false)
+    if frame == 1 || !frame_inbounds(trajdata, frame)
+        return 0.0 # no past info, assume zero
+    end
+
+    if frenet
+        past = get_vehiclestate(trajdata, id, frame-1).posF.ϕ
+        curr = get_vehiclestate(trajdata, id, frame).posF.ϕ
+        (curr - past) / NGSIM_TIMESTEP # [ft/s²]
+    else # global frame
+        past = get_vehiclestate(trajdata, id, frame-1).posG.θ
+        curr = get_vehiclestate(trajdata, id, frame).posG.θ
+        (curr - past) / NGSIM_TIMESTEP # [ft/s²]
+    end
 end
