@@ -381,7 +381,12 @@ function Base.copy!(trajdata::TrajdataRaw, ftr::FilterTrajectoryResult)
     for i in 1 : N
         trajdata.df[dfstart + i - 1, :global_x] = ftr.x_arr[i]
         trajdata.df[dfstart + i - 1, :global_y] = ftr.y_arr[i]
-        trajdata.df[dfstart + i - 1, :speed]   = ftr.v_arr[i]
+        # trajdata.df[dfstart + i - 1, :speed]   = ftr.v_arr[i]
+        if i > 1
+            trajdata.df[dfstart + i - 1, :speed]   = hypot(ftr.x_arr[i] - ftr.x_arr[i-1], ftr.y_arr[i] - ftr.y_arr[i-1]) / NGSIM_TIMESTEP
+        else
+            trajdata.df[dfstart + i - 1, :speed]   = hypot(ftr.x_arr[i+1] - ftr.x_arr[i], ftr.y_arr[i+1] - ftr.y_arr[i]) / NGSIM_TIMESTEP
+        end
         trajdata.df[dfstart + i - 1, :global_heading] = ftr.θ_arr[i]
     end
 
@@ -607,7 +612,7 @@ function get_vehicle(
 end
 
 function get_acceleration(trajdata::Trajdata, id::Int, frame::Int)
-    if frame == 1 || !frame_inbounds(trajdata, frame)
+    if frame == 1 || !frame_inbounds(trajdata, frame) || !iscarinframe(trajdata, id, frame-1)
         return 0.0 # no past info, assume zero
     end
 
@@ -617,7 +622,7 @@ function get_acceleration(trajdata::Trajdata, id::Int, frame::Int)
     (v_curr - v_past) / NGSIM_TIMESTEP # [ft/s²]
 end
 function get_turnrate(trajdata::Trajdata, id::Int, frame::Int, frenet::Bool=false)
-    if frame == 1 || !frame_inbounds(trajdata, frame)
+    if frame == 1 || !frame_inbounds(trajdata, frame) || !iscarinframe(trajdata, id, frame-1)
         return 0.0 # no past info, assume zero
     end
 
