@@ -18,6 +18,7 @@ export
     VehicleState,
     Vehicle,
     Scene,
+    SceneRecord,
     FilterTrajectoryResult,
 
 
@@ -75,10 +76,15 @@ export
     filter_trajectory!,
     symmetric_exponential_moving_average!,
     load_trajdata_raw,
-    input_path_to_extracted_trajdata_csv
+    input_path_to_extracted_trajdata_csv,
+
+    record_length,
+    update!
+
 
 include("roadway.jl")
 include("trajdata.jl")
 include("scene.jl")
+include("scene_record.jl")
 
 end # module
