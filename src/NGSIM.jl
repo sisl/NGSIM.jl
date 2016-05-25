@@ -26,7 +26,7 @@ export
 
     project_to_lane,
     project_to_closest_lane,
-    project_posG_to_frenet!,
+    project_posG_to_frenet,
     curve_at,
     move_extind_along,
     get_neighbor_laneid_left,
@@ -57,8 +57,9 @@ export
     iscarinframe,
     car_df_index,
 
-    get_acceleration,
     get_turnrate,
+    get_acceleration,
+    get_acceleration_lon,
 
     get_state_list,
     get_state_list_global,

@@ -301,7 +301,7 @@ function project_to_closest_lane(posG::VecSE2, roadway::Roadway)
 
     (best_posF, best_laneid)
 end
-function project_posG_to_frenet!(posG::VecSE2, roadway::Roadway)
+function project_posG_to_frenet(posG::VecSE2, roadway::Roadway)
     posF, laneid = project_to_closest_lane(posG, roadway)
 
     extind = posF.x

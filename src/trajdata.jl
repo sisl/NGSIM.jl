@@ -77,6 +77,15 @@ type Vehicle
     state::VehicleState
 
     Vehicle() = new(0, 0, NaN, NaN, VehicleState())
+    function Vehicle(
+        id::Int,
+        class::Int,
+        length::Float64,
+        width::Float64,
+        state::VehicleState=VehicleState()
+        )
+        new(id, class, length, width, state)
+    end
 end
 
 get_footpoint(veh::Vehicle) = veh.state.posG + polar(veh.state.posF.t, veh.state.posG.θ-veh.state.posF.ϕ-π/2)
@@ -297,7 +306,7 @@ function pull_vehicle_frenet_data!(trajdata::TrajdataRaw)
         θ = df[i, :global_heading]
 
         posG = VecSE2(x,y,θ)
-        frenet = project_posG_to_frenet!(posG, trajdata.roadway)
+        frenet = project_posG_to_frenet(posG, trajdata.roadway)
 
         df[i, :laneid] = frenet.laneid
         df[i, :frenet_extind] = frenet.extind
@@ -589,20 +598,13 @@ function get_frame_range(trajdata::Trajdata, carid::Int)
 
     framestart:frameend
 end
-function get_vehiclestate(
-    trajdata::Trajdata,
-    carid::Int,
-    frame::Int,
-    )
+function get_vehiclestate(trajdata::Trajdata, carid::Int, frame::Int)
 
-    dfind = car_df_index(trajdata, carid, frame)
+    dfind = car_df_index(trajdata, carid::Int, frame::Int)
     trajdata.states[dfind]
 end
-function get_vehicle(
-    trajdata::Trajdata,
-    carid::Int,
-    frame::Int,
-    )
+get_vehicle(trajdata::Trajdata, carid::Int) = trajdata.vehicles[carid]
+function get_vehicle(trajdata::Trajdata, carid::Int, frame::Int)
 
     veh = trajdata.vehicles[carid]
     dfind = car_df_index(trajdata, carid, frame)
@@ -611,16 +613,6 @@ function get_vehicle(
     veh
 end
 
-function get_acceleration(trajdata::Trajdata, id::Int, frame::Int)
-    if frame == 1 || !frame_inbounds(trajdata, frame) || !iscarinframe(trajdata, id, frame-1)
-        return 0.0 # no past info, assume zero
-    end
-
-    v_past = get_vehiclestate(trajdata, id, frame-1).v
-    v_curr = get_vehiclestate(trajdata, id, frame).v
-
-    (v_curr - v_past) / NGSIM_TIMESTEP # [ft/s²]
-end
 function get_turnrate(trajdata::Trajdata, id::Int, frame::Int, frenet::Bool=false)
     if frame == 1 || !frame_inbounds(trajdata, frame) || !iscarinframe(trajdata, id, frame-1)
         return 0.0 # no past info, assume zero
@@ -635,4 +627,31 @@ function get_turnrate(trajdata::Trajdata, id::Int, frame::Int, frenet::Bool=fals
         curr = get_vehiclestate(trajdata, id, frame).posG.θ
         (curr - past) / NGSIM_TIMESTEP # [ft/s²]
     end
+end
+function get_acceleration(trajdata::Trajdata, id::Int, frame::Int)
+    if frame == 1 || !frame_inbounds(trajdata, frame) || !iscarinframe(trajdata, id, frame-1)
+        return 0.0 # no past info, assume zero
+    end
+
+    v_past = get_vehiclestate(trajdata, id, frame-1).v
+    v_curr = get_vehiclestate(trajdata, id, frame).v
+
+    (v_curr - v_past) / NGSIM_TIMESTEP # [ft/s²]
+end
+function get_acceleration_lon(trajdata::Trajdata, id::Int, frame::Int)
+    if frame == 1 || !frame_inbounds(trajdata, frame) || !iscarinframe(trajdata, id, frame-1)
+        return 0.0 # no past info, assume zero
+    end
+
+
+    s_past = get_vehiclestate(trajdata, id, frame-1)
+    s_curr = get_vehiclestate(trajdata, id, frame)
+
+    curve = trajdata.roadway.centerlines[s_curr.posF.laneid]
+    proj = project_to_lane(s_curr.posG, curve)
+
+    v_past = s_past.v * cos(s_past.posF.ϕ)
+    v_curr = s_curr.v * cos(proj.θ)
+
+    (v_curr - v_past) / NGSIM_TIMESTEP # [ft/s²]
 end
