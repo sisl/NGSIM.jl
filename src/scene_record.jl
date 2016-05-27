@@ -143,8 +143,6 @@ function get_neighbor_index_fore(rec::SceneRecord, vehicle_index::Int, pastframe
     This finds the closest vehicle in the same lane based on footpoint and lanetag
     =#
 
-    roadway = get_roadway(rec)
-
     j = _state_ind(pastframe)
     ego_state = rec.states[vehicle_index, j]
     active_laneid = ego_state.posF.laneid
@@ -177,8 +175,6 @@ function get_neighbor_index_fore(rec::SceneRecord, vehicle_index::Int, pastframe
     best_index
 end
 function get_neighbor_index_rear(rec::SceneRecord, vehicle_index::Int, pastframe::Int=0)
-
-    roadway = get_roadway(rec)
 
     j = _state_ind(pastframe)
     ego_state = rec.states[vehicle_index, j]
@@ -289,6 +285,67 @@ function get_neighbor_index_right(rec::SceneRecord, vehicle_index::Int, gap_lo::
     end
 
     best_index
+end
+
+function get_gap(dir::Symbol, rec::SceneRecord, vehicle_index::Int, gap_lo::Float64, gap_hi::Float64, pastframe::Int=0;
+    GAP_T::Float64 = 5.0,  # [ft]
+    )
+
+    #=
+    Computes the lane change gap to the left, the headway distance between the vehicles to your left
+        NOTE: dir is either :left or :right
+    =#
+
+    best_index_fore = 0
+    best_index_rear = 0
+    bestΔs_fore =  Inf
+    bestΔs_rear = -Inf
+
+    j = _state_ind(pastframe)
+    veh = rec[vehicle_index, pastframe]
+    posG = veh.state.posG
+    posF = veh.state.posF
+
+    footpoint = get_footpoint(veh)
+
+    @assert(dir == :left || dir == :right)
+    if dir == :left
+        lane_footpoint = footpoint + Vec.polar(2*GAP_T, footpoint.θ + π/2)
+    else
+        lane_footpoint = footpoint + Vec.polar(2*GAP_T, footpoint.θ - π/2)
+    end
+
+    for test_index in 1 : rec.n_vehicles[j]
+        if test_index != vehicle_index
+
+            veh_test = rec[test_index, pastframe]
+            state_test = veh_test.state
+            if state_test.posF.laneid != posF.laneid # not in the same lane
+
+                # project vehicle to right lane tangent
+                pos_rel = inertial2body(state_test.posG, lane_footpoint)
+
+                # if a rear vehicle
+                rear_loc = pos_rel.x - veh_test.length
+                if gap_lo ≤ rear_loc ≤ 0.0 && abs(pos_rel.y) ≤ GAP_T && rear_loc > bestΔs_rear
+                    bestΔs_rear = rear_loc
+                    best_index_rear = test_index
+                end
+
+                # if a fore vehicle
+                if 0.0 ≤ pos_rel.x ≤ gap_hi && abs(pos_rel.y) ≤ GAP_T && pos_rel.x < bestΔs_fore
+                    bestΔs_rear = pos_rel.x
+                    best_index_fore = test_index
+                end
+            end
+        end
+    end
+
+    if best_index_fore != 0 && best_index_rear != 0
+        return get_headway_dist_between(rec[best_index_rear, pastframe], rec[best_index_fore, pastframe])
+    end
+
+    NaN # no vehicle pair to the left
 end
 
 function get_acceleration(rec::SceneRecord, id::Int, pastframe::Int=0)

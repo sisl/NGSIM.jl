@@ -44,6 +44,8 @@ export
     get_vehiclestate,
     get_roadway,
 
+    get_vel_s,
+    get_vel_t,
     get_extind,
     get_footpoint,
     get_center,
@@ -62,6 +64,9 @@ export
     get_acceleration,
     get_acceleration_lon,
 
+    get_headway_dist_between,
+    get_headway_time_between,
+
     get_state_list,
     get_state_list_global,
     get_state_list_frenet,
@@ -70,8 +75,7 @@ export
     get_neighbor_index_rear,
     get_neighbor_index_left,
     get_neighbor_index_right,
-    get_headway_dist_between,
-    get_headway_time_between,
+    get_gap,
 
     filter_trajectory!,
     symmetric_exponential_moving_average!,
@@ -83,6 +87,7 @@ export
 
 
 include("roadway.jl")
+include("vehicles.jl")
 include("trajdata.jl")
 include("scene.jl")
 include("scene_record.jl")

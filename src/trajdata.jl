@@ -51,45 +51,6 @@ const TRAJDATA_INPUT_PATHS = [
     "/media/tim/DATAPART1/Data/NGSIM/HW101/US-101-Main-Data/vehicle-trajectory-data/0820am-0835am/trajectories-0820am-0835am.txt",
 ]
 
-###############
-
-immutable Frenet
-    laneid::Int
-    extind::Float64
-    s::Float64 # distance along lane
-    t::Float64 # lane offset, positive is to left
-    ϕ::Float64 # lane relative heading
-end
-immutable VehicleState
-    posG::VecSE2 # global
-    posF::Frenet # (extind,t,ϕ)
-    v::Float64
-
-    VehicleState() = new(VecSE2(), Frenet(-1, NaN, NaN, NaN, NaN), NaN)
-    VehicleState(posG::VecSE2, v::Float64) = new(posG, Frenet(-1, NaN, NaN, NaN, NaN), v)
-    VehicleState(posG::VecSE2, posF::Frenet, v::Float64) = new(posG, posF, v)
-end
-type Vehicle
-    id::Int
-    class::Int # ∈ (1-motorcycle, 2-auto, 3-truck)
-    length::Float64
-    width::Float64
-    state::VehicleState
-
-    Vehicle() = new(0, 0, NaN, NaN, VehicleState())
-    function Vehicle(
-        id::Int,
-        class::Int,
-        length::Float64,
-        width::Float64,
-        state::VehicleState=VehicleState()
-        )
-        new(id, class, length, width, state)
-    end
-end
-
-get_footpoint(veh::Vehicle) = veh.state.posG + polar(veh.state.posF.t, veh.state.posG.θ-veh.state.posF.ϕ-π/2)
-get_center(veh::Vehicle) = veh.state.posG + polar(veh.length/2, veh.state.posG.θ+π)
 
 ###############
 
