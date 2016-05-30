@@ -21,7 +21,9 @@ Base.next(scene::Scene, i::Int) = (scene.vehicles[i], i+1)
 
 # copying
 function Base.copy!(dest::Scene, src::Scene)
-    copy!(dest.vehicles, 1, src.vehicles, 1, src.n_vehicles)
+    for i in 1 : src.n_vehicles
+        dest.vehicles[i] = deepcopy(src.vehicles[i])
+    end
     dest.n_vehicles = src.n_vehicles
     dest.roadway_name = src.roadway_name
     dest
@@ -51,6 +53,13 @@ function Base.get!(scene::Scene, trajdata::Trajdata, frame::Int)
         scene.n_vehicles = 0
     end
 
+    scene
+end
+function Base.deleteat!(scene::Scene, vehicle_index::Int)
+    for i in vehicle_index : scene.n_vehicles - 1
+        scene.vehicles[i] = scene.vehicles[i+1]
+    end
+    scene.n_vehicles -= 1
     scene
 end
 
