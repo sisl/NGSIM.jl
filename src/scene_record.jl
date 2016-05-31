@@ -122,17 +122,21 @@ function update!(rec::SceneRecord, scene::Scene)
 end
 
 function Base.get!(scene::Scene, rec::SceneRecord, pastframe::Int=0)
-    scene.roadway_name = rec.roadway_name
 
     j = _state_ind(pastframe)
+    n_veh = 0
     for i in 1 : rec.n_vehicles[j]
-        id = rec.ids[i,j]
-        veh = deepcopy(rec.vehicles[id])
-        veh.state = rec.states[i,j]
-        scene.vehicles[i] = veh
+        state = rec.states[i,j]
+        if !isnan(state.posG.x)
+            id = rec.ids[i,j]
+            veh = deepcopy(rec.vehicles[id])
+            veh.state = state
+            scene.vehicles[n_veh += 1] = veh
+        end
     end
 
-    scene.n_vehicles = rec.n_vehicles[j]
+    scene.n_vehicles = n_veh
+    scene.roadway_name = rec.roadway_name
 
     scene
 end
