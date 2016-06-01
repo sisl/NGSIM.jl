@@ -1,7 +1,7 @@
 const FLOATING_POINT_REGEX = r"[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)?"
 
 immutable CurvePt
-    pos::VecSE2 # global position
+    pos::VecSE2 # global position and orientation
     s::Float64 # distance along curve
 end
 Vec.lerp(a::CurvePt, b::CurvePt, t::Float64) = CurvePt(lerp(a.pos, b.pos, t), a.s + (b.s - a.s)*t)
@@ -275,7 +275,7 @@ function project_to_lane(posG::VecSE2, curve::Vector{CurvePt})
     # 3 - compute frenet value
     d = hypot(p_curve - posG)
 
-    dyaw = mod2pi( atan2( posG - p_curve ) - posG.θ )
+    dyaw = _mod2pi2( atan2( posG - p_curve ) - posG.θ )
 
     on_left_side = abs(_mod2pi2(dyaw - pi/2)) < abs(_mod2pi2(dyaw - 3pi/2))
     d *= on_left_side ? 1.0 : -1.0 # left side is positive, right side is negative
@@ -365,25 +365,33 @@ function move_extind_along(extind::Float64, curve::Vector{CurvePt}, Δs::Float64
 
     if Δs > 0.0
 
-        while s + Δs > s_hi && ind_hi < L
-            Δs -= (s_hi - s)
-            s = s_hi
-            ind_lo += 1
-            ind_hi += 1
-            s_lo = curve[ind_lo].s
-            s_hi = curve[ind_hi].s
+        if s + Δs > s_hi && ind_hi < L
+            while s + Δs > s_hi && ind_hi < L
+                Δs -= (s_hi - s)
+                s = s_hi
+                ind_lo += 1
+                ind_hi += 1
+                s_lo = curve[ind_lo].s
+                s_hi = curve[ind_hi].s
+            end
+        else
+            Δs = s + Δs - s_lo
         end
 
         t = Δs/(s_hi - s_lo)
         extind = lerp(ind_lo, ind_hi, t)
     elseif Δs < 0.0
-        while s + Δs < s_lo  && ind_lo > 1
-            Δs += (s - s_lo)
-            s = s_lo
-            ind_lo -= 1
-            ind_hi -= 1
-            s_lo = curve[ind_lo].s
-            s_hi = curve[ind_hi].s
+        if s + Δs < s_lo  && ind_lo > 1
+            while s + Δs < s_lo  && ind_lo > 1
+                Δs += (s - s_lo)
+                s = s_lo
+                ind_lo -= 1
+                ind_hi -= 1
+                s_lo = curve[ind_lo].s
+                s_hi = curve[ind_hi].s
+            end
+        else
+            Δs = s + Δs - s_lo
         end
 
         t = 1.0 - Δs/(s_hi - s_lo)
