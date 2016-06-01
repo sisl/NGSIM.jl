@@ -599,6 +599,23 @@ function get_acceleration(trajdata::Trajdata, id::Int, frame::Int)
 
     (v_curr - v_past) / NGSIM_TIMESTEP # [ft/s²]
 end
+function get_acceleration_lat(trajdata::Trajdata, id::Int, frame::Int)
+    if frame == 1 || !frame_inbounds(trajdata, frame) || !iscarinframe(trajdata, id, frame-1)
+        return 0.0 # no past info, assume zero
+    end
+
+
+    s_past = get_vehiclestate(trajdata, id, frame-1)
+    s_curr = get_vehiclestate(trajdata, id, frame)
+
+    curve = trajdata.roadway.centerlines[s_curr.posF.laneid]
+    proj = project_to_lane(s_curr.posG, curve)
+
+    v_past = s_past.v * sin(s_past.posF.ϕ)
+    v_curr = s_curr.v * sin(proj.θ)
+
+    (v_curr - v_past) / NGSIM_TIMESTEP # [ft/s²]
+end
 function get_acceleration_lon(trajdata::Trajdata, id::Int, frame::Int)
     if frame == 1 || !frame_inbounds(trajdata, frame) || !iscarinframe(trajdata, id, frame-1)
         return 0.0 # no past info, assume zero
