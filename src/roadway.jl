@@ -117,8 +117,8 @@ function get_roadway_for_trajdata(input_path::AbstractString)
     end
 end
 
-function _mod2pi2(X::Float64)
-    val = mod2pi(X)
+function _mod2pi2(x::Float64)
+    val = mod2pi(x)
     if val > pi
         val -= 2pi
     end
