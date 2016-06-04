@@ -1,10 +1,3 @@
-immutable Frenet
-    laneid::Int
-    extind::Float64
-    s::Float64 # distance along lane
-    t::Float64 # lane offset, positive is to left
-    ϕ::Float64 # lane relative heading
-end
 immutable VehicleState
     posG::VecSE2 # global
     posF::Frenet # (extind,t,ϕ)

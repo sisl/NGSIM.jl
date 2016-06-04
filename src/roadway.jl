@@ -6,6 +6,26 @@ immutable CurvePt
 end
 Vec.lerp(a::CurvePt, b::CurvePt, t::Float64) = CurvePt(lerp(a.pos, b.pos, t), a.s + (b.s - a.s)*t)
 
+immutable Frenet
+    laneid::Int
+    extind::Float64
+    s::Float64 # distance along lane
+    t::Float64 # lane offset, positive is to left
+    ϕ::Float64 # lane relative heading
+end
+function Base.isapprox(a::Frenet, b::Frenet;
+    rtol::Real=cbrt(eps(Float64)),
+    atol::Real=sqrt(eps(Float64))
+    )
+    
+    a.laneid == b.laneid &&
+    isapprox(a.extind, b.extind, atol=atol, rtol=rtol) &&
+    isapprox(a.s, b.s, atol=atol, rtol=rtol) &&
+    isapprox(a.t, b.t, atol=atol, rtol=rtol) &&
+    isapprox(a.ϕ, b.ϕ, atol=atol, rtol=rtol)
+end
+
+
 type Roadway
     name::Symbol
     boundaries::Vector{Vector{VecE2}}
@@ -175,7 +195,6 @@ function _binary_search_curve_dist2(
 
     a # dead code
 end
-
 function _proj_rel( P₀::VecE2, P₁::VecE2, Q::VecE2 )
 
     #=
@@ -221,6 +240,102 @@ function _get_ind_lo_and_hi(curve::Vector{CurvePt}, extind::Float64)
     (ind_lo, ind_hi)
 end
 
+function curve_at(curve::Vector{CurvePt}, extind::Float64)
+    ind_lo, ind_hi = _get_ind_lo_and_hi(curve, extind)
+    curvept_lo = curve[ind_lo]
+    curvept_hi = curve[ind_hi]
+    t = extind - ind_lo
+    lerp(curvept_lo, curvept_hi, t)
+end
+function get_extind(curve::Vector{CurvePt}, s::Float64)
+
+    # get the extind for the closest s-location on the curve
+
+    if s < 0.0
+        return 1.0
+    elseif s > curve[end].s
+        return convert(Float64, length(curve))
+    end
+
+    a = 1
+    b = length(curve)
+
+    fa = curve[a].s - s
+    fb = curve[b].s - s
+
+    n = 1
+    while true
+        if b == a+1
+            return a + -fa/(fb-fa)
+        end
+
+        c = div(a+b, 2)
+        fc = curve[c].s - s
+        n += 1
+
+        if sign(fc) == sign(fa)
+            a, fa = c, fc
+        else
+            b, fb = c, fc
+        end
+    end
+
+    error("get_extind failed")
+    NaN
+end
+function move_extind_along(extind::Float64, curve::Vector{CurvePt}, Δs::Float64)
+
+    L = length(curve)
+    ind_lo, ind_hi = _get_ind_lo_and_hi(curve, extind)
+
+    s_lo = curve[ind_lo].s
+    s_hi = curve[ind_hi].s
+    s = lerp(s_lo, s_hi, extind-ind_lo)
+
+    if Δs > 0.0
+
+        if s + Δs > s_hi && ind_hi < L
+            while s + Δs > s_hi && ind_hi < L
+                Δs -= (s_hi - s)
+                s = s_hi
+                ind_lo += 1
+                ind_hi += 1
+                s_lo = curve[ind_lo].s
+                s_hi = curve[ind_hi].s
+            end
+        else
+            Δs = s + Δs - s_lo
+        end
+
+        t = Δs/(s_hi - s_lo)
+        extind = lerp(ind_lo, ind_hi, t)
+    elseif Δs < 0.0
+        if s + Δs < s_lo  && ind_lo > 1
+            while s + Δs < s_lo  && ind_lo > 1
+                Δs += (s - s_lo)
+                s = s_lo
+                ind_lo -= 1
+                ind_hi -= 1
+                s_lo = curve[ind_lo].s
+                s_hi = curve[ind_hi].s
+            end
+        else
+            Δs = s + Δs - s_lo
+        end
+
+        t = 1.0 - Δs/(s_hi - s_lo)
+        extind = lerp(ind_lo, ind_hi, t)
+    end
+
+    clamp(extind, 1.0, L)
+end
+
+
+immutable CurveProjection
+    extind::Float64
+    t::Float64 # lane offset
+    ϕ::Float64 # lane-relative heading
+end
 function project_to_lane(posG::VecSE2, curve::Vector{CurvePt})
 
     # 1 - find the index of the point closest to the curve
@@ -270,18 +385,17 @@ function project_to_lane(posG::VecSE2, curve::Vector{CurvePt})
 
     yaw = _mod2pi2(posG.θ-p_curve.θ)
 
-    # 4 - return Frenet pt {extind, d, yaw}
-    VecSE2(extind_curve, d, yaw)
+    CurveProjection(extind_curve, d, yaw)
 end
 function project_to_closest_lane(posG::VecSE2, roadway::Roadway)
 
-    best_posF = VecSE2(Inf, Inf, NaN) # extind, t, yaw
+    best_posF = CurveProjection(Inf, Inf, NaN)
     best_laneid = -1
 
     for laneid in 1 : length(roadway.centerlines)
         posF = project_to_lane(posG, roadway.centerlines[laneid])
 
-        if abs(posF.y) < abs(best_posF.y)
+        if abs(posF.t) < abs(best_posF.t)
             best_posF = posF
             best_laneid = laneid
         end
@@ -292,101 +406,11 @@ end
 function project_posG_to_frenet(posG::VecSE2, roadway::Roadway)
     posF, laneid = project_to_closest_lane(posG, roadway)
 
-    extind = posF.x
+    extind = posF.extind
     curve = roadway.centerlines[laneid]
     s = curve_at(curve, extind).s
 
-    Frenet(laneid, extind, s, posF.y, posF.θ)
-end
-function curve_at(curve::Vector{CurvePt}, extind::Float64)
-    ind_lo, ind_hi = _get_ind_lo_and_hi(curve, extind)
-    curvept_lo = curve[ind_lo]
-    curvept_hi = curve[ind_hi]
-    t = extind - ind_lo
-    lerp(curvept_lo, curvept_hi, t)
-end
-function get_extind(curve::Vector{CurvePt}, s::Float64)
-
-    # get the extind for the closest s-location on the curve
-
-    if s < 0.0
-        return 1.0
-    elseif s > curve[end].s
-        return convert(Float64, length(curve))
-    end
-
-    a = 1
-    b = length(curve)
-
-    fa = curve[a].s - s
-    fb = curve[b].s - s
-
-    n = 1
-    while true
-        if b == a+1
-            return a + -fa/(fb-fa)
-        end
-
-        c = div(a+b, 2)
-        fc = curve[c].s - s
-        n += 1
-
-        if sign(fc) == sign(fa)
-            a = c
-        else
-            b = c
-        end
-    end
-
-    error("get_extind failed")
-    NaN
-end
-
-function move_extind_along(extind::Float64, curve::Vector{CurvePt}, Δs::Float64)
-
-    L = length(curve)
-    ind_lo, ind_hi = _get_ind_lo_and_hi(curve, extind)
-
-    s_lo = curve[ind_lo].s
-    s_hi = curve[ind_hi].s
-    s = lerp(s_lo, s_hi, extind-ind_lo)
-
-    if Δs > 0.0
-
-        if s + Δs > s_hi && ind_hi < L
-            while s + Δs > s_hi && ind_hi < L
-                Δs -= (s_hi - s)
-                s = s_hi
-                ind_lo += 1
-                ind_hi += 1
-                s_lo = curve[ind_lo].s
-                s_hi = curve[ind_hi].s
-            end
-        else
-            Δs = s + Δs - s_lo
-        end
-
-        t = Δs/(s_hi - s_lo)
-        extind = lerp(ind_lo, ind_hi, t)
-    elseif Δs < 0.0
-        if s + Δs < s_lo  && ind_lo > 1
-            while s + Δs < s_lo  && ind_lo > 1
-                Δs += (s - s_lo)
-                s = s_lo
-                ind_lo -= 1
-                ind_hi -= 1
-                s_lo = curve[ind_lo].s
-                s_hi = curve[ind_hi].s
-            end
-        else
-            Δs = s + Δs - s_lo
-        end
-
-        t = 1.0 - Δs/(s_hi - s_lo)
-        extind = lerp(ind_lo, ind_hi, t)
-    end
-
-    clamp(extind, 1.0, L)
+    Frenet(laneid, extind, s, posF.t, posF.ϕ)
 end
 
 function get_neighbor_laneid_left(roadway::Roadway, laneid::Int, extind::Float64)
