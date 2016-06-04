@@ -22,6 +22,7 @@ _state_ind(pastframe::Int) = 1 - pastframe
 
 function Base.empty!(rec::SceneRecord)
     fill!(rec.n_vehicles, 0)
+    empty!(rec.vehicles)
     rec
 end
 

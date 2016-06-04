@@ -127,27 +127,18 @@ end
 function _binary_search_curve_dist2(
     centerline::Vector{CurvePt},
     target::AbstractVec,
-    sq_dist_threshold::Float64 = 0.1 # if dist is less than this we know we have the closest point
     )
 
     a = 1
     b = length(centerline)
+    c = div(a+b, 2)
 
     @assert(length(centerline) ≥ b)
 
     sqdist_a = abs2(centerline[a].pos - target)
     sqdist_b = abs2(centerline[b].pos - target)
-
-    if b == a
-        return a
-    elseif b == a + 1
-        return sqdist_b < sqdist_a ? b : a
-    end
-
-    c = div(a+b, 2)
     sqdist_c = abs2(centerline[c].pos - target)
 
-    n = 1
     while true
         if b == a
             return a
@@ -166,16 +157,10 @@ function _binary_search_curve_dist2(
         left = div(a+c, 2)
         sqdist_l = abs2(centerline[left].pos - target)
 
-        if sqdist_l < sq_dist_threshold
-            return left
-        end
-
         right = div(c+b, 2)
         sqdist_r = abs2(centerline[right].pos - target)
 
-        if sqdist_r < sq_dist_threshold
-            return right
-        elseif sqdist_l < sqdist_r
+        if sqdist_l < sqdist_r
             b = c
             sqdist_b = sqdist_c
             c = left
@@ -188,7 +173,7 @@ function _binary_search_curve_dist2(
         end
     end
 
-    a
+    a # dead code
 end
 
 function _proj_rel( P₀::VecE2, P₁::VecE2, Q::VecE2 )
@@ -197,8 +182,8 @@ function _proj_rel( P₀::VecE2, P₁::VecE2, Q::VecE2 )
     Project the point (Q - P₀) onto (P₁ - P₀) and return the relative distance along
     =#
 
-    b = P₁ - P₀
     a = Q - P₀
+    b = P₁ - P₀
 
     c = proj(a, b, VecE2)
 
@@ -244,6 +229,7 @@ function project_to_lane(posG::VecSE2, curve::Vector{CurvePt})
     # 2 - interpolate between points
     extind_curve = 0.0
     p_curve = VecSE2(NaN, NaN, NaN)
+    d = NaN
 
     if ind > 1 && ind < length(curve)
         t_lo = _proj_rel( curve[ind-1], curve[ind],   posG )
@@ -257,24 +243,26 @@ function project_to_lane(posG::VecSE2, curve::Vector{CurvePt})
 
         if d_lo < d_hi
             p_curve = p_lo
-            extind_curve = ind-1.0+t_lo
+            d = d_lo
+            extind_curve = ind-1+t_lo
         else
             p_curve = p_hi
+            d = d_hi
             extind_curve = ind+t_hi
         end
     elseif ind == 1
-        t = _proj_rel( curve[ind], curve[ind+1], posG )
-        p_curve = lerp( curve[ind].pos, curve[ind+1].pos, t)
+        t = _proj_rel( curve[1], curve[2], posG )
+        p_curve = lerp( curve[1].pos, curve[2].pos, t)
+        d = hypot(p_curve - posG)
         extind_curve = ind + t
     else
-        t = _proj_rel( curve[ind-1], curve[ind], posG )
-        p_curve = lerp( curve[ind-1].pos, curve[ind].pos, t)
-        extind_curve = ind - 1.0 + t
+        t = _proj_rel( curve[end-1], curve[end], posG )
+        p_curve = lerp( curve[end-1].pos, curve[end].pos, t)
+        d = hypot(p_curve - posG)
+        extind_curve = ind-1 + t
     end
 
     # 3 - compute frenet value
-    d = hypot(p_curve - posG)
-
     dyaw = _mod2pi2( atan2( posG - p_curve ) - posG.θ )
 
     on_left_side = abs(_mod2pi2(dyaw - pi/2)) < abs(_mod2pi2(dyaw - 3pi/2))
@@ -287,7 +275,7 @@ function project_to_lane(posG::VecSE2, curve::Vector{CurvePt})
 end
 function project_to_closest_lane(posG::VecSE2, roadway::Roadway)
 
-    best_posF = VecSE2(Inf, Inf, NaN)
+    best_posF = VecSE2(Inf, Inf, NaN) # extind, t, yaw
     best_laneid = -1
 
     for laneid in 1 : length(roadway.centerlines)
