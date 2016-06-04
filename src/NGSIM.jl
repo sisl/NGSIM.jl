@@ -62,6 +62,7 @@ export
 
     get_turnrate,
     get_acceleration,
+    get_acceleration_lat,
     get_acceleration_lon,
 
     get_headway_dist_between,
