@@ -3,33 +3,33 @@ p = lerp(CurvePt(VecSE2(0.0,0.0,0.0), 0.0), CurvePt(VecSE2(1.0,2.0,3.0), 4.0), 0
 @test isapprox(p.pos.θ, 0.75)
 @test isapprox(p.s, 1.0)
 
-@test isapprox(_mod2pi2(0.0), 0.0)
-@test isapprox(_mod2pi2(0.5), 0.5)
-@test isapprox(_mod2pi2(2pi + 1), 1.0)
-@test isapprox(_mod2pi2(1 - 2pi), 1.0)
+@test isapprox(NGSIM._mod2pi2(0.0), 0.0)
+@test isapprox(NGSIM._mod2pi2(0.5), 0.5)
+@test isapprox(NGSIM._mod2pi2(2pi + 1), 1.0)
+@test isapprox(NGSIM._mod2pi2(1 - 2pi), 1.0)
 
 centerline = [CurvePt(VecSE2(0.0,0.0,0.0), 0.0),
 			  CurvePt(VecSE2(1.0,0.0,0.0), 1.0),
 			  CurvePt(VecSE2(3.0,0.0,0.0), 3.0)]
-@test _binary_search_curve_dist2(centerline, VecE2(0.0,0.0)) == 1
-@test _binary_search_curve_dist2(centerline, VecE2(1.0,0.0)) == 2
-@test _binary_search_curve_dist2(centerline, VecE2(2.1,0.0)) == 3
-@test _binary_search_curve_dist2(centerline, VecE2(0.49,0.0)) == 1
-@test _binary_search_curve_dist2(centerline, VecE2(1.9,-100.0)) == 2
-@test _binary_search_curve_dist2(centerline, VecSE2(1.9,-100.0,0.0)) == 2
-@test _binary_search_curve_dist2(centerline, VecSE2(-1.0,0.0,0.0)) == 1
+@test NGSIM._binary_search_curve_dist2(centerline, VecE2(0.0,0.0)) == 1
+@test NGSIM._binary_search_curve_dist2(centerline, VecE2(1.0,0.0)) == 2
+@test NGSIM._binary_search_curve_dist2(centerline, VecE2(2.1,0.0)) == 3
+@test NGSIM._binary_search_curve_dist2(centerline, VecE2(0.49,0.0)) == 1
+@test NGSIM._binary_search_curve_dist2(centerline, VecE2(1.9,-100.0)) == 2
+@test NGSIM._binary_search_curve_dist2(centerline, VecSE2(1.9,-100.0,0.0)) == 2
+@test NGSIM._binary_search_curve_dist2(centerline, VecSE2(-1.0,0.0,0.0)) == 1
 
-@test isapprox(_proj_rel(VecE2(0.0,0.0), VecE2(1.0,0.0), VecE2(1.0,0.0)), 1.0)
-@test isapprox(_proj_rel(VecE2(0.0,0.0), VecE2(1.0,0.0), VecE2(0.5,0.0)), 0.5)
-@test isapprox(_proj_rel(VecE2(0.0,0.0), VecE2(1.0,0.0), VecE2(0.5,0.5)), 0.5)
-@test isapprox(_proj_rel(VecE2(0.0,0.0), VecE2(1.0,1.0), VecE2(0.5,0.5)), 0.5)
-@test isapprox(_proj_rel(VecE2(1.0,0.0), VecE2(2.0,0.0), VecE2(1.5,0.5)), 0.5)
-@test isapprox(_proj_rel(VecE2(0.0,0.0), VecE2(-1.0,0.0), VecE2(1.0,0.0)), 0.0)
-@test isapprox(_proj_rel(VecE2(0.0,0.0), VecE2(-1.0,0.0), VecE2(-0.75,0.0)), 0.75)
+@test isapprox(NGSIM._proj_rel(VecE2(0.0,0.0), VecE2(1.0,0.0), VecE2(1.0,0.0)), 1.0)
+@test isapprox(NGSIM._proj_rel(VecE2(0.0,0.0), VecE2(1.0,0.0), VecE2(0.5,0.0)), 0.5)
+@test isapprox(NGSIM._proj_rel(VecE2(0.0,0.0), VecE2(1.0,0.0), VecE2(0.5,0.5)), 0.5)
+@test isapprox(NGSIM._proj_rel(VecE2(0.0,0.0), VecE2(1.0,1.0), VecE2(0.5,0.5)), 0.5)
+@test isapprox(NGSIM._proj_rel(VecE2(1.0,0.0), VecE2(2.0,0.0), VecE2(1.5,0.5)), 0.5)
+@test isapprox(NGSIM._proj_rel(VecE2(0.0,0.0), VecE2(-1.0,0.0), VecE2(1.0,0.0)), 0.0)
+@test isapprox(NGSIM._proj_rel(VecE2(0.0,0.0), VecE2(-1.0,0.0), VecE2(-0.75,0.0)), 0.75)
 
-@test _get_ind_lo_and_hi(centerline, 1.0) == (1,2)
-@test _get_ind_lo_and_hi(centerline, 2.5) == (2,3)
-@test _get_ind_lo_and_hi(centerline, 3.0) == (2,3)
+@test NGSIM._get_ind_lo_and_hi(centerline, 1.0) == (1,2)
+@test NGSIM._get_ind_lo_and_hi(centerline, 2.5) == (2,3)
+@test NGSIM._get_ind_lo_and_hi(centerline, 3.0) == (2,3)
 
 @test isapprox(get_extind(centerline, 0.0), 1.0)
 @test isapprox(get_extind(centerline, 1.0), 2.0)
