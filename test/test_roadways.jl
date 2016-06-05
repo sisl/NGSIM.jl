@@ -39,7 +39,7 @@ centerline = [CurvePt(VecSE2(0.0,0.0,0.0), 0.0),
 
 @test isapprox(move_extind_along(1.0, centerline, 0.25), 1.25)
 @test isapprox(move_extind_along(1.0, centerline, 1.25), 2.125)
-@test isapprox(move_extind_along(1.5, centerline, 1.5), 2.25)
+@test isapprox(move_extind_along(1.5, centerline, 1.5), 2.5)
 
 res = project_to_lane(VecSE2(0.0,0.0,0.0), centerline)
 @test isapprox(res.extind, 1.0)
