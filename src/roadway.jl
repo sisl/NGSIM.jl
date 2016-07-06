@@ -17,7 +17,7 @@ function Base.isapprox(a::Frenet, b::Frenet;
     rtol::Real=cbrt(eps(Float64)),
     atol::Real=sqrt(eps(Float64))
     )
-    
+
     a.laneid == b.laneid &&
     isapprox(a.extind, b.extind, atol=atol, rtol=rtol) &&
     isapprox(a.s, b.s, atol=atol, rtol=rtol) &&
@@ -195,15 +195,15 @@ function _binary_search_curve_dist2(
 
     a # dead code
 end
-function _proj_rel( P₀::VecE2, P₁::VecE2, Q::VecE2 )
 
-    #=
-    Project the point (Q - P₀) onto (P₁ - P₀) and return the relative distance along
-    =#
+"""
+    get_lerp_time(A::VecE2, B::VecE2, Q::VecE2)
+Get lerp time t∈[0,1] such that lerp(A, B) is as close as possible to Q
+"""
+function get_lerp_time(A::VecE2, B::VecE2, Q::VecE2)
 
-    a = Q - P₀
-    b = P₁ - P₀
-
+    a = Q - A
+    b = B - A
     c = proj(a, b, VecE2)
 
     if b.x != 0.0
@@ -214,7 +214,7 @@ function _proj_rel( P₀::VecE2, P₁::VecE2, Q::VecE2 )
 
     clamp(t, 0.0, 1.0)
 end
-_proj_rel( P₀::CurvePt, P₁::CurvePt, Q::VecSE2 ) = _proj_rel(convert(VecE2, P₀.pos), convert(VecE2, P₁.pos), convert(VecE2, Q))
+get_lerp_time(A::CurvePt, B::CurvePt, Q::VecSE2) = get_lerp_time(convert(VecE2, A.pos), convert(VecE2, B.pos), convert(VecE2, Q))
 
 function _get_ind_lo_and_hi(curve::Vector{CurvePt}, extind::Float64)
     ind_lo = floor(Int, extind)
@@ -347,8 +347,8 @@ function project_to_lane(posG::VecSE2, curve::Vector{CurvePt})
     d = NaN
 
     if ind > 1 && ind < length(curve)
-        t_lo = _proj_rel( curve[ind-1], curve[ind],   posG )
-        t_hi = _proj_rel( curve[ind],   curve[ind+1], posG )
+        t_lo = get_lerp_time( curve[ind-1], curve[ind],   posG )
+        t_hi = get_lerp_time( curve[ind],   curve[ind+1], posG )
 
         p_lo = lerp( curve[ind-1].pos, curve[ind].pos,   t_lo )
         p_hi = lerp( curve[ind].pos,   curve[ind+1].pos, t_hi )
@@ -366,12 +366,12 @@ function project_to_lane(posG::VecSE2, curve::Vector{CurvePt})
             extind_curve = ind+t_hi
         end
     elseif ind == 1
-        t = _proj_rel( curve[1], curve[2], posG )
+        t = get_lerp_time( curve[1], curve[2], posG )
         p_curve = lerp( curve[1].pos, curve[2].pos, t)
         d = hypot(p_curve - posG)
         extind_curve = ind + t
     else
-        t = _proj_rel( curve[end-1], curve[end], posG )
+        t = get_lerp_time( curve[end-1], curve[end], posG )
         p_curve = lerp( curve[end-1].pos, curve[end].pos, t)
         d = hypot(p_curve - posG)
         extind_curve = ind-1 + t
