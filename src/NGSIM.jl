@@ -59,6 +59,7 @@ export
     first_carid,
     iscarinframe,
     car_df_index,
+    vehicle_ids,
 
     get_turnrate,
     get_acceleration,

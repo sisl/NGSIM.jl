@@ -533,6 +533,7 @@ carsinframe(trajdata::Trajdata, frame::Int) = trajdata.frame2cars[frame]
 nth_carid(trajdata::Trajdata, frame::Int, n::Int) = trajdata.frame2cars[frame][n]
 first_carid(trajdata::Trajdata, frame::Int) = nth_carid(trajdata, frame, 1)
 iscarinframe(trajdata::Trajdata, carid::Int, frame::Int) = in(carid, trajdata.frame2cars[frame])
+vehicle_ids(trajdata::Trajdata) = 1:length(trajdata.vehicles)
 
 function car_df_index(trajdata::Trajdata, carid::Int, frame::Int)
     #=
