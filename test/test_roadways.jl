@@ -19,13 +19,13 @@ centerline = [CurvePt(VecSE2(0.0,0.0,0.0), 0.0),
 @test NGSIM._binary_search_curve_dist2(centerline, VecSE2(1.9,-100.0,0.0)) == 2
 @test NGSIM._binary_search_curve_dist2(centerline, VecSE2(-1.0,0.0,0.0)) == 1
 
-@test isapprox(NGSIM._proj_rel(VecE2(0.0,0.0), VecE2(1.0,0.0), VecE2(1.0,0.0)), 1.0)
-@test isapprox(NGSIM._proj_rel(VecE2(0.0,0.0), VecE2(1.0,0.0), VecE2(0.5,0.0)), 0.5)
-@test isapprox(NGSIM._proj_rel(VecE2(0.0,0.0), VecE2(1.0,0.0), VecE2(0.5,0.5)), 0.5)
-@test isapprox(NGSIM._proj_rel(VecE2(0.0,0.0), VecE2(1.0,1.0), VecE2(0.5,0.5)), 0.5)
-@test isapprox(NGSIM._proj_rel(VecE2(1.0,0.0), VecE2(2.0,0.0), VecE2(1.5,0.5)), 0.5)
-@test isapprox(NGSIM._proj_rel(VecE2(0.0,0.0), VecE2(-1.0,0.0), VecE2(1.0,0.0)), 0.0)
-@test isapprox(NGSIM._proj_rel(VecE2(0.0,0.0), VecE2(-1.0,0.0), VecE2(-0.75,0.0)), 0.75)
+@test isapprox(NGSIM.get_lerp_time(VecE2(0.0,0.0), VecE2(1.0,0.0), VecE2(1.0,0.0)), 1.0)
+@test isapprox(NGSIM.get_lerp_time(VecE2(0.0,0.0), VecE2(1.0,0.0), VecE2(0.5,0.0)), 0.5)
+@test isapprox(NGSIM.get_lerp_time(VecE2(0.0,0.0), VecE2(1.0,0.0), VecE2(0.5,0.5)), 0.5)
+@test isapprox(NGSIM.get_lerp_time(VecE2(0.0,0.0), VecE2(1.0,1.0), VecE2(0.5,0.5)), 0.5)
+@test isapprox(NGSIM.get_lerp_time(VecE2(1.0,0.0), VecE2(2.0,0.0), VecE2(1.5,0.5)), 0.5)
+@test isapprox(NGSIM.get_lerp_time(VecE2(0.0,0.0), VecE2(-1.0,0.0), VecE2(1.0,0.0)), 0.0)
+@test isapprox(NGSIM.get_lerp_time(VecE2(0.0,0.0), VecE2(-1.0,0.0), VecE2(-0.75,0.0)), 0.75)
 
 @test NGSIM._get_ind_lo_and_hi(centerline, 1.0) == (1,2)
 @test NGSIM._get_ind_lo_and_hi(centerline, 2.5) == (2,3)
