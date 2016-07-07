@@ -75,6 +75,14 @@ function get_index_of_first_vehicle_with_id(scene::Scene, id::Int)
     end
     retval
 end
+function get_by_id(scene::Scene, id::Int)
+    for i in 1 : scene.n_vehicles
+        if scene.vehicles[i].id == id
+            return scene.vehicles[i]
+        end
+    end
+    error("vehicle not found!")
+end
 function get_neighbor_index_fore(scene::Scene, vehicle_index::Int;
     max_dist = 1000.0 # [ft]
     )

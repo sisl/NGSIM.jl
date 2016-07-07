@@ -51,6 +51,7 @@ export
     get_center,
     get_frame_range,
     get_index_of_first_vehicle_with_id,
+    get_by_id,
     nframes,
     frame_inbounds,
     carsinframe,
