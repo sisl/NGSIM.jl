@@ -50,23 +50,13 @@ type NGSIMTrajdata
 
         @assert(isfile(input_path))
 
-        if splitext(input_path)[2] == ".txt" # txt is original
-            df = readtable(input_path, separator=' ', header = false)
-            col_names = [:id, :frame, :n_frames_in_dataset, :epoch, :local_x, :local_y, :global_x, :global_y, :length, :width, :class, :speed, :acc, :lane, :carind_front, :carind_rear, :dist_headway, :time_headway]
-            for (i,name) in enumerate(col_names)
-                rename!(df, symbol(@sprintf("x%d", i)), name)
-            end
-
-            df[:global_heading] = fill(NaN, nrow(df))
-            df[:laneid] = fill(-1, nrow(df))
-            df[:frenet_extind] = fill(NaN, nrow(df))
-            df[:frenet_s] = fill(NaN, nrow(df))
-            df[:frenet_t] = fill(NaN, nrow(df))
-            df[:frenet_heading] = fill(NaN, nrow(df))
-        else
-            @assert(splitext(input_path)[2] == ".csv")
-            df = readtable(input_path) # csv file is exported after extracting everything
+        df = readtable(input_path, separator=' ', header = false)
+        col_names = [:id, :frame, :n_frames_in_dataset, :epoch, :local_x, :local_y, :global_x, :global_y, :length, :width, :class, :speed, :acc, :lane, :carind_front, :carind_rear, :dist_headway, :time_headway]
+        for (i,name) in enumerate(col_names)
+            rename!(df, symbol(@sprintf("x%d", i)), name)
         end
+
+        df[:global_heading] = fill(NaN, nrow(df))
 
         car2start = Dict{Int, Int}()
         frame2cars = Dict{Int, Vector{Int}}()
@@ -317,7 +307,7 @@ function Base.convert(::Type{Trajdata}, tdraw::NGSIMTrajdata)
     frames = Array(TrajdataFrame, nframes(tdraw))
 
     for (id, dfind) in tdraw.car2start
-        vehdefs[id] = VehicleDef(id, df[dfind, :class], df[dfind, :length], df[dfind, :width])
+        vehdefs[id] = VehicleDef(id, df[dfind, :class], df[dfind, :length]*METERS_PER_FOOT, df[dfind, :width]*METERS_PER_FOOT)
     end
 
     state_ind = 0
@@ -328,8 +318,8 @@ function Base.convert(::Type{Trajdata}, tdraw::NGSIMTrajdata)
         for id in carsinframe(tdraw, frame)
             dfind = car_df_index(tdraw, id, frame)
 
-            posG = VecSE2(df[dfind, :global_x], df[dfind, :global_y], df[dfind, :global_heading])
-            speed = df[dfind, :speed]
+            posG = VecSE2(df[dfind, :global_x]*METERS_PER_FOOT, df[dfind, :global_y]*METERS_PER_FOOT, df[dfind, :global_heading])
+            speed = df[dfind, :speed]*METERS_PER_FOOT
 
             states[state_ind += 1] = TrajdataState(id, VehicleState(posG, tdraw.roadway, speed))
         end
@@ -375,7 +365,7 @@ const TRAJDATA_PATHS = [
 
 function load_trajdata(filepath::AbstractString)
     td = open(io->read(io, Trajdata), filepath, "r")
-    td.roadway = startswith(splitdir(filepath)[2], "i101") ? ROADWAY_101 : ROADWAY_80
+    td.roadway = startswith(splitdir(filepath)[2], "trajdata_i101") ? ROADWAY_101 : ROADWAY_80
     td
 end
 load_trajdata(i::Int) = load_trajdata(TRAJDATA_PATHS[i])

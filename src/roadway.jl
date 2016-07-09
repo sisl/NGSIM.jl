@@ -1,4 +1,5 @@
 const FLOATING_POINT_REGEX = r"[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)?"
+const METERS_PER_FOOT = 0.3048
 
 type NGSIMRoadway
     name::Symbol
@@ -30,8 +31,8 @@ function read_boundaries(io::IO)
         line = Array(VecE2, npts)
         for j in 1 : npts
             matches = matchall(FLOATING_POINT_REGEX, lines[line_index+=1])
-            x = parse(Float64, matches[1])
-            y = parse(Float64, matches[2])
+            x = parse(Float64, matches[1]) * METERS_PER_FOOT # convert to meters
+            y = parse(Float64, matches[2]) * METERS_PER_FOOT
             line[j] = VecE2(x,y)
         end
         retval[i] = line
@@ -59,8 +60,8 @@ function read_centerlines(io::IO)
         line = Array(VecE2, npts)
         for j in 1 : npts
             matches = matchall(FLOATING_POINT_REGEX, lines[line_index+=1])
-            x = parse(Float64, matches[1])
-            y = parse(Float64, matches[2])
+            x = parse(Float64, matches[1]) * METERS_PER_FOOT # convert to meters
+            y = parse(Float64, matches[2]) * METERS_PER_FOOT # convert to meters
             line[j] = VecE2(x,y)
         end
 
@@ -126,6 +127,19 @@ function write_lwpolyline(io::IO, pts::Vector{CurvePt}, handle_int::Int, is_clos
     end
 end
 
+function convert_curves_feet_to_meters!(roadway::Roadway)
+    for seg in roadway.segments
+        for lane in seg.lanes
+            for (i,P) in enumerate(lane.curve)
+                lane.curve[i] = CurvePt(
+                        VecSE2(P.pos.x*METERS_PER_FOOT, P.pos.y*METERS_PER_FOOT, P.pos.θ),
+                        P.s*METERS_PER_FOOT, P.k/METERS_PER_FOOT, P.kd/METERS_PER_FOOT)
+            end
+        end
+    end
+    roadway
+end
+
 function write_dxf(io::IO, roadway::NGSIMRoadway)
 
     lines = open(readlines, Pkg.dir("NGSIM", "data", "template.dxf"))
@@ -162,8 +176,12 @@ function write_roadways_to_dxf()
 end
 function write_roadways_from_dxf()
 
-    roadway_80 = open(io->read_dxf(io, Roadway), Pkg.dir("NGSIM", "data", "ngsim_80.dxf"), "r")
-    roadway_101 = open(io->read_dxf(io, Roadway), Pkg.dir("NGSIM", "data", "ngsim_101.dxf"), "r")
+    roadway_80 = open(io->read_dxf(io, Roadway, dist_threshold_lane_connect=2.0), Pkg.dir("NGSIM", "data", "ngsim_80.dxf"), "r")
+    roadway_101 = open(io->read_dxf(io, Roadway, dist_threshold_lane_connect=2.0), Pkg.dir("NGSIM", "data", "ngsim_101.dxf"), "r")
+
+    # also converts to meters
+    convert_curves_feet_to_meters!(roadway_80)
+    convert_curves_feet_to_meters!(roadway_101)
 
     open(io->write(io, roadway_80), Pkg.dir("NGSIM", "data", "ngsim_80.txt"), "w")
     open(io->write(io, roadway_101), Pkg.dir("NGSIM", "data", "ngsim_101.txt"), "w")
