@@ -1,98 +1,33 @@
+VERSION >= v"0.4.0-dev+6521" && __precompile__(true)
+
+
 module NGSIM
 
-using Vec
+using AutomotiveDrivingModels
 using DataFrames
 using Distributions
 
 export
-    CurvePt,
-    Roadway,
+    NGSIMRoadway,
+    RoadwayInputParams,
+
     ROADWAY_80,
     ROADWAY_101,
-    ROADWAY_DICT,
 
-    TrajdataRaw,
-    Trajdata,
-    Frenet,
+    NGSIMTrajdata,
     VehicleSystem,
-    VehicleState,
-    Vehicle,
-    Scene,
-    SceneRecord,
     FilterTrajectoryResult,
 
-
-    read_roadway,
-    get_roadway_for_trajdata,
-
-    project_to_lane,
-    project_to_closest_lane,
-    project_posG_to_frenet,
-    curve_at,
-    move_extind_along,
-    get_neighbor_laneid_left,
-    get_neighbor_laneid_right,
-
+    TRAJDATA_PATHS,
     NGSIM_TIMESTEP,
-    SMOOTHING_WIDTH_POS,
-    CLASS_MOTORCYCLE,
-    CLASS_AUTOMOBILE,
-    CLASS_TRUCKORBUS,
-
-    get_vehicle,
-    get_vehicle!,
-    get_vehiclestate,
-    get_roadway,
-
-    get_vel_s,
-    get_vel_t,
-    get_extind,
-    get_footpoint,
-    get_center,
-    get_frame_range,
-    get_index_of_first_vehicle_with_id,
-    get_by_id,
-    nframes,
-    frame_inbounds,
-    carsinframe,
-    carid_set,
-    nth_carid,
-    first_carid,
-    iscarinframe,
-    car_df_index,
-    vehicle_ids,
-
-    get_turnrate,
-    get_acceleration,
-    get_acceleration_lat,
-    get_acceleration_lon,
-
-    get_headway_dist_between,
-    get_headway_time_between,
-
-    get_state_list,
-    get_state_list_global,
-    get_state_list_frenet,
-
-    get_neighbor_index_fore,
-    get_neighbor_index_rear,
-    get_neighbor_index_left,
-    get_neighbor_index_right,
-    get_gap,
 
     filter_trajectory!,
     symmetric_exponential_moving_average!,
-    load_trajdata_raw,
-    input_path_to_extracted_trajdata_csv,
-
-    record_length,
-    update!
+    load_ngsim_trajdata,
+    load_trajdata
 
 
 include("roadway.jl")
-include("vehicles.jl")
 include("trajdata.jl")
-include("scene.jl")
-include("scene_record.jl")
 
 end # module

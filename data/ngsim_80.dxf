@@ -1,0 +1,20984 @@
+999
+dxfrw 0.6.3
+  0
+SECTION
+  2
+HEADER
+  9
+$ACADVER
+  1
+AC1021
+  9
+$DWGCODEPAGE
+  3
+ANSI_1252
+  9
+$INSBASE
+ 10
+0
+ 20
+0
+ 30
+0
+  9
+$EXTMIN
+ 10
+6042421.774
+ 20
+2131048.718
+ 30
+0
+  9
+$EXTMAX
+ 10
+6043470.316
+ 20
+2135911.031
+ 30
+0
+  9
+$LIMMIN
+ 10
+0
+ 20
+0
+  9
+$LIMMAX
+ 10
+420
+ 20
+297
+  9
+$ORTHOMODE
+ 70
+    0
+  9
+$REGENMODE
+ 70
+    1
+  9
+$FILLMODE
+ 70
+    1
+  9
+$QTEXTMODE
+ 70
+    0
+  9
+$MIRRTEXT
+ 70
+    0
+  9
+$LTSCALE
+ 40
+1
+  9
+$ATTMODE
+ 70
+    0
+  9
+$TEXTSIZE
+ 40
+2.5
+  9
+$TRACEWID
+ 40
+15.68
+  9
+$TEXTSTYLE
+  7
+STANDARD
+  9
+$CLAYER
+  8
+seg004
+  9
+$CELTYPE
+  6
+BYLAYER
+  9
+$CECOLOR
+ 62
+  256
+  9
+$CELTSCALE
+ 40
+1
+  9
+$DISPSILH
+ 70
+    0
+  9
+$DIMSCALE
+ 40
+2.5
+  9
+$DIMASZ
+ 40
+2.5
+  9
+$DIMEXO
+ 40
+0.625
+  9
+$DIMDLI
+ 40
+3.75
+  9
+$DIMRND
+ 40
+0
+  9
+$DIMDLE
+ 40
+0
+  9
+$DIMEXE
+ 40
+1.25
+  9
+$DIMTP
+ 40
+0
+  9
+$DIMTM
+ 40
+0
+  9
+$DIMTXT
+ 40
+2.5
+  9
+$DIMCEN
+ 40
+2.5
+  9
+$DIMTSZ
+ 40
+0
+  9
+$DIMTOL
+ 70
+    0
+  9
+$DIMLIM
+ 70
+    0
+  9
+$DIMTIH
+ 70
+    0
+  9
+$DIMTOH
+ 70
+    0
+  9
+$DIMSE1
+ 70
+    0
+  9
+$DIMSE2
+ 70
+    0
+  9
+$DIMTAD
+ 70
+    1
+  9
+$DIMZIN
+ 70
+    8
+  9
+$DIMBLK
+  1
+
+  9
+$DIMASO
+ 70
+    1
+  9
+$DIMSHO
+ 70
+    1
+  9
+$DIMPOST
+  1
+
+  9
+$DIMAPOST
+  1
+
+  9
+$DIMALT
+ 70
+    0
+  9
+$DIMALTD
+ 70
+    3
+  9
+$DIMALTF
+ 40
+0.03937
+  9
+$DIMLFAC
+ 40
+1
+  9
+$DIMTOFL
+ 70
+    1
+  9
+$DIMTVP
+ 40
+0
+  9
+$DIMTIX
+ 70
+    0
+  9
+$DIMSOXD
+ 70
+    0
+  9
+$DIMSAH
+ 70
+    0
+  9
+$DIMBLK1
+  1
+
+  9
+$DIMBLK2
+  1
+
+  9
+$DIMSTYLE
+  2
+Standard
+  9
+$DIMCLRD
+ 70
+    0
+  9
+$DIMCLRE
+ 70
+    0
+  9
+$DIMCLRT
+ 70
+    0
+  9
+$DIMTFAC
+ 40
+1
+  9
+$DIMGAP
+ 40
+0.625
+  9
+$DIMJUST
+ 70
+    0
+  9
+$DIMSD1
+ 70
+    0
+  9
+$DIMSD2
+ 70
+    0
+  9
+$DIMTOLJ
+ 70
+    0
+  9
+$DIMTZIN
+ 70
+    8
+  9
+$DIMALTZ
+ 70
+    0
+  9
+$DIMALTTZ
+ 70
+    0
+  9
+$DIMUPT
+ 70
+    0
+  9
+$DIMDEC
+ 70
+    4
+  9
+$DIMTDEC
+ 70
+    2
+  9
+$DIMALTU
+ 70
+    2
+  9
+$DIMALTTD
+ 70
+    3
+  9
+$DIMTXSTY
+  7
+STANDARD
+  9
+$DIMAUNIT
+ 70
+    0
+  9
+$DIMADEC
+ 70
+    0
+  9
+$DIMALTRND
+ 40
+0
+  9
+$DIMAZIN
+ 70
+    0
+  9
+$DIMDSEP
+ 70
+   44
+  9
+$DIMATFIT
+ 70
+    3
+  9
+$DIMFRAC
+ 70
+    0
+  9
+$DIMLDRBLK
+  1
+STANDARD
+  9
+$DIMLUNIT
+ 70
+    2
+  9
+$DIMLWD
+ 70
+   -2
+  9
+$DIMLWE
+ 70
+   -2
+  9
+$DIMTMOVE
+ 70
+    0
+  9
+$DIMFXL
+ 40
+1
+  9
+$DIMFXLON
+ 70
+    0
+  9
+$DIMJOGANG
+ 40
+0.7854
+  9
+$DIMTFILL
+ 70
+    0
+  9
+$DIMTFILLCLR
+ 70
+    0
+  9
+$DIMARCSYM
+ 70
+    0
+  9
+$DIMLTYPE
+  6
+
+  9
+$DIMLTEX1
+  6
+
+  9
+$DIMLTEX2
+  6
+
+  9
+$LUNITS
+ 70
+    2
+  9
+$LUPREC
+ 70
+    4
+  9
+$SKETCHINC
+ 40
+1
+  9
+$FILLETRAD
+ 40
+0
+  9
+$AUNITS
+ 70
+    0
+  9
+$AUPREC
+ 70
+    2
+  9
+$MENU
+  1
+.
+  9
+$ELEVATION
+ 40
+0
+  9
+$PELEVATION
+ 40
+0
+  9
+$THICKNESS
+ 40
+0
+  9
+$LIMCHECK
+ 70
+    0
+  9
+$CHAMFERA
+ 40
+0
+  9
+$CHAMFERB
+ 40
+0
+  9
+$CHAMFERC
+ 40
+0
+  9
+$CHAMFERD
+ 40
+0
+  9
+$SKPOLY
+ 70
+    0
+  9
+$USRTIMER
+ 70
+    1
+  9
+$ANGBASE
+ 50
+0
+  9
+$ANGDIR
+ 70
+    0
+  9
+$PDMODE
+ 70
+   34
+  9
+$PDSIZE
+ 40
+0
+  9
+$PLINEWID
+ 40
+0
+  9
+$SPLFRAME
+ 70
+    0
+  9
+$SPLINETYPE
+ 70
+    2
+  9
+$SPLINESEGS
+ 70
+    8
+  9
+$HANDSEED
+  5
+20000
+  9
+$SURFTAB1
+ 70
+    6
+  9
+$SURFTAB2
+ 70
+    6
+  9
+$SURFTYPE
+ 70
+    6
+  9
+$SURFU
+ 70
+    6
+  9
+$SURFV
+ 70
+    6
+  9
+$UCSBASE
+  2
+
+  9
+$UCSNAME
+  2
+
+  9
+$UCSORG
+ 10
+0
+ 20
+0
+ 30
+0
+  9
+$UCSXDIR
+ 10
+1
+ 20
+0
+ 30
+0
+  9
+$UCSYDIR
+ 10
+0
+ 20
+1
+ 30
+0
+  9
+$UCSORTHOREF
+  2
+
+  9
+$UCSORTHOVIEW
+ 70
+    0
+  9
+$UCSORGTOP
+ 10
+0
+ 20
+0
+ 30
+0
+  9
+$UCSORGBOTTOM
+ 10
+0
+ 20
+0
+ 30
+0
+  9
+$UCSORGLEFT
+ 10
+0
+ 20
+0
+ 30
+0
+  9
+$UCSORGRIGHT
+ 10
+0
+ 20
+0
+ 30
+0
+  9
+$UCSORGFRONT
+ 10
+0
+ 20
+0
+ 30
+0
+  9
+$UCSORGBACK
+ 10
+0
+ 20
+0
+ 30
+0
+  9
+$PUCSBASE
+  2
+
+  9
+$PUCSNAME
+  2
+
+  9
+$PUCSORG
+ 10
+0
+ 20
+0
+ 30
+0
+  9
+$PUCSXDIR
+ 10
+1
+ 20
+0
+ 30
+0
+  9
+$PUCSYDIR
+ 10
+0
+ 20
+1
+ 30
+0
+  9
+$PUCSORTHOREF
+  2
+
+  9
+$PUCSORTHOVIEW
+ 70
+    0
+  9
+$PUCSORGTOP
+ 10
+0
+ 20
+0
+ 30
+0
+  9
+$PUCSORGBOTTOM
+ 10
+0
+ 20
+0
+ 30
+0
+  9
+$PUCSORGLEFT
+ 10
+0
+ 20
+0
+ 30
+0
+  9
+$PUCSORGRIGHT
+ 10
+0
+ 20
+0
+ 30
+0
+  9
+$PUCSORGFRONT
+ 10
+0
+ 20
+0
+ 30
+0
+  9
+$PUCSORGBACK
+ 10
+0
+ 20
+0
+ 30
+0
+  9
+$USERI1
+ 70
+    0
+  9
+$USERI2
+ 70
+    0
+  9
+$USERI3
+ 70
+    0
+  9
+$USERI4
+ 70
+    0
+  9
+$USERI5
+ 70
+    0
+  9
+$USERR1
+ 40
+0
+  9
+$USERR2
+ 40
+0
+  9
+$USERR3
+ 40
+0
+  9
+$USERR4
+ 40
+0
+  9
+$USERR5
+ 40
+0
+  9
+$WORLDVIEW
+ 70
+    1
+  9
+$SHADEDGE
+ 70
+    3
+  9
+$SHADEDIF
+ 70
+   70
+  9
+$TILEMODE
+ 70
+    1
+  9
+$MAXACTVP
+ 70
+   64
+  9
+$PINSBASE
+ 10
+0
+ 20
+0
+ 30
+0
+  9
+$PLIMCHECK
+ 70
+    0
+  9
+$PEXTMIN
+ 10
+0
+ 20
+0
+ 30
+0
+  9
+$PEXTMAX
+ 10
+0
+ 20
+0
+ 30
+0
+  9
+$GRIDMODE
+ 70
+    0
+  9
+$SNAPSTYLE
+ 70
+    0
+  9
+$PLIMMIN
+ 10
+0
+ 20
+0
+  9
+$PLIMMAX
+ 10
+210
+ 20
+297
+  9
+$UNITMODE
+ 70
+    0
+  9
+$VISRETAIN
+ 70
+    1
+  9
+$PLINEGEN
+ 70
+    0
+  9
+$PSLTSCALE
+ 70
+    1
+  9
+$TREEDEPTH
+ 70
+ 3020
+  9
+$CMLSTYLE
+  2
+Standard
+  9
+$CMLJUST
+ 70
+    0
+  9
+$CMLSCALE
+ 40
+20
+  9
+$PROXYGRAPHICS
+ 70
+    1
+  9
+$MEASUREMENT
+ 70
+    1
+  9
+$CELWEIGHT
+370
+   -1
+  9
+$ENDCAPS
+280
+    0
+  9
+$JOINSTYLE
+280
+    0
+  9
+$LWDISPLAY
+290
+    0
+  9
+$INSUNITS
+ 70
+    4
+  9
+$HYPERLINKBASE
+  1
+
+  9
+$STYLESHEET
+  1
+
+  9
+$XEDIT
+290
+    1
+  9
+$CEPSNTYPE
+380
+    0
+  9
+$PSTYLEMODE
+290
+    1
+  9
+$EXTNAMES
+290
+    1
+  9
+$PSVPSCALE
+ 40
+1
+  9
+$OLESTARTUP
+290
+    0
+  9
+$SORTENTS
+280
+  127
+  9
+$INDEXCTL
+280
+    0
+  9
+$HIDETEXT
+280
+    1
+  9
+$XCLIPFRAME
+290
+    0
+  9
+$HALOGAP
+280
+    0
+  9
+$OBSCOLOR
+ 70
+  257
+  9
+$OBSLTYPE
+280
+    0
+  9
+$INTERSECTIONDISPLAY
+280
+    0
+  9
+$INTERSECTIONCOLOR
+ 70
+  257
+  9
+$DIMASSOC
+280
+    1
+  9
+$PROJECTNAME
+  1
+
+  9
+$CAMERADISPLAY
+290
+    0
+  9
+$LENSLENGTH
+ 40
+50
+  9
+$CAMERAHEIGHT
+ 40
+0
+  9
+$STEPSPERSEC
+ 40
+2
+  9
+$STEPSIZE
+ 40
+50
+  9
+$3DDWFPREC
+ 40
+2
+  9
+$PSOLWIDTH
+ 40
+5
+  9
+$PSOLHEIGHT
+ 40
+80
+  9
+$LOFTANG1
+ 40
+1.570796326794897
+  9
+$LOFTANG2
+ 40
+1.570796326794897
+  9
+$LOFTMAG1
+ 40
+0
+  9
+$LOFTMAG2
+ 40
+0
+  9
+$LOFTPARAM
+ 70
+    7
+  9
+$LOFTNORMALS
+280
+    1
+  9
+$LATITUDE
+ 40
+1
+  9
+$LONGITUDE
+ 40
+1
+  9
+$NORTHDIRECTION
+ 40
+0
+  9
+$TIMEZONE
+ 70
+-8000
+  9
+$LIGHTGLYPHDISPLAY
+280
+    1
+  9
+$TILEMODELIGHTSYNCH
+280
+    1
+  9
+$SOLIDHIST
+280
+    1
+  9
+$SHOWHIST
+280
+    1
+  9
+$DWFFRAME
+280
+    2
+  9
+$DGNFRAME
+280
+    0
+  9
+$REALWORLDSCALE
+290
+    1
+  9
+$INTERFERECOLOR
+ 62
+    1
+  9
+$CSHADOW
+280
+    0
+  9
+$SHADOWPLANELOCATION
+ 40
+0
+  0
+ENDSEC
+  0
+SECTION
+  2
+CLASSES
+  0
+ENDSEC
+  0
+SECTION
+  2
+TABLES
+  0
+TABLE
+  2
+VPORT
+  5
+8
+330
+0
+100
+AcDbSymbolTable
+ 70
+    1
+  0
+VPORT
+  5
+31
+330
+2
+100
+AcDbSymbolTableRecord
+100
+AcDbViewportTableRecord
+  2
+*ACTIVE
+ 70
+    0
+ 10
+0
+ 20
+0
+ 11
+1
+ 21
+1
+ 12
+3021475.554188448
+ 22
+1068077.766955103
+ 13
+0
+ 23
+0
+ 14
+10
+ 24
+10
+ 15
+10
+ 25
+10
+ 16
+0
+ 26
+0
+ 36
+1
+ 17
+0
+ 27
+0
+ 37
+0
+ 40
+802.6787112407567
+ 41
+1.466594827586207
+ 42
+50
+ 43
+0
+ 44
+0
+ 50
+0
+ 51
+0
+ 71
+    0
+ 72
+  100
+ 73
+    1
+ 74
+    3
+ 75
+    0
+ 76
+    0
+ 77
+    0
+ 78
+    0
+281
+    0
+ 65
+    1
+110
+0
+120
+0
+130
+0
+111
+1
+121
+0
+131
+0
+112
+0
+122
+1
+132
+0
+ 79
+    0
+146
+0
+348
+10020
+ 60
+    7
+ 61
+    5
+292
+1
+282
+    1
+141
+0
+142
+0
+ 63
+  250
+421
+3358443
+  0
+ENDTAB
+  0
+TABLE
+  2
+LTYPE
+  5
+5
+330
+0
+100
+AcDbSymbolTable
+ 70
+    4
+  0
+LTYPE
+  5
+14
+330
+5
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+ByBlock
+ 70
+    0
+  3
+
+ 72
+   65
+ 73
+    0
+ 40
+0
+  0
+LTYPE
+  5
+15
+330
+5
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+ByLayer
+ 70
+    0
+  3
+
+ 72
+   65
+ 73
+    0
+ 40
+0
+  0
+LTYPE
+  5
+16
+330
+5
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+Continuous
+ 70
+    0
+  3
+Solid line
+ 72
+   65
+ 73
+    0
+ 40
+0
+  0
+LTYPE
+  5
+32
+330
+5
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+DOT
+ 70
+    0
+  3
+Dot . . . . . . . . . . . . . . . . . . . . . .
+ 72
+   65
+ 73
+    2
+ 40
+6.35
+ 49
+0
+ 74
+    0
+ 49
+-6.35
+ 74
+    0
+  0
+LTYPE
+  5
+33
+330
+5
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+DOTTINY
+ 70
+    0
+  3
+Dot (.15x) .....................................
+ 72
+   65
+ 73
+    2
+ 40
+0.9525
+ 49
+0
+ 74
+    0
+ 49
+-0.9525
+ 74
+    0
+  0
+LTYPE
+  5
+34
+330
+5
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+DOT2
+ 70
+    0
+  3
+Dot (.5x) .....................................
+ 72
+   65
+ 73
+    2
+ 40
+3.175
+ 49
+0
+ 74
+    0
+ 49
+-3.175
+ 74
+    0
+  0
+LTYPE
+  5
+35
+330
+5
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+DOTX2
+ 70
+    0
+  3
+Dot (2x) .  .  .  .  .  .  .  .  .  .  .  .  .
+ 72
+   65
+ 73
+    2
+ 40
+12.7
+ 49
+0
+ 74
+    0
+ 49
+-12.7
+ 74
+    0
+  0
+LTYPE
+  5
+36
+330
+5
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+DASHED
+ 70
+    0
+  3
+Dashed _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ 72
+   65
+ 73
+    2
+ 40
+19.05
+ 49
+12.7
+ 74
+    0
+ 49
+-6.35
+ 74
+    0
+  0
+LTYPE
+  5
+37
+330
+5
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+DASHEDTINY
+ 70
+    0
+  3
+Dashed (.15x) _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ 72
+   65
+ 73
+    2
+ 40
+2.8575
+ 49
+1.905
+ 74
+    0
+ 49
+-0.9525
+ 74
+    0
+  0
+LTYPE
+  5
+38
+330
+5
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+DASHED2
+ 70
+    0
+  3
+Dashed (.5x) _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ 72
+   65
+ 73
+    2
+ 40
+9.524999999999999
+ 49
+6.35
+ 74
+    0
+ 49
+-3.175
+ 74
+    0
+  0
+LTYPE
+  5
+39
+330
+5
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+DASHEDX2
+ 70
+    0
+  3
+Dashed (2x) ____  ____  ____  ____  ____  ___
+ 72
+   65
+ 73
+    2
+ 40
+38.09999999999999
+ 49
+25.4
+ 74
+    0
+ 49
+-12.7
+ 74
+    0
+  0
+LTYPE
+  5
+3A
+330
+5
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+DASHDOT
+ 70
+    0
+  3
+Dash dot __ . __ . __ . __ . __ . __ . __ . __
+ 72
+   65
+ 73
+    4
+ 40
+25.4
+ 49
+12.7
+ 74
+    0
+ 49
+-6.35
+ 74
+    0
+ 49
+0
+ 74
+    0
+ 49
+-6.35
+ 74
+    0
+  0
+LTYPE
+  5
+3B
+330
+5
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+DASHDOTTINY
+ 70
+    0
+  3
+Dash dot (.15x) _._._._._._._._._._._._._._._.
+ 72
+   65
+ 73
+    4
+ 40
+3.81
+ 49
+1.905
+ 74
+    0
+ 49
+-0.9525
+ 74
+    0
+ 49
+0
+ 74
+    0
+ 49
+-0.9525
+ 74
+    0
+  0
+LTYPE
+  5
+3C
+330
+5
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+DASHDOT2
+ 70
+    0
+  3
+Dash dot (.5x) _._._._._._._._._._._._._._._.
+ 72
+   65
+ 73
+    4
+ 40
+12.7
+ 49
+6.35
+ 74
+    0
+ 49
+-3.175
+ 74
+    0
+ 49
+0
+ 74
+    0
+ 49
+-3.175
+ 74
+    0
+  0
+LTYPE
+  5
+3D
+330
+5
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+DASHDOTX2
+ 70
+    0
+  3
+Dash dot (2x) ____  .  ____  .  ____  .  ___
+ 72
+   65
+ 73
+    4
+ 40
+50.8
+ 49
+25.4
+ 74
+    0
+ 49
+-12.7
+ 74
+    0
+ 49
+0
+ 74
+    0
+ 49
+-12.7
+ 74
+    0
+  0
+LTYPE
+  5
+3E
+330
+5
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+DIVIDE
+ 70
+    0
+  3
+Divide ____ . . ____ . . ____ . . ____ . . ____
+ 72
+   65
+ 73
+    6
+ 40
+31.75
+ 49
+12.7
+ 74
+    0
+ 49
+-6.35
+ 74
+    0
+ 49
+0
+ 74
+    0
+ 49
+-6.35
+ 74
+    0
+ 49
+0
+ 74
+    0
+ 49
+-6.35
+ 74
+    0
+  0
+LTYPE
+  5
+3F
+330
+5
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+DIVIDETINY
+ 70
+    0
+  3
+Divide (.15x) __..__..__..__..__..__..__..__.._
+ 72
+   65
+ 73
+    6
+ 40
+4.7625
+ 49
+1.905
+ 74
+    0
+ 49
+-0.9525
+ 74
+    0
+ 49
+0
+ 74
+    0
+ 49
+-0.9525
+ 74
+    0
+ 49
+0
+ 74
+    0
+ 49
+-0.9525
+ 74
+    0
+  0
+LTYPE
+  5
+40
+330
+5
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+DIVIDE2
+ 70
+    0
+  3
+Divide (.5x) __..__..__..__..__..__..__..__.._
+ 72
+   65
+ 73
+    6
+ 40
+15.875
+ 49
+6.35
+ 74
+    0
+ 49
+-3.175
+ 74
+    0
+ 49
+0
+ 74
+    0
+ 49
+-3.175
+ 74
+    0
+ 49
+0
+ 74
+    0
+ 49
+-3.175
+ 74
+    0
+  0
+LTYPE
+  5
+41
+330
+5
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+DIVIDEX2
+ 70
+    0
+  3
+Divide (2x) ________  .  .  ________  .  .  _
+ 72
+   65
+ 73
+    6
+ 40
+63.5
+ 49
+25.4
+ 74
+    0
+ 49
+-12.7
+ 74
+    0
+ 49
+0
+ 74
+    0
+ 49
+-12.7
+ 74
+    0
+ 49
+0
+ 74
+    0
+ 49
+-12.7
+ 74
+    0
+  0
+LTYPE
+  5
+42
+330
+5
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+BORDER
+ 70
+    0
+  3
+Border __ __ . __ __ . __ __ . __ __ . __ __ .
+ 72
+   65
+ 73
+    6
+ 40
+44.45
+ 49
+12.7
+ 74
+    0
+ 49
+-6.35
+ 74
+    0
+ 49
+12.7
+ 74
+    0
+ 49
+-6.35
+ 74
+    0
+ 49
+0
+ 74
+    0
+ 49
+-6.35
+ 74
+    0
+  0
+LTYPE
+  5
+43
+330
+5
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+BORDERTINY
+ 70
+    0
+  3
+Border (.15x) __.__.__.__.__.__.__.__.__.__.__.
+ 72
+   65
+ 73
+    6
+ 40
+6.6675
+ 49
+1.905
+ 74
+    0
+ 49
+-0.9525
+ 74
+    0
+ 49
+1.905
+ 74
+    0
+ 49
+-0.9525
+ 74
+    0
+ 49
+0
+ 74
+    0
+ 49
+-0.9525
+ 74
+    0
+  0
+LTYPE
+  5
+44
+330
+5
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+BORDER2
+ 70
+    0
+  3
+Border (.5x) __.__.__.__.__.__.__.__.__.__.__.
+ 72
+   65
+ 73
+    6
+ 40
+22.225
+ 49
+6.35
+ 74
+    0
+ 49
+-3.175
+ 74
+    0
+ 49
+6.35
+ 74
+    0
+ 49
+-3.175
+ 74
+    0
+ 49
+0
+ 74
+    0
+ 49
+-3.175
+ 74
+    0
+  0
+LTYPE
+  5
+45
+330
+5
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+BORDERX2
+ 70
+    0
+  3
+Border (2x) ____  ____  .  ____  ____  .  ___
+ 72
+   65
+ 73
+    6
+ 40
+88.89999999999999
+ 49
+25.4
+ 74
+    0
+ 49
+-12.7
+ 74
+    0
+ 49
+25.4
+ 74
+    0
+ 49
+-12.7
+ 74
+    0
+ 49
+0
+ 74
+    0
+ 49
+-12.7
+ 74
+    0
+  0
+LTYPE
+  5
+46
+330
+5
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+CENTER
+ 70
+    0
+  3
+Center ____ _ ____ _ ____ _ ____ _ ____ _ ____
+ 72
+   65
+ 73
+    4
+ 40
+50.8
+ 49
+31.75
+ 74
+    0
+ 49
+-6.35
+ 74
+    0
+ 49
+6.35
+ 74
+    0
+ 49
+-6.35
+ 74
+    0
+  0
+LTYPE
+  5
+47
+330
+5
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+CENTERTINY
+ 70
+    0
+  3
+Center (.15x) ___ _ ___ _ ___ _ ___ _ ___ _ ___
+ 72
+   65
+ 73
+    4
+ 40
+7.619999999999999
+ 49
+4.7625
+ 74
+    0
+ 49
+-0.9525
+ 74
+    0
+ 49
+0.9525
+ 74
+    0
+ 49
+-0.9525
+ 74
+    0
+  0
+LTYPE
+  5
+48
+330
+5
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+CENTER2
+ 70
+    0
+  3
+Center (.5x) ___ _ ___ _ ___ _ ___ _ ___ _ ___
+ 72
+   65
+ 73
+    4
+ 40
+28.575
+ 49
+19.05
+ 74
+    0
+ 49
+-3.175
+ 74
+    0
+ 49
+3.175
+ 74
+    0
+ 49
+-3.175
+ 74
+    0
+  0
+LTYPE
+  5
+49
+330
+5
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+CENTERX2
+ 70
+    0
+  3
+Center (2x) ________  __  ________  __  _____
+ 72
+   65
+ 73
+    4
+ 40
+101.6
+ 49
+63.5
+ 74
+    0
+ 49
+-12.7
+ 74
+    0
+ 49
+12.7
+ 74
+    0
+ 49
+-12.7
+ 74
+    0
+  0
+ENDTAB
+  0
+TABLE
+  2
+LAYER
+  5
+2
+330
+0
+100
+AcDbSymbolTable
+ 70
+    1
+  0
+LAYER
+  5
+10
+330
+2
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+0
+ 70
+    1
+ 62
+    1
+  6
+CONTINUOUS
+370
+   -3
+390
+F
+  0
+LAYER
+  5
+4A
+330
+2
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+seg001
+ 70
+    4
+ 62
+    3
+  6
+CONTINUOUS
+370
+    0
+390
+F
+  0
+LAYER
+  5
+4B
+330
+2
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+seg002
+ 70
+    4
+ 62
+    3
+  6
+CONTINUOUS
+370
+    0
+390
+F
+  0
+LAYER
+  5
+4C
+330
+2
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+seg003
+ 70
+    4
+ 62
+    3
+  6
+CONTINUOUS
+370
+    0
+390
+F
+  0
+LAYER
+  5
+4D
+330
+2
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+seg004
+ 70
+    4
+ 62
+    3
+  6
+CONTINUOUS
+370
+    0
+390
+F
+  0
+ENDTAB
+  0
+TABLE
+  2
+STYLE
+  5
+3
+330
+0
+100
+AcDbSymbolTable
+ 70
+    3
+  0
+STYLE
+  5
+4E
+330
+2
+100
+AcDbSymbolTableRecord
+100
+AcDbTextStyleTableRecord
+  2
+standard
+ 70
+    0
+ 40
+0
+ 41
+1
+ 50
+0
+ 71
+    0
+ 42
+1
+  3
+standard
+  4
+
+  0
+ENDTAB
+  0
+TABLE
+  2
+VIEW
+  5
+6
+330
+0
+100
+AcDbSymbolTable
+ 70
+    0
+  0
+ENDTAB
+  0
+TABLE
+  2
+UCS
+  5
+7
+330
+0
+100
+AcDbSymbolTable
+ 70
+    0
+  0
+ENDTAB
+  0
+TABLE
+  2
+APPID
+  5
+9
+330
+0
+100
+AcDbSymbolTable
+ 70
+    1
+  0
+APPID
+  5
+12
+330
+9
+100
+AcDbSymbolTableRecord
+100
+AcDbRegAppTableRecord
+  2
+ACAD
+ 70
+    0
+  0
+APPID
+  5
+4F
+330
+9
+100
+AcDbSymbolTableRecord
+100
+AcDbRegAppTableRecord
+  2
+LibreCad
+ 70
+    0
+  0
+ENDTAB
+  0
+TABLE
+  2
+DIMSTYLE
+  5
+A
+330
+0
+100
+AcDbSymbolTable
+ 70
+    1
+100
+AcDbDimStyleTable
+ 71
+    1
+  0
+DIMSTYLE
+105
+50
+330
+A
+100
+AcDbSymbolTableRecord
+100
+AcDbDimStyleTableRecord
+  2
+Standard
+ 70
+    0
+ 40
+2.5
+ 41
+2.5
+ 42
+0.625
+ 43
+0.38
+ 44
+1.25
+ 45
+0
+ 46
+0
+ 47
+0
+ 48
+0
+ 49
+1
+140
+2.5
+141
+0.09
+142
+0
+143
+25.4
+144
+1
+145
+0
+146
+1
+147
+0.625
+148
+0
+ 71
+    0
+ 72
+    0
+ 73
+    0
+ 74
+    1
+ 75
+    0
+ 76
+    0
+ 77
+    0
+ 78
+    8
+ 79
+    0
+170
+    0
+171
+    2
+172
+    0
+173
+    0
+174
+    0
+175
+    0
+176
+    0
+177
+    0
+178
+    0
+179
+    0
+271
+    4
+272
+    4
+273
+    2
+274
+    2
+275
+    0
+276
+    0
+277
+    2
+278
+   44
+279
+    0
+280
+    0
+281
+    0
+282
+    0
+283
+    1
+284
+    0
+285
+    0
+286
+    0
+288
+    0
+289
+    3
+340
+STANDARD
+341
+
+371
+   -2
+372
+   -2
+  0
+ENDTAB
+  0
+TABLE
+  2
+BLOCK_RECORD
+  5
+1
+330
+0
+100
+AcDbSymbolTable
+ 70
+    2
+  0
+BLOCK_RECORD
+  5
+1F
+330
+1
+100
+AcDbSymbolTableRecord
+100
+AcDbBlockTableRecord
+  2
+*Model_Space
+ 70
+    0
+280
+    1
+281
+    0
+  0
+BLOCK_RECORD
+  5
+1E
+330
+1
+100
+AcDbSymbolTableRecord
+100
+AcDbBlockTableRecord
+  2
+*Paper_Space
+ 70
+    0
+280
+    1
+281
+    0
+  0
+BLOCK_RECORD
+  5
+51
+330
+1
+100
+AcDbSymbolTableRecord
+100
+AcDbBlockTableRecord
+  2
+BOX
+ 70
+    0
+280
+    1
+281
+    0
+  0
+BLOCK_RECORD
+  5
+54
+330
+1
+100
+AcDbSymbolTableRecord
+100
+AcDbBlockTableRecord
+  2
+SIGN1
+ 70
+    0
+280
+    1
+281
+    0
+  0
+BLOCK_RECORD
+  5
+57
+330
+1
+100
+AcDbSymbolTableRecord
+100
+AcDbBlockTableRecord
+  2
+POST
+ 70
+    0
+280
+    1
+281
+    0
+  0
+BLOCK_RECORD
+  5
+5A
+330
+1
+100
+AcDbSymbolTableRecord
+100
+AcDbBlockTableRecord
+  2
+ELT
+ 70
+    0
+280
+    1
+281
+    0
+  0
+BLOCK_RECORD
+  5
+5D
+330
+1
+100
+AcDbSymbolTableRecord
+100
+AcDbBlockTableRecord
+  2
+POLE
+ 70
+    0
+280
+    1
+281
+    0
+  0
+BLOCK_RECORD
+  5
+60
+330
+1
+100
+AcDbSymbolTableRecord
+100
+AcDbBlockTableRecord
+  2
+SIGN2
+ 70
+    0
+280
+    1
+281
+    0
+  0
+BLOCK_RECORD
+  5
+63
+330
+1
+100
+AcDbSymbolTableRecord
+100
+AcDbBlockTableRecord
+  2
+TSIG
+ 70
+    0
+280
+    1
+281
+    0
+  0
+BLOCK_RECORD
+  5
+66
+330
+1
+100
+AcDbSymbolTableRecord
+100
+AcDbBlockTableRecord
+  2
+TSP
+ 70
+    0
+280
+    1
+281
+    0
+  0
+BLOCK_RECORD
+  5
+69
+330
+1
+100
+AcDbSymbolTableRecord
+100
+AcDbBlockTableRecord
+  2
+ELTDBL
+ 70
+    0
+280
+    1
+281
+    0
+  0
+BLOCK_RECORD
+  5
+6C
+330
+1
+100
+AcDbSymbolTableRecord
+100
+AcDbBlockTableRecord
+  2
+SIGN3
+ 70
+    0
+280
+    1
+281
+    0
+  0
+BLOCK_RECORD
+  5
+6F
+330
+1
+100
+AcDbSymbolTableRecord
+100
+AcDbBlockTableRecord
+  2
+LTP
+ 70
+    0
+280
+    1
+281
+    0
+  0
+BLOCK_RECORD
+  5
+72
+330
+1
+100
+AcDbSymbolTableRecord
+100
+AcDbBlockTableRecord
+  2
+CB
+ 70
+    0
+280
+    1
+281
+    0
+  0
+BLOCK_RECORD
+  5
+75
+330
+1
+100
+AcDbSymbolTableRecord
+100
+AcDbBlockTableRecord
+  2
+EPOLE
+ 70
+    0
+280
+    1
+281
+    0
+  0
+BLOCK_RECORD
+  5
+78
+330
+1
+100
+AcDbSymbolTableRecord
+100
+AcDbBlockTableRecord
+  2
+SPOT
+ 70
+    0
+280
+    1
+281
+    0
+  0
+ENDTAB
+  0
+ENDSEC
+  0
+SECTION
+  2
+BLOCKS
+  0
+BLOCK
+  5
+20
+330
+1F
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockBegin
+  2
+*Model_Space
+ 70
+    0
+ 10
+0
+ 20
+0
+ 30
+0
+  3
+*Model_Space
+  1
+
+  0
+ENDBLK
+  5
+21
+330
+1F
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockEnd
+  0
+BLOCK
+  5
+1C
+330
+1B
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockBegin
+  2
+*Paper_Space
+ 70
+    0
+ 10
+0
+ 20
+0
+ 30
+0
+  3
+*Paper_Space
+  1
+
+  0
+ENDBLK
+  5
+1D
+330
+1F
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockEnd
+  0
+BLOCK
+  5
+52
+330
+51
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockBegin
+  2
+BOX
+ 70
+    0
+ 10
+0
+ 20
+0
+  3
+BOX
+  1
+
+  0
+LWPOLYLINE
+  5
+7B
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbPolyline
+ 90
+    5
+ 70
+    0
+ 43
+0
+ 10
+0.02999999999999936
+ 20
+0.03000000000000114
+ 10
+-0.02999999999999936
+ 20
+0.03000000000000114
+ 10
+-0.02999999999999936
+ 20
+-0.02999999999999936
+ 10
+0.02999999999999936
+ 20
+-0.02999999999999936
+ 10
+0.02999999999999936
+ 20
+0.03000000000000114
+  0
+ENDBLK
+  5
+53
+330
+51
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockEnd
+  0
+BLOCK
+  5
+55
+330
+54
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockBegin
+  2
+SIGN1
+ 70
+    0
+ 10
+0
+ 20
+0
+  3
+SIGN1
+  1
+
+  0
+LINE
+  5
+7C
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbLine
+ 10
+-0.07580000000000142
+ 20
+4.440892098500626e-16
+ 11
+0.07039999999999891
+ 21
+4.440892098500626e-16
+  0
+LWPOLYLINE
+  5
+7D
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbPolyline
+ 90
+    2
+ 70
+    1
+ 43
+0
+ 10
+-0.008175000000000487
+ 20
+2.497131363886347e-18
+ 42
+0.9999999999999999
+ 10
+0.006824999999999193
+ 20
+1.765213550333452e-18
+ 42
+0.9999999999999999
+  0
+ENDBLK
+  5
+56
+330
+54
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockEnd
+  0
+BLOCK
+  5
+58
+330
+57
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockBegin
+  2
+POST
+ 70
+    0
+ 10
+0
+ 20
+0
+  3
+POST
+  1
+
+  0
+LWPOLYLINE
+  5
+7E
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbPolyline
+ 90
+    2
+ 70
+    1
+ 43
+0
+ 10
+-0.009999999999999787
+ 20
+3.329508485181796e-18
+ 42
+0.9999999999999999
+ 10
+0.009999999999999787
+ 20
+2.353618067111269e-18
+ 42
+0.9999999999999999
+  0
+ENDBLK
+  5
+59
+330
+57
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockEnd
+  0
+BLOCK
+  5
+5B
+330
+5A
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockBegin
+  2
+ELT
+ 70
+    0
+ 10
+0
+ 20
+0
+  3
+ELT
+  1
+
+  0
+LWPOLYLINE
+  5
+7F
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbPolyline
+ 90
+    2
+ 70
+    0
+ 43
+0
+ 10
+1.77635683940025e-15
+ 20
+0.04999999999999982
+ 10
+1.77635683940025e-15
+ 20
+-0.05000000000000027
+  0
+LWPOLYLINE
+  5
+80
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbPolyline
+ 90
+    2
+ 70
+    1
+ 43
+0
+ 10
+-0.01249999999999929
+ 20
+4.482510954565396e-16
+ 42
+0.9999999999999999
+ 10
+0.01249999999999929
+ 20
+4.470312324339515e-16
+ 42
+0.9999999999999999
+  0
+LWPOLYLINE
+  5
+81
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbPolyline
+ 90
+    2
+ 70
+    0
+ 43
+0
+ 10
+0
+ 20
+4.440892098500626e-16
+ 10
+0.1200000000000099
+ 20
+4.440892098500626e-16
+  0
+CIRCLE
+  5
+82
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbCircle
+ 10
+0.1450000000000102
+ 20
+4.440892098500626e-16
+ 40
+0.025
+  0
+LWPOLYLINE
+  5
+83
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbPolyline
+ 90
+    2
+ 70
+    0
+ 43
+0
+ 10
+0.1450000000000102
+ 20
+0.0250000000000834
+ 10
+0.1450000000000102
+ 20
+0.06000000000000005
+  0
+LWPOLYLINE
+  5
+84
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbPolyline
+ 90
+    2
+ 70
+    0
+ 43
+0
+ 10
+0.1700000000000941
+ 20
+4.440892098500626e-16
+ 10
+0.2050000000000107
+ 20
+4.440892098500626e-16
+  0
+LWPOLYLINE
+  5
+85
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbPolyline
+ 90
+    2
+ 70
+    0
+ 43
+0
+ 10
+0.1450000000000102
+ 20
+-0.02500000000008251
+ 10
+0.1450000000000102
+ 20
+-0.05999999999999917
+  0
+ENDBLK
+  5
+5C
+330
+5A
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockEnd
+  0
+BLOCK
+  5
+5E
+330
+5D
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockBegin
+  2
+POLE
+ 70
+    0
+ 10
+0
+ 20
+0
+  3
+POLE
+  1
+
+  0
+LWPOLYLINE
+  5
+86
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbPolyline
+ 90
+    2
+ 70
+    1
+ 43
+0
+ 10
+-0.01500000000000001
+ 20
+4.994262727772805e-18
+ 42
+0.9999999999999999
+ 10
+0.01500000000000001
+ 20
+3.530427100666982e-18
+ 42
+0.9999999999999999
+  0
+ENDBLK
+  5
+5F
+330
+5D
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockEnd
+  0
+BLOCK
+  5
+61
+330
+60
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockBegin
+  2
+SIGN2
+ 70
+    0
+ 10
+0
+ 20
+0
+  3
+SIGN2
+  1
+
+  0
+LWPOLYLINE
+  5
+87
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbPolyline
+ 90
+    2
+ 70
+    0
+ 43
+0
+ 10
+-0.1500000000000012
+ 20
+4.440892098500626e-16
+ 10
+0.1499999999999986
+ 20
+4.440892098500626e-16
+  0
+LWPOLYLINE
+  5
+88
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbPolyline
+ 90
+    2
+ 70
+    1
+ 43
+0
+ 10
+-0.1037500000000007
+ 20
+4.474187183352445e-16
+ 42
+0.9999999999999999
+ 10
+-0.0837500000000011
+ 20
+4.464428279171739e-16
+ 42
+0.9999999999999999
+  0
+LWPOLYLINE
+  5
+89
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbPolyline
+ 90
+    2
+ 70
+    1
+ 43
+0
+ 10
+0.08374999999999977
+ 20
+4.474187183352444e-16
+ 42
+0.9999999999999999
+ 10
+0.1037499999999993
+ 20
+4.464428279171738e-16
+ 42
+0.9999999999999999
+  0
+ENDBLK
+  5
+62
+330
+60
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockEnd
+  0
+BLOCK
+  5
+64
+330
+63
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockBegin
+  2
+TSIG
+ 70
+    0
+ 10
+0
+ 20
+0
+  3
+TSIG
+  1
+
+  0
+LWPOLYLINE
+  5
+8A
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbPolyline
+ 90
+    2
+ 70
+    0
+ 43
+0
+ 10
+0.2050000000000001
+ 20
+1.77635683940025e-15
+ 10
+0.2286396103067911
+ 20
+0.06363961030679022
+  0
+LWPOLYLINE
+  5
+8B
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbPolyline
+ 90
+    2
+ 70
+    0
+ 43
+0
+ 10
+0.1213603896932103
+ 20
+0.06363961030679022
+ 10
+0.1450000000000014
+ 20
+1.77635683940025e-15
+  0
+CIRCLE
+  5
+8C
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbCircle
+ 10
+0.1750000000000007
+ 20
+1.77635683940025e-15
+ 40
+0.03
+  0
+LWPOLYLINE
+  5
+8D
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbPolyline
+ 90
+    2
+ 70
+    0
+ 43
+0
+ 10
+0.2286396103067911
+ 20
+0.06363961030679022
+ 10
+0.1213603896932103
+ 20
+0.06363961030679022
+  0
+LWPOLYLINE
+  5
+8E
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbPolyline
+ 90
+    2
+ 70
+    1
+ 43
+0
+ 10
+-0.01249999999999929
+ 20
+8.923403053066022e-16
+ 42
+0.9999999999999999
+ 10
+0.01249999999999929
+ 20
+8.911204422840139e-16
+ 42
+0.9999999999999999
+  0
+LWPOLYLINE
+  5
+8F
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbPolyline
+ 90
+    2
+ 70
+    0
+ 43
+0
+ 10
+0
+ 20
+8.881784197001252e-16
+ 10
+0.1450000000000369
+ 20
+8.881784197001252e-16
+  0
+ENDBLK
+  5
+65
+330
+63
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockEnd
+  0
+BLOCK
+  5
+67
+330
+66
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockBegin
+  2
+TSP
+ 70
+    0
+ 10
+0
+ 20
+0
+  3
+TSP
+  1
+
+  0
+LWPOLYLINE
+  5
+90
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbPolyline
+ 90
+    2
+ 70
+    0
+ 43
+0
+ 10
+0
+ 20
+-0.03000000000000025
+ 10
+0.06363961030678844
+ 20
+-0.05363961030678954
+  0
+LWPOLYLINE
+  5
+91
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbPolyline
+ 90
+    2
+ 70
+    0
+ 43
+0
+ 10
+0.06363961030678844
+ 20
+0.05363961030678954
+ 10
+0
+ 20
+0.03000000000000025
+  0
+CIRCLE
+  5
+92
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbCircle
+ 10
+0
+ 20
+0
+ 40
+0.03
+  0
+LWPOLYLINE
+  5
+93
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbPolyline
+ 90
+    2
+ 70
+    0
+ 43
+0
+ 10
+0.06363961030678844
+ 20
+-0.05363961030678954
+ 10
+0.06363961030678844
+ 20
+0.05363961030678954
+  0
+ENDBLK
+  5
+68
+330
+66
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockEnd
+  0
+BLOCK
+  5
+6A
+330
+69
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockBegin
+  2
+ELTDBL
+ 70
+    0
+ 10
+0
+ 20
+0
+  3
+ELTDBL
+  1
+
+  0
+LWPOLYLINE
+  5
+94
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbPolyline
+ 90
+    2
+ 70
+    0
+ 43
+0
+ 10
+0
+ 20
+4.440892098500626e-16
+ 10
+0.1200000000000099
+ 20
+0
+  0
+LWPOLYLINE
+  5
+95
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbPolyline
+ 90
+    2
+ 70
+    0
+ 43
+0
+ 10
+0
+ 20
+4.440892098500626e-16
+ 10
+-0.1200000000000081
+ 20
+8.881784197001252e-16
+  0
+CIRCLE
+  5
+96
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbCircle
+ 10
+-0.1450000000000085
+ 20
+4.440892098500626e-16
+ 40
+0.025
+  0
+CIRCLE
+  5
+97
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbCircle
+ 10
+0.1450000000000102
+ 20
+4.440892098500626e-16
+ 40
+0.025
+  0
+LWPOLYLINE
+  5
+98
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbPolyline
+ 90
+    2
+ 70
+    0
+ 43
+0
+ 10
+-0.1450000000000085
+ 20
+-0.02500000000008251
+ 10
+-0.1450000000000085
+ 20
+-0.05999999999999917
+  0
+LWPOLYLINE
+  5
+99
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbPolyline
+ 90
+    2
+ 70
+    0
+ 43
+0
+ 10
+-0.1199999999999246
+ 20
+4.440892098500626e-16
+ 10
+-0.08500000000000796
+ 20
+4.440892098500626e-16
+  0
+LWPOLYLINE
+  5
+9A
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbPolyline
+ 90
+    2
+ 70
+    0
+ 43
+0
+ 10
+-0.1450000000000085
+ 20
+0.0250000000000834
+ 10
+-0.1450000000000085
+ 20
+0.06000000000000005
+  0
+LWPOLYLINE
+  5
+9B
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbPolyline
+ 90
+    2
+ 70
+    0
+ 43
+0
+ 10
+0.08500000000000973
+ 20
+4.440892098500626e-16
+ 10
+0.1199999999999264
+ 20
+4.440892098500626e-16
+  0
+LWPOLYLINE
+  5
+9C
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbPolyline
+ 90
+    2
+ 70
+    0
+ 43
+0
+ 10
+0.1450000000000102
+ 20
+-0.02500000000008251
+ 10
+0.1450000000000102
+ 20
+-0.05999999999999917
+  0
+LWPOLYLINE
+  5
+9D
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbPolyline
+ 90
+    2
+ 70
+    0
+ 43
+0
+ 10
+0.1700000000000941
+ 20
+4.440892098500626e-16
+ 10
+0.2050000000000107
+ 20
+4.440892098500626e-16
+  0
+LWPOLYLINE
+  5
+9E
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbPolyline
+ 90
+    2
+ 70
+    0
+ 43
+0
+ 10
+0.1450000000000102
+ 20
+0.0250000000000834
+ 10
+0.1450000000000102
+ 20
+0.06000000000000005
+  0
+LWPOLYLINE
+  5
+9F
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbPolyline
+ 90
+    2
+ 70
+    1
+ 43
+0
+ 10
+-0.01249999999999929
+ 20
+4.482510954565396e-16
+ 42
+0.9999999999999999
+ 10
+0.01249999999999929
+ 20
+4.470312324339515e-16
+ 42
+0.9999999999999999
+  0
+LWPOLYLINE
+  5
+A0
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbPolyline
+ 90
+    2
+ 70
+    0
+ 43
+0
+ 10
+-0.205000000000009
+ 20
+4.440892098500626e-16
+ 10
+-0.1700000000000923
+ 20
+4.440892098500626e-16
+  0
+ENDBLK
+  5
+6B
+330
+69
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockEnd
+  0
+BLOCK
+  5
+6D
+330
+6C
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockBegin
+  2
+SIGN3
+ 70
+    0
+ 10
+0
+ 20
+0
+  3
+SIGN3
+  1
+
+  0
+LWPOLYLINE
+  5
+A1
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbPolyline
+ 90
+    2
+ 70
+    0
+ 43
+0
+ 10
+0
+ 20
+0.04999999999999982
+ 10
+0
+ 20
+-0.04999999999999982
+  0
+LWPOLYLINE
+  5
+A2
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbPolyline
+ 90
+    2
+ 70
+    0
+ 43
+0
+ 10
+-0.04999999999999982
+ 20
+0
+ 10
+0.05000000000000027
+ 20
+0
+  0
+LWPOLYLINE
+  5
+A3
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbPolyline
+ 90
+    2
+ 70
+    1
+ 43
+0
+ 10
+0.05874999999999986
+ 20
+8.915079281853071e-16
+ 42
+0.9999999999999999
+ 10
+0.07874999999999943
+ 20
+8.905320377672364e-16
+ 42
+0.9999999999999999
+  0
+LWPOLYLINE
+  5
+A4
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbPolyline
+ 90
+    2
+ 70
+    1
+ 43
+0
+ 10
+1.774491166542174e-15
+ 20
+0.07875000000000121
+ 42
+0.9999999999999999
+ 10
+1.77180746789248e-15
+ 20
+0.05875000000000163
+ 42
+0.9999999999999999
+  0
+LWPOLYLINE
+  5
+A5
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbPolyline
+ 90
+    2
+ 70
+    1
+ 43
+0
+ 10
+-0.07875000000000076
+ 20
+8.915079281853071e-16
+ 42
+0.9999999999999999
+ 10
+-0.05875000000000119
+ 20
+8.905320377672364e-16
+ 42
+0.9999999999999999
+  0
+LWPOLYLINE
+  5
+A6
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbPolyline
+ 90
+    2
+ 70
+    1
+ 43
+0
+ 10
+1.774491166542174e-15
+ 20
+-0.05874999999999808
+ 42
+0.9999999999999999
+ 10
+1.77180746789248e-15
+ 20
+-0.07874999999999766
+ 42
+0.9999999999999999
+  0
+ENDBLK
+  5
+6E
+330
+6C
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockEnd
+  0
+BLOCK
+  5
+70
+330
+6F
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockBegin
+  2
+LTP
+ 70
+    0
+ 10
+0
+ 20
+0
+  3
+LTP
+  1
+
+  0
+LWPOLYLINE
+  5
+A7
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbPolyline
+ 90
+    2
+ 70
+    0
+ 43
+0
+ 10
+-0.0600000000000005
+ 20
+0
+ 10
+-0.02500000000008384
+ 20
+0
+  0
+LWPOLYLINE
+  5
+A8
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbPolyline
+ 90
+    2
+ 70
+    1
+ 43
+0
+ 10
+-0.01249999999999929
+ 20
+4.161885606477098e-18
+ 42
+0.9999999999999999
+ 10
+0.01249999999999929
+ 20
+2.942022583888983e-18
+ 42
+0.9999999999999999
+  0
+LWPOLYLINE
+  5
+A9
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbPolyline
+ 90
+    2
+ 70
+    0
+ 43
+0
+ 10
+0.02500000000008384
+ 20
+0
+ 10
+0.0600000000000005
+ 20
+0
+  0
+LWPOLYLINE
+  5
+AA
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbPolyline
+ 90
+    2
+ 70
+    0
+ 43
+0
+ 10
+0
+ 20
+-0.02500000000008296
+ 10
+0
+ 20
+-0.05999999999999961
+  0
+LWPOLYLINE
+  5
+AB
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbPolyline
+ 90
+    2
+ 70
+    0
+ 43
+0
+ 10
+0
+ 20
+0.02500000000008296
+ 10
+0
+ 20
+0.05999999999999961
+  0
+ENDBLK
+  5
+71
+330
+6F
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockEnd
+  0
+BLOCK
+  5
+73
+330
+72
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockBegin
+  2
+CB
+ 70
+    0
+ 10
+0
+ 20
+0
+  3
+CB
+  1
+
+  0
+LWPOLYLINE
+  5
+AC
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbPolyline
+ 90
+    2
+ 70
+    0
+ 43
+0
+ 10
+0.05000000000000071
+ 20
+-0.009374999999998579
+ 10
+-0.05000000000000071
+ 20
+-0.009374999999998579
+  0
+LWPOLYLINE
+  5
+AD
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbPolyline
+ 90
+    2
+ 70
+    0
+ 43
+0
+ 10
+-0.05000000000000071
+ 20
+0.01250000000000107
+ 10
+0.05000000000000071
+ 20
+0.01250000000000107
+  0
+LWPOLYLINE
+  5
+AE
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbPolyline
+ 90
+    5
+ 70
+    0
+ 43
+0
+ 10
+-0.05000000000000249
+ 20
+-0.03125000000000178
+ 10
+0.04999999999999893
+ 20
+-0.03125000000000178
+ 10
+0.05000000000000071
+ 20
+0.03437500000000071
+ 10
+-0.05000000000000071
+ 20
+0.03437500000000071
+ 10
+-0.05000000000000249
+ 20
+-0.03125000000000178
+  0
+ENDBLK
+  5
+74
+330
+72
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockEnd
+  0
+BLOCK
+  5
+76
+330
+75
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockBegin
+  2
+EPOLE
+ 70
+    0
+ 10
+0
+ 20
+0
+  3
+EPOLE
+  1
+
+  0
+LWPOLYLINE
+  5
+AF
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbPolyline
+ 90
+    2
+ 70
+    0
+ 43
+0
+ 10
+-0.06
+ 20
+0
+ 10
+0.06
+ 20
+0
+  0
+LWPOLYLINE
+  5
+B0
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbPolyline
+ 90
+    2
+ 70
+    1
+ 43
+0
+ 10
+-0.01500000000000001
+ 20
+4.994262727772805e-18
+ 42
+0.9999999999999999
+ 10
+0.01500000000000001
+ 20
+3.530427100666982e-18
+ 42
+0.9999999999999999
+  0
+ENDBLK
+  5
+77
+330
+75
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockEnd
+  0
+BLOCK
+  5
+79
+330
+78
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockBegin
+  2
+SPOT
+ 70
+    0
+ 10
+0
+ 20
+0
+  3
+SPOT
+  1
+
+  0
+TEXT
+  5
+B1
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbText
+ 10
+-1.77635683940025e-15
+ 20
+0
+ 30
+0
+ 40
+0.08
+  1
+x
+ 50
+0
+ 41
+1
+ 51
+0
+  7
+standard
+ 71
+    0
+ 72
+    4
+ 11
+-1.77635683940025e-15
+ 21
+0
+ 31
+0
+210
+0
+220
+0
+230
+1
+100
+AcDbText
+  0
+ENDBLK
+  5
+7A
+330
+78
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockEnd
+  0
+ENDSEC
+  0
+SECTION
+  2
+ENTITIES
+  0
+LWPOLYLINE
+  5
+B2
+100
+AcDbEntity
+  8
+seg001
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbPolyline
+ 90
+  502
+ 70
+    0
+ 43
+0
+ 10
+6042869.831
+ 20
+2132812.498
+ 10
+6042869.205
+ 20
+2132817.459
+ 10
+6042868.578
+ 20
+2132822.419
+ 10
+6042867.953
+ 20
+2132827.38
+ 10
+6042867.332
+ 20
+2132832.341
+ 10
+6042866.71
+ 20
+2132837.303
+ 10
+6042866.089
+ 20
+2132842.264
+ 10
+6042865.468
+ 20
+2132847.225
+ 10
+6042864.846
+ 20
+2132852.186
+ 10
+6042864.225
+ 20
+2132857.147
+ 10
+6042863.603
+ 20
+2132862.109
+ 10
+6042862.982
+ 20
+2132867.07
+ 10
+6042862.36
+ 20
+2132872.031
+ 10
+6042861.739
+ 20
+2132876.992
+ 10
+6042861.118
+ 20
+2132881.954
+ 10
+6042860.496
+ 20
+2132886.915
+ 10
+6042859.875
+ 20
+2132891.876
+ 10
+6042859.253
+ 20
+2132896.837
+ 10
+6042858.632
+ 20
+2132901.799
+ 10
+6042858.011
+ 20
+2132906.76
+ 10
+6042857.389
+ 20
+2132911.721
+ 10
+6042856.768
+ 20
+2132916.682
+ 10
+6042856.146
+ 20
+2132921.643
+ 10
+6042855.525
+ 20
+2132926.605
+ 10
+6042854.903
+ 20
+2132931.566
+ 10
+6042854.282
+ 20
+2132936.527
+ 10
+6042853.661
+ 20
+2132941.488
+ 10
+6042853.04
+ 20
+2132946.45
+ 10
+6042852.419
+ 20
+2132951.411
+ 10
+6042851.798
+ 20
+2132956.372
+ 10
+6042851.177
+ 20
+2132961.334
+ 10
+6042850.556
+ 20
+2132966.295
+ 10
+6042849.935
+ 20
+2132971.256
+ 10
+6042849.313
+ 20
+2132976.217
+ 10
+6042848.692
+ 20
+2132981.179
+ 10
+6042848.071
+ 20
+2132986.141
+ 10
+6042847.449
+ 20
+2132991.103
+ 10
+6042846.828
+ 20
+2132996.064
+ 10
+6042846.206
+ 20
+2133001.025
+ 10
+6042845.584
+ 20
+2133005.986
+ 10
+6042844.963
+ 20
+2133010.947
+ 10
+6042844.341
+ 20
+2133015.909
+ 10
+6042843.719
+ 20
+2133020.87
+ 10
+6042843.098
+ 20
+2133025.831
+ 10
+6042842.476
+ 20
+2133030.792
+ 10
+6042841.854
+ 20
+2133035.753
+ 10
+6042841.233
+ 20
+2133040.715
+ 10
+6042840.611
+ 20
+2133045.676
+ 10
+6042839.989
+ 20
+2133050.637
+ 10
+6042839.357
+ 20
+2133055.597
+ 10
+6042838.721
+ 20
+2133060.556
+ 10
+6042838.086
+ 20
+2133065.516
+ 10
+6042837.451
+ 20
+2133070.475
+ 10
+6042836.816
+ 20
+2133075.435
+ 10
+6042836.18
+ 20
+2133080.394
+ 10
+6042835.545
+ 20
+2133085.354
+ 10
+6042834.91
+ 20
+2133090.313
+ 10
+6042834.275
+ 20
+2133095.273
+ 10
+6042833.64
+ 20
+2133100.232
+ 10
+6042833.004
+ 20
+2133105.192
+ 10
+6042832.369
+ 20
+2133110.151
+ 10
+6042831.734
+ 20
+2133115.111
+ 10
+6042831.099
+ 20
+2133120.07
+ 10
+6042830.463
+ 20
+2133125.03
+ 10
+6042829.828
+ 20
+2133129.989
+ 10
+6042829.193
+ 20
+2133134.949
+ 10
+6042828.558
+ 20
+2133139.908
+ 10
+6042827.922
+ 20
+2133144.868
+ 10
+6042827.298
+ 20
+2133149.829
+ 10
+6042826.677
+ 20
+2133154.79
+ 10
+6042826.057
+ 20
+2133159.751
+ 10
+6042825.436
+ 20
+2133164.713
+ 10
+6042824.815
+ 20
+2133169.674
+ 10
+6042824.194
+ 20
+2133174.635
+ 10
+6042823.573
+ 20
+2133179.597
+ 10
+6042822.952
+ 20
+2133184.558
+ 10
+6042822.332
+ 20
+2133189.519
+ 10
+6042821.716
+ 20
+2133194.468
+ 10
+6042821.101
+ 20
+2133199.43
+ 10
+6042820.485
+ 20
+2133204.392
+ 10
+6042819.87
+ 20
+2133209.354
+ 10
+6042819.255
+ 20
+2133214.316
+ 10
+6042818.64
+ 20
+2133219.278
+ 10
+6042818.024
+ 20
+2133224.24
+ 10
+6042817.409
+ 20
+2133229.202
+ 10
+6042816.794
+ 20
+2133234.164
+ 10
+6042816.179
+ 20
+2133239.126
+ 10
+6042815.575
+ 20
+2133244.09
+ 10
+6042814.975
+ 20
+2133249.053
+ 10
+6042814.376
+ 20
+2133254.017
+ 10
+6042813.776
+ 20
+2133258.981
+ 10
+6042813.176
+ 20
+2133263.945
+ 10
+6042812.577
+ 20
+2133268.909
+ 10
+6042811.977
+ 20
+2133273.873
+ 10
+6042811.378
+ 20
+2133278.837
+ 10
+6042810.778
+ 20
+2133283.801
+ 10
+6042810.179
+ 20
+2133288.765
+ 10
+6042809.579
+ 20
+2133293.729
+ 10
+6042808.98
+ 20
+2133298.693
+ 10
+6042808.38
+ 20
+2133303.657
+ 10
+6042807.781
+ 20
+2133308.621
+ 10
+6042807.181
+ 20
+2133313.585
+ 10
+6042806.582
+ 20
+2133318.549
+ 10
+6042805.982
+ 20
+2133323.513
+ 10
+6042805.383
+ 20
+2133328.477
+ 10
+6042804.783
+ 20
+2133333.441
+ 10
+6042804.174
+ 20
+2133338.403
+ 10
+6042803.558
+ 20
+2133343.365
+ 10
+6042802.943
+ 20
+2133348.327
+ 10
+6042802.328
+ 20
+2133353.289
+ 10
+6042801.712
+ 20
+2133358.251
+ 10
+6042801.097
+ 20
+2133363.213
+ 10
+6042800.481
+ 20
+2133368.175
+ 10
+6042799.866
+ 20
+2133373.137
+ 10
+6042799.25
+ 20
+2133378.099
+ 10
+6042798.635
+ 20
+2133383.061
+ 10
+6042798.019
+ 20
+2133388.023
+ 10
+6042797.404
+ 20
+2133392.985
+ 10
+6042796.788
+ 20
+2133397.947
+ 10
+6042796.173
+ 20
+2133402.909
+ 10
+6042795.557
+ 20
+2133407.871
+ 10
+6042794.939
+ 20
+2133412.84
+ 10
+6042794.321
+ 20
+2133417.802
+ 10
+6042793.702
+ 20
+2133422.763
+ 10
+6042793.083
+ 20
+2133427.725
+ 10
+6042792.462
+ 20
+2133432.686
+ 10
+6042791.84
+ 20
+2133437.647
+ 10
+6042791.217
+ 20
+2133442.608
+ 10
+6042790.594
+ 20
+2133447.569
+ 10
+6042789.971
+ 20
+2133452.53
+ 10
+6042789.348
+ 20
+2133457.491
+ 10
+6042788.725
+ 20
+2133462.452
+ 10
+6042788.103
+ 20
+2133467.413
+ 10
+6042787.48
+ 20
+2133472.375
+ 10
+6042786.857
+ 20
+2133477.336
+ 10
+6042786.234
+ 20
+2133482.297
+ 10
+6042785.611
+ 20
+2133487.258
+ 10
+6042784.988
+ 20
+2133492.219
+ 10
+6042784.365
+ 20
+2133497.18
+ 10
+6042783.743
+ 20
+2133502.141
+ 10
+6042783.12
+ 20
+2133507.102
+ 10
+6042782.497
+ 20
+2133512.063
+ 10
+6042781.874
+ 20
+2133517.024
+ 10
+6042781.251
+ 20
+2133521.985
+ 10
+6042780.634
+ 20
+2133526.947
+ 10
+6042780.024
+ 20
+2133531.909
+ 10
+6042779.413
+ 20
+2133536.872
+ 10
+6042778.803
+ 20
+2133541.835
+ 10
+6042778.192
+ 20
+2133546.797
+ 10
+6042777.582
+ 20
+2133551.76
+ 10
+6042776.971
+ 20
+2133556.722
+ 10
+6042776.361
+ 20
+2133561.685
+ 10
+6042775.751
+ 20
+2133566.648
+ 10
+6042775.14
+ 20
+2133571.61
+ 10
+6042774.53
+ 20
+2133576.573
+ 10
+6042773.919
+ 20
+2133581.535
+ 10
+6042773.309
+ 20
+2133586.498
+ 10
+6042772.698
+ 20
+2133591.461
+ 10
+6042772.088
+ 20
+2133596.423
+ 10
+6042771.477
+ 20
+2133601.386
+ 10
+6042770.867
+ 20
+2133606.348
+ 10
+6042770.256
+ 20
+2133611.311
+ 10
+6042769.646
+ 20
+2133616.274
+ 10
+6042769.035
+ 20
+2133621.236
+ 10
+6042768.425
+ 20
+2133626.199
+ 10
+6042767.814
+ 20
+2133631.161
+ 10
+6042767.197
+ 20
+2133636.123
+ 10
+6042766.58
+ 20
+2133641.085
+ 10
+6042765.964
+ 20
+2133646.047
+ 10
+6042765.342
+ 20
+2133651.025
+ 10
+6042764.718
+ 20
+2133655.986
+ 10
+6042764.095
+ 20
+2133660.947
+ 10
+6042763.471
+ 20
+2133665.908
+ 10
+6042762.847
+ 20
+2133670.869
+ 10
+6042762.224
+ 20
+2133675.83
+ 10
+6042761.6
+ 20
+2133680.791
+ 10
+6042760.976
+ 20
+2133685.752
+ 10
+6042760.352
+ 20
+2133690.713
+ 10
+6042759.729
+ 20
+2133695.674
+ 10
+6042759.105
+ 20
+2133700.635
+ 10
+6042758.481
+ 20
+2133705.595
+ 10
+6042757.858
+ 20
+2133710.556
+ 10
+6042757.234
+ 20
+2133715.517
+ 10
+6042756.61
+ 20
+2133720.478
+ 10
+6042755.986
+ 20
+2133725.439
+ 10
+6042755.363
+ 20
+2133730.4
+ 10
+6042754.739
+ 20
+2133735.361
+ 10
+6042754.115
+ 20
+2133740.322
+ 10
+6042753.492
+ 20
+2133745.283
+ 10
+6042752.868
+ 20
+2133750.244
+ 10
+6042752.244
+ 20
+2133755.205
+ 10
+6042751.621
+ 20
+2133760.166
+ 10
+6042750.997
+ 20
+2133765.127
+ 10
+6042750.368
+ 20
+2133770.087
+ 10
+6042749.729
+ 20
+2133775.046
+ 10
+6042749.089
+ 20
+2133780.005
+ 10
+6042748.45
+ 20
+2133784.964
+ 10
+6042747.811
+ 20
+2133789.923
+ 10
+6042747.171
+ 20
+2133794.882
+ 10
+6042746.532
+ 20
+2133799.841
+ 10
+6042745.893
+ 20
+2133804.8
+ 10
+6042745.253
+ 20
+2133809.759
+ 10
+6042744.614
+ 20
+2133814.718
+ 10
+6042743.974
+ 20
+2133819.677
+ 10
+6042743.335
+ 20
+2133824.636
+ 10
+6042742.696
+ 20
+2133829.595
+ 10
+6042742.056
+ 20
+2133834.554
+ 10
+6042741.417
+ 20
+2133839.513
+ 10
+6042740.778
+ 20
+2133844.472
+ 10
+6042740.138
+ 20
+2133849.431
+ 10
+6042739.499
+ 20
+2133854.39
+ 10
+6042738.86
+ 20
+2133859.349
+ 10
+6042738.22
+ 20
+2133864.307
+ 10
+6042737.57
+ 20
+2133869.265
+ 10
+6042736.906
+ 20
+2133874.221
+ 10
+6042736.241
+ 20
+2133879.177
+ 10
+6042735.577
+ 20
+2133884.132
+ 10
+6042734.913
+ 20
+2133889.088
+ 10
+6042734.223
+ 20
+2133894.137
+ 10
+6042733.518
+ 20
+2133899.087
+ 10
+6042732.813
+ 20
+2133904.037
+ 10
+6042732.108
+ 20
+2133908.987
+ 10
+6042731.403
+ 20
+2133913.937
+ 10
+6042730.698
+ 20
+2133918.888
+ 10
+6042729.993
+ 20
+2133923.838
+ 10
+6042729.288
+ 20
+2133928.788
+ 10
+6042728.583
+ 20
+2133933.738
+ 10
+6042727.878
+ 20
+2133938.688
+ 10
+6042727.173
+ 20
+2133943.638
+ 10
+6042726.468
+ 20
+2133948.588
+ 10
+6042725.763
+ 20
+2133953.538
+ 10
+6042725.058
+ 20
+2133958.488
+ 10
+6042724.353
+ 20
+2133963.438
+ 10
+6042723.648
+ 20
+2133968.388
+ 10
+6042722.943
+ 20
+2133973.338
+ 10
+6042722.238
+ 20
+2133978.288
+ 10
+6042721.533
+ 20
+2133983.238
+ 10
+6042720.828
+ 20
+2133988.188
+ 10
+6042720.123
+ 20
+2133993.138
+ 10
+6042719.418
+ 20
+2133998.088
+ 10
+6042718.713
+ 20
+2134003.039
+ 10
+6042718.008
+ 20
+2134007.989
+ 10
+6042717.303
+ 20
+2134012.939
+ 10
+6042716.598
+ 20
+2134017.889
+ 10
+6042715.893
+ 20
+2134022.839
+ 10
+6042715.188
+ 20
+2134027.789
+ 10
+6042714.483
+ 20
+2134032.739
+ 10
+6042713.778
+ 20
+2134037.689
+ 10
+6042713.073
+ 20
+2134042.639
+ 10
+6042712.368
+ 20
+2134047.589
+ 10
+6042711.663
+ 20
+2134052.539
+ 10
+6042710.947
+ 20
+2134057.487
+ 10
+6042710.199
+ 20
+2134062.431
+ 10
+6042709.452
+ 20
+2134067.375
+ 10
+6042708.704
+ 20
+2134072.319
+ 10
+6042707.956
+ 20
+2134077.263
+ 10
+6042707.209
+ 20
+2134082.207
+ 10
+6042706.425
+ 20
+2134087.224
+ 10
+6042705.645
+ 20
+2134092.163
+ 10
+6042704.865
+ 20
+2134097.102
+ 10
+6042704.085
+ 20
+2134102.04
+ 10
+6042703.305
+ 20
+2134106.979
+ 10
+6042702.525
+ 20
+2134111.918
+ 10
+6042701.745
+ 20
+2134116.857
+ 10
+6042700.965
+ 20
+2134121.796
+ 10
+6042700.185
+ 20
+2134126.734
+ 10
+6042699.405
+ 20
+2134131.673
+ 10
+6042698.625
+ 20
+2134136.612
+ 10
+6042697.845
+ 20
+2134141.551
+ 10
+6042697.065
+ 20
+2134146.489
+ 10
+6042696.285
+ 20
+2134151.428
+ 10
+6042695.505
+ 20
+2134156.367
+ 10
+6042694.725
+ 20
+2134161.306
+ 10
+6042693.944
+ 20
+2134166.245
+ 10
+6042693.164
+ 20
+2134171.183
+ 10
+6042692.384
+ 20
+2134176.122
+ 10
+6042691.604
+ 20
+2134181.061
+ 10
+6042690.824
+ 20
+2134186
+ 10
+6042690.044
+ 20
+2134190.938
+ 10
+6042689.264
+ 20
+2134195.877
+ 10
+6042688.484
+ 20
+2134200.816
+ 10
+6042687.704
+ 20
+2134205.755
+ 10
+6042686.924
+ 20
+2134210.694
+ 10
+6042686.144
+ 20
+2134215.632
+ 10
+6042685.364
+ 20
+2134220.571
+ 10
+6042684.584
+ 20
+2134225.51
+ 10
+6042683.804
+ 20
+2134230.449
+ 10
+6042683.005
+ 20
+2134235.42
+ 10
+6042682.21
+ 20
+2134240.356
+ 10
+6042681.412
+ 20
+2134245.292
+ 10
+6042680.602
+ 20
+2134250.226
+ 10
+6042679.792
+ 20
+2134255.16
+ 10
+6042678.982
+ 20
+2134260.094
+ 10
+6042678.172
+ 20
+2134265.028
+ 10
+6042677.361
+ 20
+2134269.962
+ 10
+6042676.551
+ 20
+2134274.896
+ 10
+6042675.741
+ 20
+2134279.83
+ 10
+6042674.931
+ 20
+2134284.764
+ 10
+6042674.121
+ 20
+2134289.698
+ 10
+6042673.31
+ 20
+2134294.632
+ 10
+6042672.5
+ 20
+2134299.565
+ 10
+6042671.69
+ 20
+2134304.499
+ 10
+6042670.88
+ 20
+2134309.433
+ 10
+6042670.07
+ 20
+2134314.367
+ 10
+6042669.259
+ 20
+2134319.301
+ 10
+6042668.449
+ 20
+2134324.235
+ 10
+6042667.639
+ 20
+2134329.169
+ 10
+6042666.829
+ 20
+2134334.103
+ 10
+6042666.019
+ 20
+2134339.037
+ 10
+6042665.208
+ 20
+2134343.971
+ 10
+6042664.398
+ 20
+2134348.905
+ 10
+6042663.588
+ 20
+2134353.839
+ 10
+6042662.778
+ 20
+2134358.772
+ 10
+6042661.967
+ 20
+2134363.707
+ 10
+6042661.157
+ 20
+2134368.641
+ 10
+6042660.346
+ 20
+2134373.575
+ 10
+6042659.535
+ 20
+2134378.509
+ 10
+6042658.725
+ 20
+2134383.443
+ 10
+6042657.914
+ 20
+2134388.377
+ 10
+6042657.103
+ 20
+2134393.31
+ 10
+6042656.293
+ 20
+2134398.244
+ 10
+6042655.484
+ 20
+2134403.178
+ 10
+6042654.679
+ 20
+2134408.113
+ 10
+6042653.874
+ 20
+2134413.048
+ 10
+6042653.07
+ 20
+2134417.983
+ 10
+6042652.265
+ 20
+2134422.918
+ 10
+6042651.46
+ 20
+2134427.853
+ 10
+6042650.656
+ 20
+2134432.787
+ 10
+6042649.851
+ 20
+2134437.722
+ 10
+6042649.046
+ 20
+2134442.657
+ 10
+6042648.242
+ 20
+2134447.592
+ 10
+6042647.437
+ 20
+2134452.527
+ 10
+6042646.632
+ 20
+2134457.462
+ 10
+6042645.828
+ 20
+2134462.396
+ 10
+6042645.023
+ 20
+2134467.331
+ 10
+6042644.218
+ 20
+2134472.266
+ 10
+6042643.414
+ 20
+2134477.201
+ 10
+6042642.611
+ 20
+2134482.127
+ 10
+6042641.81
+ 20
+2134487.062
+ 10
+6042641.009
+ 20
+2134491.998
+ 10
+6042640.208
+ 20
+2134496.933
+ 10
+6042639.407
+ 20
+2134501.869
+ 10
+6042638.606
+ 20
+2134506.804
+ 10
+6042637.805
+ 20
+2134511.74
+ 10
+6042637.004
+ 20
+2134516.675
+ 10
+6042636.203
+ 20
+2134521.61
+ 10
+6042635.402
+ 20
+2134526.546
+ 10
+6042634.601
+ 20
+2134531.481
+ 10
+6042633.8
+ 20
+2134536.417
+ 10
+6042632.999
+ 20
+2134541.352
+ 10
+6042632.198
+ 20
+2134546.288
+ 10
+6042631.397
+ 20
+2134551.223
+ 10
+6042630.596
+ 20
+2134556.158
+ 10
+6042629.795
+ 20
+2134561.094
+ 10
+6042628.994
+ 20
+2134566.029
+ 10
+6042628.193
+ 20
+2134570.965
+ 10
+6042627.391
+ 20
+2134575.9
+ 10
+6042626.589
+ 20
+2134580.835
+ 10
+6042625.786
+ 20
+2134585.77
+ 10
+6042624.984
+ 20
+2134590.705
+ 10
+6042624.181
+ 20
+2134595.641
+ 10
+6042623.379
+ 20
+2134600.576
+ 10
+6042622.576
+ 20
+2134605.511
+ 10
+6042621.774
+ 20
+2134610.446
+ 10
+6042620.97
+ 20
+2134615.383
+ 10
+6042620.167
+ 20
+2134620.318
+ 10
+6042619.363
+ 20
+2134625.253
+ 10
+6042618.56
+ 20
+2134630.188
+ 10
+6042617.756
+ 20
+2134635.123
+ 10
+6042616.953
+ 20
+2134640.059
+ 10
+6042616.149
+ 20
+2134644.994
+ 10
+6042615.346
+ 20
+2134649.929
+ 10
+6042614.543
+ 20
+2134654.864
+ 10
+6042613.739
+ 20
+2134659.799
+ 10
+6042612.936
+ 20
+2134664.734
+ 10
+6042612.132
+ 20
+2134669.669
+ 10
+6042611.329
+ 20
+2134674.604
+ 10
+6042610.525
+ 20
+2134679.539
+ 10
+6042609.722
+ 20
+2134684.474
+ 10
+6042608.919
+ 20
+2134689.409
+ 10
+6042608.115
+ 20
+2134694.344
+ 10
+6042607.312
+ 20
+2134699.279
+ 10
+6042606.508
+ 20
+2134704.214
+ 10
+6042605.705
+ 20
+2134709.149
+ 10
+6042604.901
+ 20
+2134714.084
+ 10
+6042604.098
+ 20
+2134719.019
+ 10
+6042603.295
+ 20
+2134723.954
+ 10
+6042602.494
+ 20
+2134728.885
+ 10
+6042601.693
+ 20
+2134733.82
+ 10
+6042600.892
+ 20
+2134738.755
+ 10
+6042600.091
+ 20
+2134743.691
+ 10
+6042599.29
+ 20
+2134748.626
+ 10
+6042598.489
+ 20
+2134753.562
+ 10
+6042597.688
+ 20
+2134758.497
+ 10
+6042596.886
+ 20
+2134763.433
+ 10
+6042596.085
+ 20
+2134768.368
+ 10
+6042595.284
+ 20
+2134773.303
+ 10
+6042594.483
+ 20
+2134778.239
+ 10
+6042593.682
+ 20
+2134783.174
+ 10
+6042592.881
+ 20
+2134788.11
+ 10
+6042592.08
+ 20
+2134793.045
+ 10
+6042591.279
+ 20
+2134797.98
+ 10
+6042590.478
+ 20
+2134802.916
+ 10
+6042589.677
+ 20
+2134807.851
+ 10
+6042588.876
+ 20
+2134812.787
+ 10
+6042588.075
+ 20
+2134817.722
+ 10
+6042587.273
+ 20
+2134822.657
+ 10
+6042586.481
+ 20
+2134827.571
+ 10
+6042585.69
+ 20
+2134832.508
+ 10
+6042584.899
+ 20
+2134837.445
+ 10
+6042584.108
+ 20
+2134842.382
+ 10
+6042583.316
+ 20
+2134847.319
+ 10
+6042582.525
+ 20
+2134852.256
+ 10
+6042581.742
+ 20
+2134857.194
+ 10
+6042580.979
+ 20
+2134862.135
+ 10
+6042580.216
+ 20
+2134867.077
+ 10
+6042579.453
+ 20
+2134872.018
+ 10
+6042578.69
+ 20
+2134876.96
+ 10
+6042577.927
+ 20
+2134881.901
+ 10
+6042577.164
+ 20
+2134886.843
+ 10
+6042576.401
+ 20
+2134891.784
+ 10
+6042575.638
+ 20
+2134896.726
+ 10
+6042574.875
+ 20
+2134901.667
+ 10
+6042574.112
+ 20
+2134906.609
+ 10
+6042573.349
+ 20
+2134911.55
+ 10
+6042572.586
+ 20
+2134916.492
+ 10
+6042571.823
+ 20
+2134921.433
+ 10
+6042571.081
+ 20
+2134926.335
+ 10
+6042570.335
+ 20
+2134931.279
+ 10
+6042569.589
+ 20
+2134936.223
+ 10
+6042568.843
+ 20
+2134941.167
+ 10
+6042568.097
+ 20
+2134946.111
+ 10
+6042567.351
+ 20
+2134951.056
+ 10
+6042566.605
+ 20
+2134956
+ 10
+6042565.859
+ 20
+2134960.944
+ 10
+6042565.114
+ 20
+2134965.888
+ 10
+6042564.368
+ 20
+2134970.832
+ 10
+6042563.622
+ 20
+2134975.776
+ 10
+6042562.876
+ 20
+2134980.72
+ 10
+6042562.13
+ 20
+2134985.664
+ 10
+6042561.384
+ 20
+2134990.608
+ 10
+6042560.638
+ 20
+2134995.552
+ 10
+6042559.892
+ 20
+2135000.496
+ 10
+6042559.147
+ 20
+2135005.44
+ 10
+6042558.401
+ 20
+2135010.384
+ 10
+6042557.657
+ 20
+2135015.329
+ 10
+6042556.916
+ 20
+2135020.273
+ 10
+6042556.175
+ 20
+2135025.218
+ 10
+6042555.433
+ 20
+2135030.163
+ 10
+6042554.692
+ 20
+2135035.108
+ 10
+6042553.951
+ 20
+2135040.052
+ 10
+6042553.21
+ 20
+2135044.997
+ 10
+6042552.469
+ 20
+2135049.942
+ 10
+6042551.728
+ 20
+2135054.887
+ 10
+6042551.006
+ 20
+2135059.799
+ 10
+6042550.279
+ 20
+2135064.746
+ 10
+6042549.552
+ 20
+2135069.693
+ 10
+6042548.826
+ 20
+2135074.64
+ 10
+6042548.099
+ 20
+2135079.587
+ 10
+6042547.372
+ 20
+2135084.533
+ 10
+6042546.645
+ 20
+2135089.48
+ 10
+6042545.918
+ 20
+2135094.427
+ 10
+6042545.192
+ 20
+2135099.374
+ 10
+6042544.465
+ 20
+2135104.321
+ 10
+6042543.738
+ 20
+2135109.268
+ 10
+6042543.011
+ 20
+2135114.215
+ 10
+6042542.284
+ 20
+2135119.162
+ 10
+6042541.557
+ 20
+2135124.109
+ 10
+6042540.831
+ 20
+2135129.056
+ 10
+6042540.104
+ 20
+2135134.002
+ 10
+6042539.378
+ 20
+2135138.949
+ 10
+6042538.658
+ 20
+2135143.897
+ 10
+6042537.938
+ 20
+2135148.845
+ 10
+6042537.218
+ 20
+2135153.793
+ 10
+6042536.498
+ 20
+2135158.741
+ 10
+6042535.778
+ 20
+2135163.689
+ 10
+6042535.059
+ 20
+2135168.637
+ 10
+6042534.339
+ 20
+2135173.585
+ 10
+6042533.619
+ 20
+2135178.533
+ 10
+6042532.899
+ 20
+2135183.481
+ 10
+6042532.179
+ 20
+2135188.429
+ 10
+6042531.459
+ 20
+2135193.377
+ 10
+6042530.74
+ 20
+2135198.324
+ 10
+6042530.02
+ 20
+2135203.272
+ 10
+6042529.3
+ 20
+2135208.22
+ 10
+6042528.58
+ 20
+2135213.168
+ 10
+6042527.86
+ 20
+2135218.116
+ 10
+6042527.14
+ 20
+2135223.064
+ 10
+6042526.42
+ 20
+2135228.012
+ 10
+6042525.701
+ 20
+2135232.96
+ 10
+6042524.974
+ 20
+2135237.941
+ 10
+6042524.24
+ 20
+2135242.887
+ 10
+6042523.505
+ 20
+2135247.833
+ 10
+6042522.771
+ 20
+2135252.779
+ 10
+6042522.036
+ 20
+2135257.724
+ 10
+6042521.302
+ 20
+2135262.67
+ 10
+6042520.568
+ 20
+2135267.616
+ 10
+6042519.833
+ 20
+2135272.562
+ 10
+6042519.099
+ 20
+2135277.508
+ 10
+6042518.358
+ 20
+2135282.452
+ 10
+6042517.612
+ 20
+2135287.396
+ 10
+6042516.55370044
+ 20
+2135294.433893652
+  0
+LWPOLYLINE
+  5
+B3
+100
+AcDbEntity
+  8
+seg001
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbPolyline
+ 90
+  503
+ 70
+    0
+ 43
+0
+ 10
+6042881.822
+ 20
+2132812.307
+ 10
+6042881.191
+ 20
+2132817.267
+ 10
+6042880.561
+ 20
+2132822.227
+ 10
+6042879.93
+ 20
+2132827.187
+ 10
+6042879.31
+ 20
+2132832.137
+ 10
+6042878.689
+ 20
+2132837.098
+ 10
+6042878.068
+ 20
+2132842.059
+ 10
+6042877.447
+ 20
+2132847.021
+ 10
+6042876.827
+ 20
+2132851.982
+ 10
+6042876.206
+ 20
+2132856.943
+ 10
+6042875.585
+ 20
+2132861.905
+ 10
+6042874.964
+ 20
+2132866.866
+ 10
+6042874.343
+ 20
+2132871.827
+ 10
+6042873.722
+ 20
+2132876.789
+ 10
+6042873.102
+ 20
+2132881.75
+ 10
+6042872.481
+ 20
+2132886.711
+ 10
+6042871.86
+ 20
+2132891.672
+ 10
+6042871.239
+ 20
+2132896.634
+ 10
+6042870.618
+ 20
+2132901.595
+ 10
+6042869.997
+ 20
+2132906.556
+ 10
+6042869.376
+ 20
+2132911.518
+ 10
+6042868.756
+ 20
+2132916.479
+ 10
+6042868.135
+ 20
+2132921.44
+ 10
+6042867.514
+ 20
+2132926.402
+ 10
+6042866.893
+ 20
+2132931.363
+ 10
+6042866.272
+ 20
+2132936.324
+ 10
+6042865.652
+ 20
+2132941.285
+ 10
+6042865.032
+ 20
+2132946.246
+ 10
+6042864.412
+ 20
+2132951.207
+ 10
+6042863.791
+ 20
+2132956.169
+ 10
+6042863.171
+ 20
+2132961.13
+ 10
+6042862.551
+ 20
+2132966.092
+ 10
+6042861.931
+ 20
+2132971.053
+ 10
+6042861.311
+ 20
+2132976.014
+ 10
+6042860.691
+ 20
+2132980.976
+ 10
+6042860.071
+ 20
+2132985.937
+ 10
+6042859.451
+ 20
+2132990.899
+ 10
+6042858.831
+ 20
+2132995.86
+ 10
+6042858.211
+ 20
+2133000.821
+ 10
+6042857.59
+ 20
+2133005.783
+ 10
+6042856.97
+ 20
+2133010.744
+ 10
+6042856.35
+ 20
+2133015.706
+ 10
+6042855.73
+ 20
+2133020.667
+ 10
+6042855.11
+ 20
+2133025.628
+ 10
+6042854.49
+ 20
+2133030.59
+ 10
+6042853.87
+ 20
+2133035.551
+ 10
+6042853.25
+ 20
+2133040.513
+ 10
+6042852.63
+ 20
+2133045.474
+ 10
+6042852.01
+ 20
+2133050.435
+ 10
+6042851.372
+ 20
+2133055.428
+ 10
+6042850.725
+ 20
+2133060.386
+ 10
+6042850.078
+ 20
+2133065.344
+ 10
+6042849.431
+ 20
+2133070.301
+ 10
+6042848.783
+ 20
+2133075.259
+ 10
+6042848.136
+ 20
+2133080.217
+ 10
+6042847.489
+ 20
+2133085.175
+ 10
+6042846.842
+ 20
+2133090.133
+ 10
+6042846.194
+ 20
+2133095.091
+ 10
+6042845.547
+ 20
+2133100.049
+ 10
+6042844.9
+ 20
+2133105.007
+ 10
+6042844.253
+ 20
+2133109.965
+ 10
+6042843.606
+ 20
+2133114.923
+ 10
+6042842.958
+ 20
+2133119.881
+ 10
+6042842.311
+ 20
+2133124.839
+ 10
+6042841.664
+ 20
+2133129.797
+ 10
+6042841.017
+ 20
+2133134.755
+ 10
+6042840.369
+ 20
+2133139.713
+ 10
+6042839.722
+ 20
+2133144.67
+ 10
+6042839.092
+ 20
+2133149.595
+ 10
+6042838.473
+ 20
+2133154.557
+ 10
+6042837.855
+ 20
+2133159.519
+ 10
+6042837.236
+ 20
+2133164.48
+ 10
+6042836.618
+ 20
+2133169.442
+ 10
+6042835.999
+ 20
+2133174.403
+ 10
+6042835.381
+ 20
+2133179.365
+ 10
+6042834.762
+ 20
+2133184.327
+ 10
+6042834.144
+ 20
+2133189.288
+ 10
+6042833.526
+ 20
+2133194.25
+ 10
+6042832.907
+ 20
+2133199.211
+ 10
+6042832.289
+ 20
+2133204.173
+ 10
+6042831.67
+ 20
+2133209.135
+ 10
+6042831.052
+ 20
+2133214.096
+ 10
+6042830.433
+ 20
+2133219.058
+ 10
+6042829.815
+ 20
+2133224.019
+ 10
+6042829.197
+ 20
+2133228.981
+ 10
+6042828.578
+ 20
+2133233.943
+ 10
+6042827.96
+ 20
+2133238.904
+ 10
+6042827.357
+ 20
+2133243.83
+ 10
+6042826.77
+ 20
+2133248.795
+ 10
+6042826.183
+ 20
+2133253.76
+ 10
+6042825.596
+ 20
+2133258.726
+ 10
+6042825.009
+ 20
+2133263.691
+ 10
+6042824.422
+ 20
+2133268.657
+ 10
+6042823.835
+ 20
+2133273.622
+ 10
+6042823.248
+ 20
+2133278.588
+ 10
+6042822.661
+ 20
+2133283.553
+ 10
+6042822.074
+ 20
+2133288.518
+ 10
+6042821.487
+ 20
+2133293.484
+ 10
+6042820.9
+ 20
+2133298.449
+ 10
+6042820.313
+ 20
+2133303.415
+ 10
+6042819.725
+ 20
+2133308.38
+ 10
+6042819.138
+ 20
+2133313.345
+ 10
+6042818.551
+ 20
+2133318.311
+ 10
+6042817.964
+ 20
+2133323.276
+ 10
+6042817.377
+ 20
+2133328.242
+ 10
+6042816.79
+ 20
+2133333.207
+ 10
+6042816.19
+ 20
+2133338.21
+ 10
+6042815.571
+ 20
+2133343.171
+ 10
+6042814.952
+ 20
+2133348.133
+ 10
+6042814.333
+ 20
+2133353.094
+ 10
+6042813.714
+ 20
+2133358.056
+ 10
+6042813.095
+ 20
+2133363.017
+ 10
+6042812.476
+ 20
+2133367.979
+ 10
+6042811.857
+ 20
+2133372.941
+ 10
+6042811.238
+ 20
+2133377.902
+ 10
+6042810.619
+ 20
+2133382.864
+ 10
+6042810
+ 20
+2133387.825
+ 10
+6042809.381
+ 20
+2133392.787
+ 10
+6042808.762
+ 20
+2133397.748
+ 10
+6042808.143
+ 20
+2133402.71
+ 10
+6042807.524
+ 20
+2133407.671
+ 10
+6042806.905
+ 20
+2133412.633
+ 10
+6042806.287
+ 20
+2133417.594
+ 10
+6042805.668
+ 20
+2133422.556
+ 10
+6042805.049
+ 20
+2133427.518
+ 10
+6042804.426
+ 20
+2133432.489
+ 10
+6042803.799
+ 20
+2133437.449
+ 10
+6042803.172
+ 20
+2133442.41
+ 10
+6042802.544
+ 20
+2133447.37
+ 10
+6042801.917
+ 20
+2133452.331
+ 10
+6042801.289
+ 20
+2133457.291
+ 10
+6042800.662
+ 20
+2133462.252
+ 10
+6042800.035
+ 20
+2133467.212
+ 10
+6042799.407
+ 20
+2133472.173
+ 10
+6042798.78
+ 20
+2133477.133
+ 10
+6042798.152
+ 20
+2133482.094
+ 10
+6042797.525
+ 20
+2133487.054
+ 10
+6042796.898
+ 20
+2133492.015
+ 10
+6042796.27
+ 20
+2133496.975
+ 10
+6042795.643
+ 20
+2133501.936
+ 10
+6042795.015
+ 20
+2133506.896
+ 10
+6042794.388
+ 20
+2133511.857
+ 10
+6042793.761
+ 20
+2133516.817
+ 10
+6042793.133
+ 20
+2133521.778
+ 10
+6042792.513
+ 20
+2133526.709
+ 10
+6042791.91
+ 20
+2133531.672
+ 10
+6042791.308
+ 20
+2133536.636
+ 10
+6042790.705
+ 20
+2133541.599
+ 10
+6042790.102
+ 20
+2133546.563
+ 10
+6042789.5
+ 20
+2133551.527
+ 10
+6042788.897
+ 20
+2133556.49
+ 10
+6042788.294
+ 20
+2133561.454
+ 10
+6042787.692
+ 20
+2133566.417
+ 10
+6042787.089
+ 20
+2133571.381
+ 10
+6042786.486
+ 20
+2133576.344
+ 10
+6042785.884
+ 20
+2133581.308
+ 10
+6042785.281
+ 20
+2133586.271
+ 10
+6042784.679
+ 20
+2133591.235
+ 10
+6042784.076
+ 20
+2133596.198
+ 10
+6042783.473
+ 20
+2133601.162
+ 10
+6042782.871
+ 20
+2133606.126
+ 10
+6042782.268
+ 20
+2133611.089
+ 10
+6042781.665
+ 20
+2133616.053
+ 10
+6042781.063
+ 20
+2133621.016
+ 10
+6042780.46
+ 20
+2133625.98
+ 10
+6042779.857
+ 20
+2133630.943
+ 10
+6042779.243
+ 20
+2133635.921
+ 10
+6042778.628
+ 20
+2133640.883
+ 10
+6042778.013
+ 20
+2133645.845
+ 10
+6042777.398
+ 20
+2133650.807
+ 10
+6042776.783
+ 20
+2133655.769
+ 10
+6042776.168
+ 20
+2133660.731
+ 10
+6042775.553
+ 20
+2133665.693
+ 10
+6042774.938
+ 20
+2133670.655
+ 10
+6042774.323
+ 20
+2133675.617
+ 10
+6042773.707
+ 20
+2133680.579
+ 10
+6042773.092
+ 20
+2133685.541
+ 10
+6042772.477
+ 20
+2133690.503
+ 10
+6042771.862
+ 20
+2133695.465
+ 10
+6042771.247
+ 20
+2133700.427
+ 10
+6042770.632
+ 20
+2133705.389
+ 10
+6042770.017
+ 20
+2133710.351
+ 10
+6042769.402
+ 20
+2133715.313
+ 10
+6042768.787
+ 20
+2133720.275
+ 10
+6042768.172
+ 20
+2133725.237
+ 10
+6042767.557
+ 20
+2133730.199
+ 10
+6042766.942
+ 20
+2133735.161
+ 10
+6042766.327
+ 20
+2133740.123
+ 10
+6042765.711
+ 20
+2133745.085
+ 10
+6042765.096
+ 20
+2133750.047
+ 10
+6042764.481
+ 20
+2133755.009
+ 10
+6042763.866
+ 20
+2133759.971
+ 10
+6042763.251
+ 20
+2133764.933
+ 10
+6042762.636
+ 20
+2133769.895
+ 10
+6042761.986
+ 20
+2133774.891
+ 10
+6042761.339
+ 20
+2133779.849
+ 10
+6042760.693
+ 20
+2133784.807
+ 10
+6042760.047
+ 20
+2133789.765
+ 10
+6042759.4
+ 20
+2133794.723
+ 10
+6042758.754
+ 20
+2133799.681
+ 10
+6042758.107
+ 20
+2133804.639
+ 10
+6042757.461
+ 20
+2133809.597
+ 10
+6042756.815
+ 20
+2133814.555
+ 10
+6042756.168
+ 20
+2133819.513
+ 10
+6042755.522
+ 20
+2133824.471
+ 10
+6042754.875
+ 20
+2133829.429
+ 10
+6042754.229
+ 20
+2133834.387
+ 10
+6042753.583
+ 20
+2133839.346
+ 10
+6042752.936
+ 20
+2133844.304
+ 10
+6042752.29
+ 20
+2133849.262
+ 10
+6042751.644
+ 20
+2133854.22
+ 10
+6042750.997
+ 20
+2133859.178
+ 10
+6042750.351
+ 20
+2133864.136
+ 10
+6042749.692
+ 20
+2133869.153
+ 10
+6042748.996
+ 20
+2133874.104
+ 10
+6042748.299
+ 20
+2133879.055
+ 10
+6042747.603
+ 20
+2133884.007
+ 10
+6042746.907
+ 20
+2133888.958
+ 10
+6042746.211
+ 20
+2133893.909
+ 10
+6042745.515
+ 20
+2133898.861
+ 10
+6042744.818
+ 20
+2133903.812
+ 10
+6042744.122
+ 20
+2133908.763
+ 10
+6042743.426
+ 20
+2133913.715
+ 10
+6042742.73
+ 20
+2133918.666
+ 10
+6042742.034
+ 20
+2133923.617
+ 10
+6042741.337
+ 20
+2133928.568
+ 10
+6042740.641
+ 20
+2133933.52
+ 10
+6042739.945
+ 20
+2133938.471
+ 10
+6042739.249
+ 20
+2133943.422
+ 10
+6042738.553
+ 20
+2133948.374
+ 10
+6042737.856
+ 20
+2133953.325
+ 10
+6042737.16
+ 20
+2133958.276
+ 10
+6042736.464
+ 20
+2133963.227
+ 10
+6042735.768
+ 20
+2133968.179
+ 10
+6042735.072
+ 20
+2133973.13
+ 10
+6042734.375
+ 20
+2133978.081
+ 10
+6042733.679
+ 20
+2133983.033
+ 10
+6042732.983
+ 20
+2133987.984
+ 10
+6042732.287
+ 20
+2133992.935
+ 10
+6042731.591
+ 20
+2133997.887
+ 10
+6042730.894
+ 20
+2134002.838
+ 10
+6042730.198
+ 20
+2134007.789
+ 10
+6042729.502
+ 20
+2134012.74
+ 10
+6042728.806
+ 20
+2134017.692
+ 10
+6042728.11
+ 20
+2134022.643
+ 10
+6042727.413
+ 20
+2134027.594
+ 10
+6042726.717
+ 20
+2134032.546
+ 10
+6042726.021
+ 20
+2134037.497
+ 10
+6042725.325
+ 20
+2134042.448
+ 10
+6042724.629
+ 20
+2134047.399
+ 10
+6042723.932
+ 20
+2134052.351
+ 10
+6042723.236
+ 20
+2134057.302
+ 10
+6042722.45
+ 20
+2134062.344
+ 10
+6042721.668
+ 20
+2134067.283
+ 10
+6042720.887
+ 20
+2134072.222
+ 10
+6042720.106
+ 20
+2134077.16
+ 10
+6042719.324
+ 20
+2134082.099
+ 10
+6042718.543
+ 20
+2134087.037
+ 10
+6042717.761
+ 20
+2134091.976
+ 10
+6042716.98
+ 20
+2134096.914
+ 10
+6042716.199
+ 20
+2134101.853
+ 10
+6042715.417
+ 20
+2134106.792
+ 10
+6042714.636
+ 20
+2134111.73
+ 10
+6042713.854
+ 20
+2134116.669
+ 10
+6042713.073
+ 20
+2134121.607
+ 10
+6042712.291
+ 20
+2134126.546
+ 10
+6042711.51
+ 20
+2134131.484
+ 10
+6042710.729
+ 20
+2134136.423
+ 10
+6042709.947
+ 20
+2134141.361
+ 10
+6042709.166
+ 20
+2134146.3
+ 10
+6042708.384
+ 20
+2134151.239
+ 10
+6042707.603
+ 20
+2134156.177
+ 10
+6042706.822
+ 20
+2134161.116
+ 10
+6042706.04
+ 20
+2134166.054
+ 10
+6042705.259
+ 20
+2134170.993
+ 10
+6042704.477
+ 20
+2134175.931
+ 10
+6042703.696
+ 20
+2134180.87
+ 10
+6042702.914
+ 20
+2134185.808
+ 10
+6042702.133
+ 20
+2134190.747
+ 10
+6042701.352
+ 20
+2134195.686
+ 10
+6042700.57
+ 20
+2134200.624
+ 10
+6042699.789
+ 20
+2134205.563
+ 10
+6042699.007
+ 20
+2134210.501
+ 10
+6042698.226
+ 20
+2134215.44
+ 10
+6042697.445
+ 20
+2134220.378
+ 10
+6042696.663
+ 20
+2134225.317
+ 10
+6042695.882
+ 20
+2134230.256
+ 10
+6042695.1
+ 20
+2134235.194
+ 10
+6042694.319
+ 20
+2134240.133
+ 10
+6042693.537
+ 20
+2134245.071
+ 10
+6042692.726
+ 20
+2134250.043
+ 10
+6042691.914
+ 20
+2134254.977
+ 10
+6042691.101
+ 20
+2134259.91
+ 10
+6042690.289
+ 20
+2134264.844
+ 10
+6042689.476
+ 20
+2134269.777
+ 10
+6042688.664
+ 20
+2134274.711
+ 10
+6042687.851
+ 20
+2134279.645
+ 10
+6042687.039
+ 20
+2134284.578
+ 10
+6042686.226
+ 20
+2134289.512
+ 10
+6042685.414
+ 20
+2134294.445
+ 10
+6042684.601
+ 20
+2134299.379
+ 10
+6042683.788
+ 20
+2134304.312
+ 10
+6042682.976
+ 20
+2134309.246
+ 10
+6042682.163
+ 20
+2134314.179
+ 10
+6042681.351
+ 20
+2134319.113
+ 10
+6042680.538
+ 20
+2134324.046
+ 10
+6042679.726
+ 20
+2134328.98
+ 10
+6042678.913
+ 20
+2134333.913
+ 10
+6042678.101
+ 20
+2134338.847
+ 10
+6042677.288
+ 20
+2134343.78
+ 10
+6042676.476
+ 20
+2134348.714
+ 10
+6042675.663
+ 20
+2134353.648
+ 10
+6042674.85
+ 20
+2134358.581
+ 10
+6042674.038
+ 20
+2134363.515
+ 10
+6042673.225
+ 20
+2134368.448
+ 10
+6042672.413
+ 20
+2134373.382
+ 10
+6042671.6
+ 20
+2134378.315
+ 10
+6042670.788
+ 20
+2134383.249
+ 10
+6042669.975
+ 20
+2134388.182
+ 10
+6042669.163
+ 20
+2134393.116
+ 10
+6042668.35
+ 20
+2134398.049
+ 10
+6042667.538
+ 20
+2134402.983
+ 10
+6042666.737
+ 20
+2134407.904
+ 10
+6042665.937
+ 20
+2134412.839
+ 10
+6042665.136
+ 20
+2134417.775
+ 10
+6042664.335
+ 20
+2134422.71
+ 10
+6042663.535
+ 20
+2134427.646
+ 10
+6042662.734
+ 20
+2134432.581
+ 10
+6042661.934
+ 20
+2134437.517
+ 10
+6042661.133
+ 20
+2134442.452
+ 10
+6042660.332
+ 20
+2134447.388
+ 10
+6042659.532
+ 20
+2134452.323
+ 10
+6042658.731
+ 20
+2134457.259
+ 10
+6042657.931
+ 20
+2134462.194
+ 10
+6042657.13
+ 20
+2134467.13
+ 10
+6042656.329
+ 20
+2134472.065
+ 10
+6042655.529
+ 20
+2134477.001
+ 10
+6042654.728
+ 20
+2134481.936
+ 10
+6042653.928
+ 20
+2134486.872
+ 10
+6042653.127
+ 20
+2134491.807
+ 10
+6042652.327
+ 20
+2134496.743
+ 10
+6042651.526
+ 20
+2134501.678
+ 10
+6042650.725
+ 20
+2134506.614
+ 10
+6042649.925
+ 20
+2134511.549
+ 10
+6042649.124
+ 20
+2134516.484
+ 10
+6042648.324
+ 20
+2134521.42
+ 10
+6042647.523
+ 20
+2134526.355
+ 10
+6042646.722
+ 20
+2134531.291
+ 10
+6042645.922
+ 20
+2134536.226
+ 10
+6042645.121
+ 20
+2134541.162
+ 10
+6042644.321
+ 20
+2134546.097
+ 10
+6042643.52
+ 20
+2134551.033
+ 10
+6042642.719
+ 20
+2134555.968
+ 10
+6042641.919
+ 20
+2134560.904
+ 10
+6042641.118
+ 20
+2134565.839
+ 10
+6042640.318
+ 20
+2134570.775
+ 10
+6042639.516
+ 20
+2134575.714
+ 10
+6042638.713
+ 20
+2134580.649
+ 10
+6042637.909
+ 20
+2134585.584
+ 10
+6042637.105
+ 20
+2134590.519
+ 10
+6042636.302
+ 20
+2134595.454
+ 10
+6042635.498
+ 20
+2134600.389
+ 10
+6042634.694
+ 20
+2134605.324
+ 10
+6042633.891
+ 20
+2134610.259
+ 10
+6042633.087
+ 20
+2134615.194
+ 10
+6042632.283
+ 20
+2134620.129
+ 10
+6042631.479
+ 20
+2134625.064
+ 10
+6042630.676
+ 20
+2134629.999
+ 10
+6042629.872
+ 20
+2134634.934
+ 10
+6042629.068
+ 20
+2134639.869
+ 10
+6042628.265
+ 20
+2134644.804
+ 10
+6042627.461
+ 20
+2134649.739
+ 10
+6042626.657
+ 20
+2134654.674
+ 10
+6042625.854
+ 20
+2134659.609
+ 10
+6042625.05
+ 20
+2134664.544
+ 10
+6042624.246
+ 20
+2134669.479
+ 10
+6042623.442
+ 20
+2134674.414
+ 10
+6042622.639
+ 20
+2134679.349
+ 10
+6042621.835
+ 20
+2134684.284
+ 10
+6042621.031
+ 20
+2134689.219
+ 10
+6042620.228
+ 20
+2134694.154
+ 10
+6042619.424
+ 20
+2134699.089
+ 10
+6042618.62
+ 20
+2134704.024
+ 10
+6042617.817
+ 20
+2134708.959
+ 10
+6042617.013
+ 20
+2134713.894
+ 10
+6042616.21
+ 20
+2134718.828
+ 10
+6042615.407
+ 20
+2134723.763
+ 10
+6042614.604
+ 20
+2134728.698
+ 10
+6042613.801
+ 20
+2134733.633
+ 10
+6042612.998
+ 20
+2134738.568
+ 10
+6042612.195
+ 20
+2134743.503
+ 10
+6042611.392
+ 20
+2134748.438
+ 10
+6042610.589
+ 20
+2134753.374
+ 10
+6042609.786
+ 20
+2134758.309
+ 10
+6042608.983
+ 20
+2134763.244
+ 10
+6042608.18
+ 20
+2134768.179
+ 10
+6042607.377
+ 20
+2134773.114
+ 10
+6042606.574
+ 20
+2134778.049
+ 10
+6042605.771
+ 20
+2134782.984
+ 10
+6042604.968
+ 20
+2134787.919
+ 10
+6042604.165
+ 20
+2134792.854
+ 10
+6042603.362
+ 20
+2134797.789
+ 10
+6042602.559
+ 20
+2134802.724
+ 10
+6042601.756
+ 20
+2134807.66
+ 10
+6042600.953
+ 20
+2134812.595
+ 10
+6042600.15
+ 20
+2134817.53
+ 10
+6042599.347
+ 20
+2134822.465
+ 10
+6042598.544
+ 20
+2134827.4
+ 10
+6042597.741
+ 20
+2134832.335
+ 10
+6042596.938
+ 20
+2134837.27
+ 10
+6042596.135
+ 20
+2134842.205
+ 10
+6042595.332
+ 20
+2134847.14
+ 10
+6042594.529
+ 20
+2134852.075
+ 10
+6042593.726
+ 20
+2134857.011
+ 10
+6042592.983
+ 20
+2134861.886
+ 10
+6042592.237
+ 20
+2134866.83
+ 10
+6042591.49
+ 20
+2134871.774
+ 10
+6042590.744
+ 20
+2134876.718
+ 10
+6042589.998
+ 20
+2134881.662
+ 10
+6042589.251
+ 20
+2134886.606
+ 10
+6042588.505
+ 20
+2134891.549
+ 10
+6042587.758
+ 20
+2134896.493
+ 10
+6042587.012
+ 20
+2134901.437
+ 10
+6042586.265
+ 20
+2134906.381
+ 10
+6042585.519
+ 20
+2134911.325
+ 10
+6042584.772
+ 20
+2134916.269
+ 10
+6042584.026
+ 20
+2134921.213
+ 10
+6042583.279
+ 20
+2134926.157
+ 10
+6042582.533
+ 20
+2134931.101
+ 10
+6042581.787
+ 20
+2134936.045
+ 10
+6042581.04
+ 20
+2134940.989
+ 10
+6042580.294
+ 20
+2134945.933
+ 10
+6042579.547
+ 20
+2134950.877
+ 10
+6042578.801
+ 20
+2134955.821
+ 10
+6042578.054
+ 20
+2134960.765
+ 10
+6042577.308
+ 20
+2134965.709
+ 10
+6042576.561
+ 20
+2134970.653
+ 10
+6042575.815
+ 20
+2134975.597
+ 10
+6042575.068
+ 20
+2134980.541
+ 10
+6042574.322
+ 20
+2134985.485
+ 10
+6042573.576
+ 20
+2134990.429
+ 10
+6042572.829
+ 20
+2134995.373
+ 10
+6042572.083
+ 20
+2135000.317
+ 10
+6042571.336
+ 20
+2135005.261
+ 10
+6042570.59
+ 20
+2135010.205
+ 10
+6042569.843
+ 20
+2135015.149
+ 10
+6042569.108
+ 20
+2135020.083
+ 10
+6042568.371
+ 20
+2135025.028
+ 10
+6042567.634
+ 20
+2135029.973
+ 10
+6042566.897
+ 20
+2135034.919
+ 10
+6042566.16
+ 20
+2135039.864
+ 10
+6042565.423
+ 20
+2135044.81
+ 10
+6042564.686
+ 20
+2135049.755
+ 10
+6042563.949
+ 20
+2135054.7
+ 10
+6042563.213
+ 20
+2135059.646
+ 10
+6042562.476
+ 20
+2135064.591
+ 10
+6042561.739
+ 20
+2135069.537
+ 10
+6042561.002
+ 20
+2135074.482
+ 10
+6042560.265
+ 20
+2135079.427
+ 10
+6042559.528
+ 20
+2135084.373
+ 10
+6042558.791
+ 20
+2135089.318
+ 10
+6042558.054
+ 20
+2135094.264
+ 10
+6042557.317
+ 20
+2135099.209
+ 10
+6042556.58
+ 20
+2135104.154
+ 10
+6042555.843
+ 20
+2135109.1
+ 10
+6042555.106
+ 20
+2135114.045
+ 10
+6042554.369
+ 20
+2135118.99
+ 10
+6042553.632
+ 20
+2135123.936
+ 10
+6042552.896
+ 20
+2135128.881
+ 10
+6042552.159
+ 20
+2135133.827
+ 10
+6042551.422
+ 20
+2135138.772
+ 10
+6042550.697
+ 20
+2135143.702
+ 10
+6042549.974
+ 20
+2135148.65
+ 10
+6042549.251
+ 20
+2135153.597
+ 10
+6042548.528
+ 20
+2135158.545
+ 10
+6042547.805
+ 20
+2135163.492
+ 10
+6042547.082
+ 20
+2135168.439
+ 10
+6042546.359
+ 20
+2135173.387
+ 10
+6042545.636
+ 20
+2135178.334
+ 10
+6042544.913
+ 20
+2135183.282
+ 10
+6042544.19
+ 20
+2135188.229
+ 10
+6042543.467
+ 20
+2135193.177
+ 10
+6042542.744
+ 20
+2135198.124
+ 10
+6042542.021
+ 20
+2135203.072
+ 10
+6042541.298
+ 20
+2135208.019
+ 10
+6042540.575
+ 20
+2135212.967
+ 10
+6042539.852
+ 20
+2135217.914
+ 10
+6042539.129
+ 20
+2135222.861
+ 10
+6042538.406
+ 20
+2135227.809
+ 10
+6042537.683
+ 20
+2135232.756
+ 10
+6042536.96
+ 20
+2135237.704
+ 10
+6042536.237
+ 20
+2135242.651
+ 10
+6042535.514
+ 20
+2135247.599
+ 10
+6042534.791
+ 20
+2135252.546
+ 10
+6042534.068
+ 20
+2135257.494
+ 10
+6042533.345
+ 20
+2135262.441
+ 10
+6042532.622
+ 20
+2135267.389
+ 10
+6042531.899
+ 20
+2135272.336
+ 10
+6042531.176
+ 20
+2135277.283
+ 10
+6042530.446
+ 20
+2135282.259
+ 10
+6042529.699
+ 20
+2135287.203
+ 10
+6042528.953
+ 20
+2135292.147
+ 10
+6042528.402573004
+ 20
+2135296.109987429
+  0
+LWPOLYLINE
+  5
+B4
+100
+AcDbEntity
+  8
+seg001
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbPolyline
+ 90
+  502
+ 70
+    0
+ 43
+0
+ 10
+6042893.825
+ 20
+2132814.621
+ 10
+6042893.191
+ 20
+2132819.581
+ 10
+6042892.557
+ 20
+2132824.541
+ 10
+6042891.925
+ 20
+2132829.488
+ 10
+6042891.296
+ 20
+2132834.449
+ 10
+6042890.667
+ 20
+2132839.409
+ 10
+6042890.038
+ 20
+2132844.369
+ 10
+6042889.408
+ 20
+2132849.329
+ 10
+6042888.779
+ 20
+2132854.29
+ 10
+6042888.15
+ 20
+2132859.25
+ 10
+6042887.521
+ 20
+2132864.21
+ 10
+6042886.892
+ 20
+2132869.17
+ 10
+6042886.262
+ 20
+2132874.131
+ 10
+6042885.633
+ 20
+2132879.091
+ 10
+6042885.004
+ 20
+2132884.051
+ 10
+6042884.375
+ 20
+2132889.011
+ 10
+6042883.746
+ 20
+2132893.972
+ 10
+6042883.117
+ 20
+2132898.932
+ 10
+6042882.487
+ 20
+2132903.892
+ 10
+6042881.858
+ 20
+2132908.853
+ 10
+6042881.229
+ 20
+2132913.813
+ 10
+6042880.6
+ 20
+2132918.773
+ 10
+6042879.971
+ 20
+2132923.733
+ 10
+6042879.341
+ 20
+2132928.694
+ 10
+6042878.712
+ 20
+2132933.654
+ 10
+6042878.083
+ 20
+2132938.614
+ 10
+6042877.459
+ 20
+2132943.574
+ 10
+6042876.839
+ 20
+2132948.536
+ 10
+6042876.219
+ 20
+2132953.497
+ 10
+6042875.599
+ 20
+2132958.458
+ 10
+6042874.979
+ 20
+2132963.42
+ 10
+6042874.359
+ 20
+2132968.381
+ 10
+6042873.739
+ 20
+2132973.342
+ 10
+6042873.118
+ 20
+2132978.304
+ 10
+6042872.498
+ 20
+2132983.265
+ 10
+6042871.878
+ 20
+2132988.227
+ 10
+6042871.258
+ 20
+2132993.188
+ 10
+6042870.638
+ 20
+2132998.149
+ 10
+6042870.018
+ 20
+2133003.111
+ 10
+6042869.398
+ 20
+2133008.072
+ 10
+6042868.778
+ 20
+2133013.034
+ 10
+6042868.158
+ 20
+2133017.995
+ 10
+6042867.538
+ 20
+2133022.956
+ 10
+6042866.918
+ 20
+2133027.918
+ 10
+6042866.297
+ 20
+2133032.879
+ 10
+6042865.677
+ 20
+2133037.841
+ 10
+6042865.057
+ 20
+2133042.802
+ 10
+6042864.437
+ 20
+2133047.763
+ 10
+6042863.817
+ 20
+2133052.725
+ 10
+6042863.176
+ 20
+2133057.717
+ 10
+6042862.528
+ 20
+2133062.675
+ 10
+6042861.881
+ 20
+2133067.632
+ 10
+6042861.234
+ 20
+2133072.59
+ 10
+6042860.587
+ 20
+2133077.548
+ 10
+6042859.939
+ 20
+2133082.506
+ 10
+6042859.292
+ 20
+2133087.464
+ 10
+6042858.645
+ 20
+2133092.422
+ 10
+6042857.998
+ 20
+2133097.38
+ 10
+6042857.35
+ 20
+2133102.338
+ 10
+6042856.703
+ 20
+2133107.296
+ 10
+6042856.056
+ 20
+2133112.254
+ 10
+6042855.409
+ 20
+2133117.212
+ 10
+6042854.761
+ 20
+2133122.17
+ 10
+6042854.114
+ 20
+2133127.128
+ 10
+6042853.467
+ 20
+2133132.086
+ 10
+6042852.82
+ 20
+2133137.044
+ 10
+6042852.172
+ 20
+2133142.001
+ 10
+6042851.525
+ 20
+2133146.959
+ 10
+6042850.899
+ 20
+2133151.885
+ 10
+6042850.281
+ 20
+2133156.846
+ 10
+6042849.662
+ 20
+2133161.808
+ 10
+6042849.044
+ 20
+2133166.77
+ 10
+6042848.425
+ 20
+2133171.731
+ 10
+6042847.807
+ 20
+2133176.693
+ 10
+6042847.188
+ 20
+2133181.655
+ 10
+6042846.57
+ 20
+2133186.616
+ 10
+6042845.951
+ 20
+2133191.578
+ 10
+6042845.333
+ 20
+2133196.539
+ 10
+6042844.715
+ 20
+2133201.501
+ 10
+6042844.096
+ 20
+2133206.463
+ 10
+6042843.478
+ 20
+2133211.424
+ 10
+6042842.859
+ 20
+2133216.386
+ 10
+6042842.241
+ 20
+2133221.347
+ 10
+6042841.622
+ 20
+2133226.309
+ 10
+6042841.004
+ 20
+2133231.271
+ 10
+6042840.386
+ 20
+2133236.232
+ 10
+6042839.767
+ 20
+2133241.194
+ 10
+6042839.17
+ 20
+2133246.12
+ 10
+6042838.583
+ 20
+2133251.085
+ 10
+6042837.996
+ 20
+2133256.051
+ 10
+6042837.409
+ 20
+2133261.016
+ 10
+6042836.822
+ 20
+2133265.982
+ 10
+6042836.235
+ 20
+2133270.947
+ 10
+6042835.648
+ 20
+2133275.912
+ 10
+6042835.061
+ 20
+2133280.878
+ 10
+6042834.474
+ 20
+2133285.843
+ 10
+6042833.887
+ 20
+2133290.809
+ 10
+6042833.299
+ 20
+2133295.774
+ 10
+6042832.712
+ 20
+2133300.739
+ 10
+6042832.125
+ 20
+2133305.705
+ 10
+6042831.538
+ 20
+2133310.67
+ 10
+6042830.951
+ 20
+2133315.636
+ 10
+6042830.364
+ 20
+2133320.601
+ 10
+6042829.777
+ 20
+2133325.567
+ 10
+6042829.19
+ 20
+2133330.532
+ 10
+6042828.603
+ 20
+2133335.497
+ 10
+6042827.997
+ 20
+2133340.499
+ 10
+6042827.378
+ 20
+2133345.461
+ 10
+6042826.759
+ 20
+2133350.422
+ 10
+6042826.14
+ 20
+2133355.384
+ 10
+6042825.521
+ 20
+2133360.345
+ 10
+6042824.902
+ 20
+2133365.307
+ 10
+6042824.283
+ 20
+2133370.269
+ 10
+6042823.665
+ 20
+2133375.23
+ 10
+6042823.046
+ 20
+2133380.192
+ 10
+6042822.427
+ 20
+2133385.153
+ 10
+6042821.808
+ 20
+2133390.115
+ 10
+6042821.189
+ 20
+2133395.076
+ 10
+6042820.57
+ 20
+2133400.038
+ 10
+6042819.951
+ 20
+2133404.999
+ 10
+6042819.332
+ 20
+2133409.961
+ 10
+6042818.713
+ 20
+2133414.922
+ 10
+6042818.094
+ 20
+2133419.884
+ 10
+6042817.475
+ 20
+2133424.845
+ 10
+6042816.856
+ 20
+2133429.807
+ 10
+6042816.233
+ 20
+2133434.778
+ 10
+6042815.605
+ 20
+2133439.739
+ 10
+6042814.978
+ 20
+2133444.699
+ 10
+6042814.35
+ 20
+2133449.66
+ 10
+6042813.723
+ 20
+2133454.62
+ 10
+6042813.096
+ 20
+2133459.581
+ 10
+6042812.468
+ 20
+2133464.541
+ 10
+6042811.841
+ 20
+2133469.502
+ 10
+6042811.213
+ 20
+2133474.462
+ 10
+6042810.586
+ 20
+2133479.423
+ 10
+6042809.959
+ 20
+2133484.383
+ 10
+6042809.331
+ 20
+2133489.344
+ 10
+6042808.704
+ 20
+2133494.304
+ 10
+6042808.076
+ 20
+2133499.265
+ 10
+6042807.449
+ 20
+2133504.225
+ 10
+6042806.822
+ 20
+2133509.186
+ 10
+6042806.194
+ 20
+2133514.146
+ 10
+6042805.567
+ 20
+2133519.106
+ 10
+6042804.939
+ 20
+2133524.067
+ 10
+6042804.323
+ 20
+2133528.999
+ 10
+6042803.72
+ 20
+2133533.962
+ 10
+6042803.118
+ 20
+2133538.926
+ 10
+6042802.515
+ 20
+2133543.889
+ 10
+6042801.912
+ 20
+2133548.853
+ 10
+6042801.31
+ 20
+2133553.816
+ 10
+6042800.707
+ 20
+2133558.78
+ 10
+6042800.104
+ 20
+2133563.743
+ 10
+6042799.502
+ 20
+2133568.707
+ 10
+6042798.899
+ 20
+2133573.671
+ 10
+6042798.297
+ 20
+2133578.634
+ 10
+6042797.694
+ 20
+2133583.598
+ 10
+6042797.091
+ 20
+2133588.561
+ 10
+6042796.489
+ 20
+2133593.525
+ 10
+6042795.886
+ 20
+2133598.488
+ 10
+6042795.283
+ 20
+2133603.452
+ 10
+6042794.681
+ 20
+2133608.415
+ 10
+6042794.078
+ 20
+2133613.379
+ 10
+6042793.475
+ 20
+2133618.343
+ 10
+6042792.873
+ 20
+2133623.306
+ 10
+6042792.27
+ 20
+2133628.27
+ 10
+6042791.667
+ 20
+2133633.233
+ 10
+6042791.051
+ 20
+2133638.21
+ 10
+6042790.436
+ 20
+2133643.172
+ 10
+6042789.821
+ 20
+2133648.134
+ 10
+6042789.206
+ 20
+2133653.096
+ 10
+6042788.591
+ 20
+2133658.058
+ 10
+6042787.976
+ 20
+2133663.02
+ 10
+6042787.361
+ 20
+2133667.982
+ 10
+6042786.746
+ 20
+2133672.944
+ 10
+6042786.13
+ 20
+2133677.906
+ 10
+6042785.515
+ 20
+2133682.868
+ 10
+6042784.9
+ 20
+2133687.83
+ 10
+6042784.285
+ 20
+2133692.792
+ 10
+6042783.67
+ 20
+2133697.754
+ 10
+6042783.055
+ 20
+2133702.716
+ 10
+6042782.44
+ 20
+2133707.679
+ 10
+6042781.825
+ 20
+2133712.641
+ 10
+6042781.21
+ 20
+2133717.603
+ 10
+6042780.595
+ 20
+2133722.565
+ 10
+6042779.98
+ 20
+2133727.527
+ 10
+6042779.365
+ 20
+2133732.489
+ 10
+6042778.749
+ 20
+2133737.451
+ 10
+6042778.134
+ 20
+2133742.413
+ 10
+6042777.519
+ 20
+2133747.375
+ 10
+6042776.904
+ 20
+2133752.337
+ 10
+6042776.289
+ 20
+2133757.299
+ 10
+6042775.674
+ 20
+2133762.261
+ 10
+6042775.059
+ 20
+2133767.223
+ 10
+6042774.435
+ 20
+2133772.222
+ 10
+6042773.789
+ 20
+2133777.18
+ 10
+6042773.142
+ 20
+2133782.138
+ 10
+6042772.496
+ 20
+2133787.096
+ 10
+6042771.85
+ 20
+2133792.054
+ 10
+6042771.203
+ 20
+2133797.012
+ 10
+6042770.557
+ 20
+2133801.97
+ 10
+6042769.91
+ 20
+2133806.928
+ 10
+6042769.264
+ 20
+2133811.886
+ 10
+6042768.618
+ 20
+2133816.844
+ 10
+6042767.971
+ 20
+2133821.802
+ 10
+6042767.325
+ 20
+2133826.76
+ 10
+6042766.679
+ 20
+2133831.718
+ 10
+6042766.032
+ 20
+2133836.676
+ 10
+6042765.386
+ 20
+2133841.634
+ 10
+6042764.739
+ 20
+2133846.592
+ 10
+6042764.093
+ 20
+2133851.551
+ 10
+6042763.447
+ 20
+2133856.509
+ 10
+6042762.8
+ 20
+2133861.467
+ 10
+6042762.154
+ 20
+2133866.425
+ 10
+6042761.488
+ 20
+2133871.441
+ 10
+6042760.792
+ 20
+2133876.392
+ 10
+6042760.096
+ 20
+2133881.344
+ 10
+6042759.399
+ 20
+2133886.295
+ 10
+6042758.703
+ 20
+2133891.246
+ 10
+6042758.007
+ 20
+2133896.197
+ 10
+6042757.311
+ 20
+2133901.149
+ 10
+6042756.614
+ 20
+2133906.1
+ 10
+6042755.918
+ 20
+2133911.051
+ 10
+6042755.222
+ 20
+2133916.003
+ 10
+6042754.526
+ 20
+2133920.954
+ 10
+6042753.829
+ 20
+2133925.905
+ 10
+6042753.133
+ 20
+2133930.856
+ 10
+6042752.437
+ 20
+2133935.808
+ 10
+6042751.741
+ 20
+2133940.759
+ 10
+6042751.044
+ 20
+2133945.71
+ 10
+6042750.348
+ 20
+2133950.662
+ 10
+6042749.652
+ 20
+2133955.613
+ 10
+6042748.956
+ 20
+2133960.564
+ 10
+6042748.259
+ 20
+2133965.515
+ 10
+6042747.563
+ 20
+2133970.467
+ 10
+6042746.867
+ 20
+2133975.418
+ 10
+6042746.171
+ 20
+2133980.369
+ 10
+6042745.474
+ 20
+2133985.321
+ 10
+6042744.778
+ 20
+2133990.272
+ 10
+6042744.082
+ 20
+2133995.223
+ 10
+6042743.386
+ 20
+2134000.174
+ 10
+6042742.689
+ 20
+2134005.126
+ 10
+6042741.993
+ 20
+2134010.077
+ 10
+6042741.297
+ 20
+2134015.028
+ 10
+6042740.601
+ 20
+2134019.98
+ 10
+6042739.904
+ 20
+2134024.931
+ 10
+6042739.208
+ 20
+2134029.882
+ 10
+6042738.512
+ 20
+2134034.833
+ 10
+6042737.816
+ 20
+2134039.785
+ 10
+6042737.12
+ 20
+2134044.736
+ 10
+6042736.423
+ 20
+2134049.687
+ 10
+6042735.727
+ 20
+2134054.639
+ 10
+6042735.031
+ 20
+2134059.59
+ 10
+6042734.237
+ 20
+2134064.631
+ 10
+6042733.456
+ 20
+2134069.57
+ 10
+6042732.674
+ 20
+2134074.508
+ 10
+6042731.893
+ 20
+2134079.447
+ 10
+6042731.112
+ 20
+2134084.385
+ 10
+6042730.33
+ 20
+2134089.324
+ 10
+6042729.549
+ 20
+2134094.263
+ 10
+6042728.767
+ 20
+2134099.201
+ 10
+6042727.986
+ 20
+2134104.14
+ 10
+6042727.205
+ 20
+2134109.078
+ 10
+6042726.423
+ 20
+2134114.017
+ 10
+6042725.642
+ 20
+2134118.955
+ 10
+6042724.86
+ 20
+2134123.894
+ 10
+6042724.079
+ 20
+2134128.832
+ 10
+6042723.297
+ 20
+2134133.771
+ 10
+6042722.516
+ 20
+2134138.71
+ 10
+6042721.735
+ 20
+2134143.648
+ 10
+6042720.953
+ 20
+2134148.587
+ 10
+6042720.172
+ 20
+2134153.525
+ 10
+6042719.39
+ 20
+2134158.464
+ 10
+6042718.609
+ 20
+2134163.402
+ 10
+6042717.828
+ 20
+2134168.341
+ 10
+6042717.046
+ 20
+2134173.28
+ 10
+6042716.265
+ 20
+2134178.218
+ 10
+6042715.483
+ 20
+2134183.157
+ 10
+6042714.702
+ 20
+2134188.095
+ 10
+6042713.92
+ 20
+2134193.034
+ 10
+6042713.139
+ 20
+2134197.972
+ 10
+6042712.358
+ 20
+2134202.911
+ 10
+6042711.576
+ 20
+2134207.849
+ 10
+6042710.795
+ 20
+2134212.788
+ 10
+6042710.013
+ 20
+2134217.727
+ 10
+6042709.232
+ 20
+2134222.665
+ 10
+6042708.451
+ 20
+2134227.604
+ 10
+6042707.669
+ 20
+2134232.542
+ 10
+6042706.888
+ 20
+2134237.481
+ 10
+6042706.106
+ 20
+2134242.419
+ 10
+6042705.325
+ 20
+2134247.358
+ 10
+6042704.511
+ 20
+2134252.33
+ 10
+6042703.699
+ 20
+2134257.263
+ 10
+6042702.886
+ 20
+2134262.197
+ 10
+6042702.074
+ 20
+2134267.13
+ 10
+6042701.261
+ 20
+2134272.064
+ 10
+6042700.449
+ 20
+2134276.997
+ 10
+6042699.636
+ 20
+2134281.931
+ 10
+6042698.824
+ 20
+2134286.864
+ 10
+6042698.011
+ 20
+2134291.798
+ 10
+6042697.199
+ 20
+2134296.732
+ 10
+6042696.386
+ 20
+2134301.665
+ 10
+6042695.574
+ 20
+2134306.599
+ 10
+6042694.761
+ 20
+2134311.532
+ 10
+6042693.948
+ 20
+2134316.466
+ 10
+6042693.136
+ 20
+2134321.399
+ 10
+6042692.323
+ 20
+2134326.333
+ 10
+6042691.511
+ 20
+2134331.266
+ 10
+6042690.698
+ 20
+2134336.2
+ 10
+6042689.886
+ 20
+2134341.133
+ 10
+6042689.073
+ 20
+2134346.067
+ 10
+6042688.261
+ 20
+2134351
+ 10
+6042687.448
+ 20
+2134355.934
+ 10
+6042686.636
+ 20
+2134360.867
+ 10
+6042685.823
+ 20
+2134365.801
+ 10
+6042685.011
+ 20
+2134370.735
+ 10
+6042684.198
+ 20
+2134375.668
+ 10
+6042683.385
+ 20
+2134380.602
+ 10
+6042682.573
+ 20
+2134385.535
+ 10
+6042681.76
+ 20
+2134390.469
+ 10
+6042680.948
+ 20
+2134395.402
+ 10
+6042680.135
+ 20
+2134400.336
+ 10
+6042679.323
+ 20
+2134405.269
+ 10
+6042678.523
+ 20
+2134410.19
+ 10
+6042677.723
+ 20
+2134415.126
+ 10
+6042676.922
+ 20
+2134420.061
+ 10
+6042676.122
+ 20
+2134424.997
+ 10
+6042675.321
+ 20
+2134429.932
+ 10
+6042674.52
+ 20
+2134434.868
+ 10
+6042673.72
+ 20
+2134439.803
+ 10
+6042672.919
+ 20
+2134444.739
+ 10
+6042672.119
+ 20
+2134449.674
+ 10
+6042671.318
+ 20
+2134454.61
+ 10
+6042670.517
+ 20
+2134459.545
+ 10
+6042669.717
+ 20
+2134464.481
+ 10
+6042668.916
+ 20
+2134469.416
+ 10
+6042668.115
+ 20
+2134474.352
+ 10
+6042667.315
+ 20
+2134479.287
+ 10
+6042666.514
+ 20
+2134484.223
+ 10
+6042665.714
+ 20
+2134489.158
+ 10
+6042664.913
+ 20
+2134494.094
+ 10
+6042664.112
+ 20
+2134499.029
+ 10
+6042663.312
+ 20
+2134503.965
+ 10
+6042662.511
+ 20
+2134508.9
+ 10
+6042661.711
+ 20
+2134513.835
+ 10
+6042660.91
+ 20
+2134518.771
+ 10
+6042660.109
+ 20
+2134523.706
+ 10
+6042659.309
+ 20
+2134528.642
+ 10
+6042658.508
+ 20
+2134533.577
+ 10
+6042657.708
+ 20
+2134538.513
+ 10
+6042656.907
+ 20
+2134543.448
+ 10
+6042656.106
+ 20
+2134548.384
+ 10
+6042655.306
+ 20
+2134553.319
+ 10
+6042654.505
+ 20
+2134558.255
+ 10
+6042653.705
+ 20
+2134563.19
+ 10
+6042652.904
+ 20
+2134568.126
+ 10
+6042652.103
+ 20
+2134573.061
+ 10
+6042651.302
+ 20
+2134578.001
+ 10
+6042650.498
+ 20
+2134582.935
+ 10
+6042649.695
+ 20
+2134587.87
+ 10
+6042648.891
+ 20
+2134592.805
+ 10
+6042648.087
+ 20
+2134597.74
+ 10
+6042647.284
+ 20
+2134602.675
+ 10
+6042646.48
+ 20
+2134607.61
+ 10
+6042645.676
+ 20
+2134612.545
+ 10
+6042644.872
+ 20
+2134617.48
+ 10
+6042644.069
+ 20
+2134622.415
+ 10
+6042643.265
+ 20
+2134627.35
+ 10
+6042642.461
+ 20
+2134632.285
+ 10
+6042641.658
+ 20
+2134637.22
+ 10
+6042640.854
+ 20
+2134642.155
+ 10
+6042640.05
+ 20
+2134647.09
+ 10
+6042639.247
+ 20
+2134652.025
+ 10
+6042638.443
+ 20
+2134656.96
+ 10
+6042637.639
+ 20
+2134661.895
+ 10
+6042636.835
+ 20
+2134666.83
+ 10
+6042636.032
+ 20
+2134671.765
+ 10
+6042635.228
+ 20
+2134676.7
+ 10
+6042634.424
+ 20
+2134681.635
+ 10
+6042633.621
+ 20
+2134686.57
+ 10
+6042632.817
+ 20
+2134691.505
+ 10
+6042632.013
+ 20
+2134696.44
+ 10
+6042631.21
+ 20
+2134701.375
+ 10
+6042630.406
+ 20
+2134706.31
+ 10
+6042629.602
+ 20
+2134711.245
+ 10
+6042628.799
+ 20
+2134716.18
+ 10
+6042627.995
+ 20
+2134721.114
+ 10
+6042627.192
+ 20
+2134726.049
+ 10
+6042626.389
+ 20
+2134730.984
+ 10
+6042625.586
+ 20
+2134735.92
+ 10
+6042624.783
+ 20
+2134740.855
+ 10
+6042623.98
+ 20
+2134745.79
+ 10
+6042623.177
+ 20
+2134750.725
+ 10
+6042622.374
+ 20
+2134755.66
+ 10
+6042621.571
+ 20
+2134760.595
+ 10
+6042620.768
+ 20
+2134765.53
+ 10
+6042619.965
+ 20
+2134770.465
+ 10
+6042619.162
+ 20
+2134775.4
+ 10
+6042618.359
+ 20
+2134780.335
+ 10
+6042617.557
+ 20
+2134785.271
+ 10
+6042616.754
+ 20
+2134790.206
+ 10
+6042615.951
+ 20
+2134795.141
+ 10
+6042615.148
+ 20
+2134800.076
+ 10
+6042614.345
+ 20
+2134805.011
+ 10
+6042613.542
+ 20
+2134809.946
+ 10
+6042612.739
+ 20
+2134814.881
+ 10
+6042611.936
+ 20
+2134819.816
+ 10
+6042611.133
+ 20
+2134824.751
+ 10
+6042610.33
+ 20
+2134829.686
+ 10
+6042609.527
+ 20
+2134834.622
+ 10
+6042608.724
+ 20
+2134839.557
+ 10
+6042607.921
+ 20
+2134844.492
+ 10
+6042607.118
+ 20
+2134849.427
+ 10
+6042606.315
+ 20
+2134854.362
+ 10
+6042605.512
+ 20
+2134859.297
+ 10
+6042604.774
+ 20
+2134864.173
+ 10
+6042604.028
+ 20
+2134869.117
+ 10
+6042603.281
+ 20
+2134874.061
+ 10
+6042602.535
+ 20
+2134879.005
+ 10
+6042601.788
+ 20
+2134883.949
+ 10
+6042601.042
+ 20
+2134888.893
+ 10
+6042600.295
+ 20
+2134893.837
+ 10
+6042599.549
+ 20
+2134898.781
+ 10
+6042598.803
+ 20
+2134903.725
+ 10
+6042598.056
+ 20
+2134908.669
+ 10
+6042597.31
+ 20
+2134913.613
+ 10
+6042596.563
+ 20
+2134918.557
+ 10
+6042595.817
+ 20
+2134923.501
+ 10
+6042595.07
+ 20
+2134928.444
+ 10
+6042594.324
+ 20
+2134933.388
+ 10
+6042593.577
+ 20
+2134938.332
+ 10
+6042592.831
+ 20
+2134943.276
+ 10
+6042592.084
+ 20
+2134948.22
+ 10
+6042591.338
+ 20
+2134953.164
+ 10
+6042590.591
+ 20
+2134958.108
+ 10
+6042589.845
+ 20
+2134963.052
+ 10
+6042589.098
+ 20
+2134967.996
+ 10
+6042588.352
+ 20
+2134972.94
+ 10
+6042587.605
+ 20
+2134977.884
+ 10
+6042586.859
+ 20
+2134982.828
+ 10
+6042586.113
+ 20
+2134987.772
+ 10
+6042585.366
+ 20
+2134992.716
+ 10
+6042584.62
+ 20
+2134997.66
+ 10
+6042583.873
+ 20
+2135002.604
+ 10
+6042583.127
+ 20
+2135007.548
+ 10
+6042582.38
+ 20
+2135012.492
+ 10
+6042581.636
+ 20
+2135017.425
+ 10
+6042580.899
+ 20
+2135022.37
+ 10
+6042580.163
+ 20
+2135027.315
+ 10
+6042579.426
+ 20
+2135032.261
+ 10
+6042578.689
+ 20
+2135037.206
+ 10
+6042577.952
+ 20
+2135042.152
+ 10
+6042577.215
+ 20
+2135047.097
+ 10
+6042576.478
+ 20
+2135052.042
+ 10
+6042575.741
+ 20
+2135056.988
+ 10
+6042575.004
+ 20
+2135061.933
+ 10
+6042574.267
+ 20
+2135066.879
+ 10
+6042573.53
+ 20
+2135071.824
+ 10
+6042572.793
+ 20
+2135076.769
+ 10
+6042572.056
+ 20
+2135081.715
+ 10
+6042571.319
+ 20
+2135086.66
+ 10
+6042570.583
+ 20
+2135091.605
+ 10
+6042569.846
+ 20
+2135096.551
+ 10
+6042569.109
+ 20
+2135101.496
+ 10
+6042568.372
+ 20
+2135106.442
+ 10
+6042567.635
+ 20
+2135111.387
+ 10
+6042566.898
+ 20
+2135116.332
+ 10
+6042566.161
+ 20
+2135121.278
+ 10
+6042565.424
+ 20
+2135126.223
+ 10
+6042564.687
+ 20
+2135131.169
+ 10
+6042563.95
+ 20
+2135136.114
+ 10
+6042563.213
+ 20
+2135141.059
+ 10
+6042562.49
+ 20
+2135145.99
+ 10
+6042561.767
+ 20
+2135150.937
+ 10
+6042561.044
+ 20
+2135155.885
+ 10
+6042560.321
+ 20
+2135160.832
+ 10
+6042559.598
+ 20
+2135165.78
+ 10
+6042558.875
+ 20
+2135170.727
+ 10
+6042558.152
+ 20
+2135175.675
+ 10
+6042557.429
+ 20
+2135180.622
+ 10
+6042556.706
+ 20
+2135185.569
+ 10
+6042555.983
+ 20
+2135190.517
+ 10
+6042555.26
+ 20
+2135195.464
+ 10
+6042554.537
+ 20
+2135200.412
+ 10
+6042553.814
+ 20
+2135205.359
+ 10
+6042553.091
+ 20
+2135210.307
+ 10
+6042552.369
+ 20
+2135215.254
+ 10
+6042551.646
+ 20
+2135220.202
+ 10
+6042550.923
+ 20
+2135225.149
+ 10
+6042550.2
+ 20
+2135230.096
+ 10
+6042549.477
+ 20
+2135235.044
+ 10
+6042548.754
+ 20
+2135239.991
+ 10
+6042548.031
+ 20
+2135244.939
+ 10
+6042547.308
+ 20
+2135249.886
+ 10
+6042546.585
+ 20
+2135254.834
+ 10
+6042545.862
+ 20
+2135259.781
+ 10
+6042545.139
+ 20
+2135264.729
+ 10
+6042544.416
+ 20
+2135269.676
+ 10
+6042543.693
+ 20
+2135274.624
+ 10
+6042542.97
+ 20
+2135279.571
+ 10
+6042542.237
+ 20
+2135284.546
+ 10
+6042541.49
+ 20
+2135289.49
+ 10
+6042540.3636338
+ 20
+2135297.353724264
+  0
+LWPOLYLINE
+  5
+B5
+100
+AcDbEntity
+  8
+seg001
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbPolyline
+ 90
+  503
+ 70
+    0
+ 43
+0
+ 10
+6042918.155
+ 20
+2132814.001
+ 10
+6042917.518
+ 20
+2132818.96
+ 10
+6042916.881
+ 20
+2132823.919
+ 10
+6042916.244
+ 20
+2132828.879
+ 10
+6042915.606
+ 20
+2132833.838
+ 10
+6042914.969
+ 20
+2132838.797
+ 10
+6042914.332
+ 20
+2132843.756
+ 10
+6042913.695
+ 20
+2132848.716
+ 10
+6042913.057
+ 20
+2132853.675
+ 10
+6042912.42
+ 20
+2132858.634
+ 10
+6042911.783
+ 20
+2132863.593
+ 10
+6042911.146
+ 20
+2132868.553
+ 10
+6042910.508
+ 20
+2132873.512
+ 10
+6042909.871
+ 20
+2132878.471
+ 10
+6042909.235
+ 20
+2132883.43
+ 10
+6042908.609
+ 20
+2132888.391
+ 10
+6042907.983
+ 20
+2132893.352
+ 10
+6042907.357
+ 20
+2132898.312
+ 10
+6042906.731
+ 20
+2132903.273
+ 10
+6042906.105
+ 20
+2132908.234
+ 10
+6042905.479
+ 20
+2132913.194
+ 10
+6042904.853
+ 20
+2132918.155
+ 10
+6042904.227
+ 20
+2132923.116
+ 10
+6042903.601
+ 20
+2132928.076
+ 10
+6042902.975
+ 20
+2132933.037
+ 10
+6042902.349
+ 20
+2132937.998
+ 10
+6042901.724
+ 20
+2132942.958
+ 10
+6042901.104
+ 20
+2132947.911
+ 10
+6042900.483
+ 20
+2132952.872
+ 10
+6042899.863
+ 20
+2132957.834
+ 10
+6042899.243
+ 20
+2132962.795
+ 10
+6042898.623
+ 20
+2132967.757
+ 10
+6042898.003
+ 20
+2132972.718
+ 10
+6042897.383
+ 20
+2132977.679
+ 10
+6042896.763
+ 20
+2132982.641
+ 10
+6042896.143
+ 20
+2132987.602
+ 10
+6042895.523
+ 20
+2132992.564
+ 10
+6042894.903
+ 20
+2132997.525
+ 10
+6042894.283
+ 20
+2133002.486
+ 10
+6042893.662
+ 20
+2133007.448
+ 10
+6042893.042
+ 20
+2133012.409
+ 10
+6042892.422
+ 20
+2133017.371
+ 10
+6042891.802
+ 20
+2133022.332
+ 10
+6042891.182
+ 20
+2133027.293
+ 10
+6042890.562
+ 20
+2133032.255
+ 10
+6042889.942
+ 20
+2133037.216
+ 10
+6042889.322
+ 20
+2133042.178
+ 10
+6042888.702
+ 20
+2133047.139
+ 10
+6042888.082
+ 20
+2133052.1
+ 10
+6042887.462
+ 20
+2133057.062
+ 10
+6042886.813
+ 20
+2133062.053
+ 10
+6042886.166
+ 20
+2133067.011
+ 10
+6042885.519
+ 20
+2133071.968
+ 10
+6042884.871
+ 20
+2133076.926
+ 10
+6042884.224
+ 20
+2133081.884
+ 10
+6042883.577
+ 20
+2133086.842
+ 10
+6042882.93
+ 20
+2133091.8
+ 10
+6042882.282
+ 20
+2133096.758
+ 10
+6042881.635
+ 20
+2133101.716
+ 10
+6042880.988
+ 20
+2133106.674
+ 10
+6042880.341
+ 20
+2133111.632
+ 10
+6042879.693
+ 20
+2133116.59
+ 10
+6042879.046
+ 20
+2133121.548
+ 10
+6042878.399
+ 20
+2133126.506
+ 10
+6042877.752
+ 20
+2133131.464
+ 10
+6042877.104
+ 20
+2133136.422
+ 10
+6042876.457
+ 20
+2133141.379
+ 10
+6042875.81
+ 20
+2133146.337
+ 10
+6042875.163
+ 20
+2133151.295
+ 10
+6042874.544
+ 20
+2133156.222
+ 10
+6042873.926
+ 20
+2133161.183
+ 10
+6042873.307
+ 20
+2133166.145
+ 10
+6042872.689
+ 20
+2133171.107
+ 10
+6042872.07
+ 20
+2133176.068
+ 10
+6042871.452
+ 20
+2133181.03
+ 10
+6042870.833
+ 20
+2133185.991
+ 10
+6042870.215
+ 20
+2133190.953
+ 10
+6042869.596
+ 20
+2133195.915
+ 10
+6042868.978
+ 20
+2133200.876
+ 10
+6042868.36
+ 20
+2133205.838
+ 10
+6042867.741
+ 20
+2133210.799
+ 10
+6042867.123
+ 20
+2133215.761
+ 10
+6042866.504
+ 20
+2133220.723
+ 10
+6042865.886
+ 20
+2133225.684
+ 10
+6042865.267
+ 20
+2133230.646
+ 10
+6042864.649
+ 20
+2133235.607
+ 10
+6042864.031
+ 20
+2133240.569
+ 10
+6042863.412
+ 20
+2133245.531
+ 10
+6042862.824
+ 20
+2133250.458
+ 10
+6042862.237
+ 20
+2133255.423
+ 10
+6042861.65
+ 20
+2133260.389
+ 10
+6042861.063
+ 20
+2133265.354
+ 10
+6042860.476
+ 20
+2133270.32
+ 10
+6042859.889
+ 20
+2133275.285
+ 10
+6042859.302
+ 20
+2133280.25
+ 10
+6042858.715
+ 20
+2133285.216
+ 10
+6042858.128
+ 20
+2133290.181
+ 10
+6042857.541
+ 20
+2133295.147
+ 10
+6042856.954
+ 20
+2133300.112
+ 10
+6042856.367
+ 20
+2133305.077
+ 10
+6042855.78
+ 20
+2133310.043
+ 10
+6042855.193
+ 20
+2133315.008
+ 10
+6042854.606
+ 20
+2133319.974
+ 10
+6042854.018
+ 20
+2133324.939
+ 10
+6042853.431
+ 20
+2133329.905
+ 10
+6042852.844
+ 20
+2133334.87
+ 10
+6042852.257
+ 20
+2133339.835
+ 10
+6042851.642
+ 20
+2133344.836
+ 10
+6042851.023
+ 20
+2133349.798
+ 10
+6042850.404
+ 20
+2133354.759
+ 10
+6042849.785
+ 20
+2133359.721
+ 10
+6042849.167
+ 20
+2133364.682
+ 10
+6042848.548
+ 20
+2133369.644
+ 10
+6042847.929
+ 20
+2133374.605
+ 10
+6042847.31
+ 20
+2133379.567
+ 10
+6042846.691
+ 20
+2133384.529
+ 10
+6042846.072
+ 20
+2133389.49
+ 10
+6042845.453
+ 20
+2133394.452
+ 10
+6042844.834
+ 20
+2133399.413
+ 10
+6042844.215
+ 20
+2133404.375
+ 10
+6042843.596
+ 20
+2133409.336
+ 10
+6042842.977
+ 20
+2133414.298
+ 10
+6042842.358
+ 20
+2133419.259
+ 10
+6042841.739
+ 20
+2133424.221
+ 10
+6042841.12
+ 20
+2133429.182
+ 10
+6042840.501
+ 20
+2133434.144
+ 10
+6042839.875
+ 20
+2133439.115
+ 10
+6042839.248
+ 20
+2133444.075
+ 10
+6042838.621
+ 20
+2133449.036
+ 10
+6042837.993
+ 20
+2133453.996
+ 10
+6042837.366
+ 20
+2133458.957
+ 10
+6042836.738
+ 20
+2133463.917
+ 10
+6042836.111
+ 20
+2133468.878
+ 10
+6042835.484
+ 20
+2133473.838
+ 10
+6042834.856
+ 20
+2133478.799
+ 10
+6042834.229
+ 20
+2133483.759
+ 10
+6042833.601
+ 20
+2133488.72
+ 10
+6042832.974
+ 20
+2133493.68
+ 10
+6042832.347
+ 20
+2133498.641
+ 10
+6042831.719
+ 20
+2133503.601
+ 10
+6042831.092
+ 20
+2133508.562
+ 10
+6042830.464
+ 20
+2133513.522
+ 10
+6042829.837
+ 20
+2133518.483
+ 10
+6042829.21
+ 20
+2133523.443
+ 10
+6042828.582
+ 20
+2133528.404
+ 10
+6042827.973
+ 20
+2133533.336
+ 10
+6042827.37
+ 20
+2133538.3
+ 10
+6042826.768
+ 20
+2133543.263
+ 10
+6042826.165
+ 20
+2133548.227
+ 10
+6042825.562
+ 20
+2133553.19
+ 10
+6042824.96
+ 20
+2133558.154
+ 10
+6042824.357
+ 20
+2133563.117
+ 10
+6042823.754
+ 20
+2133568.081
+ 10
+6042823.152
+ 20
+2133573.045
+ 10
+6042822.549
+ 20
+2133578.008
+ 10
+6042821.946
+ 20
+2133582.972
+ 10
+6042821.344
+ 20
+2133587.935
+ 10
+6042820.741
+ 20
+2133592.899
+ 10
+6042820.138
+ 20
+2133597.862
+ 10
+6042819.536
+ 20
+2133602.826
+ 10
+6042818.933
+ 20
+2133607.789
+ 10
+6042818.33
+ 20
+2133612.753
+ 10
+6042817.728
+ 20
+2133617.716
+ 10
+6042817.125
+ 20
+2133622.68
+ 10
+6042816.522
+ 20
+2133627.644
+ 10
+6042815.92
+ 20
+2133632.607
+ 10
+6042815.312
+ 20
+2133637.585
+ 10
+6042814.697
+ 20
+2133642.547
+ 10
+6042814.082
+ 20
+2133647.509
+ 10
+6042813.467
+ 20
+2133652.471
+ 10
+6042812.852
+ 20
+2133657.433
+ 10
+6042812.237
+ 20
+2133662.395
+ 10
+6042811.622
+ 20
+2133667.357
+ 10
+6042811.007
+ 20
+2133672.319
+ 10
+6042810.392
+ 20
+2133677.281
+ 10
+6042809.777
+ 20
+2133682.243
+ 10
+6042809.162
+ 20
+2133687.205
+ 10
+6042808.547
+ 20
+2133692.167
+ 10
+6042807.932
+ 20
+2133697.129
+ 10
+6042807.316
+ 20
+2133702.091
+ 10
+6042806.701
+ 20
+2133707.054
+ 10
+6042806.086
+ 20
+2133712.016
+ 10
+6042805.471
+ 20
+2133716.978
+ 10
+6042804.856
+ 20
+2133721.94
+ 10
+6042804.241
+ 20
+2133726.902
+ 10
+6042803.626
+ 20
+2133731.864
+ 10
+6042803.011
+ 20
+2133736.826
+ 10
+6042802.396
+ 20
+2133741.788
+ 10
+6042801.781
+ 20
+2133746.75
+ 10
+6042801.166
+ 20
+2133751.712
+ 10
+6042800.551
+ 20
+2133756.674
+ 10
+6042799.936
+ 20
+2133761.636
+ 10
+6042799.321
+ 20
+2133766.598
+ 10
+6042798.706
+ 20
+2133771.56
+ 10
+6042798.073
+ 20
+2133776.558
+ 10
+6042797.427
+ 20
+2133781.516
+ 10
+6042796.781
+ 20
+2133786.474
+ 10
+6042796.134
+ 20
+2133791.432
+ 10
+6042795.488
+ 20
+2133796.39
+ 10
+6042794.841
+ 20
+2133801.348
+ 10
+6042794.195
+ 20
+2133806.306
+ 10
+6042793.549
+ 20
+2133811.264
+ 10
+6042792.902
+ 20
+2133816.222
+ 10
+6042792.256
+ 20
+2133821.18
+ 10
+6042791.609
+ 20
+2133826.138
+ 10
+6042790.963
+ 20
+2133831.096
+ 10
+6042790.317
+ 20
+2133836.054
+ 10
+6042789.67
+ 20
+2133841.012
+ 10
+6042789.024
+ 20
+2133845.97
+ 10
+6042788.377
+ 20
+2133850.929
+ 10
+6042787.731
+ 20
+2133855.887
+ 10
+6042787.085
+ 20
+2133860.845
+ 10
+6042786.438
+ 20
+2133865.803
+ 10
+6042785.792
+ 20
+2133870.761
+ 10
+6042785.115
+ 20
+2133875.776
+ 10
+6042784.418
+ 20
+2133880.727
+ 10
+6042783.722
+ 20
+2133885.678
+ 10
+6042783.026
+ 20
+2133890.629
+ 10
+6042782.329
+ 20
+2133895.581
+ 10
+6042781.633
+ 20
+2133900.532
+ 10
+6042780.937
+ 20
+2133905.483
+ 10
+6042780.24
+ 20
+2133910.434
+ 10
+6042779.544
+ 20
+2133915.386
+ 10
+6042778.848
+ 20
+2133920.337
+ 10
+6042778.151
+ 20
+2133925.288
+ 10
+6042777.455
+ 20
+2133930.24
+ 10
+6042776.759
+ 20
+2133935.191
+ 10
+6042776.062
+ 20
+2133940.142
+ 10
+6042775.366
+ 20
+2133945.093
+ 10
+6042774.67
+ 20
+2133950.045
+ 10
+6042773.973
+ 20
+2133954.996
+ 10
+6042773.277
+ 20
+2133959.947
+ 10
+6042772.581
+ 20
+2133964.899
+ 10
+6042771.884
+ 20
+2133969.85
+ 10
+6042771.188
+ 20
+2133974.801
+ 10
+6042770.492
+ 20
+2133979.752
+ 10
+6042769.795
+ 20
+2133984.704
+ 10
+6042769.099
+ 20
+2133989.655
+ 10
+6042768.403
+ 20
+2133994.606
+ 10
+6042767.707
+ 20
+2133999.557
+ 10
+6042767.01
+ 20
+2134004.509
+ 10
+6042766.314
+ 20
+2134009.46
+ 10
+6042765.618
+ 20
+2134014.411
+ 10
+6042764.921
+ 20
+2134019.363
+ 10
+6042764.225
+ 20
+2134024.314
+ 10
+6042763.529
+ 20
+2134029.265
+ 10
+6042762.832
+ 20
+2134034.216
+ 10
+6042762.136
+ 20
+2134039.168
+ 10
+6042761.44
+ 20
+2134044.119
+ 10
+6042760.743
+ 20
+2134049.07
+ 10
+6042760.047
+ 20
+2134054.021
+ 10
+6042759.351
+ 20
+2134058.973
+ 10
+6042758.632
+ 20
+2134064.025
+ 10
+6042757.851
+ 20
+2134068.964
+ 10
+6042757.069
+ 20
+2134073.902
+ 10
+6042756.288
+ 20
+2134078.841
+ 10
+6042755.506
+ 20
+2134083.779
+ 10
+6042754.725
+ 20
+2134088.718
+ 10
+6042753.944
+ 20
+2134093.657
+ 10
+6042753.162
+ 20
+2134098.595
+ 10
+6042752.381
+ 20
+2134103.534
+ 10
+6042751.599
+ 20
+2134108.472
+ 10
+6042750.818
+ 20
+2134113.411
+ 10
+6042750.037
+ 20
+2134118.349
+ 10
+6042749.255
+ 20
+2134123.288
+ 10
+6042748.474
+ 20
+2134128.226
+ 10
+6042747.692
+ 20
+2134133.165
+ 10
+6042746.911
+ 20
+2134138.104
+ 10
+6042746.129
+ 20
+2134143.042
+ 10
+6042745.348
+ 20
+2134147.981
+ 10
+6042744.567
+ 20
+2134152.919
+ 10
+6042743.785
+ 20
+2134157.858
+ 10
+6042743.004
+ 20
+2134162.796
+ 10
+6042742.222
+ 20
+2134167.735
+ 10
+6042741.441
+ 20
+2134172.673
+ 10
+6042740.659
+ 20
+2134177.612
+ 10
+6042739.878
+ 20
+2134182.551
+ 10
+6042739.097
+ 20
+2134187.489
+ 10
+6042738.315
+ 20
+2134192.428
+ 10
+6042737.534
+ 20
+2134197.366
+ 10
+6042736.752
+ 20
+2134202.305
+ 10
+6042735.971
+ 20
+2134207.243
+ 10
+6042735.189
+ 20
+2134212.182
+ 10
+6042734.408
+ 20
+2134217.121
+ 10
+6042733.627
+ 20
+2134222.059
+ 10
+6042732.845
+ 20
+2134226.998
+ 10
+6042732.064
+ 20
+2134231.936
+ 10
+6042731.282
+ 20
+2134236.875
+ 10
+6042730.501
+ 20
+2134241.813
+ 10
+6042729.719
+ 20
+2134246.752
+ 10
+6042728.938
+ 20
+2134251.69
+ 10
+6042728.121
+ 20
+2134256.662
+ 10
+6042727.309
+ 20
+2134261.595
+ 10
+6042726.496
+ 20
+2134266.529
+ 10
+6042725.684
+ 20
+2134271.462
+ 10
+6042724.871
+ 20
+2134276.396
+ 10
+6042724.059
+ 20
+2134281.329
+ 10
+6042723.246
+ 20
+2134286.263
+ 10
+6042722.434
+ 20
+2134291.196
+ 10
+6042721.621
+ 20
+2134296.13
+ 10
+6042720.808
+ 20
+2134301.063
+ 10
+6042719.996
+ 20
+2134305.997
+ 10
+6042719.183
+ 20
+2134310.93
+ 10
+6042718.371
+ 20
+2134315.864
+ 10
+6042717.558
+ 20
+2134320.798
+ 10
+6042716.746
+ 20
+2134325.731
+ 10
+6042715.933
+ 20
+2134330.665
+ 10
+6042715.121
+ 20
+2134335.598
+ 10
+6042714.308
+ 20
+2134340.532
+ 10
+6042713.496
+ 20
+2134345.465
+ 10
+6042712.683
+ 20
+2134350.399
+ 10
+6042711.87
+ 20
+2134355.332
+ 10
+6042711.058
+ 20
+2134360.266
+ 10
+6042710.245
+ 20
+2134365.199
+ 10
+6042709.433
+ 20
+2134370.133
+ 10
+6042708.62
+ 20
+2134375.066
+ 10
+6042707.808
+ 20
+2134380
+ 10
+6042706.995
+ 20
+2134384.933
+ 10
+6042706.183
+ 20
+2134389.867
+ 10
+6042705.37
+ 20
+2134394.801
+ 10
+6042704.557
+ 20
+2134399.734
+ 10
+6042703.745
+ 20
+2134404.668
+ 10
+6042702.932
+ 20
+2134409.601
+ 10
+6042702.134
+ 20
+2134414.522
+ 10
+6042701.333
+ 20
+2134419.458
+ 10
+6042700.533
+ 20
+2134424.393
+ 10
+6042699.732
+ 20
+2134429.329
+ 10
+6042698.932
+ 20
+2134434.264
+ 10
+6042698.131
+ 20
+2134439.2
+ 10
+6042697.33
+ 20
+2134444.135
+ 10
+6042696.53
+ 20
+2134449.071
+ 10
+6042695.729
+ 20
+2134454.006
+ 10
+6042694.929
+ 20
+2134458.942
+ 10
+6042694.128
+ 20
+2134463.877
+ 10
+6042693.327
+ 20
+2134468.813
+ 10
+6042692.527
+ 20
+2134473.748
+ 10
+6042691.726
+ 20
+2134478.684
+ 10
+6042690.926
+ 20
+2134483.619
+ 10
+6042690.125
+ 20
+2134488.555
+ 10
+6042689.324
+ 20
+2134493.49
+ 10
+6042688.524
+ 20
+2134498.426
+ 10
+6042687.723
+ 20
+2134503.361
+ 10
+6042686.923
+ 20
+2134508.297
+ 10
+6042686.122
+ 20
+2134513.232
+ 10
+6042685.322
+ 20
+2134518.168
+ 10
+6042684.521
+ 20
+2134523.103
+ 10
+6042683.72
+ 20
+2134528.039
+ 10
+6042682.92
+ 20
+2134532.974
+ 10
+6042682.119
+ 20
+2134537.91
+ 10
+6042681.319
+ 20
+2134542.845
+ 10
+6042680.518
+ 20
+2134547.781
+ 10
+6042679.717
+ 20
+2134552.716
+ 10
+6042678.917
+ 20
+2134557.651
+ 10
+6042678.116
+ 20
+2134562.587
+ 10
+6042677.316
+ 20
+2134567.522
+ 10
+6042676.515
+ 20
+2134572.458
+ 10
+6042675.714
+ 20
+2134577.393
+ 10
+6042674.913
+ 20
+2134582.333
+ 10
+6042674.109
+ 20
+2134587.268
+ 10
+6042673.305
+ 20
+2134592.203
+ 10
+6042672.501
+ 20
+2134597.138
+ 10
+6042671.698
+ 20
+2134602.072
+ 10
+6042670.894
+ 20
+2134607.007
+ 10
+6042670.09
+ 20
+2134611.942
+ 10
+6042669.287
+ 20
+2134616.877
+ 10
+6042668.483
+ 20
+2134621.812
+ 10
+6042667.679
+ 20
+2134626.747
+ 10
+6042666.876
+ 20
+2134631.682
+ 10
+6042666.072
+ 20
+2134636.617
+ 10
+6042665.268
+ 20
+2134641.552
+ 10
+6042664.464
+ 20
+2134646.487
+ 10
+6042663.661
+ 20
+2134651.422
+ 10
+6042662.857
+ 20
+2134656.357
+ 10
+6042662.053
+ 20
+2134661.292
+ 10
+6042661.25
+ 20
+2134666.227
+ 10
+6042660.446
+ 20
+2134671.162
+ 10
+6042659.642
+ 20
+2134676.097
+ 10
+6042658.839
+ 20
+2134681.032
+ 10
+6042658.035
+ 20
+2134685.967
+ 10
+6042657.231
+ 20
+2134690.902
+ 10
+6042656.428
+ 20
+2134695.837
+ 10
+6042655.624
+ 20
+2134700.772
+ 10
+6042654.82
+ 20
+2134705.707
+ 10
+6042654.016
+ 20
+2134710.642
+ 10
+6042653.213
+ 20
+2134715.577
+ 10
+6042652.409
+ 20
+2134720.512
+ 10
+6042651.606
+ 20
+2134725.446
+ 10
+6042650.803
+ 20
+2134730.381
+ 10
+6042650
+ 20
+2134735.316
+ 10
+6042649.197
+ 20
+2134740.252
+ 10
+6042648.394
+ 20
+2134745.187
+ 10
+6042647.591
+ 20
+2134750.122
+ 10
+6042646.788
+ 20
+2134755.057
+ 10
+6042645.985
+ 20
+2134759.992
+ 10
+6042645.182
+ 20
+2134764.927
+ 10
+6042644.379
+ 20
+2134769.862
+ 10
+6042643.576
+ 20
+2134774.797
+ 10
+6042642.773
+ 20
+2134779.732
+ 10
+6042641.97
+ 20
+2134784.668
+ 10
+6042641.167
+ 20
+2134789.603
+ 10
+6042640.364
+ 20
+2134794.538
+ 10
+6042639.561
+ 20
+2134799.473
+ 10
+6042638.758
+ 20
+2134804.408
+ 10
+6042637.955
+ 20
+2134809.343
+ 10
+6042637.152
+ 20
+2134814.278
+ 10
+6042636.349
+ 20
+2134819.213
+ 10
+6042635.546
+ 20
+2134824.148
+ 10
+6042634.743
+ 20
+2134829.083
+ 10
+6042633.94
+ 20
+2134834.019
+ 10
+6042633.137
+ 20
+2134838.954
+ 10
+6042632.334
+ 20
+2134843.889
+ 10
+6042631.531
+ 20
+2134848.824
+ 10
+6042630.728
+ 20
+2134853.759
+ 10
+6042629.925
+ 20
+2134858.694
+ 10
+6042629.138
+ 20
+2134863.562
+ 10
+6042628.392
+ 20
+2134868.506
+ 10
+6042627.646
+ 20
+2134873.45
+ 10
+6042626.899
+ 20
+2134878.394
+ 10
+6042626.153
+ 20
+2134883.338
+ 10
+6042625.406
+ 20
+2134888.282
+ 10
+6042624.66
+ 20
+2134893.226
+ 10
+6042623.913
+ 20
+2134898.17
+ 10
+6042623.167
+ 20
+2134903.114
+ 10
+6042622.42
+ 20
+2134908.058
+ 10
+6042621.674
+ 20
+2134913.002
+ 10
+6042620.927
+ 20
+2134917.946
+ 10
+6042620.181
+ 20
+2134922.89
+ 10
+6042619.435
+ 20
+2134927.834
+ 10
+6042618.688
+ 20
+2134932.778
+ 10
+6042617.942
+ 20
+2134937.722
+ 10
+6042617.195
+ 20
+2134942.666
+ 10
+6042616.449
+ 20
+2134947.61
+ 10
+6042615.702
+ 20
+2134952.554
+ 10
+6042614.956
+ 20
+2134957.498
+ 10
+6042614.209
+ 20
+2134962.441
+ 10
+6042613.463
+ 20
+2134967.385
+ 10
+6042612.716
+ 20
+2134972.329
+ 10
+6042611.97
+ 20
+2134977.273
+ 10
+6042611.224
+ 20
+2134982.217
+ 10
+6042610.477
+ 20
+2134987.161
+ 10
+6042609.731
+ 20
+2134992.105
+ 10
+6042608.984
+ 20
+2134997.049
+ 10
+6042608.238
+ 20
+2135001.993
+ 10
+6042607.491
+ 20
+2135006.937
+ 10
+6042606.745
+ 20
+2135011.881
+ 10
+6042605.998
+ 20
+2135016.825
+ 10
+6042605.256
+ 20
+2135021.758
+ 10
+6042604.519
+ 20
+2135026.703
+ 10
+6042603.782
+ 20
+2135031.649
+ 10
+6042603.045
+ 20
+2135036.594
+ 10
+6042602.308
+ 20
+2135041.54
+ 10
+6042601.571
+ 20
+2135046.485
+ 10
+6042600.835
+ 20
+2135051.43
+ 10
+6042600.098
+ 20
+2135056.376
+ 10
+6042599.361
+ 20
+2135061.321
+ 10
+6042598.624
+ 20
+2135066.267
+ 10
+6042597.887
+ 20
+2135071.212
+ 10
+6042597.15
+ 20
+2135076.157
+ 10
+6042596.413
+ 20
+2135081.103
+ 10
+6042595.676
+ 20
+2135086.048
+ 10
+6042594.939
+ 20
+2135090.994
+ 10
+6042594.202
+ 20
+2135095.939
+ 10
+6042593.465
+ 20
+2135100.884
+ 10
+6042592.728
+ 20
+2135105.83
+ 10
+6042591.991
+ 20
+2135110.775
+ 10
+6042591.254
+ 20
+2135115.721
+ 10
+6042590.567
+ 20
+2135120.673
+ 10
+6042589.879
+ 20
+2135125.626
+ 10
+6042589.192
+ 20
+2135130.579
+ 10
+6042588.504
+ 20
+2135135.532
+ 10
+6042587.816
+ 20
+2135140.484
+ 10
+6042587.129
+ 20
+2135145.437
+ 10
+6042586.457
+ 20
+2135150.374
+ 10
+6042585.784
+ 20
+2135155.329
+ 10
+6042585.11
+ 20
+2135160.283
+ 10
+6042584.436
+ 20
+2135165.238
+ 10
+6042583.763
+ 20
+2135170.193
+ 10
+6042583.089
+ 20
+2135175.147
+ 10
+6042582.415
+ 20
+2135180.102
+ 10
+6042581.742
+ 20
+2135185.057
+ 10
+6042581.068
+ 20
+2135190.011
+ 10
+6042580.394
+ 20
+2135194.966
+ 10
+6042579.721
+ 20
+2135199.921
+ 10
+6042579.047
+ 20
+2135204.875
+ 10
+6042578.373
+ 20
+2135209.83
+ 10
+6042577.7
+ 20
+2135214.785
+ 10
+6042577.026
+ 20
+2135219.739
+ 10
+6042576.352
+ 20
+2135224.694
+ 10
+6042575.679
+ 20
+2135229.649
+ 10
+6042575.005
+ 20
+2135234.603
+ 10
+6042574.331
+ 20
+2135239.558
+ 10
+6042573.658
+ 20
+2135244.513
+ 10
+6042572.984
+ 20
+2135249.467
+ 10
+6042572.31
+ 20
+2135254.422
+ 10
+6042571.637
+ 20
+2135259.377
+ 10
+6042570.963
+ 20
+2135264.331
+ 10
+6042570.289
+ 20
+2135269.286
+ 10
+6042569.616
+ 20
+2135274.241
+ 10
+6042568.942
+ 20
+2135279.195
+ 10
+6042568.268
+ 20
+2135284.15
+ 10
+6042567.58
+ 20
+2135289.14
+ 10
+6042566.883
+ 20
+2135294.091
+ 10
+6042565.997968182
+ 20
+2135300.065930843
+  0
+LWPOLYLINE
+  5
+B6
+100
+AcDbEntity
+  8
+seg001
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbPolyline
+ 90
+  503
+ 70
+    0
+ 43
+0
+ 10
+6042906.063
+ 20
+2132814.069
+ 10
+6042905.43
+ 20
+2132819.029
+ 10
+6042904.798
+ 20
+2132823.989
+ 10
+6042904.165
+ 20
+2132828.949
+ 10
+6042903.533
+ 20
+2132833.909
+ 10
+6042902.901
+ 20
+2132838.868
+ 10
+6042902.268
+ 20
+2132843.828
+ 10
+6042901.636
+ 20
+2132848.788
+ 10
+6042901.003
+ 20
+2132853.748
+ 10
+6042900.371
+ 20
+2132858.708
+ 10
+6042899.738
+ 20
+2132863.668
+ 10
+6042899.106
+ 20
+2132868.627
+ 10
+6042898.473
+ 20
+2132873.587
+ 10
+6042897.841
+ 20
+2132878.547
+ 10
+6042897.209
+ 20
+2132883.507
+ 10
+6042896.576
+ 20
+2132888.467
+ 10
+6042895.944
+ 20
+2132893.427
+ 10
+6042895.311
+ 20
+2132898.386
+ 10
+6042894.679
+ 20
+2132903.346
+ 10
+6042894.046
+ 20
+2132908.306
+ 10
+6042893.414
+ 20
+2132913.266
+ 10
+6042892.782
+ 20
+2132918.226
+ 10
+6042892.149
+ 20
+2132923.186
+ 10
+6042891.517
+ 20
+2132928.146
+ 10
+6042890.884
+ 20
+2132933.105
+ 10
+6042890.252
+ 20
+2132938.065
+ 10
+6042889.624
+ 20
+2132943.004
+ 10
+6042889.004
+ 20
+2132947.966
+ 10
+6042888.384
+ 20
+2132952.927
+ 10
+6042887.764
+ 20
+2132957.889
+ 10
+6042887.143
+ 20
+2132962.85
+ 10
+6042886.523
+ 20
+2132967.811
+ 10
+6042885.903
+ 20
+2132972.773
+ 10
+6042885.283
+ 20
+2132977.734
+ 10
+6042884.663
+ 20
+2132982.696
+ 10
+6042884.043
+ 20
+2132987.657
+ 10
+6042883.423
+ 20
+2132992.618
+ 10
+6042882.803
+ 20
+2132997.58
+ 10
+6042882.183
+ 20
+2133002.541
+ 10
+6042881.563
+ 20
+2133007.503
+ 10
+6042880.943
+ 20
+2133012.464
+ 10
+6042880.322
+ 20
+2133017.425
+ 10
+6042879.702
+ 20
+2133022.387
+ 10
+6042879.082
+ 20
+2133027.348
+ 10
+6042878.462
+ 20
+2133032.31
+ 10
+6042877.842
+ 20
+2133037.271
+ 10
+6042877.222
+ 20
+2133042.232
+ 10
+6042876.602
+ 20
+2133047.194
+ 10
+6042875.982
+ 20
+2133052.155
+ 10
+6042875.352
+ 20
+2133057.148
+ 10
+6042874.704
+ 20
+2133062.106
+ 10
+6042874.057
+ 20
+2133067.064
+ 10
+6042873.41
+ 20
+2133072.022
+ 10
+6042872.763
+ 20
+2133076.98
+ 10
+6042872.115
+ 20
+2133081.938
+ 10
+6042871.468
+ 20
+2133086.896
+ 10
+6042870.821
+ 20
+2133091.854
+ 10
+6042870.174
+ 20
+2133096.812
+ 10
+6042869.526
+ 20
+2133101.77
+ 10
+6042868.879
+ 20
+2133106.728
+ 10
+6042868.232
+ 20
+2133111.686
+ 10
+6042867.585
+ 20
+2133116.644
+ 10
+6042866.937
+ 20
+2133121.602
+ 10
+6042866.29
+ 20
+2133126.559
+ 10
+6042865.643
+ 20
+2133131.517
+ 10
+6042864.996
+ 20
+2133136.475
+ 10
+6042864.348
+ 20
+2133141.433
+ 10
+6042863.701
+ 20
+2133146.391
+ 10
+6042863.063
+ 20
+2133151.315
+ 10
+6042862.444
+ 20
+2133156.277
+ 10
+6042861.826
+ 20
+2133161.238
+ 10
+6042861.207
+ 20
+2133166.2
+ 10
+6042860.589
+ 20
+2133171.162
+ 10
+6042859.971
+ 20
+2133176.123
+ 10
+6042859.352
+ 20
+2133181.085
+ 10
+6042858.734
+ 20
+2133186.046
+ 10
+6042858.115
+ 20
+2133191.008
+ 10
+6042857.497
+ 20
+2133195.97
+ 10
+6042856.878
+ 20
+2133200.931
+ 10
+6042856.26
+ 20
+2133205.893
+ 10
+6042855.642
+ 20
+2133210.854
+ 10
+6042855.023
+ 20
+2133215.816
+ 10
+6042854.405
+ 20
+2133220.778
+ 10
+6042853.786
+ 20
+2133225.739
+ 10
+6042853.168
+ 20
+2133230.701
+ 10
+6042852.549
+ 20
+2133235.662
+ 10
+6042851.931
+ 20
+2133240.624
+ 10
+6042851.321
+ 20
+2133245.548
+ 10
+6042850.734
+ 20
+2133250.514
+ 10
+6042850.147
+ 20
+2133255.479
+ 10
+6042849.56
+ 20
+2133260.445
+ 10
+6042848.973
+ 20
+2133265.41
+ 10
+6042848.386
+ 20
+2133270.376
+ 10
+6042847.799
+ 20
+2133275.341
+ 10
+6042847.212
+ 20
+2133280.306
+ 10
+6042846.625
+ 20
+2133285.272
+ 10
+6042846.038
+ 20
+2133290.237
+ 10
+6042845.451
+ 20
+2133295.203
+ 10
+6042844.864
+ 20
+2133300.168
+ 10
+6042844.276
+ 20
+2133305.133
+ 10
+6042843.689
+ 20
+2133310.099
+ 10
+6042843.102
+ 20
+2133315.064
+ 10
+6042842.515
+ 20
+2133320.03
+ 10
+6042841.928
+ 20
+2133324.995
+ 10
+6042841.341
+ 20
+2133329.961
+ 10
+6042840.754
+ 20
+2133334.926
+ 10
+6042840.161
+ 20
+2133339.93
+ 10
+6042839.542
+ 20
+2133344.891
+ 10
+6042838.923
+ 20
+2133349.853
+ 10
+6042838.304
+ 20
+2133354.814
+ 10
+6042837.686
+ 20
+2133359.776
+ 10
+6042837.067
+ 20
+2133364.737
+ 10
+6042836.448
+ 20
+2133369.699
+ 10
+6042835.829
+ 20
+2133374.66
+ 10
+6042835.21
+ 20
+2133379.622
+ 10
+6042834.591
+ 20
+2133384.583
+ 10
+6042833.972
+ 20
+2133389.545
+ 10
+6042833.353
+ 20
+2133394.506
+ 10
+6042832.734
+ 20
+2133399.468
+ 10
+6042832.115
+ 20
+2133404.43
+ 10
+6042831.496
+ 20
+2133409.391
+ 10
+6042830.877
+ 20
+2133414.353
+ 10
+6042830.258
+ 20
+2133419.314
+ 10
+6042829.639
+ 20
+2133424.276
+ 10
+6042829.02
+ 20
+2133429.237
+ 10
+6042828.401
+ 20
+2133434.199
+ 10
+6042827.773
+ 20
+2133439.169
+ 10
+6042827.145
+ 20
+2133444.13
+ 10
+6042826.518
+ 20
+2133449.09
+ 10
+6042825.891
+ 20
+2133454.051
+ 10
+6042825.263
+ 20
+2133459.011
+ 10
+6042824.636
+ 20
+2133463.972
+ 10
+6042824.008
+ 20
+2133468.932
+ 10
+6042823.381
+ 20
+2133473.893
+ 10
+6042822.754
+ 20
+2133478.853
+ 10
+6042822.126
+ 20
+2133483.814
+ 10
+6042821.499
+ 20
+2133488.774
+ 10
+6042820.871
+ 20
+2133493.735
+ 10
+6042820.244
+ 20
+2133498.695
+ 10
+6042819.617
+ 20
+2133503.656
+ 10
+6042818.989
+ 20
+2133508.616
+ 10
+6042818.362
+ 20
+2133513.577
+ 10
+6042817.734
+ 20
+2133518.537
+ 10
+6042817.107
+ 20
+2133523.498
+ 10
+6042816.48
+ 20
+2133528.458
+ 10
+6042815.878
+ 20
+2133533.392
+ 10
+6042815.275
+ 20
+2133538.355
+ 10
+6042814.673
+ 20
+2133543.319
+ 10
+6042814.07
+ 20
+2133548.282
+ 10
+6042813.467
+ 20
+2133553.246
+ 10
+6042812.865
+ 20
+2133558.209
+ 10
+6042812.262
+ 20
+2133563.173
+ 10
+6042811.659
+ 20
+2133568.136
+ 10
+6042811.057
+ 20
+2133573.1
+ 10
+6042810.454
+ 20
+2133578.064
+ 10
+6042809.851
+ 20
+2133583.027
+ 10
+6042809.249
+ 20
+2133587.991
+ 10
+6042808.646
+ 20
+2133592.954
+ 10
+6042808.043
+ 20
+2133597.918
+ 10
+6042807.441
+ 20
+2133602.881
+ 10
+6042806.838
+ 20
+2133607.845
+ 10
+6042806.235
+ 20
+2133612.808
+ 10
+6042805.633
+ 20
+2133617.772
+ 10
+6042805.03
+ 20
+2133622.735
+ 10
+6042804.427
+ 20
+2133627.699
+ 10
+6042803.825
+ 20
+2133632.663
+ 10
+6042803.213
+ 20
+2133637.64
+ 10
+6042802.598
+ 20
+2133642.602
+ 10
+6042801.983
+ 20
+2133647.564
+ 10
+6042801.368
+ 20
+2133652.526
+ 10
+6042800.753
+ 20
+2133657.488
+ 10
+6042800.138
+ 20
+2133662.45
+ 10
+6042799.523
+ 20
+2133667.412
+ 10
+6042798.908
+ 20
+2133672.374
+ 10
+6042798.293
+ 20
+2133677.336
+ 10
+6042797.678
+ 20
+2133682.298
+ 10
+6042797.063
+ 20
+2133687.26
+ 10
+6042796.448
+ 20
+2133692.222
+ 10
+6042795.833
+ 20
+2133697.184
+ 10
+6042795.218
+ 20
+2133702.146
+ 10
+6042794.603
+ 20
+2133707.109
+ 10
+6042793.987
+ 20
+2133712.071
+ 10
+6042793.372
+ 20
+2133717.033
+ 10
+6042792.757
+ 20
+2133721.995
+ 10
+6042792.142
+ 20
+2133726.957
+ 10
+6042791.527
+ 20
+2133731.919
+ 10
+6042790.912
+ 20
+2133736.881
+ 10
+6042790.297
+ 20
+2133741.843
+ 10
+6042789.682
+ 20
+2133746.805
+ 10
+6042789.067
+ 20
+2133751.767
+ 10
+6042788.452
+ 20
+2133756.729
+ 10
+6042787.837
+ 20
+2133761.691
+ 10
+6042787.222
+ 20
+2133766.653
+ 10
+6042786.607
+ 20
+2133771.615
+ 10
+6042785.965
+ 20
+2133776.612
+ 10
+6042785.318
+ 20
+2133781.57
+ 10
+6042784.672
+ 20
+2133786.528
+ 10
+6042784.025
+ 20
+2133791.486
+ 10
+6042783.379
+ 20
+2133796.444
+ 10
+6042782.733
+ 20
+2133801.402
+ 10
+6042782.086
+ 20
+2133806.36
+ 10
+6042781.44
+ 20
+2133811.318
+ 10
+6042780.793
+ 20
+2133816.276
+ 10
+6042780.147
+ 20
+2133821.234
+ 10
+6042779.501
+ 20
+2133826.192
+ 10
+6042778.854
+ 20
+2133831.15
+ 10
+6042778.208
+ 20
+2133836.108
+ 10
+6042777.562
+ 20
+2133841.066
+ 10
+6042776.915
+ 20
+2133846.024
+ 10
+6042776.269
+ 20
+2133850.982
+ 10
+6042775.622
+ 20
+2133855.94
+ 10
+6042774.976
+ 20
+2133860.898
+ 10
+6042774.33
+ 20
+2133865.856
+ 10
+6042773.683
+ 20
+2133870.814
+ 10
+6042772.989
+ 20
+2133875.827
+ 10
+6042772.293
+ 20
+2133880.778
+ 10
+6042771.597
+ 20
+2133885.73
+ 10
+6042770.901
+ 20
+2133890.681
+ 10
+6042770.204
+ 20
+2133895.632
+ 10
+6042769.508
+ 20
+2133900.583
+ 10
+6042768.812
+ 20
+2133905.535
+ 10
+6042768.115
+ 20
+2133910.486
+ 10
+6042767.419
+ 20
+2133915.437
+ 10
+6042766.723
+ 20
+2133920.389
+ 10
+6042766.027
+ 20
+2133925.34
+ 10
+6042765.33
+ 20
+2133930.291
+ 10
+6042764.634
+ 20
+2133935.242
+ 10
+6042763.938
+ 20
+2133940.194
+ 10
+6042763.241
+ 20
+2133945.145
+ 10
+6042762.545
+ 20
+2133950.096
+ 10
+6042761.849
+ 20
+2133955.048
+ 10
+6042761.153
+ 20
+2133959.999
+ 10
+6042760.456
+ 20
+2133964.95
+ 10
+6042759.76
+ 20
+2133969.901
+ 10
+6042759.064
+ 20
+2133974.853
+ 10
+6042758.368
+ 20
+2133979.804
+ 10
+6042757.671
+ 20
+2133984.755
+ 10
+6042756.975
+ 20
+2133989.706
+ 10
+6042756.279
+ 20
+2133994.658
+ 10
+6042755.582
+ 20
+2133999.609
+ 10
+6042754.886
+ 20
+2134004.56
+ 10
+6042754.19
+ 20
+2134009.512
+ 10
+6042753.494
+ 20
+2134014.463
+ 10
+6042752.797
+ 20
+2134019.414
+ 10
+6042752.101
+ 20
+2134024.365
+ 10
+6042751.405
+ 20
+2134029.317
+ 10
+6042750.708
+ 20
+2134034.268
+ 10
+6042750.012
+ 20
+2134039.219
+ 10
+6042749.316
+ 20
+2134044.171
+ 10
+6042748.62
+ 20
+2134049.122
+ 10
+6042747.923
+ 20
+2134054.073
+ 10
+6042747.227
+ 20
+2134059.024
+ 10
+6042746.476
+ 20
+2134064.072
+ 10
+6042745.694
+ 20
+2134069.011
+ 10
+6042744.913
+ 20
+2134073.949
+ 10
+6042744.131
+ 20
+2134078.888
+ 10
+6042743.35
+ 20
+2134083.826
+ 10
+6042742.568
+ 20
+2134088.765
+ 10
+6042741.787
+ 20
+2134093.703
+ 10
+6042741.005
+ 20
+2134098.642
+ 10
+6042740.224
+ 20
+2134103.58
+ 10
+6042739.443
+ 20
+2134108.519
+ 10
+6042738.661
+ 20
+2134113.458
+ 10
+6042737.88
+ 20
+2134118.396
+ 10
+6042737.098
+ 20
+2134123.335
+ 10
+6042736.317
+ 20
+2134128.273
+ 10
+6042735.535
+ 20
+2134133.212
+ 10
+6042734.754
+ 20
+2134138.15
+ 10
+6042733.973
+ 20
+2134143.089
+ 10
+6042733.191
+ 20
+2134148.027
+ 10
+6042732.41
+ 20
+2134152.966
+ 10
+6042731.628
+ 20
+2134157.905
+ 10
+6042730.847
+ 20
+2134162.843
+ 10
+6042730.065
+ 20
+2134167.782
+ 10
+6042729.284
+ 20
+2134172.72
+ 10
+6042728.503
+ 20
+2134177.659
+ 10
+6042727.721
+ 20
+2134182.597
+ 10
+6042726.94
+ 20
+2134187.536
+ 10
+6042726.158
+ 20
+2134192.474
+ 10
+6042725.377
+ 20
+2134197.413
+ 10
+6042724.595
+ 20
+2134202.352
+ 10
+6042723.814
+ 20
+2134207.29
+ 10
+6042723.032
+ 20
+2134212.229
+ 10
+6042722.251
+ 20
+2134217.167
+ 10
+6042721.47
+ 20
+2134222.106
+ 10
+6042720.688
+ 20
+2134227.044
+ 10
+6042719.907
+ 20
+2134231.983
+ 10
+6042719.125
+ 20
+2134236.921
+ 10
+6042718.344
+ 20
+2134241.86
+ 10
+6042717.562
+ 20
+2134246.799
+ 10
+6042716.765
+ 20
+2134251.773
+ 10
+6042715.952
+ 20
+2134256.706
+ 10
+6042715.14
+ 20
+2134261.64
+ 10
+6042714.327
+ 20
+2134266.573
+ 10
+6042713.515
+ 20
+2134271.507
+ 10
+6042712.702
+ 20
+2134276.441
+ 10
+6042711.889
+ 20
+2134281.374
+ 10
+6042711.077
+ 20
+2134286.308
+ 10
+6042710.264
+ 20
+2134291.241
+ 10
+6042709.452
+ 20
+2134296.175
+ 10
+6042708.639
+ 20
+2134301.108
+ 10
+6042707.827
+ 20
+2134306.042
+ 10
+6042707.014
+ 20
+2134310.975
+ 10
+6042706.202
+ 20
+2134315.909
+ 10
+6042705.389
+ 20
+2134320.842
+ 10
+6042704.577
+ 20
+2134325.776
+ 10
+6042703.764
+ 20
+2134330.709
+ 10
+6042702.952
+ 20
+2134335.643
+ 10
+6042702.139
+ 20
+2134340.576
+ 10
+6042701.327
+ 20
+2134345.51
+ 10
+6042700.514
+ 20
+2134350.444
+ 10
+6042699.702
+ 20
+2134355.377
+ 10
+6042698.889
+ 20
+2134360.311
+ 10
+6042698.076
+ 20
+2134365.244
+ 10
+6042697.264
+ 20
+2134370.178
+ 10
+6042696.451
+ 20
+2134375.111
+ 10
+6042695.639
+ 20
+2134380.045
+ 10
+6042694.826
+ 20
+2134384.978
+ 10
+6042694.014
+ 20
+2134389.912
+ 10
+6042693.201
+ 20
+2134394.845
+ 10
+6042692.389
+ 20
+2134399.779
+ 10
+6042691.576
+ 20
+2134404.712
+ 10
+6042690.771
+ 20
+2134409.633
+ 10
+6042689.97
+ 20
+2134414.568
+ 10
+6042689.17
+ 20
+2134419.503
+ 10
+6042688.369
+ 20
+2134424.439
+ 10
+6042687.568
+ 20
+2134429.374
+ 10
+6042686.768
+ 20
+2134434.31
+ 10
+6042685.967
+ 20
+2134439.245
+ 10
+6042685.167
+ 20
+2134444.181
+ 10
+6042684.366
+ 20
+2134449.116
+ 10
+6042683.565
+ 20
+2134454.052
+ 10
+6042682.765
+ 20
+2134458.987
+ 10
+6042681.964
+ 20
+2134463.923
+ 10
+6042681.163
+ 20
+2134468.858
+ 10
+6042680.363
+ 20
+2134473.794
+ 10
+6042679.562
+ 20
+2134478.729
+ 10
+6042678.762
+ 20
+2134483.665
+ 10
+6042677.961
+ 20
+2134488.6
+ 10
+6042677.16
+ 20
+2134493.536
+ 10
+6042676.36
+ 20
+2134498.471
+ 10
+6042675.559
+ 20
+2134503.407
+ 10
+6042674.759
+ 20
+2134508.342
+ 10
+6042673.958
+ 20
+2134513.278
+ 10
+6042673.157
+ 20
+2134518.213
+ 10
+6042672.357
+ 20
+2134523.149
+ 10
+6042671.556
+ 20
+2134528.084
+ 10
+6042670.756
+ 20
+2134533.02
+ 10
+6042669.955
+ 20
+2134537.955
+ 10
+6042669.154
+ 20
+2134542.891
+ 10
+6042668.354
+ 20
+2134547.826
+ 10
+6042667.553
+ 20
+2134552.762
+ 10
+6042666.753
+ 20
+2134557.697
+ 10
+6042665.952
+ 20
+2134562.633
+ 10
+6042665.151
+ 20
+2134567.568
+ 10
+6042664.351
+ 20
+2134572.504
+ 10
+6042663.55
+ 20
+2134577.439
+ 10
+6042662.747
+ 20
+2134582.378
+ 10
+6042661.943
+ 20
+2134587.313
+ 10
+6042661.14
+ 20
+2134592.248
+ 10
+6042660.336
+ 20
+2134597.183
+ 10
+6042659.532
+ 20
+2134602.118
+ 10
+6042658.729
+ 20
+2134607.053
+ 10
+6042657.925
+ 20
+2134611.988
+ 10
+6042657.121
+ 20
+2134616.923
+ 10
+6042656.318
+ 20
+2134621.858
+ 10
+6042655.514
+ 20
+2134626.793
+ 10
+6042654.71
+ 20
+2134631.728
+ 10
+6042653.906
+ 20
+2134636.663
+ 10
+6042653.103
+ 20
+2134641.598
+ 10
+6042652.299
+ 20
+2134646.533
+ 10
+6042651.495
+ 20
+2134651.468
+ 10
+6042650.692
+ 20
+2134656.403
+ 10
+6042649.888
+ 20
+2134661.338
+ 10
+6042649.084
+ 20
+2134666.273
+ 10
+6042648.281
+ 20
+2134671.208
+ 10
+6042647.477
+ 20
+2134676.143
+ 10
+6042646.673
+ 20
+2134681.078
+ 10
+6042645.87
+ 20
+2134686.013
+ 10
+6042645.066
+ 20
+2134690.948
+ 10
+6042644.262
+ 20
+2134695.883
+ 10
+6042643.458
+ 20
+2134700.818
+ 10
+6042642.655
+ 20
+2134705.753
+ 10
+6042641.851
+ 20
+2134710.688
+ 10
+6042641.047
+ 20
+2134715.623
+ 10
+6042640.244
+ 20
+2134720.558
+ 10
+6042639.441
+ 20
+2134725.492
+ 10
+6042638.638
+ 20
+2134730.427
+ 10
+6042637.835
+ 20
+2134735.362
+ 10
+6042637.032
+ 20
+2134740.297
+ 10
+6042636.229
+ 20
+2134745.232
+ 10
+6042635.426
+ 20
+2134750.167
+ 10
+6042634.623
+ 20
+2134755.102
+ 10
+6042633.82
+ 20
+2134760.037
+ 10
+6042633.017
+ 20
+2134764.973
+ 10
+6042632.214
+ 20
+2134769.908
+ 10
+6042631.411
+ 20
+2134774.843
+ 10
+6042630.608
+ 20
+2134779.778
+ 10
+6042629.805
+ 20
+2134784.713
+ 10
+6042629.002
+ 20
+2134789.648
+ 10
+6042628.199
+ 20
+2134794.583
+ 10
+6042627.396
+ 20
+2134799.518
+ 10
+6042626.593
+ 20
+2134804.453
+ 10
+6042625.79
+ 20
+2134809.388
+ 10
+6042624.987
+ 20
+2134814.324
+ 10
+6042624.184
+ 20
+2134819.259
+ 10
+6042623.381
+ 20
+2134824.194
+ 10
+6042622.578
+ 20
+2134829.129
+ 10
+6042621.775
+ 20
+2134834.064
+ 10
+6042620.972
+ 20
+2134838.999
+ 10
+6042620.169
+ 20
+2134843.934
+ 10
+6042619.366
+ 20
+2134848.869
+ 10
+6042618.563
+ 20
+2134853.804
+ 10
+6042617.76
+ 20
+2134858.74
+ 10
+6042616.995
+ 20
+2134863.611
+ 10
+6042616.249
+ 20
+2134868.555
+ 10
+6042615.502
+ 20
+2134873.499
+ 10
+6042614.756
+ 20
+2134878.443
+ 10
+6042614.009
+ 20
+2134883.387
+ 10
+6042613.263
+ 20
+2134888.331
+ 10
+6042612.517
+ 20
+2134893.275
+ 10
+6042611.77
+ 20
+2134898.219
+ 10
+6042611.024
+ 20
+2134903.163
+ 10
+6042610.277
+ 20
+2134908.107
+ 10
+6042609.531
+ 20
+2134913.051
+ 10
+6042608.784
+ 20
+2134917.995
+ 10
+6042608.038
+ 20
+2134922.939
+ 10
+6042607.291
+ 20
+2134927.883
+ 10
+6042606.545
+ 20
+2134932.827
+ 10
+6042605.798
+ 20
+2134937.771
+ 10
+6042605.052
+ 20
+2134942.715
+ 10
+6042604.305
+ 20
+2134947.658
+ 10
+6042603.559
+ 20
+2134952.602
+ 10
+6042602.812
+ 20
+2134957.546
+ 10
+6042602.066
+ 20
+2134962.49
+ 10
+6042601.319
+ 20
+2134967.434
+ 10
+6042600.573
+ 20
+2134972.378
+ 10
+6042599.827
+ 20
+2134977.322
+ 10
+6042599.08
+ 20
+2134982.266
+ 10
+6042598.334
+ 20
+2134987.21
+ 10
+6042597.587
+ 20
+2134992.154
+ 10
+6042596.841
+ 20
+2134997.098
+ 10
+6042596.094
+ 20
+2135002.042
+ 10
+6042595.348
+ 20
+2135006.986
+ 10
+6042594.601
+ 20
+2135011.93
+ 10
+6042593.855
+ 20
+2135016.874
+ 10
+6042593.116
+ 20
+2135021.807
+ 10
+6042592.379
+ 20
+2135026.753
+ 10
+6042591.642
+ 20
+2135031.698
+ 10
+6042590.905
+ 20
+2135036.644
+ 10
+6042590.168
+ 20
+2135041.589
+ 10
+6042589.431
+ 20
+2135046.534
+ 10
+6042588.694
+ 20
+2135051.48
+ 10
+6042587.958
+ 20
+2135056.425
+ 10
+6042587.221
+ 20
+2135061.371
+ 10
+6042586.484
+ 20
+2135066.316
+ 10
+6042585.747
+ 20
+2135071.261
+ 10
+6042585.01
+ 20
+2135076.207
+ 10
+6042584.273
+ 20
+2135081.152
+ 10
+6042583.536
+ 20
+2135086.097
+ 10
+6042582.799
+ 20
+2135091.043
+ 10
+6042582.062
+ 20
+2135095.988
+ 10
+6042581.325
+ 20
+2135100.934
+ 10
+6042580.588
+ 20
+2135105.879
+ 10
+6042579.851
+ 20
+2135110.824
+ 10
+6042579.114
+ 20
+2135115.77
+ 10
+6042578.377
+ 20
+2135120.715
+ 10
+6042577.641
+ 20
+2135125.661
+ 10
+6042576.904
+ 20
+2135130.606
+ 10
+6042576.167
+ 20
+2135135.551
+ 10
+6042575.43
+ 20
+2135140.497
+ 10
+6042574.7
+ 20
+2135145.426
+ 10
+6042573.977
+ 20
+2135150.374
+ 10
+6042573.254
+ 20
+2135155.321
+ 10
+6042572.531
+ 20
+2135160.269
+ 10
+6042571.808
+ 20
+2135165.216
+ 10
+6042571.085
+ 20
+2135170.164
+ 10
+6042570.362
+ 20
+2135175.111
+ 10
+6042569.639
+ 20
+2135180.058
+ 10
+6042568.916
+ 20
+2135185.006
+ 10
+6042568.193
+ 20
+2135189.953
+ 10
+6042567.47
+ 20
+2135194.901
+ 10
+6042566.747
+ 20
+2135199.848
+ 10
+6042566.024
+ 20
+2135204.796
+ 10
+6042565.301
+ 20
+2135209.743
+ 10
+6042564.578
+ 20
+2135214.691
+ 10
+6042563.855
+ 20
+2135219.638
+ 10
+6042563.132
+ 20
+2135224.585
+ 10
+6042562.409
+ 20
+2135229.533
+ 10
+6042561.686
+ 20
+2135234.48
+ 10
+6042560.963
+ 20
+2135239.428
+ 10
+6042560.24
+ 20
+2135244.375
+ 10
+6042559.517
+ 20
+2135249.323
+ 10
+6042558.794
+ 20
+2135254.27
+ 10
+6042558.071
+ 20
+2135259.218
+ 10
+6042557.348
+ 20
+2135264.165
+ 10
+6042556.625
+ 20
+2135269.113
+ 10
+6042555.902
+ 20
+2135274.06
+ 10
+6042555.179
+ 20
+2135279.007
+ 10
+6042554.456
+ 20
+2135283.955
+ 10
+6042553.711
+ 20
+2135288.928
+ 10
+6042552.964
+ 20
+2135293.872
+ 10
+6042552.291064012
+ 20
+2135298.474096678
+  0
+LWPOLYLINE
+  5
+B7
+100
+AcDbEntity
+  8
+seg002
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbPolyline
+ 90
+  111
+ 70
+    0
+ 43
+0
+ 10
+6042927.061
+ 20
+2133126.812
+ 10
+6042926.225
+ 20
+2133131.742
+ 10
+6042925.389
+ 20
+2133136.672
+ 10
+6042924.553
+ 20
+2133141.601
+ 10
+6042923.717
+ 20
+2133146.531
+ 10
+6042922.881
+ 20
+2133151.461
+ 10
+6042922.045
+ 20
+2133156.39
+ 10
+6042921.209
+ 20
+2133161.32
+ 10
+6042920.373
+ 20
+2133166.25
+ 10
+6042919.537
+ 20
+2133171.179
+ 10
+6042918.701
+ 20
+2133176.109
+ 10
+6042917.865
+ 20
+2133181.038
+ 10
+6042917.029
+ 20
+2133185.968
+ 10
+6042916.193
+ 20
+2133190.898
+ 10
+6042915.357
+ 20
+2133195.827
+ 10
+6042914.521
+ 20
+2133200.757
+ 10
+6042913.662
+ 20
+2133205.683
+ 10
+6042912.799
+ 20
+2133210.608
+ 10
+6042911.936
+ 20
+2133215.533
+ 10
+6042911.073
+ 20
+2133220.458
+ 10
+6042910.21
+ 20
+2133225.383
+ 10
+6042909.347
+ 20
+2133230.308
+ 10
+6042908.415
+ 20
+2133235.342
+ 10
+6042907.501
+ 20
+2133240.258
+ 10
+6042906.587
+ 20
+2133245.174
+ 10
+6042905.673
+ 20
+2133250.09
+ 10
+6042904.76
+ 20
+2133255.005
+ 10
+6042903.846
+ 20
+2133259.921
+ 10
+6042902.932
+ 20
+2133264.837
+ 10
+6042902.018
+ 20
+2133269.753
+ 10
+6042901.104
+ 20
+2133274.669
+ 10
+6042900.19
+ 20
+2133279.584
+ 10
+6042899.277
+ 20
+2133284.5
+ 10
+6042898.365
+ 20
+2133289.416
+ 10
+6042897.502
+ 20
+2133294.342
+ 10
+6042896.638
+ 20
+2133299.267
+ 10
+6042895.775
+ 20
+2133304.192
+ 10
+6042894.912
+ 20
+2133309.118
+ 10
+6042894.149
+ 20
+2133313.868
+ 10
+6042893.362
+ 20
+2133318.806
+ 10
+6042892.574
+ 20
+2133323.743
+ 10
+6042891.787
+ 20
+2133328.681
+ 10
+6042891
+ 20
+2133333.619
+ 10
+6042890.212
+ 20
+2133338.556
+ 10
+6042889.425
+ 20
+2133343.494
+ 10
+6042888.638
+ 20
+2133348.432
+ 10
+6042887.851
+ 20
+2133353.369
+ 10
+6042887.063
+ 20
+2133358.307
+ 10
+6042886.273
+ 20
+2133363.265
+ 10
+6042885.472
+ 20
+2133368.201
+ 10
+6042884.67
+ 20
+2133373.136
+ 10
+6042883.869
+ 20
+2133378.071
+ 10
+6042883.068
+ 20
+2133383.007
+ 10
+6042882.266
+ 20
+2133387.942
+ 10
+6042881.465
+ 20
+2133392.878
+ 10
+6042880.664
+ 20
+2133397.813
+ 10
+6042879.863
+ 20
+2133402.748
+ 10
+6042879.061
+ 20
+2133407.684
+ 10
+6042878.26
+ 20
+2133412.619
+ 10
+6042877.454
+ 20
+2133417.575
+ 10
+6042876.645
+ 20
+2133422.509
+ 10
+6042875.835
+ 20
+2133427.443
+ 10
+6042875.025
+ 20
+2133432.376
+ 10
+6042874.215
+ 20
+2133437.31
+ 10
+6042873.405
+ 20
+2133442.244
+ 10
+6042872.595
+ 20
+2133447.178
+ 10
+6042871.785
+ 20
+2133452.112
+ 10
+6042870.976
+ 20
+2133457.046
+ 10
+6042870.172
+ 20
+2133461.981
+ 10
+6042869.367
+ 20
+2133466.916
+ 10
+6042868.558
+ 20
+2133471.871
+ 10
+6042867.745
+ 20
+2133476.804
+ 10
+6042866.932
+ 20
+2133481.738
+ 10
+6042866.119
+ 20
+2133486.671
+ 10
+6042865.306
+ 20
+2133491.605
+ 10
+6042864.493
+ 20
+2133496.538
+ 10
+6042863.68
+ 20
+2133501.472
+ 10
+6042862.867
+ 20
+2133506.405
+ 10
+6042862.054
+ 20
+2133511.339
+ 10
+6042861.241
+ 20
+2133516.272
+ 10
+6042860.428
+ 20
+2133521.206
+ 10
+6042859.607
+ 20
+2133526.171
+ 10
+6042858.78
+ 20
+2133531.103
+ 10
+6042857.953
+ 20
+2133536.034
+ 10
+6042857.126
+ 20
+2133540.965
+ 10
+6042856.327
+ 20
+2133545.848
+ 10
+6042855.521
+ 20
+2133550.782
+ 10
+6042854.716
+ 20
+2133555.717
+ 10
+6042853.911
+ 20
+2133560.652
+ 10
+6042853.105
+ 20
+2133565.587
+ 10
+6042852.3
+ 20
+2133570.521
+ 10
+6042851.494
+ 20
+2133575.456
+ 10
+6042850.687
+ 20
+2133580.39
+ 10
+6042849.88
+ 20
+2133585.325
+ 10
+6042849.073
+ 20
+2133590.259
+ 10
+6042848.266
+ 20
+2133595.194
+ 10
+6042847.459
+ 20
+2133600.128
+ 10
+6042846.652
+ 20
+2133605.063
+ 10
+6042845.845
+ 20
+2133609.997
+ 10
+6042845.038
+ 20
+2133614.931
+ 10
+6042844.231
+ 20
+2133619.866
+ 10
+6042843.424
+ 20
+2133624.8
+ 10
+6042842.617
+ 20
+2133629.735
+ 10
+6042841.81
+ 20
+2133634.669
+ 10
+6042841.003
+ 20
+2133639.604
+ 10
+6042840.196
+ 20
+2133644.538
+ 10
+6042839.389
+ 20
+2133649.473
+ 10
+6042838.582
+ 20
+2133654.407
+ 10
+6042837.775
+ 20
+2133659.341
+ 10
+6042836.968
+ 20
+2133664.276
+ 10
+6042789.758349029
+ 20
+2133942.970192971
+  0
+LWPOLYLINE
+  5
+B8
+100
+AcDbEntity
+  8
+seg003
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbPolyline
+ 90
+  124
+ 70
+    0
+ 43
+0
+ 10
+6042516.472682261
+ 20
+2135294.676948188
+ 10
+6042516.12
+ 20
+2135297.285
+ 10
+6042515.374
+ 20
+2135302.229
+ 10
+6042514.628
+ 20
+2135307.173
+ 10
+6042513.881
+ 20
+2135312.117
+ 10
+6042513.135
+ 20
+2135317.061
+ 10
+6042512.389
+ 20
+2135322.005
+ 10
+6042511.643
+ 20
+2135326.949
+ 10
+6042510.897
+ 20
+2135331.893
+ 10
+6042510.151
+ 20
+2135336.837
+ 10
+6042509.405
+ 20
+2135341.781
+ 10
+6042508.658
+ 20
+2135346.725
+ 10
+6042507.912
+ 20
+2135351.669
+ 10
+6042507.166
+ 20
+2135356.613
+ 10
+6042506.42
+ 20
+2135361.557
+ 10
+6042505.674
+ 20
+2135366.501
+ 10
+6042504.928
+ 20
+2135371.445
+ 10
+6042504.182
+ 20
+2135376.389
+ 10
+6042503.435
+ 20
+2135381.333
+ 10
+6042502.689
+ 20
+2135386.277
+ 10
+6042501.943
+ 20
+2135391.221
+ 10
+6042501.197
+ 20
+2135396.165
+ 10
+6042500.451
+ 20
+2135401.109
+ 10
+6042499.705
+ 20
+2135406.053
+ 10
+6042498.954
+ 20
+2135410.996
+ 10
+6042498.193
+ 20
+2135415.938
+ 10
+6042497.431
+ 20
+2135420.88
+ 10
+6042496.669
+ 20
+2135425.821
+ 10
+6042495.908
+ 20
+2135430.763
+ 10
+6042495.146
+ 20
+2135435.705
+ 10
+6042494.385
+ 20
+2135440.646
+ 10
+6042493.623
+ 20
+2135445.588
+ 10
+6042492.862
+ 20
+2135450.53
+ 10
+6042492.087
+ 20
+2135455.499
+ 10
+6042491.312
+ 20
+2135460.439
+ 10
+6042490.538
+ 20
+2135465.379
+ 10
+6042489.764
+ 20
+2135470.318
+ 10
+6042488.99
+ 20
+2135475.258
+ 10
+6042488.216
+ 20
+2135480.198
+ 10
+6042487.441
+ 20
+2135485.137
+ 10
+6042486.667
+ 20
+2135490.077
+ 10
+6042485.893
+ 20
+2135495.017
+ 10
+6042485.119
+ 20
+2135499.956
+ 10
+6042484.345
+ 20
+2135504.896
+ 10
+6042483.571
+ 20
+2135509.836
+ 10
+6042482.796
+ 20
+2135514.776
+ 10
+6042482.022
+ 20
+2135519.715
+ 10
+6042481.248
+ 20
+2135524.655
+ 10
+6042480.474
+ 20
+2135529.595
+ 10
+6042479.7
+ 20
+2135534.534
+ 10
+6042478.925
+ 20
+2135539.474
+ 10
+6042478.151
+ 20
+2135544.414
+ 10
+6042477.377
+ 20
+2135549.353
+ 10
+6042476.603
+ 20
+2135554.293
+ 10
+6042475.833
+ 20
+2135559.233
+ 10
+6042475.063
+ 20
+2135564.174
+ 10
+6042474.294
+ 20
+2135569.114
+ 10
+6042473.524
+ 20
+2135574.055
+ 10
+6042472.754
+ 20
+2135578.995
+ 10
+6042471.985
+ 20
+2135583.936
+ 10
+6042471.215
+ 20
+2135588.876
+ 10
+6042470.446
+ 20
+2135593.816
+ 10
+6042469.676
+ 20
+2135598.757
+ 10
+6042468.907
+ 20
+2135603.697
+ 10
+6042468.137
+ 20
+2135608.638
+ 10
+6042467.367
+ 20
+2135613.578
+ 10
+6042466.598
+ 20
+2135618.519
+ 10
+6042465.828
+ 20
+2135623.459
+ 10
+6042465.059
+ 20
+2135628.399
+ 10
+6042464.289
+ 20
+2135633.34
+ 10
+6042463.52
+ 20
+2135638.28
+ 10
+6042462.75
+ 20
+2135643.221
+ 10
+6042461.98
+ 20
+2135648.161
+ 10
+6042461.211
+ 20
+2135653.101
+ 10
+6042460.441
+ 20
+2135658.042
+ 10
+6042459.672
+ 20
+2135662.982
+ 10
+6042458.902
+ 20
+2135667.923
+ 10
+6042458.132
+ 20
+2135672.863
+ 10
+6042457.355
+ 20
+2135677.802
+ 10
+6042456.574
+ 20
+2135682.741
+ 10
+6042455.794
+ 20
+2135687.68
+ 10
+6042455
+ 20
+2135692.641
+ 10
+6042454.209
+ 20
+2135697.578
+ 10
+6042453.417
+ 20
+2135702.515
+ 10
+6042452.626
+ 20
+2135707.452
+ 10
+6042451.835
+ 20
+2135712.39
+ 10
+6042451.044
+ 20
+2135717.327
+ 10
+6042450.253
+ 20
+2135722.264
+ 10
+6042449.462
+ 20
+2135727.201
+ 10
+6042448.671
+ 20
+2135732.138
+ 10
+6042447.88
+ 20
+2135737.075
+ 10
+6042447.089
+ 20
+2135742.012
+ 10
+6042446.298
+ 20
+2135746.949
+ 10
+6042445.507
+ 20
+2135751.886
+ 10
+6042444.716
+ 20
+2135756.823
+ 10
+6042443.925
+ 20
+2135761.76
+ 10
+6042443.133
+ 20
+2135766.697
+ 10
+6042442.342
+ 20
+2135771.634
+ 10
+6042441.551
+ 20
+2135776.571
+ 10
+6042440.76
+ 20
+2135781.508
+ 10
+6042439.969
+ 20
+2135786.445
+ 10
+6042439.178
+ 20
+2135791.382
+ 10
+6042438.387
+ 20
+2135796.319
+ 10
+6042437.596
+ 20
+2135801.256
+ 10
+6042436.805
+ 20
+2135806.193
+ 10
+6042436.014
+ 20
+2135811.13
+ 10
+6042435.223
+ 20
+2135816.067
+ 10
+6042434.432
+ 20
+2135821.004
+ 10
+6042433.641
+ 20
+2135825.941
+ 10
+6042432.849
+ 20
+2135830.878
+ 10
+6042432.058
+ 20
+2135835.815
+ 10
+6042431.267
+ 20
+2135840.752
+ 10
+6042430.476
+ 20
+2135845.689
+ 10
+6042429.685
+ 20
+2135850.626
+ 10
+6042428.894
+ 20
+2135855.563
+ 10
+6042428.103
+ 20
+2135860.5
+ 10
+6042427.312
+ 20
+2135865.437
+ 10
+6042426.521
+ 20
+2135870.374
+ 10
+6042425.73
+ 20
+2135875.311
+ 10
+6042424.939
+ 20
+2135880.248
+ 10
+6042424.148
+ 20
+2135885.185
+ 10
+6042423.357
+ 20
+2135890.122
+ 10
+6042422.565
+ 20
+2135895.059
+ 10
+6042421.774
+ 20
+2135899.996
+  0
+LWPOLYLINE
+  5
+B9
+100
+AcDbEntity
+  8
+seg003
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbPolyline
+ 90
+  123
+ 70
+    0
+ 43
+0
+ 10
+6042528.338655517
+ 20
+2135296.341801641
+ 10
+6042527.46
+ 20
+2135302.034
+ 10
+6042526.713
+ 20
+2135306.978
+ 10
+6042525.967
+ 20
+2135311.922
+ 10
+6042525.22
+ 20
+2135316.866
+ 10
+6042524.474
+ 20
+2135321.81
+ 10
+6042523.727
+ 20
+2135326.754
+ 10
+6042522.981
+ 20
+2135331.698
+ 10
+6042522.234
+ 20
+2135336.642
+ 10
+6042521.488
+ 20
+2135341.586
+ 10
+6042520.741
+ 20
+2135346.53
+ 10
+6042519.995
+ 20
+2135351.474
+ 10
+6042519.248
+ 20
+2135356.418
+ 10
+6042518.502
+ 20
+2135361.362
+ 10
+6042517.755
+ 20
+2135366.306
+ 10
+6042517.009
+ 20
+2135371.25
+ 10
+6042516.262
+ 20
+2135376.194
+ 10
+6042515.516
+ 20
+2135381.138
+ 10
+6042514.769
+ 20
+2135386.082
+ 10
+6042514.022
+ 20
+2135391.026
+ 10
+6042513.276
+ 20
+2135395.97
+ 10
+6042512.529
+ 20
+2135400.914
+ 10
+6042511.783
+ 20
+2135405.858
+ 10
+6042511.036
+ 20
+2135410.801
+ 10
+6042510.257
+ 20
+2135415.778
+ 10
+6042509.48
+ 20
+2135420.717
+ 10
+6042508.702
+ 20
+2135425.657
+ 10
+6042507.925
+ 20
+2135430.596
+ 10
+6042507.148
+ 20
+2135435.535
+ 10
+6042506.37
+ 20
+2135440.474
+ 10
+6042505.593
+ 20
+2135445.413
+ 10
+6042504.816
+ 20
+2135450.353
+ 10
+6042504.038
+ 20
+2135455.292
+ 10
+6042503.261
+ 20
+2135460.231
+ 10
+6042502.484
+ 20
+2135465.17
+ 10
+6042501.706
+ 20
+2135470.109
+ 10
+6042500.929
+ 20
+2135475.049
+ 10
+6042500.152
+ 20
+2135479.988
+ 10
+6042499.374
+ 20
+2135484.927
+ 10
+6042498.597
+ 20
+2135489.866
+ 10
+6042497.82
+ 20
+2135494.806
+ 10
+6042497.042
+ 20
+2135499.745
+ 10
+6042496.265
+ 20
+2135504.684
+ 10
+6042495.488
+ 20
+2135509.623
+ 10
+6042494.71
+ 20
+2135514.562
+ 10
+6042493.933
+ 20
+2135519.502
+ 10
+6042493.156
+ 20
+2135524.441
+ 10
+6042492.378
+ 20
+2135529.38
+ 10
+6042491.601
+ 20
+2135534.319
+ 10
+6042490.824
+ 20
+2135539.258
+ 10
+6042490.046
+ 20
+2135544.198
+ 10
+6042489.269
+ 20
+2135549.137
+ 10
+6042488.492
+ 20
+2135554.076
+ 10
+6042487.72
+ 20
+2135559.005
+ 10
+6042486.952
+ 20
+2135563.945
+ 10
+6042486.184
+ 20
+2135568.886
+ 10
+6042485.416
+ 20
+2135573.827
+ 10
+6042484.648
+ 20
+2135578.767
+ 10
+6042483.88
+ 20
+2135583.708
+ 10
+6042483.112
+ 20
+2135588.649
+ 10
+6042482.343
+ 20
+2135593.589
+ 10
+6042481.575
+ 20
+2135598.53
+ 10
+6042480.807
+ 20
+2135603.471
+ 10
+6042480.039
+ 20
+2135608.411
+ 10
+6042479.271
+ 20
+2135613.352
+ 10
+6042478.503
+ 20
+2135618.293
+ 10
+6042477.735
+ 20
+2135623.233
+ 10
+6042476.967
+ 20
+2135628.174
+ 10
+6042476.199
+ 20
+2135633.115
+ 10
+6042475.435
+ 20
+2135638.056
+ 10
+6042474.677
+ 20
+2135642.998
+ 10
+6042473.919
+ 20
+2135647.94
+ 10
+6042473.162
+ 20
+2135652.883
+ 10
+6042472.404
+ 20
+2135657.825
+ 10
+6042471.647
+ 20
+2135662.767
+ 10
+6042470.887
+ 20
+2135667.709
+ 10
+6042470.1
+ 20
+2135672.647
+ 10
+6042469.305
+ 20
+2135677.61
+ 10
+6042468.507
+ 20
+2135682.546
+ 10
+6042467.709
+ 20
+2135687.482
+ 10
+6042466.911
+ 20
+2135692.418
+ 10
+6042466.113
+ 20
+2135697.354
+ 10
+6042465.315
+ 20
+2135702.29
+ 10
+6042464.517
+ 20
+2135707.226
+ 10
+6042463.719
+ 20
+2135712.161
+ 10
+6042462.921
+ 20
+2135717.097
+ 10
+6042462.123
+ 20
+2135722.033
+ 10
+6042461.326
+ 20
+2135726.969
+ 10
+6042460.528
+ 20
+2135731.905
+ 10
+6042459.73
+ 20
+2135736.841
+ 10
+6042458.932
+ 20
+2135741.777
+ 10
+6042458.134
+ 20
+2135746.713
+ 10
+6042457.336
+ 20
+2135751.649
+ 10
+6042456.538
+ 20
+2135756.585
+ 10
+6042455.74
+ 20
+2135761.521
+ 10
+6042454.942
+ 20
+2135766.457
+ 10
+6042454.144
+ 20
+2135771.393
+ 10
+6042453.346
+ 20
+2135776.329
+ 10
+6042452.548
+ 20
+2135781.264
+ 10
+6042451.75
+ 20
+2135786.2
+ 10
+6042450.953
+ 20
+2135791.136
+ 10
+6042450.155
+ 20
+2135796.072
+ 10
+6042449.357
+ 20
+2135801.008
+ 10
+6042448.559
+ 20
+2135805.944
+ 10
+6042447.761
+ 20
+2135810.88
+ 10
+6042446.963
+ 20
+2135815.816
+ 10
+6042446.165
+ 20
+2135820.752
+ 10
+6042445.367
+ 20
+2135825.688
+ 10
+6042444.569
+ 20
+2135830.624
+ 10
+6042443.771
+ 20
+2135835.56
+ 10
+6042442.973
+ 20
+2135840.496
+ 10
+6042442.175
+ 20
+2135845.432
+ 10
+6042441.378
+ 20
+2135850.367
+ 10
+6042440.58
+ 20
+2135855.303
+ 10
+6042439.782
+ 20
+2135860.239
+ 10
+6042438.984
+ 20
+2135865.175
+ 10
+6042438.186
+ 20
+2135870.111
+ 10
+6042437.388
+ 20
+2135875.047
+ 10
+6042436.59
+ 20
+2135879.983
+ 10
+6042435.792
+ 20
+2135884.919
+ 10
+6042434.994
+ 20
+2135889.855
+ 10
+6042434.196
+ 20
+2135894.791
+ 10
+6042433.398
+ 20
+2135899.727
+  0
+LWPOLYLINE
+  5
+BA
+100
+AcDbEntity
+  8
+seg003
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbPolyline
+ 90
+  124
+ 70
+    0
+ 43
+0
+ 10
+6042540.306132609
+ 20
+2135297.629067597
+ 10
+6042539.997
+ 20
+2135299.378
+ 10
+6042539.251
+ 20
+2135304.322
+ 10
+6042538.504
+ 20
+2135309.266
+ 10
+6042537.758
+ 20
+2135314.21
+ 10
+6042537.011
+ 20
+2135319.154
+ 10
+6042536.265
+ 20
+2135324.098
+ 10
+6042535.518
+ 20
+2135329.041
+ 10
+6042534.772
+ 20
+2135333.985
+ 10
+6042534.025
+ 20
+2135338.929
+ 10
+6042533.278
+ 20
+2135343.873
+ 10
+6042532.532
+ 20
+2135348.817
+ 10
+6042531.785
+ 20
+2135353.761
+ 10
+6042531.039
+ 20
+2135358.705
+ 10
+6042530.292
+ 20
+2135363.649
+ 10
+6042529.546
+ 20
+2135368.593
+ 10
+6042528.799
+ 20
+2135373.537
+ 10
+6042528.053
+ 20
+2135378.481
+ 10
+6042527.306
+ 20
+2135383.425
+ 10
+6042526.56
+ 20
+2135388.369
+ 10
+6042525.813
+ 20
+2135393.313
+ 10
+6042525.067
+ 20
+2135398.257
+ 10
+6042524.32
+ 20
+2135403.201
+ 10
+6042523.574
+ 20
+2135408.145
+ 10
+6042522.827
+ 20
+2135413.089
+ 10
+6042522.045
+ 20
+2135418.065
+ 10
+6042521.267
+ 20
+2135423.004
+ 10
+6042520.49
+ 20
+2135427.943
+ 10
+6042519.713
+ 20
+2135432.883
+ 10
+6042518.935
+ 20
+2135437.822
+ 10
+6042518.158
+ 20
+2135442.761
+ 10
+6042517.381
+ 20
+2135447.7
+ 10
+6042516.603
+ 20
+2135452.639
+ 10
+6042515.826
+ 20
+2135457.579
+ 10
+6042515.049
+ 20
+2135462.518
+ 10
+6042514.271
+ 20
+2135467.457
+ 10
+6042513.494
+ 20
+2135472.396
+ 10
+6042512.717
+ 20
+2135477.335
+ 10
+6042511.939
+ 20
+2135482.275
+ 10
+6042511.162
+ 20
+2135487.214
+ 10
+6042510.385
+ 20
+2135492.153
+ 10
+6042509.607
+ 20
+2135497.092
+ 10
+6042508.83
+ 20
+2135502.032
+ 10
+6042508.053
+ 20
+2135506.971
+ 10
+6042507.275
+ 20
+2135511.91
+ 10
+6042506.498
+ 20
+2135516.849
+ 10
+6042505.721
+ 20
+2135521.788
+ 10
+6042504.943
+ 20
+2135526.728
+ 10
+6042504.166
+ 20
+2135531.667
+ 10
+6042503.389
+ 20
+2135536.606
+ 10
+6042502.611
+ 20
+2135541.545
+ 10
+6042501.834
+ 20
+2135546.484
+ 10
+6042501.057
+ 20
+2135551.424
+ 10
+6042500.279
+ 20
+2135556.363
+ 10
+6042499.509
+ 20
+2135561.292
+ 10
+6042498.741
+ 20
+2135566.232
+ 10
+6042497.973
+ 20
+2135571.173
+ 10
+6042497.205
+ 20
+2135576.114
+ 10
+6042496.436
+ 20
+2135581.054
+ 10
+6042495.668
+ 20
+2135585.995
+ 10
+6042494.9
+ 20
+2135590.936
+ 10
+6042494.132
+ 20
+2135595.876
+ 10
+6042493.364
+ 20
+2135600.817
+ 10
+6042492.596
+ 20
+2135605.758
+ 10
+6042491.828
+ 20
+2135610.698
+ 10
+6042491.059
+ 20
+2135615.639
+ 10
+6042490.291
+ 20
+2135620.579
+ 10
+6042489.523
+ 20
+2135625.52
+ 10
+6042488.755
+ 20
+2135630.461
+ 10
+6042487.987
+ 20
+2135635.401
+ 10
+6042487.214
+ 20
+2135640.315
+ 10
+6042486.436
+ 20
+2135645.255
+ 10
+6042485.658
+ 20
+2135650.194
+ 10
+6042484.879
+ 20
+2135655.133
+ 10
+6042484.101
+ 20
+2135660.072
+ 10
+6042483.323
+ 20
+2135665.011
+ 10
+6042482.529
+ 20
+2135670.018
+ 10
+6042481.721
+ 20
+2135674.952
+ 10
+6042480.913
+ 20
+2135679.887
+ 10
+6042480.105
+ 20
+2135684.821
+ 10
+6042479.297
+ 20
+2135689.755
+ 10
+6042478.489
+ 20
+2135694.69
+ 10
+6042477.682
+ 20
+2135699.624
+ 10
+6042476.874
+ 20
+2135704.558
+ 10
+6042476.066
+ 20
+2135709.493
+ 10
+6042475.258
+ 20
+2135714.427
+ 10
+6042474.45
+ 20
+2135719.361
+ 10
+6042473.643
+ 20
+2135724.296
+ 10
+6042472.835
+ 20
+2135729.23
+ 10
+6042472.027
+ 20
+2135734.164
+ 10
+6042471.219
+ 20
+2135739.098
+ 10
+6042470.411
+ 20
+2135744.033
+ 10
+6042469.604
+ 20
+2135748.967
+ 10
+6042468.796
+ 20
+2135753.901
+ 10
+6042467.988
+ 20
+2135758.836
+ 10
+6042467.18
+ 20
+2135763.77
+ 10
+6042466.372
+ 20
+2135768.704
+ 10
+6042465.564
+ 20
+2135773.639
+ 10
+6042464.757
+ 20
+2135778.573
+ 10
+6042463.949
+ 20
+2135783.507
+ 10
+6042463.141
+ 20
+2135788.442
+ 10
+6042462.333
+ 20
+2135793.376
+ 10
+6042461.525
+ 20
+2135798.31
+ 10
+6042460.718
+ 20
+2135803.245
+ 10
+6042459.91
+ 20
+2135808.179
+ 10
+6042459.102
+ 20
+2135813.113
+ 10
+6042458.294
+ 20
+2135818.047
+ 10
+6042457.486
+ 20
+2135822.982
+ 10
+6042456.679
+ 20
+2135827.916
+ 10
+6042455.871
+ 20
+2135832.85
+ 10
+6042455.063
+ 20
+2135837.785
+ 10
+6042454.255
+ 20
+2135842.719
+ 10
+6042453.447
+ 20
+2135847.653
+ 10
+6042452.639
+ 20
+2135852.588
+ 10
+6042451.832
+ 20
+2135857.522
+ 10
+6042451.024
+ 20
+2135862.456
+ 10
+6042450.216
+ 20
+2135867.391
+ 10
+6042449.408
+ 20
+2135872.325
+ 10
+6042448.6
+ 20
+2135877.259
+ 10
+6042447.793
+ 20
+2135882.194
+ 10
+6042446.985
+ 20
+2135887.128
+ 10
+6042446.177
+ 20
+2135892.062
+ 10
+6042445.369
+ 20
+2135896.996
+ 10
+6042444.561
+ 20
+2135901.931
+  0
+LWPOLYLINE
+  5
+BB
+100
+AcDbEntity
+  8
+seg003
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbPolyline
+ 90
+  124
+ 70
+    0
+ 43
+0
+ 10
+6042552.218
+ 20
+2135298.816
+ 10
+6042551.471
+ 20
+2135303.76
+ 10
+6042550.725
+ 20
+2135308.704
+ 10
+6042549.978
+ 20
+2135313.648
+ 10
+6042549.232
+ 20
+2135318.592
+ 10
+6042548.485
+ 20
+2135323.536
+ 10
+6042547.739
+ 20
+2135328.48
+ 10
+6042546.992
+ 20
+2135333.424
+ 10
+6042546.246
+ 20
+2135338.367
+ 10
+6042545.499
+ 20
+2135343.311
+ 10
+6042544.753
+ 20
+2135348.255
+ 10
+6042544.006
+ 20
+2135353.199
+ 10
+6042543.26
+ 20
+2135358.143
+ 10
+6042542.513
+ 20
+2135363.087
+ 10
+6042541.767
+ 20
+2135368.031
+ 10
+6042541.02
+ 20
+2135372.975
+ 10
+6042540.274
+ 20
+2135377.919
+ 10
+6042539.527
+ 20
+2135382.863
+ 10
+6042538.781
+ 20
+2135387.807
+ 10
+6042538.034
+ 20
+2135392.751
+ 10
+6042537.288
+ 20
+2135397.695
+ 10
+6042536.541
+ 20
+2135402.639
+ 10
+6042535.795
+ 20
+2135407.583
+ 10
+6042535.048
+ 20
+2135412.527
+ 10
+6042534.281
+ 20
+2135417.505
+ 10
+6042533.503
+ 20
+2135422.445
+ 10
+6042532.726
+ 20
+2135427.384
+ 10
+6042531.949
+ 20
+2135432.323
+ 10
+6042531.171
+ 20
+2135437.262
+ 10
+6042530.394
+ 20
+2135442.201
+ 10
+6042529.617
+ 20
+2135447.141
+ 10
+6042528.839
+ 20
+2135452.08
+ 10
+6042528.062
+ 20
+2135457.019
+ 10
+6042527.285
+ 20
+2135461.958
+ 10
+6042526.507
+ 20
+2135466.897
+ 10
+6042525.73
+ 20
+2135471.837
+ 10
+6042524.952
+ 20
+2135476.776
+ 10
+6042524.175
+ 20
+2135481.715
+ 10
+6042523.398
+ 20
+2135486.654
+ 10
+6042522.62
+ 20
+2135491.593
+ 10
+6042521.843
+ 20
+2135496.533
+ 10
+6042521.066
+ 20
+2135501.472
+ 10
+6042520.288
+ 20
+2135506.411
+ 10
+6042519.511
+ 20
+2135511.35
+ 10
+6042518.734
+ 20
+2135516.289
+ 10
+6042517.956
+ 20
+2135521.229
+ 10
+6042517.179
+ 20
+2135526.168
+ 10
+6042516.402
+ 20
+2135531.107
+ 10
+6042515.624
+ 20
+2135536.046
+ 10
+6042514.847
+ 20
+2135540.986
+ 10
+6042514.07
+ 20
+2135545.925
+ 10
+6042513.292
+ 20
+2135550.864
+ 10
+6042512.515
+ 20
+2135555.803
+ 10
+6042511.74
+ 20
+2135560.731
+ 10
+6042510.972
+ 20
+2135565.672
+ 10
+6042510.204
+ 20
+2135570.613
+ 10
+6042509.436
+ 20
+2135575.553
+ 10
+6042508.667
+ 20
+2135580.494
+ 10
+6042507.899
+ 20
+2135585.435
+ 10
+6042507.131
+ 20
+2135590.375
+ 10
+6042506.363
+ 20
+2135595.316
+ 10
+6042505.595
+ 20
+2135600.257
+ 10
+6042504.827
+ 20
+2135605.197
+ 10
+6042504.059
+ 20
+2135610.138
+ 10
+6042503.29
+ 20
+2135615.079
+ 10
+6042502.522
+ 20
+2135620.019
+ 10
+6042501.754
+ 20
+2135624.96
+ 10
+6042500.986
+ 20
+2135629.9
+ 10
+6042500.218
+ 20
+2135634.841
+ 10
+6042499.438
+ 20
+2135639.831
+ 10
+6042498.649
+ 20
+2135644.768
+ 10
+6042497.861
+ 20
+2135649.706
+ 10
+6042497.072
+ 20
+2135654.643
+ 10
+6042496.283
+ 20
+2135659.58
+ 10
+6042495.494
+ 20
+2135664.518
+ 10
+6042494.705
+ 20
+2135669.455
+ 10
+6042493.917
+ 20
+2135674.393
+ 10
+6042493.128
+ 20
+2135679.33
+ 10
+6042492.309
+ 20
+2135684.263
+ 10
+6042491.49
+ 20
+2135689.195
+ 10
+6042490.671
+ 20
+2135694.128
+ 10
+6042489.852
+ 20
+2135699.06
+ 10
+6042489.033
+ 20
+2135703.993
+ 10
+6042488.214
+ 20
+2135708.925
+ 10
+6042487.395
+ 20
+2135713.858
+ 10
+6042486.576
+ 20
+2135718.79
+ 10
+6042485.757
+ 20
+2135723.723
+ 10
+6042484.938
+ 20
+2135728.655
+ 10
+6042484.119
+ 20
+2135733.587
+ 10
+6042483.3
+ 20
+2135738.52
+ 10
+6042482.481
+ 20
+2135743.452
+ 10
+6042481.662
+ 20
+2135748.385
+ 10
+6042480.843
+ 20
+2135753.317
+ 10
+6042480.024
+ 20
+2135758.25
+ 10
+6042479.205
+ 20
+2135763.182
+ 10
+6042478.386
+ 20
+2135768.115
+ 10
+6042477.567
+ 20
+2135773.047
+ 10
+6042476.748
+ 20
+2135777.98
+ 10
+6042475.929
+ 20
+2135782.912
+ 10
+6042475.11
+ 20
+2135787.845
+ 10
+6042474.291
+ 20
+2135792.777
+ 10
+6042473.472
+ 20
+2135797.71
+ 10
+6042472.653
+ 20
+2135802.642
+ 10
+6042471.834
+ 20
+2135807.575
+ 10
+6042471.015
+ 20
+2135812.507
+ 10
+6042470.196
+ 20
+2135817.44
+ 10
+6042469.377
+ 20
+2135822.372
+ 10
+6042468.558
+ 20
+2135827.305
+ 10
+6042467.739
+ 20
+2135832.237
+ 10
+6042466.92
+ 20
+2135837.17
+ 10
+6042466.101
+ 20
+2135842.102
+ 10
+6042465.282
+ 20
+2135847.034
+ 10
+6042464.463
+ 20
+2135851.967
+ 10
+6042463.644
+ 20
+2135856.899
+ 10
+6042462.825
+ 20
+2135861.832
+ 10
+6042462.006
+ 20
+2135866.764
+ 10
+6042461.187
+ 20
+2135871.697
+ 10
+6042460.368
+ 20
+2135876.629
+ 10
+6042459.549
+ 20
+2135881.562
+ 10
+6042458.73
+ 20
+2135886.494
+ 10
+6042457.911
+ 20
+2135891.427
+ 10
+6042457.092
+ 20
+2135896.359
+ 10
+6042456.273
+ 20
+2135901.292
+ 10
+6042455.454
+ 20
+2135906.224
+  0
+LWPOLYLINE
+  5
+BC
+100
+AcDbEntity
+  8
+seg003
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbPolyline
+ 90
+  125
+ 70
+    0
+ 43
+0
+ 10
+6042565.985468515
+ 20
+2135300.178427843
+ 10
+6042565.488
+ 20
+2135303.994
+ 10
+6042564.791
+ 20
+2135308.945
+ 10
+6042564.094
+ 20
+2135313.897
+ 10
+6042563.397
+ 20
+2135318.848
+ 10
+6042562.699
+ 20
+2135323.799
+ 10
+6042562.002
+ 20
+2135328.751
+ 10
+6042561.305
+ 20
+2135333.702
+ 10
+6042560.608
+ 20
+2135338.654
+ 10
+6042559.911
+ 20
+2135343.605
+ 10
+6042559.213
+ 20
+2135348.556
+ 10
+6042558.516
+ 20
+2135353.508
+ 10
+6042557.819
+ 20
+2135358.459
+ 10
+6042557.122
+ 20
+2135363.411
+ 10
+6042556.425
+ 20
+2135368.362
+ 10
+6042555.728
+ 20
+2135373.313
+ 10
+6042555.03
+ 20
+2135378.265
+ 10
+6042554.333
+ 20
+2135383.216
+ 10
+6042553.636
+ 20
+2135388.168
+ 10
+6042552.939
+ 20
+2135393.119
+ 10
+6042552.242
+ 20
+2135398.07
+ 10
+6042551.544
+ 20
+2135403.022
+ 10
+6042550.847
+ 20
+2135407.973
+ 10
+6042550.15
+ 20
+2135412.925
+ 10
+6042549.324
+ 20
+2135417.913
+ 10
+6042548.495
+ 20
+2135422.844
+ 10
+6042547.666
+ 20
+2135427.775
+ 10
+6042546.836
+ 20
+2135432.706
+ 10
+6042546.007
+ 20
+2135437.637
+ 10
+6042545.178
+ 20
+2135442.568
+ 10
+6042544.348
+ 20
+2135447.499
+ 10
+6042543.519
+ 20
+2135452.43
+ 10
+6042542.69
+ 20
+2135457.361
+ 10
+6042541.86
+ 20
+2135462.292
+ 10
+6042541.031
+ 20
+2135467.223
+ 10
+6042540.202
+ 20
+2135472.154
+ 10
+6042539.372
+ 20
+2135477.085
+ 10
+6042538.543
+ 20
+2135482.016
+ 10
+6042537.714
+ 20
+2135486.947
+ 10
+6042536.884
+ 20
+2135491.878
+ 10
+6042536.055
+ 20
+2135496.809
+ 10
+6042535.225
+ 20
+2135501.74
+ 10
+6042534.396
+ 20
+2135506.671
+ 10
+6042533.567
+ 20
+2135511.602
+ 10
+6042532.74
+ 20
+2135516.534
+ 10
+6042531.919
+ 20
+2135521.466
+ 10
+6042531.098
+ 20
+2135526.399
+ 10
+6042530.278
+ 20
+2135531.331
+ 10
+6042529.457
+ 20
+2135536.263
+ 10
+6042528.636
+ 20
+2135541.196
+ 10
+6042527.815
+ 20
+2135546.128
+ 10
+6042526.995
+ 20
+2135551.06
+ 10
+6042526.174
+ 20
+2135555.993
+ 10
+6042525.353
+ 20
+2135560.925
+ 10
+6042524.538
+ 20
+2135565.844
+ 10
+6042523.722
+ 20
+2135570.777
+ 10
+6042522.906
+ 20
+2135575.711
+ 10
+6042522.09
+ 20
+2135580.644
+ 10
+6042521.274
+ 20
+2135585.577
+ 10
+6042520.457
+ 20
+2135590.51
+ 10
+6042519.64
+ 20
+2135595.443
+ 10
+6042518.819
+ 20
+2135600.376
+ 10
+6042517.999
+ 20
+2135605.308
+ 10
+6042517.178
+ 20
+2135610.241
+ 10
+6042516.357
+ 20
+2135615.173
+ 10
+6042515.536
+ 20
+2135620.105
+ 10
+6042514.715
+ 20
+2135625.038
+ 10
+6042513.894
+ 20
+2135629.97
+ 10
+6042513.073
+ 20
+2135634.903
+ 10
+6042512.252
+ 20
+2135639.835
+ 10
+6042511.431
+ 20
+2135644.768
+ 10
+6042510.611
+ 20
+2135649.7
+ 10
+6042509.79
+ 20
+2135654.633
+ 10
+6042508.969
+ 20
+2135659.565
+ 10
+6042508.148
+ 20
+2135664.497
+ 10
+6042507.327
+ 20
+2135669.43
+ 10
+6042506.506
+ 20
+2135674.362
+ 10
+6042505.685
+ 20
+2135679.295
+ 10
+6042504.833
+ 20
+2135684.299
+ 10
+6042503.982
+ 20
+2135689.226
+ 10
+6042503.131
+ 20
+2135694.153
+ 10
+6042502.28
+ 20
+2135699.08
+ 10
+6042501.429
+ 20
+2135704.007
+ 10
+6042500.578
+ 20
+2135708.934
+ 10
+6042499.727
+ 20
+2135713.861
+ 10
+6042498.876
+ 20
+2135718.789
+ 10
+6042498.025
+ 20
+2135723.716
+ 10
+6042497.18
+ 20
+2135728.644
+ 10
+6042496.338
+ 20
+2135733.572
+ 10
+6042495.496
+ 20
+2135738.501
+ 10
+6042494.654
+ 20
+2135743.43
+ 10
+6042493.812
+ 20
+2135748.358
+ 10
+6042492.97
+ 20
+2135753.287
+ 10
+6042492.128
+ 20
+2135758.215
+ 10
+6042491.286
+ 20
+2135763.144
+ 10
+6042490.444
+ 20
+2135768.073
+ 10
+6042489.602
+ 20
+2135773.001
+ 10
+6042488.76
+ 20
+2135777.93
+ 10
+6042487.918
+ 20
+2135782.858
+ 10
+6042487.076
+ 20
+2135787.787
+ 10
+6042486.235
+ 20
+2135792.716
+ 10
+6042485.398
+ 20
+2135797.645
+ 10
+6042484.56
+ 20
+2135802.575
+ 10
+6042483.723
+ 20
+2135807.504
+ 10
+6042482.885
+ 20
+2135812.433
+ 10
+6042482.048
+ 20
+2135817.363
+ 10
+6042481.21
+ 20
+2135822.292
+ 10
+6042480.372
+ 20
+2135827.221
+ 10
+6042479.535
+ 20
+2135832.151
+ 10
+6042478.697
+ 20
+2135837.08
+ 10
+6042477.86
+ 20
+2135842.01
+ 10
+6042477.022
+ 20
+2135846.939
+ 10
+6042476.185
+ 20
+2135851.868
+ 10
+6042475.347
+ 20
+2135856.798
+ 10
+6042474.51
+ 20
+2135861.727
+ 10
+6042473.672
+ 20
+2135866.656
+ 10
+6042472.834
+ 20
+2135871.586
+ 10
+6042471.997
+ 20
+2135876.515
+ 10
+6042471.159
+ 20
+2135881.444
+ 10
+6042470.322
+ 20
+2135886.374
+ 10
+6042469.497
+ 20
+2135891.305
+ 10
+6042468.672
+ 20
+2135896.237
+ 10
+6042467.846
+ 20
+2135901.168
+ 10
+6042467.021
+ 20
+2135906.1
+ 10
+6042466.196
+ 20
+2135911.031
+  0
+LWPOLYLINE
+  5
+BD
+100
+AcDbEntity
+  8
+seg001
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbPolyline
+ 90
+  467
+ 70
+    0
+ 43
+0
+ 10
+6042930.197
+ 20
+2132816.573
+ 10
+6042929.54
+ 20
+2132821.53
+ 10
+6042928.883
+ 20
+2132826.487
+ 10
+6042928.226
+ 20
+2132831.443
+ 10
+6042927.569
+ 20
+2132836.4
+ 10
+6042926.912
+ 20
+2132841.357
+ 10
+6042926.254
+ 20
+2132846.313
+ 10
+6042925.597
+ 20
+2132851.27
+ 10
+6042924.94
+ 20
+2132856.226
+ 10
+6042924.283
+ 20
+2132861.183
+ 10
+6042923.626
+ 20
+2132866.14
+ 10
+6042922.969
+ 20
+2132871.096
+ 10
+6042922.312
+ 20
+2132876.053
+ 10
+6042921.656
+ 20
+2132881.01
+ 10
+6042921.013
+ 20
+2132885.941
+ 10
+6042920.375
+ 20
+2132890.9
+ 10
+6042919.737
+ 20
+2132895.859
+ 10
+6042919.099
+ 20
+2132900.818
+ 10
+6042918.461
+ 20
+2132905.777
+ 10
+6042917.823
+ 20
+2132910.736
+ 10
+6042917.185
+ 20
+2132915.696
+ 10
+6042916.547
+ 20
+2132920.655
+ 10
+6042915.909
+ 20
+2132925.614
+ 10
+6042915.271
+ 20
+2132930.573
+ 10
+6042914.633
+ 20
+2132935.532
+ 10
+6042913.995
+ 20
+2132940.491
+ 10
+6042913.358
+ 20
+2132945.445
+ 10
+6042912.722
+ 20
+2132950.405
+ 10
+6042912.087
+ 20
+2132955.364
+ 10
+6042911.451
+ 20
+2132960.324
+ 10
+6042910.815
+ 20
+2132965.283
+ 10
+6042910.179
+ 20
+2132970.243
+ 10
+6042909.549
+ 20
+2132975.203
+ 10
+6042908.935
+ 20
+2132980.165
+ 10
+6042908.32
+ 20
+2132985.127
+ 10
+6042907.706
+ 20
+2132990.089
+ 10
+6042907.092
+ 20
+2132995.051
+ 10
+6042906.478
+ 20
+2133000.013
+ 10
+6042905.864
+ 20
+2133004.975
+ 10
+6042905.25
+ 20
+2133009.938
+ 10
+6042904.635
+ 20
+2133014.9
+ 10
+6042904.021
+ 20
+2133019.862
+ 10
+6042903.407
+ 20
+2133024.824
+ 10
+6042902.793
+ 20
+2133029.786
+ 10
+6042902.179
+ 20
+2133034.748
+ 10
+6042901.565
+ 20
+2133039.71
+ 10
+6042900.95
+ 20
+2133044.673
+ 10
+6042900.336
+ 20
+2133049.635
+ 10
+6042899.722
+ 20
+2133054.597
+ 10
+6042899.103
+ 20
+2133059.591
+ 10
+6042898.475
+ 20
+2133064.551
+ 10
+6042897.847
+ 20
+2133069.512
+ 10
+6042897.219
+ 20
+2133074.472
+ 10
+6042896.592
+ 20
+2133079.433
+ 10
+6042895.964
+ 20
+2133084.393
+ 10
+6042895.336
+ 20
+2133089.354
+ 10
+6042894.708
+ 20
+2133094.314
+ 10
+6042894.081
+ 20
+2133099.275
+ 10
+6042893.453
+ 20
+2133104.235
+ 10
+6042892.824
+ 20
+2133109.195
+ 10
+6042892.193
+ 20
+2133114.155
+ 10
+6042891.561
+ 20
+2133119.115
+ 10
+6042890.929
+ 20
+2133124.075
+ 10
+6042890.298
+ 20
+2133129.035
+ 10
+6042889.666
+ 20
+2133133.995
+ 10
+6042889.034
+ 20
+2133138.955
+ 10
+6042888.403
+ 20
+2133143.915
+ 10
+6042887.771
+ 20
+2133148.875
+ 10
+6042887.144
+ 20
+2133153.799
+ 10
+6042886.527
+ 20
+2133158.761
+ 10
+6042885.91
+ 20
+2133163.723
+ 10
+6042885.292
+ 20
+2133168.685
+ 10
+6042884.675
+ 20
+2133173.646
+ 10
+6042884.058
+ 20
+2133178.608
+ 10
+6042883.441
+ 20
+2133183.57
+ 10
+6042882.823
+ 20
+2133188.532
+ 10
+6042882.206
+ 20
+2133193.493
+ 10
+6042881.589
+ 20
+2133198.455
+ 10
+6042880.972
+ 20
+2133203.417
+ 10
+6042880.354
+ 20
+2133208.379
+ 10
+6042879.737
+ 20
+2133213.34
+ 10
+6042879.12
+ 20
+2133218.302
+ 10
+6042878.503
+ 20
+2133223.264
+ 10
+6042877.885
+ 20
+2133228.226
+ 10
+6042877.268
+ 20
+2133233.187
+ 10
+6042876.65
+ 20
+2133238.149
+ 10
+6042876.033
+ 20
+2133243.111
+ 10
+6042875.421
+ 20
+2133248.034
+ 10
+6042874.819
+ 20
+2133252.997
+ 10
+6042874.217
+ 20
+2133257.961
+ 10
+6042873.615
+ 20
+2133262.925
+ 10
+6042873.014
+ 20
+2133267.888
+ 10
+6042872.412
+ 20
+2133272.852
+ 10
+6042871.81
+ 20
+2133277.816
+ 10
+6042871.208
+ 20
+2133282.779
+ 10
+6042870.606
+ 20
+2133287.743
+ 10
+6042870.005
+ 20
+2133292.707
+ 10
+6042869.403
+ 20
+2133297.67
+ 10
+6042868.801
+ 20
+2133302.634
+ 10
+6042868.199
+ 20
+2133307.598
+ 10
+6042867.598
+ 20
+2133312.561
+ 10
+6042866.996
+ 20
+2133317.525
+ 10
+6042866.394
+ 20
+2133322.489
+ 10
+6042865.792
+ 20
+2133327.452
+ 10
+6042865.19
+ 20
+2133332.416
+ 10
+6042864.585
+ 20
+2133337.379
+ 10
+6042863.976
+ 20
+2133342.342
+ 10
+6042863.348
+ 20
+2133347.341
+ 10
+6042862.723
+ 20
+2133352.302
+ 10
+6042862.098
+ 20
+2133357.263
+ 10
+6042861.474
+ 20
+2133362.223
+ 10
+6042860.849
+ 20
+2133367.184
+ 10
+6042860.224
+ 20
+2133372.145
+ 10
+6042859.599
+ 20
+2133377.106
+ 10
+6042858.975
+ 20
+2133382.067
+ 10
+6042858.35
+ 20
+2133387.027
+ 10
+6042857.725
+ 20
+2133391.988
+ 10
+6042857.101
+ 20
+2133396.949
+ 10
+6042856.476
+ 20
+2133401.91
+ 10
+6042855.851
+ 20
+2133406.871
+ 10
+6042855.226
+ 20
+2133411.832
+ 10
+6042854.602
+ 20
+2133416.792
+ 10
+6042853.988
+ 20
+2133421.755
+ 10
+6042853.375
+ 20
+2133426.717
+ 10
+6042852.762
+ 20
+2133431.679
+ 10
+6042852.149
+ 20
+2133436.641
+ 10
+6042851.531
+ 20
+2133441.613
+ 10
+6042850.914
+ 20
+2133446.575
+ 10
+6042850.297
+ 20
+2133451.537
+ 10
+6042849.68
+ 20
+2133456.499
+ 10
+6042849.063
+ 20
+2133461.46
+ 10
+6042848.446
+ 20
+2133466.422
+ 10
+6042847.828
+ 20
+2133471.384
+ 10
+6042847.211
+ 20
+2133476.346
+ 10
+6042846.594
+ 20
+2133481.307
+ 10
+6042845.977
+ 20
+2133486.269
+ 10
+6042845.36
+ 20
+2133491.231
+ 10
+6042844.743
+ 20
+2133496.193
+ 10
+6042844.126
+ 20
+2133501.155
+ 10
+6042843.508
+ 20
+2133506.116
+ 10
+6042842.891
+ 20
+2133511.078
+ 10
+6042842.274
+ 20
+2133516.04
+ 10
+6042841.657
+ 20
+2133521.002
+ 10
+6042841.047
+ 20
+2133525.964
+ 10
+6042840.439
+ 20
+2133530.927
+ 10
+6042839.844
+ 20
+2133535.861
+ 10
+6042839.249
+ 20
+2133540.826
+ 10
+6042838.653
+ 20
+2133545.79
+ 10
+6042838.058
+ 20
+2133550.755
+ 10
+6042837.463
+ 20
+2133555.719
+ 10
+6042836.867
+ 20
+2133560.683
+ 10
+6042836.272
+ 20
+2133565.648
+ 10
+6042835.676
+ 20
+2133570.612
+ 10
+6042835.081
+ 20
+2133575.577
+ 10
+6042834.485
+ 20
+2133580.541
+ 10
+6042833.89
+ 20
+2133585.505
+ 10
+6042833.294
+ 20
+2133590.47
+ 10
+6042832.699
+ 20
+2133595.434
+ 10
+6042832.103
+ 20
+2133600.399
+ 10
+6042831.508
+ 20
+2133605.363
+ 10
+6042830.912
+ 20
+2133610.328
+ 10
+6042830.317
+ 20
+2133615.292
+ 10
+6042829.722
+ 20
+2133620.256
+ 10
+6042829.126
+ 20
+2133625.221
+ 10
+6042828.531
+ 20
+2133630.185
+ 10
+6042827.935
+ 20
+2133635.15
+ 10
+6042827.335
+ 20
+2133640.129
+ 10
+6042826.733
+ 20
+2133645.093
+ 10
+6042826.132
+ 20
+2133650.057
+ 10
+6042825.53
+ 20
+2133655.02
+ 10
+6042824.928
+ 20
+2133659.984
+ 10
+6042824.327
+ 20
+2133664.948
+ 10
+6042823.781
+ 20
+2133669.918
+ 10
+6042823.235
+ 20
+2133674.889
+ 10
+6042822.689
+ 20
+2133679.859
+ 10
+6042822.143
+ 20
+2133684.83
+ 10
+6042821.597
+ 20
+2133689.801
+ 10
+6042821.051
+ 20
+2133694.771
+ 10
+6042820.505
+ 20
+2133699.742
+ 10
+6042819.959
+ 20
+2133704.712
+ 10
+6042819.413
+ 20
+2133709.683
+ 10
+6042818.867
+ 20
+2133714.654
+ 10
+6042818.321
+ 20
+2133719.624
+ 10
+6042817.775
+ 20
+2133724.595
+ 10
+6042817.229
+ 20
+2133729.565
+ 10
+6042816.683
+ 20
+2133734.536
+ 10
+6042816.137
+ 20
+2133739.507
+ 10
+6042815.591
+ 20
+2133744.477
+ 10
+6042815.045
+ 20
+2133749.448
+ 10
+6042814.499
+ 20
+2133754.418
+ 10
+6042813.953
+ 20
+2133759.389
+ 10
+6042813.407
+ 20
+2133764.36
+ 10
+6042812.861
+ 20
+2133769.33
+ 10
+6042812.315
+ 20
+2133774.301
+ 10
+6042811.744
+ 20
+2133779.318
+ 10
+6042811.167
+ 20
+2133784.286
+ 10
+6042810.589
+ 20
+2133789.253
+ 10
+6042810.012
+ 20
+2133794.22
+ 10
+6042809.435
+ 20
+2133799.187
+ 10
+6042808.857
+ 20
+2133804.154
+ 10
+6042808.28
+ 20
+2133809.121
+ 10
+6042807.703
+ 20
+2133814.088
+ 10
+6042807.125
+ 20
+2133819.055
+ 10
+6042806.548
+ 20
+2133824.022
+ 10
+6042805.97
+ 20
+2133828.989
+ 10
+6042805.393
+ 20
+2133833.956
+ 10
+6042804.816
+ 20
+2133838.923
+ 10
+6042804.238
+ 20
+2133843.89
+ 10
+6042803.661
+ 20
+2133848.857
+ 10
+6042803.084
+ 20
+2133853.824
+ 10
+6042802.357
+ 20
+2133858.772
+ 10
+6042801.631
+ 20
+2133863.719
+ 10
+6042800.903
+ 20
+2133868.667
+ 10
+6042800.176
+ 20
+2133873.614
+ 10
+6042799.418
+ 20
+2133878.645
+ 10
+6042798.665
+ 20
+2133883.588
+ 10
+6042797.912
+ 20
+2133888.531
+ 10
+6042797.16
+ 20
+2133893.475
+ 10
+6042796.407
+ 20
+2133898.418
+ 10
+6042795.654
+ 20
+2133903.361
+ 10
+6042794.901
+ 20
+2133908.305
+ 10
+6042794.149
+ 20
+2133913.248
+ 10
+6042793.396
+ 20
+2133918.191
+ 10
+6042792.643
+ 20
+2133923.135
+ 10
+6042791.89
+ 20
+2133928.078
+ 10
+6042791.138
+ 20
+2133933.021
+ 10
+6042790.385
+ 20
+2133937.965
+ 10
+6042789.632
+ 20
+2133942.908
+ 10
+6042788.879
+ 20
+2133947.851
+ 10
+6042788.127
+ 20
+2133952.795
+ 10
+6042787.374
+ 20
+2133957.738
+ 10
+6042786.621
+ 20
+2133962.681
+ 10
+6042785.868
+ 20
+2133967.625
+ 10
+6042785.116
+ 20
+2133972.568
+ 10
+6042784.363
+ 20
+2133977.511
+ 10
+6042783.61
+ 20
+2133982.455
+ 10
+6042782.857
+ 20
+2133987.398
+ 10
+6042782.104
+ 20
+2133992.341
+ 10
+6042781.352
+ 20
+2133997.285
+ 10
+6042780.599
+ 20
+2134002.228
+ 10
+6042779.846
+ 20
+2134007.171
+ 10
+6042779.093
+ 20
+2134012.115
+ 10
+6042778.341
+ 20
+2134017.058
+ 10
+6042777.588
+ 20
+2134022.001
+ 10
+6042776.835
+ 20
+2134026.945
+ 10
+6042776.082
+ 20
+2134031.888
+ 10
+6042775.33
+ 20
+2134036.831
+ 10
+6042774.578
+ 20
+2134041.775
+ 10
+6042773.831
+ 20
+2134046.719
+ 10
+6042773.083
+ 20
+2134051.663
+ 10
+6042772.336
+ 20
+2134056.607
+ 10
+6042771.589
+ 20
+2134061.551
+ 10
+6042770.815
+ 20
+2134066.603
+ 10
+6042770.025
+ 20
+2134071.541
+ 10
+6042769.236
+ 20
+2134076.478
+ 10
+6042768.446
+ 20
+2134081.415
+ 10
+6042767.656
+ 20
+2134086.352
+ 10
+6042766.867
+ 20
+2134091.29
+ 10
+6042766.077
+ 20
+2134096.227
+ 10
+6042765.287
+ 20
+2134101.164
+ 10
+6042764.498
+ 20
+2134106.101
+ 10
+6042763.708
+ 20
+2134111.039
+ 10
+6042762.919
+ 20
+2134115.976
+ 10
+6042762.129
+ 20
+2134120.913
+ 10
+6042761.339
+ 20
+2134125.851
+ 10
+6042760.55
+ 20
+2134130.788
+ 10
+6042759.76
+ 20
+2134135.725
+ 10
+6042758.97
+ 20
+2134140.662
+ 10
+6042758.181
+ 20
+2134145.6
+ 10
+6042757.391
+ 20
+2134150.537
+ 10
+6042756.601
+ 20
+2134155.474
+ 10
+6042755.812
+ 20
+2134160.411
+ 10
+6042755.022
+ 20
+2134165.349
+ 10
+6042754.233
+ 20
+2134170.286
+ 10
+6042753.443
+ 20
+2134175.223
+ 10
+6042752.653
+ 20
+2134180.16
+ 10
+6042751.864
+ 20
+2134185.098
+ 10
+6042751.074
+ 20
+2134190.035
+ 10
+6042750.284
+ 20
+2134194.972
+ 10
+6042749.495
+ 20
+2134199.909
+ 10
+6042748.705
+ 20
+2134204.847
+ 10
+6042747.915
+ 20
+2134209.784
+ 10
+6042747.126
+ 20
+2134214.721
+ 10
+6042746.336
+ 20
+2134219.658
+ 10
+6042745.547
+ 20
+2134224.596
+ 10
+6042744.757
+ 20
+2134229.533
+ 10
+6042743.967
+ 20
+2134234.47
+ 10
+6042743.178
+ 20
+2134239.408
+ 10
+6042742.388
+ 20
+2134244.345
+ 10
+6042741.598
+ 20
+2134249.282
+ 10
+6042740.801
+ 20
+2134254.257
+ 10
+6042739.989
+ 20
+2134259.191
+ 10
+6042739.176
+ 20
+2134264.124
+ 10
+6042738.364
+ 20
+2134269.058
+ 10
+6042737.551
+ 20
+2134273.991
+ 10
+6042736.739
+ 20
+2134278.925
+ 10
+6042735.927
+ 20
+2134283.859
+ 10
+6042735.114
+ 20
+2134288.792
+ 10
+6042734.302
+ 20
+2134293.726
+ 10
+6042733.49
+ 20
+2134298.659
+ 10
+6042732.677
+ 20
+2134303.593
+ 10
+6042731.865
+ 20
+2134308.526
+ 10
+6042731.052
+ 20
+2134313.46
+ 10
+6042730.24
+ 20
+2134318.393
+ 10
+6042729.428
+ 20
+2134323.327
+ 10
+6042728.615
+ 20
+2134328.261
+ 10
+6042727.803
+ 20
+2134333.194
+ 10
+6042726.99
+ 20
+2134338.128
+ 10
+6042726.178
+ 20
+2134343.061
+ 10
+6042725.366
+ 20
+2134347.995
+ 10
+6042724.553
+ 20
+2134352.928
+ 10
+6042723.741
+ 20
+2134357.862
+ 10
+6042722.928
+ 20
+2134362.796
+ 10
+6042722.116
+ 20
+2134367.729
+ 10
+6042721.304
+ 20
+2134372.663
+ 10
+6042720.491
+ 20
+2134377.596
+ 10
+6042719.679
+ 20
+2134382.53
+ 10
+6042718.867
+ 20
+2134387.463
+ 10
+6042718.054
+ 20
+2134392.397
+ 10
+6042717.242
+ 20
+2134397.331
+ 10
+6042716.43
+ 20
+2134402.264
+ 10
+6042715.618
+ 20
+2134407.198
+ 10
+6042714.809
+ 20
+2134412.117
+ 10
+6042714.003
+ 20
+2134417.051
+ 10
+6042713.196
+ 20
+2134421.986
+ 10
+6042712.39
+ 20
+2134426.921
+ 10
+6042711.584
+ 20
+2134431.855
+ 10
+6042710.778
+ 20
+2134436.79
+ 10
+6042709.972
+ 20
+2134441.724
+ 10
+6042709.166
+ 20
+2134446.659
+ 10
+6042708.359
+ 20
+2134451.593
+ 10
+6042707.553
+ 20
+2134456.528
+ 10
+6042706.747
+ 20
+2134461.463
+ 10
+6042705.941
+ 20
+2134466.397
+ 10
+6042705.135
+ 20
+2134471.332
+ 10
+6042704.329
+ 20
+2134476.266
+ 10
+6042703.522
+ 20
+2134481.201
+ 10
+6042702.716
+ 20
+2134486.136
+ 10
+6042701.91
+ 20
+2134491.07
+ 10
+6042701.104
+ 20
+2134496.005
+ 10
+6042700.298
+ 20
+2134500.939
+ 10
+6042699.492
+ 20
+2134505.874
+ 10
+6042698.685
+ 20
+2134510.808
+ 10
+6042697.879
+ 20
+2134515.743
+ 10
+6042697.073
+ 20
+2134520.678
+ 10
+6042696.27
+ 20
+2134525.613
+ 10
+6042695.473
+ 20
+2134530.549
+ 10
+6042694.676
+ 20
+2134535.485
+ 10
+6042693.879
+ 20
+2134540.421
+ 10
+6042693.081
+ 20
+2134545.357
+ 10
+6042692.284
+ 20
+2134550.293
+ 10
+6042691.487
+ 20
+2134555.229
+ 10
+6042690.69
+ 20
+2134560.165
+ 10
+6042689.893
+ 20
+2134565.101
+ 10
+6042689.096
+ 20
+2134570.037
+ 10
+6042688.299
+ 20
+2134574.973
+ 10
+6042687.502
+ 20
+2134579.909
+ 10
+6042686.704
+ 20
+2134584.849
+ 10
+6042685.905
+ 20
+2134589.785
+ 10
+6042685.107
+ 20
+2134594.721
+ 10
+6042684.308
+ 20
+2134599.656
+ 10
+6042683.509
+ 20
+2134604.592
+ 10
+6042682.711
+ 20
+2134609.528
+ 10
+6042681.912
+ 20
+2134614.464
+ 10
+6042681.113
+ 20
+2134619.4
+ 10
+6042680.315
+ 20
+2134624.336
+ 10
+6042679.516
+ 20
+2134629.271
+ 10
+6042678.718
+ 20
+2134634.207
+ 10
+6042677.919
+ 20
+2134639.143
+ 10
+6042677.12
+ 20
+2134644.079
+ 10
+6042676.322
+ 20
+2134649.015
+ 10
+6042675.523
+ 20
+2134653.95
+ 10
+6042674.724
+ 20
+2134658.886
+ 10
+6042673.922
+ 20
+2134663.821
+ 10
+6042673.115
+ 20
+2134668.756
+ 10
+6042672.307
+ 20
+2134673.69
+ 10
+6042671.5
+ 20
+2134678.625
+ 10
+6042670.692
+ 20
+2134683.559
+ 10
+6042669.885
+ 20
+2134688.493
+ 10
+6042669.077
+ 20
+2134693.428
+ 10
+6042668.27
+ 20
+2134698.362
+ 10
+6042667.462
+ 20
+2134703.296
+ 10
+6042666.655
+ 20
+2134708.231
+ 10
+6042665.847
+ 20
+2134713.165
+ 10
+6042665.04
+ 20
+2134718.099
+ 10
+6042664.232
+ 20
+2134723.034
+ 10
+6042663.425
+ 20
+2134727.967
+ 10
+6042662.618
+ 20
+2134732.902
+ 10
+6042661.811
+ 20
+2134737.836
+ 10
+6042661.004
+ 20
+2134742.771
+ 10
+6042660.197
+ 20
+2134747.705
+ 10
+6042659.39
+ 20
+2134752.64
+ 10
+6042658.583
+ 20
+2134757.574
+ 10
+6042657.775
+ 20
+2134762.508
+ 10
+6042656.989
+ 20
+2134767.446
+ 10
+6042656.205
+ 20
+2134772.384
+ 10
+6042655.42
+ 20
+2134777.322
+ 10
+6042654.636
+ 20
+2134782.261
+ 10
+6042653.851
+ 20
+2134787.199
+ 10
+6042653.067
+ 20
+2134792.137
+ 10
+6042652.282
+ 20
+2134797.075
+ 10
+6042651.498
+ 20
+2134802.013
+ 10
+6042650.713
+ 20
+2134806.951
+ 10
+6042649.929
+ 20
+2134811.889
+ 10
+6042649.144
+ 20
+2134816.827
+ 10
+6042648.359
+ 20
+2134821.765
+ 10
+6042647.575
+ 20
+2134826.703
+ 10
+6042646.79
+ 20
+2134831.642
+ 10
+6042646.006
+ 20
+2134836.58
+ 10
+6042645.221
+ 20
+2134841.518
+ 10
+6042644.437
+ 20
+2134846.456
+ 10
+6042643.652
+ 20
+2134851.394
+ 10
+6042642.868
+ 20
+2134856.332
+ 10
+6042642.083
+ 20
+2134861.27
+ 10
+6042641.316
+ 20
+2134866.137
+ 10
+6042640.56
+ 20
+2134871.079
+ 10
+6042639.804
+ 20
+2134876.022
+ 10
+6042639.048
+ 20
+2134880.964
+ 10
+6042638.338
+ 20
+2134885.914
+ 10
+6042637.653
+ 20
+2134890.867
+ 10
+6042636.967
+ 20
+2134895.82
+ 10
+6042636.282
+ 20
+2134900.773
+ 10
+6042635.596
+ 20
+2134905.726
+ 10
+6042634.911
+ 20
+2134910.68
+ 10
+6042634.226
+ 20
+2134915.633
+ 10
+6042633.54
+ 20
+2134920.586
+ 10
+6042632.855
+ 20
+2134925.539
+ 10
+6042632.17
+ 20
+2134930.492
+ 10
+6042631.484
+ 20
+2134935.445
+ 10
+6042630.848
+ 20
+2134940.406
+ 10
+6042630.243
+ 20
+2134945.371
+ 10
+6042629.638
+ 20
+2134950.337
+ 10
+6042629.033
+ 20
+2134955.302
+ 10
+6042628.428
+ 20
+2134960.267
+ 10
+6042627.824
+ 20
+2134965.233
+ 10
+6042627.219
+ 20
+2134970.198
+ 10
+6042626.614
+ 20
+2134975.163
+ 10
+6042626.009
+ 20
+2134980.129
+ 10
+6042625.404
+ 20
+2134985.094
+ 10
+6042624.799
+ 20
+2134990.059
+ 10
+6042624.194
+ 20
+2134995.025
+ 10
+6042623.589
+ 20
+2134999.99
+ 10
+6042622.716
+ 20
+2135004.915
+ 10
+6042621.844
+ 20
+2135009.84
+ 10
+6042620.971
+ 20
+2135014.765
+ 10
+6042620.098
+ 20
+2135019.69
+ 10
+6042619.232
+ 20
+2135024.599
+ 10
+6042618.368
+ 20
+2135029.526
+ 10
+6042617.505
+ 20
+2135034.453
+ 10
+6042616.642
+ 20
+2135039.379
+ 10
+6042615.779
+ 20
+2135044.306
+ 10
+6042614.916
+ 20
+2135049.232
+ 10
+6042614.052
+ 20
+2135054.159
+ 10
+6042613.189
+ 20
+2135059.086
+ 10
+6042612.326
+ 20
+2135064.012
+ 10
+6042611.463
+ 20
+2135068.939
+ 10
+6042610.6
+ 20
+2135073.865
+ 10
+6042609.736
+ 20
+2135078.792
+ 10
+6042608.873
+ 20
+2135083.718
+ 10
+6042608.01
+ 20
+2135088.645
+ 10
+6042607.147
+ 20
+2135093.572
+ 10
+6042606.284
+ 20
+2135098.498
+ 10
+6042605.42
+ 20
+2135103.425
+ 10
+6042604.557
+ 20
+2135108.351
+ 10
+6042603.776
+ 20
+2135113.29
+ 10
+6042602.995
+ 20
+2135118.229
+ 10
+6042566.097965516
+ 20
+2135300.053431177
+  0
+LWPOLYLINE
+  5
+BE
+100
+AcDbEntity
+  8
+seg004
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbPolyline
+ 90
+  155
+ 70
+    0
+ 43
+0
+ 10
+6042624.088555677
+ 20
+2135000.077663673
+ 10
+6042616.629
+ 20
+2135108.453
+ 10
+6042616.2
+ 20
+2135113.434
+ 10
+6042615.77
+ 20
+2135118.416
+ 10
+6042615.34
+ 20
+2135123.397
+ 10
+6042614.91
+ 20
+2135128.379
+ 10
+6042614.481
+ 20
+2135133.36
+ 10
+6042614.051
+ 20
+2135138.342
+ 10
+6042613.621
+ 20
+2135143.323
+ 10
+6042613.192
+ 20
+2135148.305
+ 10
+6042612.762
+ 20
+2135153.286
+ 10
+6042612.332
+ 20
+2135158.268
+ 10
+6042611.902
+ 20
+2135163.249
+ 10
+6042611.477
+ 20
+2135168.231
+ 10
+6042611.055
+ 20
+2135173.213
+ 10
+6042610.634
+ 20
+2135178.196
+ 10
+6042610.212
+ 20
+2135183.178
+ 10
+6042609.79
+ 20
+2135188.16
+ 10
+6042609.369
+ 20
+2135193.142
+ 10
+6042608.947
+ 20
+2135198.124
+ 10
+6042608.542
+ 20
+2135203.016
+ 10
+6042608.157
+ 20
+2135208.001
+ 10
+6042607.773
+ 20
+2135212.987
+ 10
+6042607.389
+ 20
+2135217.972
+ 10
+6042607.004
+ 20
+2135222.957
+ 10
+6042606.62
+ 20
+2135227.942
+ 10
+6042606.235
+ 20
+2135232.928
+ 10
+6042605.851
+ 20
+2135237.913
+ 10
+6042605.467
+ 20
+2135242.898
+ 10
+6042605.082
+ 20
+2135247.883
+ 10
+6042604.712
+ 20
+2135252.87
+ 10
+6042604.351
+ 20
+2135257.857
+ 10
+6042603.99
+ 20
+2135262.844
+ 10
+6042603.629
+ 20
+2135267.831
+ 10
+6042603.269
+ 20
+2135272.818
+ 10
+6042602.908
+ 20
+2135277.805
+ 10
+6042602.547
+ 20
+2135282.791
+ 10
+6042602.186
+ 20
+2135287.778
+ 10
+6042601.826
+ 20
+2135292.765
+ 10
+6042601.465
+ 20
+2135297.752
+ 10
+6042601.134
+ 20
+2135302.675
+ 10
+6042600.801
+ 20
+2135307.664
+ 10
+6042600.468
+ 20
+2135312.652
+ 10
+6042600.135
+ 20
+2135317.641
+ 10
+6042599.803
+ 20
+2135322.63
+ 10
+6042599.501
+ 20
+2135327.621
+ 10
+6042599.202
+ 20
+2135332.612
+ 10
+6042598.902
+ 20
+2135337.603
+ 10
+6042598.603
+ 20
+2135342.594
+ 10
+6042598.303
+ 20
+2135347.585
+ 10
+6042598.004
+ 20
+2135352.576
+ 10
+6042597.726
+ 20
+2135357.569
+ 10
+6042597.491
+ 20
+2135362.403
+ 10
+6042597.312
+ 20
+2135367.4
+ 10
+6042597.133
+ 20
+2135372.396
+ 10
+6042596.954
+ 20
+2135377.393
+ 10
+6042596.775
+ 20
+2135382.39
+ 10
+6042596.596
+ 20
+2135387.387
+ 10
+6042596.46
+ 20
+2135392.385
+ 10
+6042596.374
+ 20
+2135397.265
+ 10
+6042596.298
+ 20
+2135402.265
+ 10
+6042596.222
+ 20
+2135407.264
+ 10
+6042596.146
+ 20
+2135412.264
+ 10
+6042596.07
+ 20
+2135417.263
+ 10
+6042596.005
+ 20
+2135422.263
+ 10
+6042596.005
+ 20
+2135427.143
+ 10
+6042596.032
+ 20
+2135432.143
+ 10
+6042596.058
+ 20
+2135437.143
+ 10
+6042596.085
+ 20
+2135442.143
+ 10
+6042596.112
+ 20
+2135447.143
+ 10
+6042596.139
+ 20
+2135452.143
+ 10
+6042596.202
+ 20
+2135457.022
+ 10
+6042596.327
+ 20
+2135462.02
+ 10
+6042596.453
+ 20
+2135467.019
+ 10
+6042596.579
+ 20
+2135472.017
+ 10
+6042596.704
+ 20
+2135477.016
+ 10
+6042596.836
+ 20
+2135482.014
+ 10
+6042597.012
+ 20
+2135487.011
+ 10
+6042597.252
+ 20
+2135491.798
+ 10
+6042597.512
+ 20
+2135496.792
+ 10
+6042597.773
+ 20
+2135501.785
+ 10
+6042598.034
+ 20
+2135506.778
+ 10
+6042598.323
+ 20
+2135511.77
+ 10
+6042598.635
+ 20
+2135516.76
+ 10
+6042598.948
+ 20
+2135521.618
+ 10
+6042599.314
+ 20
+2135526.604
+ 10
+6042599.68
+ 20
+2135531.591
+ 10
+6042600.049
+ 20
+2135536.578
+ 10
+6042600.466
+ 20
+2135541.56
+ 10
+6042600.883
+ 20
+2135546.543
+ 10
+6042601.3
+ 20
+2135551.525
+ 10
+6042601.733
+ 20
+2135556.375
+ 10
+6042602.205
+ 20
+2135561.353
+ 10
+6042602.703
+ 20
+2135566.328
+ 10
+6042603.225
+ 20
+2135571.3
+ 10
+6042603.747
+ 20
+2135576.273
+ 10
+6042604.27
+ 20
+2135581.246
+ 10
+6042604.792
+ 20
+2135586.218
+ 10
+6042605.346
+ 20
+2135591.056
+ 10
+6042605.973
+ 20
+2135596.016
+ 10
+6042606.6
+ 20
+2135600.977
+ 10
+6042607.227
+ 20
+2135605.937
+ 10
+6042607.855
+ 20
+2135610.898
+ 10
+6042608.482
+ 20
+2135615.858
+ 10
+6042609.118
+ 20
+2135620.696
+ 10
+6042609.829
+ 20
+2135625.645
+ 10
+6042610.54
+ 20
+2135630.594
+ 10
+6042611.251
+ 20
+2135635.544
+ 10
+6042611.962
+ 20
+2135640.493
+ 10
+6042612.694
+ 20
+2135645.439
+ 10
+6042613.442
+ 20
+2135650.383
+ 10
+6042614.189
+ 20
+2135655.195
+ 10
+6042614.989
+ 20
+2135660.13
+ 10
+6042615.79
+ 20
+2135665.066
+ 10
+6042616.615
+ 20
+2135669.997
+ 10
+6042617.453
+ 20
+2135674.927
+ 10
+6042618.29
+ 20
+2135679.856
+ 10
+6042619.127
+ 20
+2135684.786
+ 10
+6042619.973
+ 20
+2135689.582
+ 10
+6042620.89
+ 20
+2135694.497
+ 10
+6042621.817
+ 20
+2135699.41
+ 10
+6042622.743
+ 20
+2135704.324
+ 10
+6042623.67
+ 20
+2135709.237
+ 10
+6042624.597
+ 20
+2135714.15
+ 10
+6042625.555
+ 20
+2135719.058
+ 10
+6042626.533
+ 20
+2135723.829
+ 10
+6042627.549
+ 20
+2135728.725
+ 10
+6042628.566
+ 20
+2135733.621
+ 10
+6042629.582
+ 20
+2135738.516
+ 10
+6042630.631
+ 20
+2135743.405
+ 10
+6042631.683
+ 20
+2135748.293
+ 10
+6042632.736
+ 20
+2135753.181
+ 10
+6042633.805
+ 20
+2135757.972
+ 10
+6042634.895
+ 20
+2135762.852
+ 10
+6042636.047
+ 20
+2135767.717
+ 10
+6042637.2
+ 20
+2135772.583
+ 10
+6042638.352
+ 20
+2135777.448
+ 10
+6042639.491
+ 20
+2135782.227
+ 10
+6042640.679
+ 20
+2135787.084
+ 10
+6042641.866
+ 20
+2135791.941
+ 10
+6042643.08
+ 20
+2135796.792
+ 10
+6042644.312
+ 20
+2135801.638
+ 10
+6042645.544
+ 20
+2135806.484
+ 10
+6042646.769
+ 20
+2135811.239
+ 10
+6042648.036
+ 20
+2135816.076
+ 10
+6042649.303
+ 20
+2135820.913
+ 10
+6042650.579
+ 20
+2135825.747
+ 10
+6042651.89
+ 20
+2135830.573
+ 10
+6042653.201
+ 20
+2135835.398
+ 10
+6042654.512
+ 20
+2135840.128
+ 10
+6042655.857
+ 20
+2135844.943
+ 10
+6042657.203
+ 20
+2135849.759
+ 10
+6042658.549
+ 20
+2135854.574
+ 10
+6042659.93
+ 20
+2135859.38
+ 10
+6042661.32
+ 20
+2135864.183
+  0
+ENDSEC
+  0
+SECTION
+  2
+OBJECTS
+  0
+DICTIONARY
+  5
+C
+330
+0
+100
+AcDbDictionary
+281
+    1
+  3
+ACAD_GROUP
+350
+D
+  0
+DICTIONARY
+  5
+D
+330
+C
+100
+AcDbDictionary
+281
+    1
+  0
+ENDSEC
+  0
+EOF

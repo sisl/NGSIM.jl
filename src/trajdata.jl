@@ -1,10 +1,6 @@
 const NGSIM_TIMESTEP = 0.1 # [sec]
 const SMOOTHING_WIDTH_POS = 0.5 # [s]
 
-const CLASS_MOTORCYCLE = 1
-const CLASS_AUTOMOBILE = 2
-const CLASS_TRUCKORBUS = 3
-
 include(Pkg.dir("NGSIM", "src", "trajectory_smoothing.jl"))
 
 # from "Estimating Acceleration and Lane-Changing
@@ -42,45 +38,25 @@ function symmetric_exponential_moving_average(
     retval
 end
 
-const TRAJDATA_INPUT_PATHS = [
-    "/media/tim/DATAPART1/Data/NGSIM/HW80/I-80-Main-Data/vehicle-trajectory-data/0400pm-0415pm/trajectories-0400-0415.txt",
-    "/media/tim/DATAPART1/Data/NGSIM/HW80/I-80-Main-Data/vehicle-trajectory-data/0500pm-0515pm/trajectories-0500-0515.txt",
-    "/media/tim/DATAPART1/Data/NGSIM/HW80/I-80-Main-Data/vehicle-trajectory-data/0515pm-0530pm/trajectories-0515-0530.txt",
-    "/media/tim/DATAPART1/Data/NGSIM/HW101/US-101-Main-Data/vehicle-trajectory-data/0750am-0805am/trajectories-0750am-0805am.txt",
-    "/media/tim/DATAPART1/Data/NGSIM/HW101/US-101-Main-Data/vehicle-trajectory-data/0805am-0820am/trajectories-0805am-0820am.txt",
-    "/media/tim/DATAPART1/Data/NGSIM/HW101/US-101-Main-Data/vehicle-trajectory-data/0820am-0835am/trajectories-0820am-0835am.txt",
-]
-
-
 ###############
 
-type TrajdataRaw
+type NGSIMTrajdata
     df         :: DataFrame
     car2start  :: Dict{Int, Int}         # maps carindex to starting index in the df
     frame2cars :: Dict{Int, Vector{Int}} # maps frame to list of carids in the scene
     roadway    :: Roadway
 
-    function TrajdataRaw(input_path::AbstractString, roadway::Roadway)
+    function NGSIMTrajdata(input_path::AbstractString, roadway::Roadway)
 
         @assert(isfile(input_path))
 
-        if splitext(input_path)[2] == ".txt" # txt is original
-            df = readtable(input_path, separator=' ', header = false)
-            col_names = [:id, :frame, :n_frames_in_dataset, :epoch, :local_x, :local_y, :global_x, :global_y, :length, :width, :class, :speed, :acc, :lane, :carind_front, :carind_rear, :dist_headway, :time_headway]
-            for (i,name) in enumerate(col_names)
-                rename!(df, symbol(@sprintf("x%d", i)), name)
-            end
-
-            df[:global_heading] = fill(NaN, nrow(df))
-            df[:laneid] = fill(-1, nrow(df))
-            df[:frenet_extind] = fill(NaN, nrow(df))
-            df[:frenet_s] = fill(NaN, nrow(df))
-            df[:frenet_t] = fill(NaN, nrow(df))
-            df[:frenet_heading] = fill(NaN, nrow(df))
-        else
-            @assert(splitext(input_path)[2] == ".csv")
-            df = readtable(input_path) # csv file is exported after extracting everything
+        df = readtable(input_path, separator=' ', header = false)
+        col_names = [:id, :frame, :n_frames_in_dataset, :epoch, :local_x, :local_y, :global_x, :global_y, :length, :width, :class, :speed, :acc, :lane, :carind_front, :carind_rear, :dist_headway, :time_headway]
+        for (i,name) in enumerate(col_names)
+            rename!(df, symbol(@sprintf("x%d", i)), name)
         end
+
+        df[:global_heading] = fill(NaN, nrow(df))
 
         car2start = Dict{Int, Int}()
         frame2cars = Dict{Int, Vector{Int}}()
@@ -102,36 +78,14 @@ type TrajdataRaw
     end
 end
 
-nframes(trajdata::TrajdataRaw) = maximum(keys(trajdata.frame2cars))
-carsinframe(trajdata::TrajdataRaw, frame::Int) = get(trajdata.frame2cars, frame, Int[]) # NOTE: memory allocation!
-carid_set(trajdata::TrajdataRaw) = Set(keys(trajdata.car2start)) # NOTE: memory allocation!
-nth_carid(trajdata::TrajdataRaw, frame::Int, n::Int) = trajdata.frame2cars[frame][n]
-first_carid(trajdata::TrajdataRaw, frame::Int) = nth_carid(trajdata, frame, 1)
-iscarinframe(trajdata::TrajdataRaw, carid::Int, frame::Int) = in(carid, carsinframe(trajdata, frame))
+nframes(trajdata::NGSIMTrajdata) = maximum(keys(trajdata.frame2cars))
+carsinframe(trajdata::NGSIMTrajdata, frame::Int) = get(trajdata.frame2cars, frame, Int[]) # NOTE: memory allocation!
+carid_set(trajdata::NGSIMTrajdata) = Set(keys(trajdata.car2start)) # NOTE: memory allocation!
+nth_carid(trajdata::NGSIMTrajdata, frame::Int, n::Int) = trajdata.frame2cars[frame][n]
+first_carid(trajdata::NGSIMTrajdata, frame::Int) = nth_carid(trajdata, frame, 1)
+iscarinframe(trajdata::NGSIMTrajdata, carid::Int, frame::Int) = in(carid, carsinframe(trajdata, frame))
 
-function get_vehicle!(
-    veh::Vehicle,
-    trajdata::TrajdataRaw,
-    carid::Int,
-    frame::Int,
-    )
-
-    dfind = car_df_index(trajdata, carid, frame)
-    df = trajdata.df
-
-    veh.id = carid
-    veh.class  = df[dfind, :class ]
-    veh.length = df[dfind, :length]
-    veh.width  = df[dfind, :width ]
-
-    posG = VecSE2(df[dfind, :global_x], df[dfind, :global_y], df[dfind, :global_heading])
-    posF = Frenet(df[dfind, :laneid], df[dfind, :frenet_extind], df[dfind, :frenet_s], df[dfind, :frenet_t], df[dfind, :frenet_heading])
-    speed = df[dfind, :speed]
-    veh.state = VehicleState(posG, posF, speed)
-
-    veh
-end
-function car_df_index(trajdata::TrajdataRaw, carid::Int, frame::Int)
+function car_df_index(trajdata::NGSIMTrajdata, carid::Int, frame::Int)
     #=
     given frame and carid, find index of car in trajdata
     Returns 0 if it does not exist
@@ -156,7 +110,7 @@ function car_df_index(trajdata::TrajdataRaw, carid::Int, frame::Int)
 
     retval
 end
-function get_frame_range(trajdata::TrajdataRaw, carid::Int)
+function get_frame_range(trajdata::NGSIMTrajdata, carid::Int)
     lo = trajdata.car2start[carid]
     framestart = trajdata.df[lo, :frame]
 
@@ -165,35 +119,8 @@ function get_frame_range(trajdata::TrajdataRaw, carid::Int)
 
     framestart:frameend
 end
-function get_state_list(trajdata::TrajdataRaw, carid::Int, frames::AbstractVector{Int})
-    veh = Vehicle()
-    retval = Array(VehicleState, length(frames))
-    for (i, frame) in enumerate(frames)
-        get_vehicle!(veh, trajdata, carid, frame)
-        retval[i] = veh.state
-    end
-    retval
-end
-function get_state_list_global(trajdata::TrajdataRaw, carid::Int, frames::AbstractVector{Int})
-    veh = Vehicle()
-    retval = Array(VecSE2, length(frames))
-    for (i, frame) in enumerate(frames)
-        get_vehicle!(veh, trajdata, carid, frame)
-        retval[i] = veh.state.posG
-    end
-    retval
-end
-function get_state_list_frenet(trajdata::TrajdataRaw, carid::Int, frames::AbstractVector{Int})
-    veh = Vehicle()
-    retval = Array(Frenet, length(frames))
-    for (i, frame) in enumerate(frames)
-        get_vehicle!(veh, trajdata, carid, frame)
-        retval[i] = veh.state.posF
-    end
-    retval
-end
 
-function pull_vehicle_headings!(trajdata::TrajdataRaw;
+function pull_vehicle_headings!(trajdata::NGSIMTrajdata;
     v_cutoff::Float64 = 2.5, # speeds below this will use a linearly interpolated heading [fps]
     smoothing_width::Float64 = 0.5, # [s]
     )
@@ -253,31 +180,6 @@ function pull_vehicle_headings!(trajdata::TrajdataRaw;
 
     trajdata
 end
-function pull_vehicle_frenet_data!(trajdata::TrajdataRaw)
-
-    df = trajdata.df
-
-    for i in 1 : nrow(df)
-
-        carid = df[i, :id]
-        frame = df[i, :frame]
-
-        x = df[i, :global_x]
-        y = df[i, :global_y]
-        θ = df[i, :global_heading]
-
-        posG = VecSE2(x,y,θ)
-        frenet = project_posG_to_frenet(posG, trajdata.roadway)
-
-        df[i, :laneid] = frenet.laneid
-        df[i, :frenet_extind] = frenet.extind
-        df[i, :frenet_s] = frenet.s
-        df[i, :frenet_t] = frenet.t
-        df[i, :frenet_heading] = frenet.ϕ
-    end
-
-    trajdata
-end
 
 type FilterTrajectoryResult
     carid::Int
@@ -286,7 +188,7 @@ type FilterTrajectoryResult
     θ_arr::Vector{Float64}
     v_arr::Vector{Float64}
 
-    function FilterTrajectoryResult(trajdata::TrajdataRaw, carid::Int)
+    function FilterTrajectoryResult(trajdata::NGSIMTrajdata, carid::Int)
         dfstart = trajdata.car2start[carid]
         N = trajdata.df[dfstart, :n_frames_in_dataset]
 
@@ -342,7 +244,7 @@ function filter_trajectory!(ftr::FilterTrajectoryResult, ν::VehicleSystem = Veh
 
     ftr
 end
-function Base.copy!(trajdata::TrajdataRaw, ftr::FilterTrajectoryResult)
+function Base.copy!(trajdata::NGSIMTrajdata, ftr::FilterTrajectoryResult)
 
     dfstart = trajdata.car2start[ftr.carid]
     N = trajdata.df[dfstart, :n_frames_in_dataset]
@@ -363,7 +265,7 @@ function Base.copy!(trajdata::TrajdataRaw, ftr::FilterTrajectoryResult)
     trajdata
 end
 
-function filter_trajectory!(trajdata::TrajdataRaw, carid::Int)
+function filter_trajectory!(trajdata::NGSIMTrajdata, carid::Int)
     #=
     Filters the given vehicle's trajectory using an Extended Kalman Filter
     =#
@@ -379,258 +281,91 @@ function filter_trajectory!(trajdata::TrajdataRaw, carid::Int)
     copy!(trajdata, ftr)
     trajdata
 end
-function symmetric_exponential_moving_average!(trajdata::TrajdataRaw)
-
-    for carid in carid_set(trajdata)
-
-        dfstart = trajdata.car2start[carid]
-        N = trajdata.df[dfstart, :n_frames_in_dataset]
-
-        x_arr = Array(Float64, N)
-        y_arr = Array(Float64, N)
-        v_arr = Array(Float64, N)
-
-        for i = 1 : N
-            x_arr[i] = trajdata.df[dfstart + i - 1, :global_x]
-            y_arr[i] = trajdata.df[dfstart + i - 1, :global_y]
-            v_arr[i] = trajdata.df[dfstart + i - 1, :speed]
-        end
-
-        x_arr2 = symmetric_exponential_moving_average(x_arr, SMOOTHING_WIDTH_POS)
-        y_arr2 = symmetric_exponential_moving_average(y_arr, SMOOTHING_WIDTH_POS)
-        v_arr2 = symmetric_exponential_moving_average(v_arr, SMOOTHING_WIDTH_SPEED)
-
-        for i = 1 : N
-            trajdata.df[dfstart + i - 1, :global_x] = x_arr2[i]
-            trajdata.df[dfstart + i - 1, :global_y] = y_arr2[i]
-            trajdata.df[dfstart + i - 1, :speed]   = v_arr2[i]
-        end
-    end
-
-    trajdata
-end
-function load_trajdata_raw(filepath::AbstractString)
-
-    roadway = get_roadway_for_trajdata(filepath)
+function load_ngsim_trajdata(filepath::AbstractString, roadway::Roadway)
 
     print("loading from file: "); tic()
-    trajdata = TrajdataRaw(filepath, roadway)
+    tdraw = NGSIMTrajdata(filepath, roadway)
     toc()
 
     if splitext(filepath)[2] == ".txt" # txt is original
-        # print("smoothing:         "); tic()
-        # symmetric_exponential_moving_average!(trajdata)
-        # toc()
-
-        # print("global headings:   "); tic()
-        # pull_vehicle_headings!(trajdata)
-        # toc()
-
         print("filtering:         "); tic()
-        for carid in carid_set(trajdata)
-            filter_trajectory!(trajdata, carid)
+        for carid in carid_set(tdraw)
+            filter_trajectory!(tdraw, carid)
         end
         toc()
+    end
 
-        print("frenet data:       "); tic()
-        pull_vehicle_frenet_data!(trajdata)
+    tdraw
+end
+
+function Base.convert(::Type{Trajdata}, tdraw::NGSIMTrajdata)
+
+    df = tdraw.df
+
+    vehdefs = Dict{Int, VehicleDef}()
+    states = Array(TrajdataState, nrow(df))
+    frames = Array(TrajdataFrame, nframes(tdraw))
+
+    for (id, dfind) in tdraw.car2start
+        vehdefs[id] = VehicleDef(id, df[dfind, :class], df[dfind, :length]*METERS_PER_FOOT, df[dfind, :width]*METERS_PER_FOOT)
+    end
+
+    state_ind = 0
+    for frame in 1 : nframes(tdraw)
+
+        frame_lo = state_ind+1
+
+        for id in carsinframe(tdraw, frame)
+            dfind = car_df_index(tdraw, id, frame)
+
+            posG = VecSE2(df[dfind, :global_x]*METERS_PER_FOOT, df[dfind, :global_y]*METERS_PER_FOOT, df[dfind, :global_heading])
+            speed = df[dfind, :speed]*METERS_PER_FOOT
+
+            states[state_ind += 1] = TrajdataState(id, VehicleState(posG, tdraw.roadway, speed))
+        end
+
+        frame_hi = state_ind
+        t = NGSIM_TIMESTEP * (frame-1)
+        frames[frame] = TrajdataFrame(frame_lo, frame_hi, t)
+    end
+
+    Trajdata(tdraw.roadway, vehdefs, states, frames)
+end
+
+function convert_raw_ngsim_to_trajdatas()
+    for filename in ("i101_trajectories-0750am-0805am.txt",
+                     "i101_trajectories-0805am-0820am.txt",
+                     "i101_trajectories-0820am-0835am.txt",
+                     "i80_trajectories-0400-0415.txt",
+                     "i80_trajectories-0500-0515.txt",
+                     "i80_trajectories-0515-0530.txt")
+
+        println("converting ", filename); tic()
+
+        filepath = Pkg.dir("NGSIM", "data", filename)
+        roadway = startswith(filename, "i101") ? ROADWAY_101 : ROADWAY_80
+        tdraw = NGSIM.load_ngsim_trajdata(filepath, roadway)
+        td = convert(Trajdata, tdraw)
+
+        outpath = Pkg.dir("NGSIM", "data", "trajdata_"*filename)
+        open(io->write(io, td), outpath, "w")
+
         toc()
     end
-
-    trajdata
-end
-function input_path_to_extracted_trajdata_csv(input_path::AbstractString)
-    file = splitdir(input_path)[2]
-    joinpath("/media/tim/DATAPART1/PublicationData/2016_deepdrive/extracted_trajdata/", splitext(file)[1] * ".csv")
 end
 
-###############
+const TRAJDATA_PATHS = [
+                        Pkg.dir("NGSIM", "data", "trajdata_i101_trajectories-0750am-0805am.txt"),
+                        Pkg.dir("NGSIM", "data", "trajdata_i101_trajectories-0805am-0820am.txt"),
+                        Pkg.dir("NGSIM", "data", "trajdata_i101_trajectories-0820am-0835am.txt"),
+                        Pkg.dir("NGSIM", "data", "trajdata_i80_trajectories-0400-0415.txt"),
+                        Pkg.dir("NGSIM", "data", "trajdata_i80_trajectories-0500-0515.txt"),
+                        Pkg.dir("NGSIM", "data", "trajdata_i80_trajectories-0515-0530.txt"),
+                       ]
 
-type Trajdata
-    id         :: Int                    # id assigned to this trajdata
-    roadway    :: Roadway
-
-    vehicles   :: Vector{Vehicle}        # id → Vehicle (w/ potentially uninitialized state)
-    car2start  :: Vector{Int}            # id → starting index in the df
-    frame2cars :: Vector{Vector{Int}}    # frame → list of carids in the scene
-
-    frames              :: Vector{Int}          # [nrow df]
-    n_frames_in_dataset :: Vector{Int}          # [nrow df]
-    states              :: Vector{VehicleState} # [nrow df]
-
-    function Trajdata(filepath::AbstractString, trajdata_id::Int=0)
-        tdraw = load_trajdata_raw(filepath)
-        df = tdraw.df
-
-        id_map = Dict{Int,Int}() # old -> new
-
-        car2start = Array(Int, length(tdraw.car2start))
-        vehicles = Array(Vehicle, length(tdraw.car2start))
-        for (id_old,dfind) in tdraw.car2start
-
-            id_new = length(id_map)+1
-            id_map[id_old] = id_new
-
-            veh = Vehicle()
-
-            veh.id = id_new
-            veh.class  = df[dfind, :class ]
-            veh.length = df[dfind, :length]
-            veh.width  = df[dfind, :width ]
-
-            vehicles[id_new] = veh
-            car2start[id_new] = dfind
-        end
-
-        states = Array(VehicleState, nrow(df))
-        for dfind in 1 : nrow(df)
-
-            posG = VecSE2(df[dfind, :global_x], df[dfind, :global_y], df[dfind, :global_heading])
-            posF = Frenet(df[dfind, :laneid], df[dfind, :frenet_extind], df[dfind, :frenet_s], df[dfind, :frenet_t], df[dfind, :frenet_heading])
-            speed = df[dfind, :speed]
-
-            states[dfind] = VehicleState(posG, posF, speed)
-        end
-
-        retval = new()
-        retval.id = trajdata_id
-        retval.vehicles = vehicles
-        retval.car2start = car2start
-
-        retval.frames = convert(Vector{Int}, df[:frame])
-        frame_lo = minimum(retval.frames)
-        Δframe = frame_lo -1
-        retval.frames .-= Δframe # set low frame to 1
-
-        frame_hi = maximum(retval.frames)
-        retval.frame2cars = Array(Vector{Int}, frame_hi)
-        for frame in 1:frame_hi
-            carids = deepcopy(get(tdraw.frame2cars, frame+Δframe, Int[]))
-            for (i,id_old) in enumerate(carids)
-                carids[i] = id_map[id_old]
-            end
-            retval.frame2cars[frame] = carids
-        end
-
-        retval.roadway = tdraw.roadway
-        retval.n_frames_in_dataset = convert(Vector{Int}, df[:n_frames_in_dataset])
-        retval.states = states
-        retval
-    end
-    function Trajdata(trajdata_id::Int, recompute::Bool=false)
-        filepath = TRAJDATA_INPUT_PATHS[trajdata_id]
-        if !recompute
-            filepath = input_path_to_extracted_trajdata_csv(filepath)
-        end
-
-        Trajdata(filepath, trajdata_id)
-    end
+function load_trajdata(filepath::AbstractString)
+    td = open(io->read(io, Trajdata), filepath, "r")
+    td.roadway = startswith(splitdir(filepath)[2], "trajdata_i101") ? ROADWAY_101 : ROADWAY_80
+    td
 end
-
-nframes(trajdata::Trajdata) = length(trajdata.frame2cars)
-frame_inbounds(trajdata::Trajdata, frame::Int) = 1 ≤ frame ≤ length(trajdata.frame2cars)
-carsinframe(trajdata::Trajdata, frame::Int) = trajdata.frame2cars[frame]
-nth_carid(trajdata::Trajdata, frame::Int, n::Int) = trajdata.frame2cars[frame][n]
-first_carid(trajdata::Trajdata, frame::Int) = nth_carid(trajdata, frame, 1)
-iscarinframe(trajdata::Trajdata, carid::Int, frame::Int) = in(carid, trajdata.frame2cars[frame])
-vehicle_ids(trajdata::Trajdata) = 1:length(trajdata.vehicles)
-
-function car_df_index(trajdata::Trajdata, carid::Int, frame::Int)
-    #=
-    given frame and carid, find index of car in trajdata
-    Returns 0 if it does not exist
-    =#
-
-    lo = trajdata.car2start[carid]
-    framestart = trajdata.frames[lo]
-
-    retval = frame - framestart + lo
-    n_frames = trajdata.n_frames_in_dataset[lo]
-    if retval > lo + n_frames
-        retval = 0
-    end
-
-    retval
-end
-function get_frame_range(trajdata::Trajdata, carid::Int)
-    lo = trajdata.car2start[carid]
-    framestart = trajdata.frames[lo]
-    n_frames = trajdata.n_frames_in_dataset[lo]
-    frameend = framestart + n_frames - 1
-
-    framestart:frameend
-end
-function get_vehiclestate(trajdata::Trajdata, carid::Int, frame::Int)
-
-    dfind = car_df_index(trajdata, carid::Int, frame::Int)
-    trajdata.states[dfind]
-end
-get_vehicle(trajdata::Trajdata, carid::Int) = trajdata.vehicles[carid]
-function get_vehicle(trajdata::Trajdata, carid::Int, frame::Int)
-
-    veh = trajdata.vehicles[carid]
-    dfind = car_df_index(trajdata, carid, frame)
-    veh.state = trajdata.states[dfind]
-
-    veh
-end
-
-function get_turnrate(trajdata::Trajdata, id::Int, frame::Int, frenet::Bool=false)
-    if frame == 1 || !frame_inbounds(trajdata, frame) || !iscarinframe(trajdata, id, frame-1)
-        return 0.0 # no past info, assume zero
-    end
-
-    if frenet
-        past = get_vehiclestate(trajdata, id, frame-1).posF.ϕ
-        curr = get_vehiclestate(trajdata, id, frame).posF.ϕ
-        (curr - past) / NGSIM_TIMESTEP # [ft/s²]
-    else # global frame
-        past = get_vehiclestate(trajdata, id, frame-1).posG.θ
-        curr = get_vehiclestate(trajdata, id, frame).posG.θ
-        (curr - past) / NGSIM_TIMESTEP # [ft/s²]
-    end
-end
-function get_acceleration(trajdata::Trajdata, id::Int, frame::Int)
-    if frame == 1 || !frame_inbounds(trajdata, frame) || !iscarinframe(trajdata, id, frame-1)
-        return 0.0 # no past info, assume zero
-    end
-
-    v_past = get_vehiclestate(trajdata, id, frame-1).v
-    v_curr = get_vehiclestate(trajdata, id, frame).v
-
-    (v_curr - v_past) / NGSIM_TIMESTEP # [ft/s²]
-end
-function get_acceleration_lat(trajdata::Trajdata, id::Int, frame::Int)
-    if frame == 1 || !frame_inbounds(trajdata, frame) || !iscarinframe(trajdata, id, frame-1)
-        return 0.0 # no past info, assume zero
-    end
-
-
-    s_past = get_vehiclestate(trajdata, id, frame-1)
-    s_curr = get_vehiclestate(trajdata, id, frame)
-
-    curve = trajdata.roadway.centerlines[s_curr.posF.laneid]
-    proj = project_to_lane(s_curr.posG, curve)
-
-    v_past = s_past.v * sin(s_past.posF.ϕ)
-    v_curr = s_curr.v * sin(proj.θ)
-
-    (v_curr - v_past) / NGSIM_TIMESTEP # [ft/s²]
-end
-function get_acceleration_lon(trajdata::Trajdata, id::Int, frame::Int)
-    if frame == 1 || !frame_inbounds(trajdata, frame) || !iscarinframe(trajdata, id, frame-1)
-        return 0.0 # no past info, assume zero
-    end
-
-
-    s_past = get_vehiclestate(trajdata, id, frame-1)
-    s_curr = get_vehiclestate(trajdata, id, frame)
-
-    curve = trajdata.roadway.centerlines[s_curr.posF.laneid]
-    proj = project_to_lane(s_curr.posG, curve)
-
-    v_past = s_past.v * cos(s_past.posF.ϕ)
-    v_curr = s_curr.v * cos(proj.θ)
-
-    (v_curr - v_past) / NGSIM_TIMESTEP # [ft/s²]
-end
+load_trajdata(i::Int) = load_trajdata(TRAJDATA_PATHS[i])
