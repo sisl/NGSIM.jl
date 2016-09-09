@@ -6,7 +6,7 @@ Was tested on the [Highway 101](http://www.fhwa.dot.gov/publications/research/op
 [![Build Status](https://travis-ci.org/tawheeler/NGSIM.jl.svg?branch=master)](https://travis-ci.org/tawheeler/NGSIM.jl)
 [![Coverage Status](https://coveralls.io/repos/tawheeler/NGSIM.jl/badge.svg?branch=master&service=github)](https://coveralls.io/github/tawheeler/NGSIM.jl?branch=master)
 
-I provide two primary types: `Roadway` and `Trajdata`. The first represents the roadway at which the data was collected. Information was extracted from the NGSIM CAD files. The `Trajdata` type contains the vehicle positions over time. The raw data is availabe in `TrajdataRaw`, or smoothed and conveniently extracted into types in `Trajdata`. A multitude of accessor and utility functions are provided.
+This package is fully compatible with [AutomotiveDrivingModels.jl](https://github.com/tawheeler/AutomotiveDrivingModels.jl), providing the `Roadway` and `Trajdata` types from the NGSIM data. Roadway geometry was extracted from the NGSIM CAD files. The vehicle trajectories were filtered to provide better global positions and orientation.
 
 You will currently have to supply the NGSIM trajectory data yourself, until I can find a way to host it on GitHub (and get permission from NGSIM to do so).
 
