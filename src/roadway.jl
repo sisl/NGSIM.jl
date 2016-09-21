@@ -7,8 +7,8 @@ type NGSIMRoadway
     centerlines::Vector{Vector{CurvePt}}
 end
 immutable RoadwayInputParams
-    filepath_boundaries::ASCIIString
-    filepath_centerlines::ASCIIString
+    filepath_boundaries::String
+    filepath_centerlines::String
 end
 
 function read_boundaries(io::IO)
