@@ -19,4 +19,4 @@ Pkg.clone("https://github.com/tawheeler/Vec.jl.git")
 Pkg.clone("https://github.com/tawheeler/AutomotiveDrivingModels.jl.git")
 Pkg.clone("https://github.com/tawheeler/NGSIM.jl.git")
 ```
-Note that we do not distribute the NGSIM datasets directly, but feel free to ping us or download the datasets yourself from their respective sites.
+Note that we do not distribute the NGSIM datasets directly (they are huge), but feel free to ping us or download the datasets yourself from their respective sites.
