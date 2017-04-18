@@ -44,16 +44,15 @@ type NGSIMTrajdata
     df         :: DataFrame
     car2start  :: Dict{Int, Int}         # maps carindex to starting index in the df
     frame2cars :: Dict{Int, Vector{Int}} # maps frame to list of carids in the scene
-    roadway    :: Roadway
 
-    function NGSIMTrajdata(input_path::AbstractString, roadway::Roadway)
+    function NGSIMTrajdata(input_path::AbstractString)
 
         @assert(isfile(input_path))
 
         df = readtable(input_path, separator=' ', header = false)
         col_names = [:id, :frame, :n_frames_in_dataset, :epoch, :local_x, :local_y, :global_x, :global_y, :length, :width, :class, :speed, :acc, :lane, :carind_front, :carind_rear, :dist_headway, :time_headway]
         for (i,name) in enumerate(col_names)
-            rename!(df, symbol(@sprintf("x%d", i)), name)
+            rename!(df, Symbol(@sprintf("x%d", i)), name)
         end
 
         df[:global_heading] = fill(NaN, nrow(df))
@@ -74,11 +73,11 @@ type NGSIMTrajdata
             end
         end
 
-        new(df, car2start, frame2cars, roadway)
+        new(df, car2start, frame2cars)
     end
 end
 
-nframes(trajdata::NGSIMTrajdata) = maximum(keys(trajdata.frame2cars))
+Records.nframes(trajdata::NGSIMTrajdata) = maximum(keys(trajdata.frame2cars))
 carsinframe(trajdata::NGSIMTrajdata, frame::Int) = get(trajdata.frame2cars, frame, Int[]) # NOTE: memory allocation!
 carid_set(trajdata::NGSIMTrajdata) = Set(keys(trajdata.car2start)) # NOTE: memory allocation!
 nth_carid(trajdata::NGSIMTrajdata, frame::Int, n::Int) = trajdata.frame2cars[frame][n]
@@ -281,10 +280,10 @@ function filter_trajectory!(trajdata::NGSIMTrajdata, carid::Int)
     copy!(trajdata, ftr)
     trajdata
 end
-function load_ngsim_trajdata(filepath::AbstractString, roadway::Roadway)
+function load_ngsim_trajdata(filepath::AbstractString)
 
     print("loading from file: "); tic()
-    tdraw = NGSIMTrajdata(filepath, roadway)
+    tdraw = NGSIMTrajdata(filepath)
     toc()
 
     if splitext(filepath)[2] == ".txt" # txt is original
@@ -298,16 +297,16 @@ function load_ngsim_trajdata(filepath::AbstractString, roadway::Roadway)
     tdraw
 end
 
-function Base.convert(::Type{Trajdata}, tdraw::NGSIMTrajdata)
+function Base.convert(::Type{Trajdata}, tdraw::NGSIMTrajdata, roadway::Roadway)
 
     df = tdraw.df
 
     vehdefs = Dict{Int, VehicleDef}()
-    states = Array(TrajdataState, nrow(df))
-    frames = Array(TrajdataFrame, nframes(tdraw))
+    states = Array(RecordState{VehicleState, Int}, nrow(df))
+    frames = Array(RecordFrame, nframes(tdraw))
 
     for (id, dfind) in tdraw.car2start
-        vehdefs[id] = VehicleDef(id, df[dfind, :class], df[dfind, :length]*METERS_PER_FOOT, df[dfind, :width]*METERS_PER_FOOT)
+        vehdefs[id] = VehicleDef(df[dfind, :class], df[dfind, :length]*METERS_PER_FOOT, df[dfind, :width]*METERS_PER_FOOT)
     end
 
     state_ind = 0
@@ -321,16 +320,18 @@ function Base.convert(::Type{Trajdata}, tdraw::NGSIMTrajdata)
             posG = VecSE2(df[dfind, :global_x]*METERS_PER_FOOT, df[dfind, :global_y]*METERS_PER_FOOT, df[dfind, :global_heading])
             speed = df[dfind, :speed]*METERS_PER_FOOT
 
-            states[state_ind += 1] = TrajdataState(id, VehicleState(posG, tdraw.roadway, speed))
+            states[state_ind += 1] = RecordState(VehicleState(posG, roadway, speed), id)
         end
 
         frame_hi = state_ind
-        t = NGSIM_TIMESTEP * (frame-1)
-        frames[frame] = TrajdataFrame(frame_lo, frame_hi, t)
+        frames[frame] = RecordFrame(frame_lo, frame_hi)
     end
 
-    Trajdata(tdraw.roadway, vehdefs, states, frames)
+    Trajdata(NGSIM_TIMESTEP, frames, states, vehdefs)
 end
+
+get_corresponding_roadway(filename::String) = startswith(filename, "i101") ? ROADWAY_101 : ROADWAY_80
+
 
 function convert_raw_ngsim_to_trajdatas()
     for filename in ("i101_trajectories-0750am-0805am.txt",
@@ -343,12 +344,12 @@ function convert_raw_ngsim_to_trajdatas()
         println("converting ", filename); tic()
 
         filepath = Pkg.dir("NGSIM", "data", filename)
-        roadway = startswith(filename, "i101") ? ROADWAY_101 : ROADWAY_80
-        tdraw = NGSIM.load_ngsim_trajdata(filepath, roadway)
-        td = convert(Trajdata, tdraw)
+        roadway = get_corresponding_roadway(filename)
+        tdraw = NGSIM.load_ngsim_trajdata(filepath)
+        trajdata = convert(Trajdata, tdraw, roadway)
 
         outpath = Pkg.dir("NGSIM", "data", "trajdata_"*filename)
-        open(io->write(io, td), outpath, "w")
+        open(io->write(io, MIME"text/plain"(), trajdata), outpath, "w")
 
         toc()
     end
@@ -364,8 +365,8 @@ const TRAJDATA_PATHS = [
                        ]
 
 function load_trajdata(filepath::AbstractString)
-    td = open(io->read(io, Trajdata), filepath, "r")
-    td.roadway = startswith(splitdir(filepath)[2], "trajdata_i101") ? ROADWAY_101 : ROADWAY_80
+    td = open(io->read(io, MIME"text/plain"(), Trajdata), filepath, "r")
     td
 end
 load_trajdata(i::Int) = load_trajdata(TRAJDATA_PATHS[i])
+get_corresponding_roadway(i::Int) = get_corresponding_roadway(TRAJDATA_PATHS[i])
