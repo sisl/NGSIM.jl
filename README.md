@@ -6,9 +6,9 @@ Was tested on the [Highway 101](http://www.fhwa.dot.gov/publications/research/op
 [![Build Status](https://travis-ci.org/tawheeler/NGSIM.jl.svg?branch=master)](https://travis-ci.org/tawheeler/NGSIM.jl)
 [![Coverage Status](https://coveralls.io/repos/tawheeler/NGSIM.jl/badge.svg?branch=master&service=github)](https://coveralls.io/github/tawheeler/NGSIM.jl?branch=master)
 
-This package is fully compatible with [AutomotiveDrivingModels.jl](https://github.com/tawheeler/AutomotiveDrivingModels.jl), providing the `Roadway` and `Trajdata` types from the NGSIM data. Roadway geometry was extracted from the NGSIM CAD files. The vehicle trajectories were filtered to provide better global positions and orientation.
+This package is fully compatible with [AutomotiveDrivingModels.jl](https://github.com/sisl/AutomotiveDrivingModels.jl), providing the `Roadway` and `Trajdata` types from the NGSIM data. Roadway geometry was extracted from the NGSIM CAD files. The vehicle trajectories were filtered to provide better global positions and orientation.
 
-You will currently have to supply the NGSIM trajectory data yourself, until I can find a way to host it on GitHub (and get permission from NGSIM to do so).
+The NGSIM trajectory data is available in [our first release, with instructions here](https://github.com/tawheeler/NGSIM.jl/releases).
 
 ## Git It
 
@@ -16,7 +16,8 @@ You just clone it! Note that you also have to clone my [Vec](https://github.com/
 
 ```julia
 Pkg.clone("https://github.com/tawheeler/Vec.jl.git")
-Pkg.clone("https://github.com/tawheeler/AutomotiveDrivingModels.jl.git")
+Pkg.clone("https://github.com/tawheeler/Records.jl.git")
+Pkg.clone("https://github.com/sisl/AutomotiveDrivingModels.jl.git")
 Pkg.clone("https://github.com/tawheeler/NGSIM.jl.git")
 ```
 Note that we do not distribute the NGSIM datasets directly (they are huge), but feel free to ping us or download the datasets yourself from their respective sites.
