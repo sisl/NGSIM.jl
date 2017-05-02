@@ -21,3 +21,16 @@ Pkg.clone("https://github.com/sisl/AutomotiveDrivingModels.jl.git")
 Pkg.clone("https://github.com/tawheeler/NGSIM.jl.git")
 ```
 Note that we do not distribute the NGSIM datasets directly (they are huge), but feel free to ping us or download the datasets yourself from their respective sites.
+
+# Quickstart
+
+To download the datasets, register for an [account](https://www.its-rde.net/index.php/about/register), navigate to the datasets [page](https://www.its-rde.net/index.php/rdedataenvironment/10023), select the links for the I-80 and US-101 datasets, and download. Alternatively, download the data associated with the first release as mentioned above.
+
+To extract trajectory data (Trajdata) from the raw NGSIM data, place the raw data files in the NGSIM.jl/data directory, and run
+
+```julia
+using NGSIM
+convert_raw_ngsim_to_trajdatas()
+```
+
+The resulting files can then be loaded into a Julia program as Trajdata, a type defined in [AutomotiveDrivingModels.jl](https://github.com/sisl/AutomotiveDrivingModels.jl). See jnotebooks/Demo.ipynb for example usage.
