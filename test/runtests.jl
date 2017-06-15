@@ -1,7 +1,5 @@
 using Base.Test
-# using Lint
-
-# lintpkg("NGSIM")
 using NGSIM
+using NBInclude
 
-
+nbinclude(joinpath(dirname(@__FILE__), "..", "jnotebooks", "Demo.ipynb"))
