@@ -14,7 +14,7 @@ function symmetric_exponential_moving_average(
     Δ = T / dt
 
     N = length(arr)
-    retval = Array(Float64, N)
+    retval = Array{Float64}(N)
 
     for i = 1 : N
 
@@ -40,7 +40,7 @@ end
 
 ###############
 
-type NGSIMTrajdata
+mutable struct NGSIMTrajdata
     df         :: DataFrame
     car2start  :: Dict{Int, Int}         # maps carindex to starting index in the df
     frame2cars :: Dict{Int, Vector{Int}} # maps frame to list of carids in the scene
@@ -180,7 +180,7 @@ function pull_vehicle_headings!(trajdata::NGSIMTrajdata;
     trajdata
 end
 
-type FilterTrajectoryResult
+mutable struct FilterTrajectoryResult
     carid::Int
     x_arr::Vector{Float64}
     y_arr::Vector{Float64}
@@ -302,8 +302,8 @@ function Base.convert(::Type{Trajdata}, tdraw::NGSIMTrajdata, roadway::Roadway)
     df = tdraw.df
 
     vehdefs = Dict{Int, VehicleDef}()
-    states = Array(RecordState{VehicleState, Int}, nrow(df))
-    frames = Array(RecordFrame, nframes(tdraw))
+    states = Array{RecordState{VehicleState, Int}}(nrow(df))
+    frames = Array{RecordFrame}(nframes(tdraw))
 
     for (id, dfind) in tdraw.car2start
         vehdefs[id] = VehicleDef(df[dfind, :class], df[dfind, :length]*METERS_PER_FOOT, df[dfind, :width]*METERS_PER_FOOT)

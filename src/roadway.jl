@@ -1,12 +1,12 @@
 const FLOATING_POINT_REGEX = r"[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)?"
 const METERS_PER_FOOT = 0.3048
 
-type NGSIMRoadway
+mutable struct NGSIMRoadway
     name::Symbol
     boundaries::Vector{Vector{VecE2}}
     centerlines::Vector{Vector{CurvePt}}
 end
-immutable RoadwayInputParams
+struct RoadwayInputParams
     filepath_boundaries::String
     filepath_centerlines::String
 end
@@ -22,13 +22,13 @@ function read_boundaries(io::IO)
     n_boundaries = parse(Int, lines[2])
     @assert(n_boundaries ≥ 0)
 
-    retval = Array(Vector{VecE2}, n_boundaries)
+    retval = Array{Vector{VecE2}}(n_boundaries)
     line_index = 2
     for i in 1 : n_boundaries
 
         @assert(lines[line_index+=1] == @sprintf("BOUNDARY %d", i))
         npts = parse(Int, lines[line_index+=1])
-        line = Array(VecE2, npts)
+        line = Array{VecE2}(npts)
         for j in 1 : npts
             matches = matchall(FLOATING_POINT_REGEX, lines[line_index+=1])
             x = parse(Float64, matches[1]) * METERS_PER_FOOT # convert to meters
@@ -57,7 +57,7 @@ function read_centerlines(io::IO)
         @assert(lines[line_index+=1] == "CENTERLINE")
         name = lines[line_index+=1]
         npts = parse(Int, lines[line_index+=1])
-        line = Array(VecE2, npts)
+        line = Array{VecE2}(npts)
         for j in 1 : npts
             matches = matchall(FLOATING_POINT_REGEX, lines[line_index+=1])
             x = parse(Float64, matches[1]) * METERS_PER_FOOT # convert to meters
@@ -66,7 +66,7 @@ function read_centerlines(io::IO)
         end
 
         # post-process to extract heading and distance along lane
-        centerline = Array(CurvePt, npts)
+        centerline = Array{CurvePt}(npts)
         let
             θ = atan2(line[2]-line[1])
             centerline[1] = CurvePt(VecSE2(line[1],θ), 0.0)

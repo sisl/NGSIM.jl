@@ -1,4 +1,4 @@
-type VehicleSystem
+mutable struct VehicleSystem
     H::Matrix{Float64} # observation Jacobian
     R::MvNormal # process noise
     Q::MvNormal # observation noise
@@ -174,7 +174,7 @@ function EKF(
     (μ_next, Σ_next)
 end
 
-type SimulationResults
+mutable struct SimulationResults
     x_arr::Matrix{Float64}
     z_arr::Matrix{Float64}
     u_arr::Matrix{Float64}

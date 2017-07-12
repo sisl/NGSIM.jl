@@ -2,7 +2,6 @@ __precompile__(true)
 
 module NGSIM
 
-using Compat
 using AutomotiveDrivingModels
 using DataFrames
 using Distributions
