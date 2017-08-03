@@ -14,21 +14,24 @@ export
     ROADWAY_101,
 
     NGSIMTrajdata,
-    VehicleSystem,
-    FilterTrajectoryResult,
+    # VehicleSystem,
+    # FilterTrajectoryResult,
 
-    TRAJDATA_PATHS,
     NGSIM_TIMESTEP,
+    NGSIM_TRAJDATA_PATHS,
+    # TRAJDATA_PATHS,
 
-    filter_trajectory!,
-    symmetric_exponential_moving_average!,
+    carsinframe,
     load_ngsim_trajdata,
-    load_trajdata,
-    get_corresponding_roadway,
-    convert_raw_ngsim_to_trajdatas
+    get_corresponding_roadway
+    # filter_trajectory!,
+    # symmetric_exponential_moving_average!,
+    # load_trajdata,
+    # convert_raw_ngsim_to_trajdatas
 
 
 include("roadway.jl")
-include("trajdata.jl")
+include("ngsim_trajdata.jl")
+# include("trajdata.jl")
 
 end # module
