@@ -40,6 +40,30 @@ end
 
 ###############
 
+"""
+NGSIMTrajdata
+
+The trajectory data stored in the original NGSIM dataset format.
+The dataset is a white-space separated text file with columns:
+    id                  - I - Vehicle identification number (ascending by time of entry into section)
+    frame               - I - Frame Identification number (ascending by start time), units 1/10 of a second
+    n_frames_in_dataset - I - Total number of frames in which the vehicle appears in this data set, units 1/10 of a second
+    epoch               - I - Elapsed time since Jan 1, 1970, in milliseconds
+    local_x             - F - Lateral (X) coordinate of the front center of the vehicle with respect to the left-most edge of the section in the direction of travel, in feet
+    local_y             - F - Longitudinal (Y) coordinate of the front center of the vehicle with respect to the entry edge of the section in the direction of travel, in feet
+    global_x            - F - X Coordinate of the front center of the vehicle based on CA State Plane III in NAD83
+    global_y            - F - Y Coordinate of the front center of the vehicle based on CA State Plane III in NAD83
+    length              - F - Length of the vehicle, in feet
+    width               - F - Width of the vehicle, in feet
+    class               - I - vehicle class, 1 - motorcycle, 2 - auto, 3 - truck
+    speed               - F - Instantaneous velocity of vehicle, in ft/second
+    acc                 - F - Instantaneous acceleration of vehicle, in ft/second^2
+    lane                - I - Current lane position of vehicle
+    carind_front        - I - Vehicle Id of the lead vehicle in the same lane. A value of '0' represents no preceding vehicle
+    carind_rear         - I - Vehicle Id of the vehicle following the subject vehicle in the same lane. A value of '0' represents no following vehicle
+    dist_headway        - F - Spacing provides the distance between the front-center of a vehicle to the front-center of the preceding vehicle, in feet
+    time_headway        - F - Headway provides the time to travel from the front-center of a vehicle (at the speed of the vehicle) to the front-center of the preceding vehicle. A headway value of 9999.99 means that the vehicle is traveling at zero speed (congested conditions), in second
+"""
 mutable struct NGSIMTrajdata
     df         :: DataFrame
     car2start  :: Dict{Int, Int}         # maps carindex to starting index in the df
