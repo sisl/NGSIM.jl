@@ -161,12 +161,12 @@ function Base.convert(::Type{Trajdata}, tdraw::NGSIMTrajdata, roadway::Roadway)
 
     df = tdraw.df
 
-    vehdefs = Dict{Int, VehicleDef}()
-    states = Array{RecordState{VehicleState, Int}}(nrow(df))
+    vehdefs = Dict{Int, BoundingBoxDef}()
+    states = Array{RecordState{RoadwayState, Int}}(nrow(df))
     frames = Array{RecordFrame}(nframes(tdraw))
 
     for (id, dfind) in tdraw.car2start
-        vehdefs[id] = VehicleDef(df[dfind, :class], df[dfind, :length]*METERS_PER_FOOT, df[dfind, :width]*METERS_PER_FOOT)
+        vehdefs[id] = BoundingBoxDef(df[dfind, :class], df[dfind, :length]*METERS_PER_FOOT, df[dfind, :width]*METERS_PER_FOOT)
     end
 
     state_ind = 0
@@ -180,7 +180,7 @@ function Base.convert(::Type{Trajdata}, tdraw::NGSIMTrajdata, roadway::Roadway)
             posG = VecSE2(df[dfind, :global_x]*METERS_PER_FOOT, df[dfind, :global_y]*METERS_PER_FOOT, df[dfind, :global_heading])
             speed = df[dfind, :speed]*METERS_PER_FOOT
 
-            states[state_ind += 1] = RecordState(VehicleState(posG, roadway, speed), id)
+            states[state_ind += 1] = RecordState(RoadwayState(posG, roadway, speed), id)
         end
 
         frame_hi = state_ind
@@ -194,10 +194,10 @@ get_corresponding_roadway(filename::String) = contains(filename, "i101") ? ROADW
 
 
 function convert_raw_ngsim_to_trajdatas()
-    for filename in NGSIM_TRAJDATA_PATHS
-        println("converting ", filename); tic()
+    for filepath in NGSIM_TRAJDATA_PATHS
+        println("converting ", filepath); tic()
 
-        filepath = Pkg.dir("NGSIM", "data", filename)
+        filename = splitdir(filepath)[2]
         roadway = get_corresponding_roadway(filename)
         tdraw = NGSIM.load_ngsim_trajdata(filepath)
         trajdata = convert(Trajdata, tdraw, roadway)
