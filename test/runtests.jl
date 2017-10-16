@@ -1,5 +1,6 @@
 using Base.Test
 using NGSIM
+using AutomotiveDrivingModels
 using NBInclude
 
 let
