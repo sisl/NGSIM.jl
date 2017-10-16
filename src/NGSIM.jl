@@ -27,8 +27,10 @@ export
     filter_trajectory!,
     symmetric_exponential_moving_average!,
     load_trajdata,
-    convert_raw_ngsim_to_trajdatas
+    convert_raw_ngsim_to_trajdatas,
+    read_dxf
 
+include("splines.jl")
 include("roadway.jl")
 include("ngsim_trajdata.jl")
 include("trajdata.jl")
