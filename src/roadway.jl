@@ -201,17 +201,17 @@ function read_dxf(io::IO, ::Type{Roadway};
     # Pull pts for each lane
     lane_pts_dict = Dict{LaneTag, Vector{VecE2}}()
 
-    i = findnext(lines, "LWPOLYLINE\n", i)
+    i = findnext(lines, "LWPOLYLINE", i)
     while i != 0
-        i = findnext(lines, "  8\n", i)
+        i = findnext(lines, "  8", i)
         if i != 0 # segment identifier found in LWPOLYLINE
 
             if ismatch(r"(?<=seg)(\d*)", lines[i+1])
                 segid = parse(Int, match(r"(?<=seg)(\d*)", lines[i+1]).match)
 
-                    i = findnext(lines, "AcDbPolyline\n", i)
+                    i = findnext(lines, "AcDbPolyline", i)
                 i != 0 || error("AcDbPolyline not found in LWPOLYLINE!")
-                i = findnext(lines, " 90\n", i)
+                i = findnext(lines, " 90", i)
                 i != 0 || error("Number of vertices not found in AcDbPolyline!")
 
                 N = parse(Int, lines[i+1])
@@ -219,7 +219,7 @@ function read_dxf(io::IO, ::Type{Roadway};
 
                 pts = Array{VecE2}(N)
 
-                i = findnext(lines, " 10\n", i)
+                i = findnext(lines, " 10", i)
                 i != 0 || error("First point not found in AcDbPolyline!")
 
                 for j in 1 : N
@@ -238,7 +238,7 @@ function read_dxf(io::IO, ::Type{Roadway};
                 lane_pts_dict[LaneTag(segid, laneid)] = pts
             end
 
-            i = findnext(lines, "LWPOLYLINE\n", i)
+            i = findnext(lines, "LWPOLYLINE", i)
         end
     end
 
