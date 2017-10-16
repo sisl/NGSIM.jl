@@ -140,8 +140,8 @@ function _fit_open(pts::Matrix{Float64}) # 2×n {x,y}
         spline_coeffs = Array{Float64}(4, n) # col is <a,b,c,d> for a + b⋅t + c⋅t² + d⋅t³
         spline_coeffs[1,:] = pts[k,1:n] # x₀
         spline_coeffs[2,:] = D[1:n]     # x'₀
-        spline_coeffs[3,:] = 3*(pts[k,2:n+1]' - pts[k,1:n]') -2*D[1:n] - D[2:n+1] # -3x₀ + 3x₁ - 2x'₀ - x'₁
-        spline_coeffs[4,:] = 2*(pts[k,1:n]' - pts[k,2:n+1]') +  D[1:n] + D[2:n+1] #  2x₀ - 2x₁ +  x'₀ + x'₁
+        spline_coeffs[3,:] = 3*(pts[k,2:n+1] - pts[k,1:n]) -2*D[1:n] - D[2:n+1] # -3x₀ + 3x₁ - 2x'₀ - x'₁
+        spline_coeffs[4,:] = 2*(pts[k,1:n] - pts[k,2:n+1]) +  D[1:n] + D[2:n+1] #  2x₀ - 2x₁ +  x'₀ + x'₁
 
         retval[k] = spline_coeffs
     end

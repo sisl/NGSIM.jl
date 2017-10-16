@@ -354,6 +354,7 @@ function read_dxf(io::IO, ::Type{Roadway};
             end
 
             println("fitting curve ", length(pts), "  "); tic()
+            @show size(pt_matrix)
             curve = _fit_curve(pt_matrix, desired_distance_between_curve_samples)
             toc()
 
@@ -404,7 +405,7 @@ function read_dxf(io::IO, ::Type{Roadway};
         cindS = roadproj.curveproj.ind
         cindD = CURVEINDEX_START
 
-        if cindS == curveindex_end(prev) # a standard connection
+        if cindS == curveindex_end(prev.curve) # a standard connection
             @assert(!has_prev(prev))
             connect!(prev, lane)
         else
