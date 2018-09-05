@@ -20,7 +20,7 @@ Pkg.clone("https://github.com/tawheeler/Records.jl.git")
 Pkg.clone("https://github.com/sisl/AutomotiveDrivingModels.jl.git")
 Pkg.clone("https://github.com/tawheeler/NGSIM.jl.git")
 ```
-Note that we do not distribute the NGSIM datasets directly (they are huge), but feel free to ping us or download the datasets yourself from their respective sites.
+The data must also be downloaded as described above or below.
 
 # Quickstart
 
