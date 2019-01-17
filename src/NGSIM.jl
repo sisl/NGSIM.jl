@@ -5,6 +5,8 @@ module NGSIM
 using AutomotiveDrivingModels
 using DataFrames
 using Distributions
+using Printf
+using LinearAlgebra
 
 export
     NGSIMRoadway,

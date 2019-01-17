@@ -1,7 +1,7 @@
 const NGSIM_TIMESTEP = 0.1 # [sec]
 const SMOOTHING_WIDTH_POS = 0.5 # [s]
 
-include(Pkg.dir("NGSIM", "src", "trajectory_smoothing.jl"))
+include(joinpath(@__DIR__, "trajectory_smoothing.jl"))
 
 # from "Estimating Acceleration and Lane-Changing
 #       Dynamics Based on NGSIM Trajectory Data"
@@ -14,7 +14,7 @@ function symmetric_exponential_moving_average(
     Δ = T / dt
 
     N = length(arr)
-    retval = Array{Float64}(N)
+    retval = Array{Float64}(undef, N)
 
     for i = 1 : N
 
@@ -63,11 +63,11 @@ mutable struct FilterTrajectoryResult
         end
 
         # choose an initial belief
-        θ_arr[1] = atan2(y_arr[5] - y_arr[1], x_arr[5] - x_arr[1])
+        θ_arr[1] = atan(y_arr[5] - y_arr[1], x_arr[5] - x_arr[1])
         v_arr[1] = trajdata.df[dfstart, :speed] #hypot(ftr.y_arr[lookahead] - y₀, ftr.x_arr[lookahead] - x₀)/ν.Δt
         if v_arr[1] < 1.0 # small speed
             # estimate with greater lookahead
-            θ_arr[1] = atan2(y_arr[end] - y_arr[1], x_arr[end] - x_arr[1])
+            θ_arr[1] = atan(y_arr[end] - y_arr[1], x_arr[end] - x_arr[1])
         end
 
         new(carid, x_arr, y_arr, θ_arr, v_arr)
@@ -79,7 +79,7 @@ function filter_trajectory!(ftr::FilterTrajectoryResult, ν::VehicleSystem = Veh
     μ = [ftr.x_arr[1], ftr.y_arr[1], ftr.θ_arr[1], ftr.v_arr[1]]
 
     σ = 1e-1
-    Σ = diagm([σ*0.01, σ*0.01, σ*0.1, σ])
+    Σ = Matrix(Diagonal([σ*0.01, σ*0.01, σ*0.1, σ]))
 
     # assume control is centered
     u = [0.0, 0.0]
@@ -142,16 +142,14 @@ function filter_trajectory!(trajdata::NGSIMTrajdata, carid::Int)
 end
 function load_ngsim_trajdata(filepath::String; autofilter::Bool=true)
 
-    print("loading from file: "); tic()
+    print("loading from file: ");
     tdraw = NGSIMTrajdata(filepath)
-    toc()
 
     if autofilter && splitext(filepath)[2] == ".txt" # txt is original
-        print("filtering:         "); tic()
+        print("filtering:         ");
         for carid in carid_set(tdraw)
             filter_trajectory!(tdraw, carid)
         end
-        toc()
     end
 
     tdraw
@@ -162,8 +160,8 @@ function Base.convert(::Type{Trajdata}, tdraw::NGSIMTrajdata, roadway::Roadway)
     df = tdraw.df
 
     vehdefs = Dict{Int, VehicleDef}()
-    states = Array{RecordState{VehicleState, Int}}(nrow(df))
-    frames = Array{RecordFrame}(nframes(tdraw))
+    states = Array{RecordState{VehicleState, Int}}(undef, nrow(df))
+    frames = Array{RecordFrame}(undef, nframes(tdraw))
 
     for (id, dfind) in tdraw.car2start
         vehdefs[id] = VehicleDef(df[dfind, :class], df[dfind, :length]*METERS_PER_FOOT, df[dfind, :width]*METERS_PER_FOOT)
@@ -190,32 +188,30 @@ function Base.convert(::Type{Trajdata}, tdraw::NGSIMTrajdata, roadway::Roadway)
     Trajdata(NGSIM_TIMESTEP, frames, states, vehdefs)
 end
 
-get_corresponding_roadway(filename::String) = contains(filename, "i101") ? ROADWAY_101 : ROADWAY_80
+get_corresponding_roadway(filename::String) = occursin(filename, "i101") ? ROADWAY_101 : ROADWAY_80
 
 
 function convert_raw_ngsim_to_trajdatas()
-    for filename in NGSIM_TRAJDATA_PATHS
-        println("converting ", filename); tic()
+    for filepath in NGSIM_TRAJDATA_PATHS
+        filename = splitdir(filepath)[2]
+        println("converting ", filename);
 
-        filepath = Pkg.dir("NGSIM", "data", filename)
         roadway = get_corresponding_roadway(filename)
         tdraw = NGSIM.load_ngsim_trajdata(filepath)
         trajdata = convert(Trajdata, tdraw, roadway)
 
-        outpath = Pkg.dir("NGSIM", "data", "trajdata_"*filename)
+        outpath = joinpath(@__DIR__, "../data/trajdata_"*filename)
         open(io->write(io, MIME"text/plain"(), trajdata), outpath, "w")
-
-        toc()
     end
 end
 
 const TRAJDATA_PATHS = [
-                        Pkg.dir("NGSIM", "data", "trajdata_i101_trajectories-0750am-0805am.txt"),
-                        Pkg.dir("NGSIM", "data", "trajdata_i101_trajectories-0805am-0820am.txt"),
-                        Pkg.dir("NGSIM", "data", "trajdata_i101_trajectories-0820am-0835am.txt"),
-                        Pkg.dir("NGSIM", "data", "trajdata_i80_trajectories-0400-0415.txt"),
-                        Pkg.dir("NGSIM", "data", "trajdata_i80_trajectories-0500-0515.txt"),
-                        Pkg.dir("NGSIM", "data", "trajdata_i80_trajectories-0515-0530.txt"),
+                        joinpath(@__DIR__, "../data/trajdata_i101_trajectories-0750am-0805am.txt"),
+                        joinpath(@__DIR__, "../data/trajdata_i101_trajectories-0805am-0820am.txt"),
+                        joinpath(@__DIR__, "../data/trajdata_i101_trajectories-0820am-0835am.txt"),
+                        joinpath(@__DIR__, "../data/trajdata_i80_trajectories-0400-0415.txt"),
+                        joinpath(@__DIR__, "../data/trajdata_i80_trajectories-0500-0515.txt"),
+                        joinpath(@__DIR__, "../data/trajdata_i80_trajectories-0515-0530.txt"),
                        ]
 
 function load_trajdata(filepath::String)

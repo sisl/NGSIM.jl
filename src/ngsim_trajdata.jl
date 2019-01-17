@@ -132,14 +132,14 @@ function pull_vehicle_headings!(trajdata::NGSIMTrajdata;
         end
         slow_segments
 
-        arr_heading = map(i->atan2(convert(VecE2, states[i]-states[i-1])), 2:length(states))
+        arr_heading = map(i->atan(convert(VecE2, states[i]-states[i-1])), 2:length(states))
         unshift!(arr_heading, arr_heading[1])
 
         arr_x_smoothed = symmetric_exponential_moving_average(arr_x, smoothing_width)
         arr_y_smoothed = symmetric_exponential_moving_average(arr_y, smoothing_width)
         arr_dx_smoothed = arr_x_smoothed[2:end] - arr_x_smoothed[1:end-1]
         arr_dy_smoothed = arr_y_smoothed[2:end] - arr_y_smoothed[1:end-1]
-        arr_heading2 = map(i->atan2(arr_y_smoothed[i]-arr_y_smoothed[i-1], arr_x_smoothed[i]-arr_x_smoothed[i-1]), 2:length(states))
+        arr_heading2 = map(i->atan(arr_y_smoothed[i]-arr_y_smoothed[i-1], arr_x_smoothed[i]-arr_x_smoothed[i-1]), 2:length(states))
         unshift!(arr_heading2, arr_heading2[1])
 
         arr_heading3 = deepcopy(arr_heading2)
@@ -163,12 +163,12 @@ function pull_vehicle_headings!(trajdata::NGSIMTrajdata;
 end
 
 const NGSIM_TRAJDATA_PATHS = [
-                        Pkg.dir("NGSIM", "data", "i101_trajectories-0750am-0805am.txt"),
-                        Pkg.dir("NGSIM", "data", "i101_trajectories-0805am-0820am.txt"),
-                        Pkg.dir("NGSIM", "data", "i101_trajectories-0820am-0835am.txt"),
-                        Pkg.dir("NGSIM", "data", "i80_trajectories-0400-0415.txt"),
-                        Pkg.dir("NGSIM", "data", "i80_trajectories-0500-0515.txt"),
-                        Pkg.dir("NGSIM", "data", "i80_trajectories-0515-0530.txt"),
+                        joinpath(@__DIR__, "../data/i101_trajectories-0750am-0805am.txt"),
+                        joinpath(@__DIR__, "../data/i101_trajectories-0805am-0820am.txt"),
+                        joinpath(@__DIR__, "../data/i101_trajectories-0820am-0835am.txt"),
+                        joinpath(@__DIR__, "../data/i80_trajectories-0400-0415.txt"),
+                        joinpath(@__DIR__, "../data/i80_trajectories-0500-0515.txt"),
+                        joinpath(@__DIR__, "../data/i80_trajectories-0515-0530.txt"),
                        ]
 
 load_ngsim_trajdata(i::Int) = NGSIMTrajdata(NGSIM_TRAJDATA_PATHS[i])

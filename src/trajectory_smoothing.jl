@@ -18,9 +18,9 @@ mutable struct VehicleSystem
         H = [1.0 0.0 0.0 0.0;
              0.0 1.0 0.0 0.0]
         r = process_noise
-        R = MvNormal(diagm([r*0.01, r*0.01, r*0.00001, r*0.1])) # process, TODO: tune this
+        R = MvNormal(Matrix(Diagonal([r*0.01, r*0.01, r*0.00001, r*0.1]))) # process, TODO: tune this
         q = observation_noise
-        Q = MvNormal(diagm([q, q])) # obs, TODO: tune this
+        Q = MvNormal(Matrix(Diagonal([q, q]))) # obs, TODO: tune this
 
         n_integration_steps = 10
 

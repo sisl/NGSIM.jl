@@ -22,13 +22,13 @@ function read_boundaries(io::IO)
     n_boundaries = parse(Int, lines[2])
     @assert(n_boundaries ≥ 0)
 
-    retval = Array{Vector{VecE2}}(n_boundaries)
+    retval = Array{Vector{VecE2}}(undef, n_boundaries)
     line_index = 2
     for i in 1 : n_boundaries
 
         @assert(lines[line_index+=1] == @sprintf("BOUNDARY %d", i))
         npts = parse(Int, lines[line_index+=1])
-        line = Array{VecE2}(npts)
+        line = Array{VecE2}(undef, npts)
         for j in 1 : npts
             matches = matchall(FLOATING_POINT_REGEX, lines[line_index+=1])
             x = parse(Float64, matches[1]) * METERS_PER_FOOT # convert to meters
@@ -57,7 +57,7 @@ function read_centerlines(io::IO)
         @assert(lines[line_index+=1] == "CENTERLINE")
         name = lines[line_index+=1]
         npts = parse(Int, lines[line_index+=1])
-        line = Array{VecE2}(npts)
+        line = Array{VecE2}(undef, npts)
         for j in 1 : npts
             matches = matchall(FLOATING_POINT_REGEX, lines[line_index+=1])
             x = parse(Float64, matches[1]) * METERS_PER_FOOT # convert to meters
@@ -66,17 +66,17 @@ function read_centerlines(io::IO)
         end
 
         # post-process to extract heading and distance along lane
-        centerline = Array{CurvePt}(npts)
+        centerline = Array{CurvePt}(undef, npts)
         let
-            θ = atan2(line[2]-line[1])
+            θ = atan(line[2]-line[1])
             centerline[1] = CurvePt(VecSE2(line[1],θ), 0.0)
             for i in 2 : npts-1
                 s = centerline[i-1].s + hypot(line[i] - line[i-1])
-                θ = (atan2(line[i]-line[i-1]) + atan2(line[i+1]-line[i]))/2 # mean angle
+                θ = (atan(line[i]-line[i-1]) + atan(line[i+1]-line[i]))/2 # mean angle
                 centerline[i] = CurvePt(VecSE2(line[i],θ), s)
             end
             s = centerline[npts-1].s + hypot(line[npts] - line[npts-1])
-            θ = atan2(line[npts]-line[npts-1])
+            θ = atan(line[npts]-line[npts-1])
             centerline[npts] = CurvePt(VecSE2(line[npts],θ), s)
         end
 
@@ -142,7 +142,7 @@ end
 
 function write_dxf(io::IO, roadway::NGSIMRoadway)
 
-    lines = open(readlines, Pkg.dir("NGSIM", "data", "template.dxf"))
+    lines = open(readlines, joinpath(@__DIR__, "../data/template.dxf"))
     i = findfirst(lines, "ENTITIES\n")
     i != 0 || error("ENTITIES section not found")
 
@@ -163,31 +163,31 @@ function write_dxf(io::IO, roadway::NGSIMRoadway)
 end
 function write_roadways_to_dxf()
 
-    roadway_input_80 = RoadwayInputParams(Pkg.dir("NGSIM", "data", "boundaries80.txt"),
-                                          Pkg.dir("NGSIM", "data", "centerlines80.txt"))
-    roadway_input_101 = RoadwayInputParams(Pkg.dir("NGSIM", "data", "boundaries101.txt"),
-                                           Pkg.dir("NGSIM", "data", "centerlines101.txt"))
+    roadway_input_80 = RoadwayInputParams(joinpath(@__DIR__, "../data/boundaries80.txt"),
+                                          joinpath(@__DIR__, "../data/centerlines80.txt"))
+    roadway_input_101 = RoadwayInputParams(joinpath(@__DIR__, "../data/boundaries101.txt"),
+                                           joinpath(@__DIR__, "../data/centerlines101.txt"))
 
     ngsimroadway_80 = read_roadway(roadway_input_80)
     ngsimroadway_101 = read_roadway(roadway_input_101)
 
-    open(io->write_dxf(io, ROADWAY_80), Pkg.dir("NGSIM", "data", "ngsim_80.dxf"), "w")
-    open(io->write_dxf(io, ROADWAY_101), Pkg.dir("NGSIM", "data", "ngsim_101.dxf"), "w")
+    open(io->write_dxf(io, ROADWAY_80), joinpath(@__DIR__, "../data/ngsim_80.dxf"), "w")
+    open(io->write_dxf(io, ROADWAY_101), joinpath(@__DIR__, "../data/ngsim_101.dxf"), "w")
 end
 function write_roadways_from_dxf()
 
-    roadway_80 = open(io->read_dxf(io, Roadway, dist_threshold_lane_connect=2.0), Pkg.dir("NGSIM", "data", "ngsim_80.dxf"), "r")
-    roadway_101 = open(io->read_dxf(io, Roadway, dist_threshold_lane_connect=2.0), Pkg.dir("NGSIM", "data", "ngsim_101.dxf"), "r")
+    roadway_80 = open(io->read_dxf(io, Roadway, dist_threshold_lane_connect=2.0), joinpath(@__DIR__, "../data/ngsim_80.dxf"), "r")
+    roadway_101 = open(io->read_dxf(io, Roadway, dist_threshold_lane_connect=2.0), joinpath(@__DIR__, "../data/ngsim_101.dxf"), "r")
 
     # also converts to meters
     convert_curves_feet_to_meters!(roadway_80)
     convert_curves_feet_to_meters!(roadway_101)
 
-    open(io->write(io, roadway_80), Pkg.dir("NGSIM", "data", "ngsim_80.txt"), "w")
-    open(io->write(io, roadway_101), Pkg.dir("NGSIM", "data", "ngsim_101.txt"), "w")
+    open(io->write(io, roadway_80), joinpath(@__DIR__, "../data/ngsim_80.txt"), "w")
+    open(io->write(io, roadway_101), joinpath(@__DIR__, "../data/ngsim_101.txt"), "w")
 end
 
-const ROADWAY_80 = open(io->read(io, MIME"text/plain"(), Roadway), Pkg.dir("NGSIM", "data", "ngsim_80.txt"), "r")
-const ROADWAY_101 = open(io->read(io, MIME"text/plain"(), Roadway), Pkg.dir("NGSIM", "data", "ngsim_101.txt"), "r")
+const ROADWAY_80 = open(io->read(io, MIME"text/plain"(), Roadway), joinpath(@__DIR__, "../data/ngsim_80.txt"), "r")
+const ROADWAY_101 = open(io->read(io, MIME"text/plain"(), Roadway), joinpath(@__DIR__, "../data/ngsim_101.txt"), "r")
 
 
