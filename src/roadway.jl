@@ -143,7 +143,7 @@ end
 function write_dxf(io::IO, roadway::NGSIMRoadway)
 
     lines = open(readlines, joinpath(@__DIR__, "../data/template.dxf"))
-    i = findfirst(lines, "ENTITIES\n")
+    i = occursin("ENTITIES\n", lines)
     i != 0 || error("ENTITIES section not found")
 
     # write out header

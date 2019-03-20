@@ -188,7 +188,7 @@ function Base.convert(::Type{Trajdata}, tdraw::NGSIMTrajdata, roadway::Roadway)
     Trajdata(NGSIM_TIMESTEP, frames, states, vehdefs)
 end
 
-get_corresponding_roadway(filename::String) = occursin(filename, "i101") ? ROADWAY_101 : ROADWAY_80
+get_corresponding_roadway(filename::String) = occursin("i101", filename) ? ROADWAY_101 : ROADWAY_80
 
 
 function convert_raw_ngsim_to_trajdatas()
