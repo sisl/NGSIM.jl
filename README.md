@@ -15,10 +15,10 @@ The NGSIM trajectory data is available in [our first release, with instructions 
 You just clone it! Note that you also have to clone my [Vec](https://github.com/tawheeler/Vec.jl) package.
 
 ```julia
-Pkg.clone("https://github.com/sisl/Vec.jl.git")
-Pkg.clone("https://github.com/sisl/Records.jl.git")
-Pkg.clone("https://github.com/sisl/AutomotiveDrivingModels.jl.git")
-Pkg.clone("https://github.com/sisl/NGSIM.jl.git")
+Pkg.add(PackageSpec(url="https://github.com/sisl/Vec.jl"))
+Pkg.add(PackageSpec(url="https://github.com/sisl/Records.jl"))
+Pkg.add(PackageSpec(url="https://github.com/sisl/AutomotiveDrivingModels.jl"))
+Pkg.add(PackageSpec(url="https://github.com/sisl/NGSIM.jl"))
 ```
 The data must also be downloaded as described above or below.
 
