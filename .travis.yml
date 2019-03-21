@@ -8,8 +8,9 @@ matrix:
   allow_failures:
     - julia: nightly
 
-# script: # use the default script section which is equivalent to the following
-#   - if [[ -a .git/shallow ]]; then git fetch --unshallow; fi
+script: # use the default script section which is equivalent to the following
+  - if [[ -a .git/shallow ]]; then git fetch --unshallow; fi
+  - julia --check-bounds=yes -e 'using Pkg; Pkg.build("NGSIM"); Pkg.test("NGSIM"; coverage=true)'
 #   - julia --check-bounds=yes -e 'using Pkg; Pkg.add(PackageSpec(url="https://github.com/tawheeler/Vec.jl.git")); 
 #                                             Pkg.add(PackageSpec(url="https://github.com/sisl/Records.jl.git"));
 #                                             Pkg.add(PackageSpec(url="https://github.com/sisl/AutomotiveDrivingModels.jl.git"));
